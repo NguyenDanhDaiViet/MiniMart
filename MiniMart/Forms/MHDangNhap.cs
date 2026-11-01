@@ -1,9 +1,14 @@
 namespace MiniMart.Forms;
 
-public partial class MHDangNhap : Form
+public sealed partial class MHDangNhap : Form
 {
+ //   public UserAccount? loggedInUser { get; set; }
     public MHDangNhap()
     {
         InitializeComponent();
     }
+}
+
+public class UserAccount
+{
 }
