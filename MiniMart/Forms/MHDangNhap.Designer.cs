@@ -4,7 +4,8 @@ namespace MiniMart.Forms;
 
 partial class MHDangNhap
 {
-    /// <summary>
+    /// <summary>(đan rep tin
+    /// 
     /// Required designer variable.
     /// </summary>
     private IContainer components = null;
