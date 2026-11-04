@@ -102,7 +102,7 @@ partial class FormDangNhap
         // label1
         // 
         label1.AutoSize = true;
-        label1.BackColor = System.Drawing.Color.DarkGreen;
+        label1.BackColor = System.Drawing.Color.Green;
         label1.Dock = System.Windows.Forms.DockStyle.Fill;
         label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label1.ForeColor = System.Drawing.Color.White;
@@ -247,7 +247,7 @@ partial class FormDangNhap
         // button1
         // 
         button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button1.BackColor = System.Drawing.Color.DarkGreen;
+        button1.BackColor = System.Drawing.Color.Green;
         button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button1.ForeColor = System.Drawing.Color.White;
