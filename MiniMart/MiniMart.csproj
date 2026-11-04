@@ -18,6 +18,9 @@
       <Compile Update="Forms\FormBaoCaoThongKe.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Forms\FormQuanLyTaiKhoan.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
