@@ -1,9 +1,10 @@
 namespace MiniMart.Forms;
 
-public partial class Form1 : Form
+public partial class FormNhapKho : Form
 {
-    public Form1()
+    public FormNhapKho()
     {
         InitializeComponent();
     }
+    
 }
