@@ -86,7 +86,7 @@ partial class FormBaoCaoThongKe
         label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label7.Location = new System.Drawing.Point(12, 3);
         label7.Name = "label7";
-        label7.Size = new System.Drawing.Size(271, 28);
+        label7.Size = new System.Drawing.Size(326, 32);
         label7.TabIndex = 1;
         label7.Text = "TOP SẢN PHẨM BÁN CHẠY";
         // 
@@ -117,7 +117,7 @@ partial class FormBaoCaoThongKe
         label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label5.Location = new System.Drawing.Point(505, 15);
         label5.Name = "label5";
-        label5.Size = new System.Drawing.Size(143, 28);
+        label5.Size = new System.Drawing.Size(171, 32);
         label5.TabIndex = 1;
         label5.Text = "Số hóa đơn: 0";
         // 
@@ -129,7 +129,7 @@ partial class FormBaoCaoThongKe
         label4.ForeColor = System.Drawing.Color.ForestGreen;
         label4.Location = new System.Drawing.Point(101, 15);
         label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(154, 28);
+        label4.Size = new System.Drawing.Size(184, 32);
         label4.TabIndex = 0;
         label4.Text = "Doanh thu: 0 đ";
         // 
@@ -164,7 +164,7 @@ partial class FormBaoCaoThongKe
         button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button1.Location = new System.Drawing.Point(101, 70);
         button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(212, 33);
+        button1.Size = new System.Drawing.Size(212, 40);
         button1.TabIndex = 4;
         button1.Text = "Xem Báo Cáo";
         button1.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@ partial class FormBaoCaoThongKe
         dateTimePicker2.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dateTimePicker2.Location = new System.Drawing.Point(505, 37);
         dateTimePicker2.Name = "dateTimePicker2";
-        dateTimePicker2.Size = new System.Drawing.Size(217, 27);
+        dateTimePicker2.Size = new System.Drawing.Size(217, 31);
         dateTimePicker2.TabIndex = 3;
         // 
         // dateTimePicker1
@@ -182,7 +182,7 @@ partial class FormBaoCaoThongKe
         dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dateTimePicker1.Location = new System.Drawing.Point(101, 37);
         dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new System.Drawing.Size(212, 27);
+        dateTimePicker1.Size = new System.Drawing.Size(212, 31);
         dateTimePicker1.TabIndex = 2;
         // 
         // label3
@@ -191,7 +191,7 @@ partial class FormBaoCaoThongKe
         label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label3.Location = new System.Drawing.Point(505, 11);
         label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(91, 23);
+        label3.Size = new System.Drawing.Size(112, 30);
         label3.TabIndex = 1;
         label3.Text = "Đến ngày:";
         // 
@@ -201,7 +201,7 @@ partial class FormBaoCaoThongKe
         label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label2.Location = new System.Drawing.Point(101, 11);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(85, 23);
+        label2.Size = new System.Drawing.Size(105, 30);
         label2.TabIndex = 0;
         label2.Text = "Từ ngày: ";
         // 
@@ -222,7 +222,7 @@ partial class FormBaoCaoThongKe
         label1.Location = new System.Drawing.Point(254, 18);
         label1.Name = "label1";
         label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-        label1.Size = new System.Drawing.Size(291, 38);
+        label1.Size = new System.Drawing.Size(342, 45);
         label1.TabIndex = 0;
         label1.Text = "BÁO CÁO THỐNG KÊ\r\n";
         // 
@@ -236,11 +236,15 @@ partial class FormBaoCaoThongKe
         // 
         // FormBaoCaoThongKe
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 450);
         Controls.Add(panel1);
+        DoubleBuffered = true;
+        ImeMode = System.Windows.Forms.ImeMode.Off;
+        Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
         Text = "FormBaoCaoThongKe";
+        WindowState = System.Windows.Forms.FormWindowState.Maximized;
         Load += FormBaoCaoThongKe_Load;
         panel1.ResumeLayout(false);
         panel4.ResumeLayout(false);
