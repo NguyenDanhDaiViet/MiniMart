@@ -9,20 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Update="Forms\MainForm.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Update="Forms\FormDangNhap.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Update="Forms\FormNhapKho.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Update="Forms\FormSanPham.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Update="Forms\FormBanHang.cs">
-            <SubType>Form</SubType>
+        <Compile Update="**\*.Designer.cs">
+            <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer', '')).cs</DependentUpon>
         </Compile>
     </ItemGroup>
 
