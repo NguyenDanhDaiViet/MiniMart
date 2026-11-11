@@ -1,6 +1,5 @@
 ﻿namespace MiniMart.Model;
 
-
 public class SanPham
 {
     public int Id { get; set; }

@@ -18,7 +18,14 @@
       <Compile Update="Forms\FormNhapKho.cs">
         <SubType>Form</SubType>
       </Compile>
+<<<<<<< HEAD
       <Compile Update="Forms\FormCanhBao.cs">
+=======
+      <Compile Update="Forms\FormSanPham.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Forms\FormBanHang.cs">
+>>>>>>> master
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>
