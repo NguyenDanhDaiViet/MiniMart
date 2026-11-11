@@ -33,17 +33,17 @@ partial class MainForm
     {
         panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-        panel2 = new System.Windows.Forms.Panel();
+        manHinh = new System.Windows.Forms.Panel();
         panel3 = new System.Windows.Forms.Panel();
         tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
         label1 = new System.Windows.Forms.Label();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-        button1 = new System.Windows.Forms.Button();
-        button2 = new System.Windows.Forms.Button();
-        button3 = new System.Windows.Forms.Button();
-        button4 = new System.Windows.Forms.Button();
-        button5 = new System.Windows.Forms.Button();
-        button6 = new System.Windows.Forms.Button();
+        btTaiKhoan = new System.Windows.Forms.Button();
+        btBaoCao = new System.Windows.Forms.Button();
+        btCanhBao = new System.Windows.Forms.Button();
+        btBanHang = new System.Windows.Forms.Button();
+        btSanPham = new System.Windows.Forms.Button();
+        btNhapKho = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         panel3.SuspendLayout();
@@ -65,7 +65,7 @@ partial class MainForm
         tableLayoutPanel1.ColumnCount = 2;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.790697F));
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.209305F));
-        tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+        tableLayoutPanel1.Controls.Add(manHinh, 1, 0);
         tableLayoutPanel1.Controls.Add(panel3, 0, 0);
         tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -76,13 +76,13 @@ partial class MainForm
         tableLayoutPanel1.Size = new System.Drawing.Size(860, 617);
         tableLayoutPanel1.TabIndex = 0;
         // 
-        // panel2
+        // manHinh
         // 
-        panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel2.Location = new System.Drawing.Point(199, 3);
-        panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(658, 611);
-        panel2.TabIndex = 0;
+        manHinh.Dock = System.Windows.Forms.DockStyle.Fill;
+        manHinh.Location = new System.Drawing.Point(199, 3);
+        manHinh.Name = "manHinh";
+        manHinh.Size = new System.Drawing.Size(658, 611);
+        manHinh.TabIndex = 0;
         // 
         // panel3
         // 
@@ -155,12 +155,12 @@ partial class MainForm
         // 
         tableLayoutPanel3.ColumnCount = 1;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tableLayoutPanel3.Controls.Add(button6, 0, 5);
-        tableLayoutPanel3.Controls.Add(button5, 0, 4);
-        tableLayoutPanel3.Controls.Add(button4, 0, 3);
-        tableLayoutPanel3.Controls.Add(button1, 0, 0);
-        tableLayoutPanel3.Controls.Add(button2, 0, 1);
-        tableLayoutPanel3.Controls.Add(button3, 0, 2);
+        tableLayoutPanel3.Controls.Add(btTaiKhoan, 0, 5);
+        tableLayoutPanel3.Controls.Add(btBaoCao, 0, 4);
+        tableLayoutPanel3.Controls.Add(btCanhBao, 0, 3);
+        tableLayoutPanel3.Controls.Add(btBanHang, 0, 0);
+        tableLayoutPanel3.Controls.Add(btSanPham, 0, 1);
+        tableLayoutPanel3.Controls.Add(btNhapKho, 0, 2);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel3.Location = new System.Drawing.Point(3, 84);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -174,85 +174,91 @@ partial class MainForm
         tableLayoutPanel3.Size = new System.Drawing.Size(184, 367);
         tableLayoutPanel3.TabIndex = 1;
         // 
-        // button1
+        // btTaiKhoan
         // 
-        button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button1.BackColor = System.Drawing.Color.LimeGreen;
-        button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button1.ForeColor = System.Drawing.Color.White;
-        button1.Location = new System.Drawing.Point(3, 3);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(178, 55);
-        button1.TabIndex = 0;
-        button1.Text = "Bán hàng";
-        button1.UseVisualStyleBackColor = false;
+        btTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btTaiKhoan.BackColor = System.Drawing.Color.LimeGreen;
+        btTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btTaiKhoan.ForeColor = System.Drawing.Color.White;
+        btTaiKhoan.Location = new System.Drawing.Point(3, 308);
+        btTaiKhoan.Name = "btTaiKhoan";
+        btTaiKhoan.Size = new System.Drawing.Size(178, 56);
+        btTaiKhoan.TabIndex = 5;
+        btTaiKhoan.Text = "Tài khoản";
+        btTaiKhoan.UseVisualStyleBackColor = false;
+        btTaiKhoan.Click += btTaiKhoan_Click;
         // 
-        // button2
+        // btBaoCao
         // 
-        button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button2.BackColor = System.Drawing.Color.LimeGreen;
-        button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button2.ForeColor = System.Drawing.Color.White;
-        button2.Location = new System.Drawing.Point(3, 64);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(178, 55);
-        button2.TabIndex = 1;
-        button2.Text = "Sản phẩm";
-        button2.UseVisualStyleBackColor = false;
+        btBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btBaoCao.BackColor = System.Drawing.Color.LimeGreen;
+        btBaoCao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btBaoCao.ForeColor = System.Drawing.Color.White;
+        btBaoCao.Location = new System.Drawing.Point(3, 247);
+        btBaoCao.Name = "btBaoCao";
+        btBaoCao.Size = new System.Drawing.Size(178, 55);
+        btBaoCao.TabIndex = 4;
+        btBaoCao.Text = "Báo cáo";
+        btBaoCao.UseVisualStyleBackColor = false;
+        btBaoCao.Click += btBaoCao_Click;
         // 
-        // button3
+        // btCanhBao
         // 
-        button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button3.BackColor = System.Drawing.Color.LimeGreen;
-        button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button3.ForeColor = System.Drawing.Color.White;
-        button3.Location = new System.Drawing.Point(3, 125);
-        button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(178, 55);
-        button3.TabIndex = 2;
-        button3.Text = "Nhập kho";
-        button3.UseVisualStyleBackColor = false;
+        btCanhBao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btCanhBao.BackColor = System.Drawing.Color.LimeGreen;
+        btCanhBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btCanhBao.ForeColor = System.Drawing.Color.White;
+        btCanhBao.Location = new System.Drawing.Point(3, 186);
+        btCanhBao.Name = "btCanhBao";
+        btCanhBao.Size = new System.Drawing.Size(178, 55);
+        btCanhBao.TabIndex = 3;
+        btCanhBao.Text = "Cảnh báo tồn";
+        btCanhBao.UseVisualStyleBackColor = false;
+        btCanhBao.Click += btCanhBao_Click;
         // 
-        // button4
+        // btBanHang
         // 
-        button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button4.BackColor = System.Drawing.Color.LimeGreen;
-        button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button4.ForeColor = System.Drawing.Color.White;
-        button4.Location = new System.Drawing.Point(3, 186);
-        button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(178, 55);
-        button4.TabIndex = 3;
-        button4.Text = "Cảnh báo tồn";
-        button4.UseVisualStyleBackColor = false;
+        btBanHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btBanHang.BackColor = System.Drawing.Color.LimeGreen;
+        btBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        btBanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btBanHang.ForeColor = System.Drawing.Color.White;
+        btBanHang.Location = new System.Drawing.Point(3, 3);
+        btBanHang.Name = "btBanHang";
+        btBanHang.Size = new System.Drawing.Size(178, 55);
+        btBanHang.TabIndex = 0;
+        btBanHang.Text = "Bán hàng";
+        btBanHang.UseVisualStyleBackColor = false;
+        btBanHang.Click += btBanHang_Click;
         // 
-        // button5
+        // btSanPham
         // 
-        button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button5.BackColor = System.Drawing.Color.LimeGreen;
-        button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button5.ForeColor = System.Drawing.Color.White;
-        button5.Location = new System.Drawing.Point(3, 247);
-        button5.Name = "button5";
-        button5.Size = new System.Drawing.Size(178, 55);
-        button5.TabIndex = 4;
-        button5.Text = "Báo cáo";
-        button5.UseVisualStyleBackColor = false;
+        btSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btSanPham.BackColor = System.Drawing.Color.LimeGreen;
+        btSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        btSanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btSanPham.ForeColor = System.Drawing.Color.White;
+        btSanPham.Location = new System.Drawing.Point(3, 64);
+        btSanPham.Name = "btSanPham";
+        btSanPham.Size = new System.Drawing.Size(178, 55);
+        btSanPham.TabIndex = 1;
+        btSanPham.Text = "Sản phẩm";
+        btSanPham.UseVisualStyleBackColor = false;
+        btSanPham.Click += btSanPham_Click;
         // 
-        // button6
+        // btNhapKho
         // 
-        button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        button6.BackColor = System.Drawing.Color.LimeGreen;
-        button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button6.ForeColor = System.Drawing.Color.White;
-        button6.Location = new System.Drawing.Point(3, 308);
-        button6.Name = "button6";
-        button6.Size = new System.Drawing.Size(178, 56);
-        button6.TabIndex = 5;
-        button6.Text = "Tài khoản";
-        button6.UseVisualStyleBackColor = false;
+        btNhapKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btNhapKho.BackColor = System.Drawing.Color.LimeGreen;
+        btNhapKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btNhapKho.ForeColor = System.Drawing.Color.White;
+        btNhapKho.Location = new System.Drawing.Point(3, 125);
+        btNhapKho.Name = "btNhapKho";
+        btNhapKho.Size = new System.Drawing.Size(178, 55);
+        btNhapKho.TabIndex = 2;
+        btNhapKho.Text = "Nhập kho";
+        btNhapKho.UseVisualStyleBackColor = false;
+        btNhapKho.Click += btNhapKho_Click;
         // 
         // MainForm
         // 
@@ -272,12 +278,12 @@ partial class MainForm
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.Button button5;
-    private System.Windows.Forms.Button button6;
+    private System.Windows.Forms.Button btBanHang;
+    private System.Windows.Forms.Button btSanPham;
+    private System.Windows.Forms.Button btNhapKho;
+    private System.Windows.Forms.Button btCanhBao;
+    private System.Windows.Forms.Button btBaoCao;
+    private System.Windows.Forms.Button btTaiKhoan;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 
@@ -287,7 +293,7 @@ partial class MainForm
 
     private System.Windows.Forms.Panel panel3;
 
-    private System.Windows.Forms.Panel panel2;
+    private System.Windows.Forms.Panel manHinh;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 

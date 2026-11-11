@@ -61,7 +61,7 @@ partial class FormDangNhap
         panel1.Dock = System.Windows.Forms.DockStyle.Fill;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(460, 400);
+        panel1.Size = new System.Drawing.Size(543, 465);
         panel1.TabIndex = 0;
         // 
         // tableLayoutPanel1
@@ -80,7 +80,7 @@ partial class FormDangNhap
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.215687F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.784313F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-        tableLayoutPanel1.Size = new System.Drawing.Size(460, 400);
+        tableLayoutPanel1.Size = new System.Drawing.Size(543, 465);
         tableLayoutPanel1.TabIndex = 0;
         // 
         // tableLayoutPanel2
@@ -96,7 +96,7 @@ partial class FormDangNhap
         tableLayoutPanel2.RowCount = 2;
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel2.Size = new System.Drawing.Size(454, 117);
+        tableLayoutPanel2.Size = new System.Drawing.Size(537, 143);
         tableLayoutPanel2.TabIndex = 0;
         // 
         // label1
@@ -108,20 +108,20 @@ partial class FormDangNhap
         label1.ForeColor = System.Drawing.Color.White;
         label1.Location = new System.Drawing.Point(3, 0);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(448, 58);
+        label1.Size = new System.Drawing.Size(531, 71);
         label1.TabIndex = 0;
         label1.Text = "MiniMart";
         label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
         // label2
         // 
+        label2.Anchor = System.Windows.Forms.AnchorStyles.None;
         label2.AutoSize = true;
         label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        label2.Dock = System.Windows.Forms.DockStyle.Fill;
         label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label2.Location = new System.Drawing.Point(3, 58);
+        label2.Location = new System.Drawing.Point(40, 88);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(448, 59);
+        label2.Size = new System.Drawing.Size(457, 38);
         label2.TabIndex = 1;
         label2.Text = "ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ";
         label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -135,12 +135,12 @@ partial class FormDangNhap
         tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
         tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel3.Location = new System.Drawing.Point(3, 126);
+        tableLayoutPanel3.Location = new System.Drawing.Point(3, 152);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
         tableLayoutPanel3.RowCount = 2;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(454, 185);
+        tableLayoutPanel3.Size = new System.Drawing.Size(537, 224);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // tableLayoutPanel4
@@ -151,20 +151,20 @@ partial class FormDangNhap
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel4.Controls.Add(tenDangNhap, 0, 1);
         tableLayoutPanel4.Controls.Add(label3, 0, 0);
-        tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
+        tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
         tableLayoutPanel4.RowCount = 2;
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel4.Size = new System.Drawing.Size(448, 86);
+        tableLayoutPanel4.Size = new System.Drawing.Size(531, 106);
         tableLayoutPanel4.TabIndex = 0;
         // 
         // tenDangNhap
         // 
         tenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
         tenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        tenDangNhap.Location = new System.Drawing.Point(75, 51);
+        tenDangNhap.Location = new System.Drawing.Point(116, 66);
         tenDangNhap.Name = "tenDangNhap";
         tenDangNhap.Size = new System.Drawing.Size(298, 27);
         tenDangNhap.TabIndex = 0;
@@ -173,9 +173,8 @@ partial class FormDangNhap
         // 
         label3.Anchor = System.Windows.Forms.AnchorStyles.None;
         label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-        label3.Location = new System.Drawing.Point(74, 6);
+        label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label3.Location = new System.Drawing.Point(116, 11);
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(299, 30);
         label3.TabIndex = 1;
@@ -190,19 +189,19 @@ partial class FormDangNhap
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.Controls.Add(matKhau, 0, 1);
         tableLayoutPanel5.Controls.Add(label4, 0, 0);
-        tableLayoutPanel5.Location = new System.Drawing.Point(3, 95);
+        tableLayoutPanel5.Location = new System.Drawing.Point(3, 115);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
         tableLayoutPanel5.RowCount = 2;
         tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.08046F));
         tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.91954F));
-        tableLayoutPanel5.Size = new System.Drawing.Size(448, 87);
+        tableLayoutPanel5.Size = new System.Drawing.Size(531, 106);
         tableLayoutPanel5.TabIndex = 1;
         // 
         // matKhau
         // 
         matKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
         matKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        matKhau.Location = new System.Drawing.Point(75, 47);
+        matKhau.Location = new System.Drawing.Point(116, 60);
         matKhau.Name = "matKhau";
         matKhau.PasswordChar = '*';
         matKhau.Size = new System.Drawing.Size(298, 27);
@@ -212,7 +211,7 @@ partial class FormDangNhap
         // 
         label4.Anchor = System.Windows.Forms.AnchorStyles.None;
         label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label4.Location = new System.Drawing.Point(76, 5);
+        label4.Location = new System.Drawing.Point(117, 9);
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(296, 23);
         label4.TabIndex = 0;
@@ -226,22 +225,22 @@ partial class FormDangNhap
         tableLayoutPanel6.Controls.Add(hienMatKhau, 0, 0);
         tableLayoutPanel6.Controls.Add(button1, 0, 1);
         tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel6.Location = new System.Drawing.Point(3, 317);
+        tableLayoutPanel6.Location = new System.Drawing.Point(3, 382);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
         tableLayoutPanel6.RowCount = 2;
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.75F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.25F));
-        tableLayoutPanel6.Size = new System.Drawing.Size(454, 80);
+        tableLayoutPanel6.Size = new System.Drawing.Size(537, 80);
         tableLayoutPanel6.TabIndex = 2;
         // 
         // hienMatKhau
         // 
         hienMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-        hienMatKhau.Location = new System.Drawing.Point(78, 3);
+        hienMatKhau.Location = new System.Drawing.Point(119, 3);
         hienMatKhau.Name = "hienMatKhau";
         hienMatKhau.Size = new System.Drawing.Size(298, 21);
         hienMatKhau.TabIndex = 0;
-        hienMatKhau.Text = "checkBox1";
+        hienMatKhau.Text = "Hiện thị mật khẩu";
         hienMatKhau.UseVisualStyleBackColor = true;
         // 
         // button1
@@ -252,7 +251,7 @@ partial class FormDangNhap
         button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button1.ForeColor = System.Drawing.Color.White;
         button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-        button1.Location = new System.Drawing.Point(104, 33);
+        button1.Location = new System.Drawing.Point(146, 33);
         button1.Name = "button1";
         button1.Size = new System.Drawing.Size(245, 41);
         button1.TabIndex = 1;
@@ -263,7 +262,7 @@ partial class FormDangNhap
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(460, 400);
+        ClientSize = new System.Drawing.Size(543, 465);
         Controls.Add(panel1);
         Text = "FormDangNhap";
         panel1.ResumeLayout(false);
