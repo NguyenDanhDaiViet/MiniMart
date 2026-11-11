@@ -272,7 +272,7 @@ partial class FormBaoCaoThongKe
 
     private System.Windows.Forms.Panel panel5;
 
-    private System.Windows.Forms.Label tgsjabk;
+    
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Button button1;
 
@@ -291,6 +291,7 @@ partial class FormBaoCaoThongKe
     private System.Windows.Forms.Panel panel2;
 
     private System.Windows.Forms.Panel panel1;
+    
 
     #endregion
 }

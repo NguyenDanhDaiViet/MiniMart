@@ -42,7 +42,17 @@ partial class FormNhapKho
         groupBox1 = new System.Windows.Forms.GroupBox();
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+        label2 = new System.Windows.Forms.Label();
+        label3 = new System.Windows.Forms.Label();
+        tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+        label4 = new System.Windows.Forms.Label();
         dataGridView1 = new System.Windows.Forms.DataGridView();
+        label5 = new System.Windows.Forms.Label();
+        textBox2 = new System.Windows.Forms.TextBox();
+        numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+        label6 = new System.Windows.Forms.Label();
+        numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+        button2 = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -50,7 +60,11 @@ partial class FormNhapKho
         tableLayoutPanel4.SuspendLayout();
         groupBox1.SuspendLayout();
         tableLayoutPanel5.SuspendLayout();
+        tableLayoutPanel6.SuspendLayout();
+        tableLayoutPanel7.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
         SuspendLayout();
         // 
         // panel1
@@ -166,7 +180,7 @@ partial class FormNhapKho
         groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         groupBox1.Location = new System.Drawing.Point(652, 3);
         groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(299, 317);
+        groupBox1.Size = new System.Drawing.Size(299, 335);
         groupBox1.TabIndex = 0;
         groupBox1.TabStop = false;
         groupBox1.Text = "Thông tin phiếu nhập";
@@ -177,16 +191,20 @@ partial class FormNhapKho
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
+        tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 1);
+        tableLayoutPanel5.Controls.Add(label6, 0, 2);
+        tableLayoutPanel5.Controls.Add(numericUpDown2, 0, 3);
+        tableLayoutPanel5.Controls.Add(button2, 0, 4);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 26);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
         tableLayoutPanel5.RowCount = 5;
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.142857F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.857143F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-        tableLayoutPanel5.Size = new System.Drawing.Size(293, 288);
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.614037F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.385963F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+        tableLayoutPanel5.Size = new System.Drawing.Size(293, 306);
         tableLayoutPanel5.TabIndex = 0;
         // 
         // tableLayoutPanel6
@@ -194,14 +212,65 @@ partial class FormNhapKho
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel6.Controls.Add(label2, 0, 0);
+        tableLayoutPanel6.Controls.Add(label3, 0, 1);
         tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
         tableLayoutPanel6.RowCount = 2;
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel6.Size = new System.Drawing.Size(287, 62);
+        tableLayoutPanel6.Size = new System.Drawing.Size(287, 80);
         tableLayoutPanel6.TabIndex = 0;
+        // 
+        // label2
+        // 
+        label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        label2.Location = new System.Drawing.Point(3, 8);
+        label2.Name = "label2";
+        label2.Size = new System.Drawing.Size(100, 23);
+        label2.TabIndex = 0;
+        label2.Text = "Sản Phẩm:";
+        label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+        // 
+        // label3
+        // 
+        label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        label3.Location = new System.Drawing.Point(3, 48);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(100, 23);
+        label3.TabIndex = 1;
+        label3.Text = "Chưa Chọn";
+        label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // tableLayoutPanel7
+        // 
+        tableLayoutPanel7.ColumnCount = 2;
+        tableLayoutPanel5.SetColumnSpan(tableLayoutPanel7, 2);
+        tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel7.Controls.Add(label4, 0, 0);
+        tableLayoutPanel7.Controls.Add(label5, 1, 0);
+        tableLayoutPanel7.Controls.Add(textBox2, 0, 1);
+        tableLayoutPanel7.Controls.Add(numericUpDown1, 1, 1);
+        tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel7.Location = new System.Drawing.Point(3, 89);
+        tableLayoutPanel7.Name = "tableLayoutPanel7";
+        tableLayoutPanel7.RowCount = 2;
+        tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel7.Size = new System.Drawing.Size(287, 97);
+        tableLayoutPanel7.TabIndex = 1;
+        // 
+        // label4
+        // 
+        label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        label4.Location = new System.Drawing.Point(3, 12);
+        label4.Name = "label4";
+        label4.Size = new System.Drawing.Size(100, 23);
+        label4.TabIndex = 0;
+        label4.Text = "Mã Sản Phẩm";
+        label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // dataGridView1
         // 
@@ -213,6 +282,60 @@ partial class FormNhapKho
         dataGridView1.Size = new System.Drawing.Size(643, 505);
         dataGridView1.TabIndex = 3;
         dataGridView1.Text = "dataGridView1";
+        // 
+        // label5
+        // 
+        label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        label5.Location = new System.Drawing.Point(146, 12);
+        label5.Name = "label5";
+        label5.Size = new System.Drawing.Size(100, 23);
+        label5.TabIndex = 1;
+        label5.Text = "Số Lượng";
+        label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        // 
+        // textBox2
+        // 
+        textBox2.Location = new System.Drawing.Point(3, 51);
+        textBox2.Name = "textBox2";
+        textBox2.Size = new System.Drawing.Size(137, 30);
+        textBox2.TabIndex = 2;
+        // 
+        // numericUpDown1
+        // 
+        numericUpDown1.Location = new System.Drawing.Point(146, 51);
+        numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        numericUpDown1.Name = "numericUpDown1";
+        numericUpDown1.Size = new System.Drawing.Size(138, 30);
+        numericUpDown1.TabIndex = 3;
+        numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        // 
+        // label6
+        // 
+        label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        label6.Location = new System.Drawing.Point(3, 189);
+        label6.Name = "label6";
+        label6.Size = new System.Drawing.Size(100, 23);
+        label6.TabIndex = 2;
+        label6.Text = "Giá Nhập";
+        label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        // 
+        // numericUpDown2
+        // 
+        numericUpDown2.Location = new System.Drawing.Point(3, 215);
+        numericUpDown2.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+        numericUpDown2.Name = "numericUpDown2";
+        numericUpDown2.Size = new System.Drawing.Size(271, 30);
+        numericUpDown2.TabIndex = 3;
+        // 
+        // button2
+        // 
+        button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+        button2.Location = new System.Drawing.Point(99, 267);
+        button2.Name = "button2";
+        button2.Size = new System.Drawing.Size(94, 34);
+        button2.TabIndex = 4;
+        button2.Text = "Xác Nhận";
+        button2.UseVisualStyleBackColor = true;
         // 
         // FormNhapKho
         // 
@@ -232,9 +355,32 @@ partial class FormNhapKho
         tableLayoutPanel4.ResumeLayout(false);
         groupBox1.ResumeLayout(false);
         tableLayoutPanel5.ResumeLayout(false);
+        tableLayoutPanel6.ResumeLayout(false);
+        tableLayoutPanel7.ResumeLayout(false);
+        tableLayoutPanel7.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button button2;
+
+    private System.Windows.Forms.NumericUpDown numericUpDown2;
+
+    private System.Windows.Forms.Label label6;
+
+    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.NumericUpDown numericUpDown1;
+
+    private System.Windows.Forms.Label label4;
+
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+
+    private System.Windows.Forms.Label label3;
+
+    private System.Windows.Forms.Label label2;
 
     private System.Windows.Forms.DataGridView dataGridView1;
 
