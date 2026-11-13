@@ -13,4 +13,5 @@ public class ChiTietHoaDon
     public decimal ThanhTien { get; set; }
     
     public HoaDon? HonDon { get; set; }
+    
 }

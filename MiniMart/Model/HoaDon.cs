@@ -12,4 +12,6 @@ public class HoaDon
     public decimal TienThua { get; set; }
 
     public List<ChiTietHoaDon> Items { get; set; } = new();
+    
+    
 }

@@ -11,4 +11,6 @@ public class MatHangGioHang
     public decimal DonGia { get; set; }
     public decimal TyLeChietKhau { get; set; }
     public decimal ThanhTienDong => SoLuong * DonGia * (1 - TyLeChietKhau / 100m);
+    
+    
 }
