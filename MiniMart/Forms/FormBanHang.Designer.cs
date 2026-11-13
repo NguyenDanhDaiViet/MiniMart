@@ -109,7 +109,6 @@ partial class FormBanHang
         btnTimKiem.TabIndex = 3;
         btnTimKiem.Text = "Tìm";
         btnTimKiem.UseVisualStyleBackColor = false;
-        btnTimKiem.Click += button1_Click;
         // 
         // dgvSanPham
         // 
