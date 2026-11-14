@@ -73,7 +73,7 @@ partial class FormBanHang
         lblTitle.AutoSize = true;
         lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTitle.ForeColor = System.Drawing.Color.DarkGreen;
-        lblTitle.Location = new System.Drawing.Point(20, 15);
+        lblTitle.Location = new System.Drawing.Point(48, 11);
         lblTitle.Name = "lblTitle";
         lblTitle.Size = new System.Drawing.Size(239, 54);
         lblTitle.TabIndex = 0;
@@ -109,7 +109,6 @@ partial class FormBanHang
         btnTimKiem.TabIndex = 3;
         btnTimKiem.Text = "Tìm";
         btnTimKiem.UseVisualStyleBackColor = false;
-        btnTimKiem.Click += button1_Click;
         // 
         // dgvSanPham
         // 
