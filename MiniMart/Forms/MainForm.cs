@@ -70,6 +70,6 @@ public partial class MainForm : Form
     {
         if(DangTrongCheDoThietke()) return;
         Text = $"MiniMart - {FormDangNhap.hienThiTen}";
-        btTaiKhoan.Visible = FormDangNhap.tenThi == "Quản Lý";
+        btTaiKhoan.Visible = FormDangNhap.VaiTro == "Quản Lý";
     }
 }
