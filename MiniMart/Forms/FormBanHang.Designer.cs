@@ -65,7 +65,7 @@ partial class FormBanHang
         pnlHeader.Controls.Add(lblTitle);
         pnlHeader.Location = new System.Drawing.Point(15, 10);
         pnlHeader.Name = "pnlHeader";
-        pnlHeader.Size = new System.Drawing.Size(1360, 65);
+        pnlHeader.Size = new System.Drawing.Size(1239, 65);
         pnlHeader.TabIndex = 0;
         // 
         // lblTitle
@@ -75,7 +75,7 @@ partial class FormBanHang
         lblTitle.ForeColor = System.Drawing.Color.DarkGreen;
         lblTitle.Location = new System.Drawing.Point(20, 15);
         lblTitle.Name = "lblTitle";
-        lblTitle.Size = new System.Drawing.Size(239, 54);
+        lblTitle.Size = new System.Drawing.Size(203, 46);
         lblTitle.TabIndex = 0;
         lblTitle.Text = "BÁN HÀNG";
         // 
@@ -85,7 +85,7 @@ partial class FormBanHang
         lblDanhSach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblDanhSach.Location = new System.Drawing.Point(20, 90);
         lblDanhSach.Name = "lblDanhSach";
-        lblDanhSach.Size = new System.Drawing.Size(248, 32);
+        lblDanhSach.Size = new System.Drawing.Size(207, 28);
         lblDanhSach.TabIndex = 1;
         lblDanhSach.Text = "Danh sách sán phẩm";
         // 
@@ -94,7 +94,7 @@ partial class FormBanHang
         txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         txtTimKiem.Location = new System.Drawing.Point(20, 125);
         txtTimKiem.Name = "txtTimKiem";
-        txtTimKiem.Size = new System.Drawing.Size(342, 34);
+        txtTimKiem.Size = new System.Drawing.Size(342, 30);
         txtTimKiem.TabIndex = 2;
         txtTimKiem.Text = "Nhập mã hoặc tên sản phẩm";
         // 
@@ -133,7 +133,7 @@ partial class FormBanHang
         lblGioHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblGioHang.Location = new System.Drawing.Point(472, 90);
         lblGioHang.Name = "lblGioHang";
-        lblGioHang.Size = new System.Drawing.Size(117, 32);
+        lblGioHang.Size = new System.Drawing.Size(97, 28);
         lblGioHang.TabIndex = 5;
         lblGioHang.Text = "Giỏ hàng";
         // 
@@ -149,7 +149,7 @@ partial class FormBanHang
         dgvGioHang.ReadOnly = true;
         dgvGioHang.RowHeadersWidth = 62;
         dgvGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvGioHang.Size = new System.Drawing.Size(863, 390);
+        dgvGioHang.Size = new System.Drawing.Size(742, 390);
         dgvGioHang.TabIndex = 6;
         dgvGioHang.Text = "dataGridView1";
         // 
@@ -167,7 +167,7 @@ partial class FormBanHang
         nudSoLuong.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
         nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         nudSoLuong.Name = "nudSoLuong";
-        nudSoLuong.Size = new System.Drawing.Size(105, 31);
+        nudSoLuong.Size = new System.Drawing.Size(105, 27);
         nudSoLuong.TabIndex = 8;
         nudSoLuong.Value = new decimal(new int[] { 1, 0, 0, 0 });
         // 
@@ -183,7 +183,7 @@ partial class FormBanHang
         // 
         nudGiamGiaDong.Location = new System.Drawing.Point(605, 575);
         nudGiamGiaDong.Name = "nudGiamGiaDong";
-        nudGiamGiaDong.Size = new System.Drawing.Size(105, 31);
+        nudGiamGiaDong.Size = new System.Drawing.Size(105, 27);
         nudGiamGiaDong.TabIndex = 10;
         // 
         // btnCapNhat
@@ -219,7 +219,7 @@ partial class FormBanHang
         // 
         nudGiamGiaHoaDon.Location = new System.Drawing.Point(605, 620);
         nudGiamGiaHoaDon.Name = "nudGiamGiaHoaDon";
-        nudGiamGiaHoaDon.Size = new System.Drawing.Size(105, 31);
+        nudGiamGiaHoaDon.Size = new System.Drawing.Size(105, 27);
         nudGiamGiaHoaDon.TabIndex = 14;
         // 
         // lblKhachDua
@@ -234,7 +234,7 @@ partial class FormBanHang
         // 
         txtTienKhachDua.Location = new System.Drawing.Point(880, 620);
         txtTienKhachDua.Name = "txtTienKhachDua";
-        txtTienKhachDua.Size = new System.Drawing.Size(120, 31);
+        txtTienKhachDua.Size = new System.Drawing.Size(120, 27);
         txtTienKhachDua.TabIndex = 16;
         txtTienKhachDua.Text = "0";
         // 
@@ -251,10 +251,10 @@ partial class FormBanHang
         // 
         // FormBanHang
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.WhiteSmoke;
-        ClientSize = new System.Drawing.Size(1378, 694);
+        ClientSize = new System.Drawing.Size(1257, 694);
         Controls.Add(lblTongCong);
         Controls.Add(txtTienKhachDua);
         Controls.Add(lblKhachDua);
@@ -273,6 +273,7 @@ partial class FormBanHang
         Controls.Add(txtTimKiem);
         Controls.Add(lblDanhSach);
         Controls.Add(pnlHeader);
+        Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
         MinimumSize = new System.Drawing.Size(1200, 700);
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "MiniMart - Bán hàng";
