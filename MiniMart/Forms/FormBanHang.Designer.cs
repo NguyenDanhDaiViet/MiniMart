@@ -222,7 +222,7 @@ partial class FormBanHang
         // 
         // FormBanHang
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.WhiteSmoke;
         ClientSize = new System.Drawing.Size(1378, 694);

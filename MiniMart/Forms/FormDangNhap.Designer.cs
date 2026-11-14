@@ -45,7 +45,7 @@ partial class FormDangNhap
         label4 = new System.Windows.Forms.Label();
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
         hienMatKhau = new System.Windows.Forms.CheckBox();
-        button1 = new System.Windows.Forms.Button();
+        btDangNhap = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -223,7 +223,7 @@ partial class FormDangNhap
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.Controls.Add(hienMatKhau, 0, 0);
-        tableLayoutPanel6.Controls.Add(button1, 0, 1);
+        tableLayoutPanel6.Controls.Add(btDangNhap, 0, 1);
         tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel6.Location = new System.Drawing.Point(3, 382);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -243,20 +243,20 @@ partial class FormDangNhap
         hienMatKhau.Text = "Hiện thị mật khẩu";
         hienMatKhau.UseVisualStyleBackColor = true;
         // 
-        // button1
+        // btDangNhap
         // 
-        button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button1.BackColor = System.Drawing.Color.Green;
-        button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button1.ForeColor = System.Drawing.Color.White;
-        button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-        button1.Location = new System.Drawing.Point(146, 33);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(245, 41);
-        button1.TabIndex = 1;
-        button1.Text = "Đăng Nhập";
-        button1.UseVisualStyleBackColor = false;
+        btDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btDangNhap.BackColor = System.Drawing.Color.Green;
+        btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        btDangNhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btDangNhap.ForeColor = System.Drawing.Color.White;
+        btDangNhap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+        btDangNhap.Location = new System.Drawing.Point(146, 33);
+        btDangNhap.Name = "btDangNhap";
+        btDangNhap.Size = new System.Drawing.Size(245, 41);
+        btDangNhap.TabIndex = 1;
+        btDangNhap.Text = "Đăng Nhập";
+        btDangNhap.UseVisualStyleBackColor = false;
         // 
         // FormDangNhap
         // 
@@ -279,7 +279,7 @@ partial class FormDangNhap
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btDangNhap;
 
     private System.Windows.Forms.CheckBox hienMatKhau;
 
