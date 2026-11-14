@@ -46,13 +46,13 @@ partial class FormNhapKho
         label3 = new System.Windows.Forms.Label();
         tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
         label4 = new System.Windows.Forms.Label();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
         label5 = new System.Windows.Forms.Label();
         textBox2 = new System.Windows.Forms.TextBox();
         numericUpDown1 = new System.Windows.Forms.NumericUpDown();
         label6 = new System.Windows.Forms.Label();
         numericUpDown2 = new System.Windows.Forms.NumericUpDown();
         button2 = new System.Windows.Forms.Button();
+        dataGridView1 = new System.Windows.Forms.DataGridView();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -62,9 +62,9 @@ partial class FormNhapKho
         tableLayoutPanel5.SuspendLayout();
         tableLayoutPanel6.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
         // panel1
@@ -111,11 +111,12 @@ partial class FormNhapKho
         // 
         // label1
         // 
+        label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
         label1.AutoSize = true;
         label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-        label1.Location = new System.Drawing.Point(3, 0);
+        label1.Location = new System.Drawing.Point(3, 5);
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(344, 41);
         label1.TabIndex = 0;
@@ -134,7 +135,7 @@ partial class FormNhapKho
         tableLayoutPanel3.RowCount = 1;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(391, 46);
+        tableLayoutPanel3.Size = new System.Drawing.Size(906, 46);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // textBox1
@@ -145,12 +146,12 @@ partial class FormNhapKho
         textBox1.PlaceholderText = "Tìm sản phẩm...";
         textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
         textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-        textBox1.Size = new System.Drawing.Size(273, 27);
+        textBox1.Size = new System.Drawing.Size(640, 27);
         textBox1.TabIndex = 0;
         // 
         // button1
         // 
-        button1.Location = new System.Drawing.Point(282, 3);
+        button1.Location = new System.Drawing.Point(649, 3);
         button1.Name = "button1";
         button1.Size = new System.Drawing.Size(106, 27);
         button1.TabIndex = 1;
@@ -272,17 +273,6 @@ partial class FormNhapKho
         label4.Text = "Mã Sản Phẩm";
         label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // dataGridView1
-        // 
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-        dataGridView1.Location = new System.Drawing.Point(3, 3);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(643, 505);
-        dataGridView1.TabIndex = 3;
-        dataGridView1.Text = "dataGridView1";
-        // 
         // label5
         // 
         label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -337,6 +327,17 @@ partial class FormNhapKho
         button2.Text = "Xác Nhận";
         button2.UseVisualStyleBackColor = true;
         // 
+        // dataGridView1
+        // 
+        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+        dataGridView1.Location = new System.Drawing.Point(3, 3);
+        dataGridView1.Name = "dataGridView1";
+        dataGridView1.RowHeadersWidth = 51;
+        dataGridView1.Size = new System.Drawing.Size(643, 505);
+        dataGridView1.TabIndex = 3;
+        dataGridView1.Text = "dataGridView1";
+        // 
         // FormNhapKho
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -358,9 +359,9 @@ partial class FormNhapKho
         tableLayoutPanel6.ResumeLayout(false);
         tableLayoutPanel7.ResumeLayout(false);
         tableLayoutPanel7.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
         ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
     }
 
