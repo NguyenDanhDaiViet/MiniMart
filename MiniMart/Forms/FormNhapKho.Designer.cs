@@ -177,6 +177,7 @@ partial class FormNhapKho
         // 
         // groupBox1
         // 
+        groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         groupBox1.Controls.Add(tableLayoutPanel5);
         groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         groupBox1.Location = new System.Drawing.Point(652, 3);
