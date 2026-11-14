@@ -11,7 +11,7 @@ public class CoSoDuLieu : DbContext
 
     public static string DbPath => Path.Combine(Folder, "minimart.db");
 
-    // Mỗi DbSet là một bảng (tên bảng giữ nguyên như bản SQL cũ)
+    // Mỗi DbSet là một bảng 
     public DbSet<NguoiDung> NguoiDungs => Set<NguoiDung>();
     public DbSet<SanPham> SanPhams => Set<SanPham>();
     public DbSet<HoaDon> HoaDons => Set<HoaDon>();
@@ -24,12 +24,12 @@ public class CoSoDuLieu : DbContext
         options.UseSqlite($"Data Source={DbPath}");
     }
 
-    // SQLite không có kiểu decimal thật: lưu decimal dưới dạng REAL (giống schema cũ)
+    // quy ước chuyển đổi kiểu dữ liệu decimal sang double
     protected override void ConfigureConventions(ModelConfigurationBuilder builder)
     {
         builder.Properties<decimal>().HaveConversion<double>();
     }
-
+    // cấu hình cấu trúc các bảng, khóa chính, khóa ngoại, ràng buộc dữ liệu và dữ liệu mẫu
     protected override void OnModelCreating(ModelBuilder mb)
     {
         mb.Entity<NguoiDung>(e =>
@@ -54,7 +54,7 @@ public class CoSoDuLieu : DbContext
         {
             e.ToTable("ChiTietHoaDon");
             e.HasOne(x => x.HoaDon).WithMany(x => x.Items).HasForeignKey(x => x.IdHoaDon);
-            // Không cho xóa sản phẩm đã phát sinh hóa đơn (giống hành vi cũ)
+            // Không cho xóa sản phẩm đã có sinh hóa đơn 
             e.HasOne<SanPham>().WithMany().HasForeignKey(x => x.IdSanPham).OnDelete(DeleteBehavior.Restrict);
         });
 
@@ -64,26 +64,39 @@ public class CoSoDuLieu : DbContext
             e.HasOne<SanPham>().WithMany().HasForeignKey(x => x.Id).OnDelete(DeleteBehavior.Restrict);
         });
 
-        // Dữ liệu mẫu (chỉ chèn khi database được tạo mới)
+        // Tạo dư liệu mẫu
         var ngay = new DateTime(2026, 1, 1);
 
         mb.Entity<NguoiDung>().HasData(new NguoiDung
         {
-            Id = 1, TenNguoiDung = "admin", MatKhauBam = DichVuTaiKhoan.BamMatKhau("admin123"),
-            TenHienThi = "Quản trị viên", VaiTro = "Admin", DangHoatDong = true, DuocTaoVao = ngay
+            Id = 1, TenNguoiDung = "quanly", MatKhauBam = DichVuTaiKhoan.BamMatKhau("quanly123"),
+            TenHienThi = "Quản Lý", VaiTro = "Quản Lý", DangHoatDong = true, DuocTaoVao = ngay
+        });
+        mb.Entity<NguoiDung>().HasData(new NguoiDung
+        {
+            Id = 2, TenNguoiDung = "nhanvien", MatKhauBam = DichVuTaiKhoan.BamMatKhau("nhanvien123"),
+            TenHienThi = "Nhân Viên A", VaiTro = "Nhân Viên", DangHoatDong = true, DuocTaoVao = ngay
         });
 
         mb.Entity<SanPham>().HasData(
-            new SanPham { Id = 1, Ma = "SP001", Ten = "Nước suối 500ml", DonVi = "Chai", GiaVon = 4000,  GiaBan = 7000,  CoPhan = 50, TonKhoToiThieu = 10 },
-            new SanPham { Id = 2, Ma = "SP002", Ten = "Mì ăn liền",      DonVi = "Gói",  GiaVon = 3500,  GiaBan = 5000,  CoPhan = 80, TonKhoToiThieu = 15 },
-            new SanPham { Id = 3, Ma = "SP003", Ten = "Bánh quy",        DonVi = "Gói",  GiaVon = 12000, GiaBan = 16000, CoPhan = 25, TonKhoToiThieu = 5 },
-            new SanPham { Id = 4, Ma = "SP004", Ten = "Sữa tươi",        DonVi = "Hộp",  GiaVon = 6500,  GiaBan = 9000,  CoPhan = 8,  TonKhoToiThieu = 10 });
+            new SanPham { Id = 1,  Ma = "SP001", Ten = "Nước suối 500ml",       DonVi = "Chai", GiaVon = 4000,  GiaBan = 7000,  CoPhan = 50, TonKhoToiThieu = 10 },
+            new SanPham { Id = 2,  Ma = "SP002", Ten = "Mì ăn liền",            DonVi = "Gói",  GiaVon = 3500,  GiaBan = 5000,  CoPhan = 80, TonKhoToiThieu = 15 },
+            new SanPham { Id = 3,  Ma = "SP003", Ten = "Bánh quy",              DonVi = "Gói",  GiaVon = 12000, GiaBan = 16000, CoPhan = 25, TonKhoToiThieu = 5 },
+            new SanPham { Id = 4,  Ma = "SP004", Ten = "Sữa tươi",              DonVi = "Hộp",  GiaVon = 6500,  GiaBan = 9000,  CoPhan = 8,  TonKhoToiThieu = 10 },
+            new SanPham { Id = 5,  Ma = "SP005", Ten = "Coca Cola 330ml",       DonVi = "Lon",  GiaVon = 7000,  GiaBan = 10000, CoPhan = 40, TonKhoToiThieu = 10 },
+            new SanPham { Id = 6,  Ma = "SP006", Ten = "Pepsi 330ml",           DonVi = "Lon",  GiaVon = 7000,  GiaBan = 10000, CoPhan = 35, TonKhoToiThieu = 10 },
+            new SanPham { Id = 7,  Ma = "SP007", Ten = "Trà xanh 0 độ",         DonVi = "Chai", GiaVon = 8000,  GiaBan = 12000, CoPhan = 30, TonKhoToiThieu = 10 },
+            new SanPham { Id = 8,  Ma = "SP008", Ten = "Bánh Oreo",             DonVi = "Gói",  GiaVon = 9000,  GiaBan = 13000, CoPhan = 25, TonKhoToiThieu = 8 },
+            new SanPham { Id = 9,  Ma = "SP009", Ten = "Bánh Chocopie",         DonVi = "Hộp",  GiaVon = 25000, GiaBan = 32000, CoPhan = 20, TonKhoToiThieu = 5 },
+            new SanPham { Id = 10, Ma = "SP010", Ten = "Sữa đặc Ông Thọ",       DonVi = "Lon",  GiaVon = 18000, GiaBan = 23000, CoPhan = 15, TonKhoToiThieu = 5 },
+            new SanPham { Id = 11, Ma = "SP011", Ten = "Nước tăng lực Red Bull",DonVi = "Lon",  GiaVon = 9000,  GiaBan = 13000, CoPhan = 30, TonKhoToiThieu = 10 },
+            new SanPham { Id = 12, Ma = "SP012", Ten = "Khăn giấy",             DonVi = "Gói",  GiaVon = 5000,  GiaBan = 8000,  CoPhan = 50, TonKhoToiThieu = 10 },
+            new SanPham { Id = 13, Ma = "SP013", Ten = "Mì Hảo Hảo",            DonVi = "Gói",  GiaVon = 3500,  GiaBan = 5000,  CoPhan = 100,TonKhoToiThieu = 20 },
+            new SanPham {Id = 14,  Ma = "SP014", Ten = "Nước rửa chén",         DonVi = "Chai", GiaVon = 15000, GiaBan = 20000, CoPhan = 20, TonKhoToiThieu = 5 });
     }
 
-    /// <summary>
-    /// Gọi một lần khi khởi động app. Nếu file database cũ có cấu trúc bảng không khớp model hiện tại
-    /// (vd. tạo từ bản SQL cũ), file cũ được đổi tên thành minimart_cu_*.db và database mới được tạo lại.
-    /// </summary>
+    
+    /// Gọi một lần khi khởi động app
     public static void KhoiTao()
     {
         using (var db = new CoSoDuLieu())
@@ -100,7 +113,7 @@ public class CoSoDuLieu : DbContext
         moi.Database.EnsureCreated();
     }
 
-    /// <summary>Kiểm tra mọi bảng trong file .db có đủ cột của model và không có cột bắt buộc thừa.</summary>
+   //Kiểm tra mọi bảng trong file .db có đủ cột của model và không có cột bắt buộc thừa
     private static bool SchemaHopLe(CoSoDuLieu db)
     {
         var conn = db.Database.GetDbConnection();
