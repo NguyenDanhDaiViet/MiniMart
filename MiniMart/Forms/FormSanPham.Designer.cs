@@ -31,535 +31,380 @@ partial class FormSanPham
     /// </summary>
     private void InitializeComponent()
     {
+        pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+        panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-        pnlHeader = new System.Windows.Forms.Panel();
-        lblTitle = new System.Windows.Forms.Label();
-        pnlTimKiem = new System.Windows.Forms.Panel();
+        dataGridView1 = new System.Windows.Forms.DataGridView();
+        tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+        tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+        label1 = new System.Windows.Forms.Label();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
         btnTimKiem = new System.Windows.Forms.Button();
         textBox1 = new System.Windows.Forms.TextBox();
-        tableLayoutPanelThongTin = new System.Windows.Forms.TableLayoutPanel();
-        tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-        panel1 = new System.Windows.Forms.Panel();
-        lblMaSP = new System.Windows.Forms.Label();
-        panel2 = new System.Windows.Forms.Panel();
-        txtMaSP = new System.Windows.Forms.TextBox();
-        pnlTenSP = new System.Windows.Forms.Panel();
-        lblTenSanPham = new System.Windows.Forms.Label();
-        panel4 = new System.Windows.Forms.Panel();
+        tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+        tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+        label2 = new System.Windows.Forms.Label();
+        label3 = new System.Windows.Forms.Label();
+        label4 = new System.Windows.Forms.Label();
+        label5 = new System.Windows.Forms.Label();
+        label6 = new System.Windows.Forms.Label();
+        label7 = new System.Windows.Forms.Label();
+        label8 = new System.Windows.Forms.Label();
         textBox2 = new System.Windows.Forms.TextBox();
-        pnlDonVi = new System.Windows.Forms.Panel();
-        lblDonVi = new System.Windows.Forms.Label();
-        panel3 = new System.Windows.Forms.Panel();
-        txtDonVi = new System.Windows.Forms.TextBox();
-        pnlGiaNhap = new System.Windows.Forms.Panel();
-        lblGiaNhap = new System.Windows.Forms.Label();
-        panel6 = new System.Windows.Forms.Panel();
-        nudGiaNhap = new System.Windows.Forms.NumericUpDown();
-        pnlTonKho = new System.Windows.Forms.Panel();
-        lblTonKho = new System.Windows.Forms.Label();
-        panel5 = new System.Windows.Forms.Panel();
-        nudTonKho = new System.Windows.Forms.NumericUpDown();
-        panel9 = new System.Windows.Forms.Panel();
-        lblTonToiThieu = new System.Windows.Forms.Label();
-        panel10 = new System.Windows.Forms.Panel();
-        nudTonToiThieu = new System.Windows.Forms.NumericUpDown();
-        tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-        pnlMoi = new System.Windows.Forms.Panel();
-        btnMoi = new System.Windows.Forms.Button();
-        pnlLuu = new System.Windows.Forms.Panel();
+        textBox3 = new System.Windows.Forms.TextBox();
+        textBox4 = new System.Windows.Forms.TextBox();
+        textBox5 = new System.Windows.Forms.TextBox();
+        numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+        numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+        numericUpDown3 = new System.Windows.Forms.NumericUpDown();
         button2 = new System.Windows.Forms.Button();
-        pnlXoa = new System.Windows.Forms.Panel();
-        btnXoa = new System.Windows.Forms.Button();
-        pnlSanPham = new System.Windows.Forms.Panel();
-        dgvSanPham = new System.Windows.Forms.DataGridView();
-        pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-        tableLayoutPanel1.SuspendLayout();
-        pnlHeader.SuspendLayout();
-        pnlTimKiem.SuspendLayout();
-        tableLayoutPanel4.SuspendLayout();
-        tableLayoutPanelThongTin.SuspendLayout();
-        tableLayoutPanel3.SuspendLayout();
+        button3 = new System.Windows.Forms.Button();
+        button4 = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
-        panel2.SuspendLayout();
-        pnlTenSP.SuspendLayout();
-        panel4.SuspendLayout();
-        pnlDonVi.SuspendLayout();
-        panel3.SuspendLayout();
-        pnlGiaNhap.SuspendLayout();
-        panel6.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)nudGiaNhap).BeginInit();
-        pnlTonKho.SuspendLayout();
-        panel5.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)nudTonKho).BeginInit();
-        panel9.SuspendLayout();
-        panel10.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)nudTonToiThieu).BeginInit();
+        tableLayoutPanel1.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         tableLayoutPanel2.SuspendLayout();
-        pnlMoi.SuspendLayout();
-        pnlLuu.SuspendLayout();
-        pnlXoa.SuspendLayout();
-        pnlSanPham.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
+        tableLayoutPanel3.SuspendLayout();
+        tableLayoutPanel4.SuspendLayout();
+        tableLayoutPanel5.SuspendLayout();
+        tableLayoutPanel6.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
         SuspendLayout();
+        // 
+        // panel1
+        // 
+        panel1.Controls.Add(tableLayoutPanel1);
+        panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+        panel1.Location = new System.Drawing.Point(0, 0);
+        panel1.Name = "panel1";
+        panel1.Size = new System.Drawing.Size(1178, 644);
+        panel1.TabIndex = 0;
         // 
         // tableLayoutPanel1
         // 
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel1.Controls.Add(pnlHeader, 0, 0);
-        tableLayoutPanel1.Controls.Add(pnlTimKiem, 0, 1);
-        tableLayoutPanel1.Controls.Add(tableLayoutPanelThongTin, 0, 2);
-        tableLayoutPanel1.Controls.Add(pnlSanPham, 0, 3);
+        tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel1.Controls.Add(dataGridView1, 0, 2);
+        tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
+        tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 1);
         tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
-        tableLayoutPanel1.RowCount = 4;
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.7451F));
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.2549F));
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 156F));
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 334F));
+        tableLayoutPanel1.RowCount = 3;
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.038216F));
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.961784F));
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 329F));
         tableLayoutPanel1.Size = new System.Drawing.Size(1178, 644);
         tableLayoutPanel1.TabIndex = 0;
         // 
-        // pnlHeader
+        // dataGridView1
         // 
-        pnlHeader.Controls.Add(lblTitle);
-        pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlHeader.Location = new System.Drawing.Point(3, 3);
-        pnlHeader.Name = "pnlHeader";
-        pnlHeader.Size = new System.Drawing.Size(1172, 90);
-        pnlHeader.TabIndex = 0;
+        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+        dataGridView1.Location = new System.Drawing.Point(3, 317);
+        dataGridView1.Name = "dataGridView1";
+        dataGridView1.RowHeadersWidth = 62;
+        dataGridView1.Size = new System.Drawing.Size(1172, 324);
+        dataGridView1.TabIndex = 0;
+        dataGridView1.Text = "dataGridView1";
         // 
-        // lblTitle
+        // tableLayoutPanel2
         // 
-        lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblTitle.AutoSize = true;
-        lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTitle.ForeColor = System.Drawing.Color.Black;
-        lblTitle.Location = new System.Drawing.Point(30, 25);
-        lblTitle.Name = "lblTitle";
-        lblTitle.Size = new System.Drawing.Size(421, 54);
-        lblTitle.TabIndex = 0;
-        lblTitle.Text = "QUẢN LÝ SẢN PHẨM";
+        tableLayoutPanel2.ColumnCount = 1;
+        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel2.Controls.Add(label1, 0, 0);
+        tableLayoutPanel2.Controls.Add(tableLayoutPanel4, 0, 1);
+        tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+        tableLayoutPanel2.Name = "tableLayoutPanel2";
+        tableLayoutPanel2.RowCount = 2;
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.617645F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.382355F));
+        tableLayoutPanel2.Size = new System.Drawing.Size(1172, 126);
+        tableLayoutPanel2.TabIndex = 1;
         // 
-        // pnlTimKiem
+        // tableLayoutPanel3
         // 
-        pnlTimKiem.Controls.Add(tableLayoutPanel4);
-        pnlTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlTimKiem.Location = new System.Drawing.Point(3, 99);
-        pnlTimKiem.Name = "pnlTimKiem";
-        pnlTimKiem.Size = new System.Drawing.Size(1172, 51);
-        pnlTimKiem.TabIndex = 1;
+        tableLayoutPanel3.ColumnCount = 1;
+        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 0);
+        tableLayoutPanel3.Controls.Add(tableLayoutPanel6, 0, 1);
+        tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel3.Location = new System.Drawing.Point(3, 135);
+        tableLayoutPanel3.Name = "tableLayoutPanel3";
+        tableLayoutPanel3.RowCount = 2;
+        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.86364F));
+        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.136364F));
+        tableLayoutPanel3.Size = new System.Drawing.Size(1172, 176);
+        tableLayoutPanel3.TabIndex = 2;
+        // 
+        // label1
+        // 
+        label1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
+        label1.AutoSize = true;
+        label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(3, 17);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(421, 54);
+        label1.TabIndex = 0;
+        label1.Text = "QUẢN LÝ SẢN PHẨM";
         // 
         // tableLayoutPanel4
         // 
         tableLayoutPanel4.ColumnCount = 2;
-        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.6314F));
-        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.3686F));
+        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.3259F));
+        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.674099F));
         tableLayoutPanel4.Controls.Add(btnTimKiem, 1, 0);
         tableLayoutPanel4.Controls.Add(textBox1, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+        tableLayoutPanel4.Location = new System.Drawing.Point(3, 74);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
         tableLayoutPanel4.RowCount = 1;
-        tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.980392F));
-        tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.019608F));
-        tableLayoutPanel4.Size = new System.Drawing.Size(1172, 51);
-        tableLayoutPanel4.TabIndex = 0;
+        tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel4.Size = new System.Drawing.Size(1166, 49);
+        tableLayoutPanel4.TabIndex = 1;
         // 
         // btnTimKiem
         // 
-        btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        btnTimKiem.AutoSize = true;
         btnTimKiem.BackColor = System.Drawing.Color.Gainsboro;
-        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnTimKiem.Location = new System.Drawing.Point(655, 8);
+        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.Location = new System.Drawing.Point(823, 3);
         btnTimKiem.Name = "btnTimKiem";
-        btnTimKiem.Size = new System.Drawing.Size(120, 34);
-        btnTimKiem.TabIndex = 1;
+        btnTimKiem.Size = new System.Drawing.Size(101, 38);
+        btnTimKiem.TabIndex = 0;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
         // 
         // textBox1
         // 
-        textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox1.ForeColor = System.Drawing.Color.Gray;
-        textBox1.Location = new System.Drawing.Point(3, 8);
+        textBox1.Location = new System.Drawing.Point(3, 3);
         textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(646, 34);
-        textBox1.TabIndex = 0;
+        textBox1.Size = new System.Drawing.Size(814, 34);
+        textBox1.TabIndex = 1;
         textBox1.Text = "Tìm theo mã hoặc tên";
         // 
-        // tableLayoutPanelThongTin
+        // tableLayoutPanel5
         // 
-        tableLayoutPanelThongTin.ColumnCount = 1;
-        tableLayoutPanelThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanelThongTin.Controls.Add(tableLayoutPanel3, 0, 0);
-        tableLayoutPanelThongTin.Controls.Add(tableLayoutPanel2, 0, 1);
-        tableLayoutPanelThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanelThongTin.Location = new System.Drawing.Point(3, 156);
-        tableLayoutPanelThongTin.Name = "tableLayoutPanelThongTin";
-        tableLayoutPanelThongTin.RowCount = 2;
-        tableLayoutPanelThongTin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.235294F));
-        tableLayoutPanelThongTin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.764706F));
-        tableLayoutPanelThongTin.Size = new System.Drawing.Size(1172, 150);
-        tableLayoutPanelThongTin.TabIndex = 2;
+        tableLayoutPanel5.ColumnCount = 7;
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.897434F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.10256F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+        tableLayoutPanel5.Controls.Add(numericUpDown3, 6, 1);
+        tableLayoutPanel5.Controls.Add(numericUpDown2, 5, 1);
+        tableLayoutPanel5.Controls.Add(textBox5, 3, 1);
+        tableLayoutPanel5.Controls.Add(textBox4, 2, 1);
+        tableLayoutPanel5.Controls.Add(textBox3, 1, 1);
+        tableLayoutPanel5.Controls.Add(label8, 6, 0);
+        tableLayoutPanel5.Controls.Add(label7, 5, 0);
+        tableLayoutPanel5.Controls.Add(label6, 4, 0);
+        tableLayoutPanel5.Controls.Add(label5, 3, 0);
+        tableLayoutPanel5.Controls.Add(label4, 2, 0);
+        tableLayoutPanel5.Controls.Add(label3, 1, 0);
+        tableLayoutPanel5.Controls.Add(label2, 0, 0);
+        tableLayoutPanel5.Controls.Add(textBox2, 0, 1);
+        tableLayoutPanel5.Controls.Add(numericUpDown1, 4, 1);
+        tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+        tableLayoutPanel5.Name = "tableLayoutPanel5";
+        tableLayoutPanel5.RowCount = 2;
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel5.Size = new System.Drawing.Size(1166, 124);
+        tableLayoutPanel5.TabIndex = 0;
         // 
-        // tableLayoutPanel3
+        // tableLayoutPanel6
         // 
-        tableLayoutPanel3.ColumnCount = 6;
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.91684F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.08316F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
-        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        tableLayoutPanel3.Controls.Add(panel1, 0, 0);
-        tableLayoutPanel3.Controls.Add(panel2, 0, 1);
-        tableLayoutPanel3.Controls.Add(pnlTenSP, 1, 0);
-        tableLayoutPanel3.Controls.Add(panel4, 1, 1);
-        tableLayoutPanel3.Controls.Add(pnlDonVi, 2, 0);
-        tableLayoutPanel3.Controls.Add(panel3, 2, 1);
-        tableLayoutPanel3.Controls.Add(pnlGiaNhap, 3, 0);
-        tableLayoutPanel3.Controls.Add(panel6, 3, 1);
-        tableLayoutPanel3.Controls.Add(pnlTonKho, 4, 0);
-        tableLayoutPanel3.Controls.Add(panel5, 4, 1);
-        tableLayoutPanel3.Controls.Add(panel9, 5, 0);
-        tableLayoutPanel3.Controls.Add(panel10, 5, 1);
-        tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-        tableLayoutPanel3.Name = "tableLayoutPanel3";
-        tableLayoutPanel3.RowCount = 2;
-        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(1166, 88);
-        tableLayoutPanel3.TabIndex = 0;
+        tableLayoutPanel6.ColumnCount = 3;
+        tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.014492F));
+        tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.985508F));
+        tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 889F));
+        tableLayoutPanel6.Controls.Add(button4, 2, 0);
+        tableLayoutPanel6.Controls.Add(button3, 1, 0);
+        tableLayoutPanel6.Controls.Add(button2, 0, 0);
+        tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel6.Location = new System.Drawing.Point(3, 133);
+        tableLayoutPanel6.Name = "tableLayoutPanel6";
+        tableLayoutPanel6.RowCount = 1;
+        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel6.Size = new System.Drawing.Size(1166, 40);
+        tableLayoutPanel6.TabIndex = 1;
         // 
-        // panel1
+        // label2
         // 
-        panel1.Controls.Add(lblMaSP);
-        panel1.Location = new System.Drawing.Point(3, 3);
-        panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(186, 38);
-        panel1.TabIndex = 0;
+        label2.Dock = System.Windows.Forms.DockStyle.Fill;
+        label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label2.Location = new System.Drawing.Point(3, 0);
+        label2.Name = "label2";
+        label2.Size = new System.Drawing.Size(121, 62);
+        label2.TabIndex = 0;
+        label2.Text = "Mã SP";
+        label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // lblMaSP
+        // label3
         // 
-        lblMaSP.AutoSize = true;
-        lblMaSP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblMaSP.Location = new System.Drawing.Point(35, 6);
-        lblMaSP.Name = "lblMaSP";
-        lblMaSP.Size = new System.Drawing.Size(67, 28);
-        lblMaSP.TabIndex = 0;
-        lblMaSP.Text = "Mã SP";
-        lblMaSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label3.Dock = System.Windows.Forms.DockStyle.Fill;
+        label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label3.Location = new System.Drawing.Point(130, 0);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(222, 62);
+        label3.TabIndex = 1;
+        label3.Text = "Tên sản phẩm";
+        label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // panel2
+        // label4
         // 
-        panel2.Controls.Add(txtMaSP);
-        panel2.Location = new System.Drawing.Point(3, 47);
-        panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(186, 38);
-        panel2.TabIndex = 1;
+        label4.Dock = System.Windows.Forms.DockStyle.Fill;
+        label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label4.Location = new System.Drawing.Point(358, 0);
+        label4.Name = "label4";
+        label4.Size = new System.Drawing.Size(104, 62);
+        label4.TabIndex = 2;
+        label4.Text = "Đơn vị";
+        label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // txtMaSP
+        // label5
         // 
-        txtMaSP.Dock = System.Windows.Forms.DockStyle.Fill;
-        txtMaSP.Location = new System.Drawing.Point(0, 0);
-        txtMaSP.Name = "txtMaSP";
-        txtMaSP.Size = new System.Drawing.Size(186, 31);
-        txtMaSP.TabIndex = 0;
+        label5.Dock = System.Windows.Forms.DockStyle.Fill;
+        label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label5.Location = new System.Drawing.Point(468, 0);
+        label5.Name = "label5";
+        label5.Size = new System.Drawing.Size(208, 62);
+        label5.TabIndex = 3;
+        label5.Text = "Giá nhập";
+        label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // pnlTenSP
+        // label6
         // 
-        pnlTenSP.Controls.Add(lblTenSanPham);
-        pnlTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlTenSP.Location = new System.Drawing.Point(195, 3);
-        pnlTenSP.Name = "pnlTenSP";
-        pnlTenSP.Size = new System.Drawing.Size(283, 38);
-        pnlTenSP.TabIndex = 2;
+        label6.Dock = System.Windows.Forms.DockStyle.Fill;
+        label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label6.Location = new System.Drawing.Point(682, 0);
+        label6.Name = "label6";
+        label6.Size = new System.Drawing.Size(122, 62);
+        label6.TabIndex = 4;
+        label6.Text = "Giá bán";
+        label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // lblTenSanPham
+        // label7
         // 
-        lblTenSanPham.AutoSize = true;
-        lblTenSanPham.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTenSanPham.Location = new System.Drawing.Point(3, 6);
-        lblTenSanPham.Name = "lblTenSanPham";
-        lblTenSanPham.Size = new System.Drawing.Size(130, 28);
-        lblTenSanPham.TabIndex = 0;
-        lblTenSanPham.Text = "Tên sản phẩm";
+        label7.Dock = System.Windows.Forms.DockStyle.Fill;
+        label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label7.Location = new System.Drawing.Point(810, 0);
+        label7.Name = "label7";
+        label7.Size = new System.Drawing.Size(171, 62);
+        label7.TabIndex = 5;
+        label7.Text = "Tồn kho";
+        label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // panel4
+        // label8
         // 
-        panel4.Controls.Add(textBox2);
-        panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel4.Location = new System.Drawing.Point(195, 47);
-        panel4.Name = "panel4";
-        panel4.Size = new System.Drawing.Size(283, 38);
-        panel4.TabIndex = 3;
+        label8.Dock = System.Windows.Forms.DockStyle.Fill;
+        label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label8.Location = new System.Drawing.Point(987, 0);
+        label8.Name = "label8";
+        label8.Size = new System.Drawing.Size(176, 62);
+        label8.TabIndex = 6;
+        label8.Text = "Tồn tối thiểu";
+        label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // textBox2
         // 
-        textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-        textBox2.Location = new System.Drawing.Point(0, 0);
+        textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        textBox2.Location = new System.Drawing.Point(3, 77);
         textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(283, 31);
-        textBox2.TabIndex = 0;
+        textBox2.Size = new System.Drawing.Size(121, 31);
+        textBox2.TabIndex = 7;
         // 
-        // pnlDonVi
+        // textBox3
         // 
-        pnlDonVi.Controls.Add(lblDonVi);
-        pnlDonVi.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlDonVi.Location = new System.Drawing.Point(484, 3);
-        pnlDonVi.Name = "pnlDonVi";
-        pnlDonVi.Size = new System.Drawing.Size(130, 38);
-        pnlDonVi.TabIndex = 4;
+        textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        textBox3.Location = new System.Drawing.Point(130, 77);
+        textBox3.Name = "textBox3";
+        textBox3.Size = new System.Drawing.Size(222, 31);
+        textBox3.TabIndex = 8;
         // 
-        // lblDonVi
+        // textBox4
         // 
-        lblDonVi.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblDonVi.AutoSize = true;
-        lblDonVi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblDonVi.Location = new System.Drawing.Point(12, 6);
-        lblDonVi.Name = "lblDonVi";
-        lblDonVi.Size = new System.Drawing.Size(69, 28);
-        lblDonVi.TabIndex = 0;
-        lblDonVi.Text = "Đơn vị";
+        textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        textBox4.Location = new System.Drawing.Point(358, 77);
+        textBox4.Name = "textBox4";
+        textBox4.Size = new System.Drawing.Size(104, 31);
+        textBox4.TabIndex = 9;
         // 
-        // panel3
+        // textBox5
         // 
-        panel3.Controls.Add(txtDonVi);
-        panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel3.Location = new System.Drawing.Point(484, 47);
-        panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(130, 38);
-        panel3.TabIndex = 5;
+        textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        textBox5.Location = new System.Drawing.Point(468, 77);
+        textBox5.Name = "textBox5";
+        textBox5.Size = new System.Drawing.Size(208, 31);
+        textBox5.TabIndex = 10;
         // 
-        // txtDonVi
+        // numericUpDown1
         // 
-        txtDonVi.Dock = System.Windows.Forms.DockStyle.Fill;
-        txtDonVi.Location = new System.Drawing.Point(0, 0);
-        txtDonVi.Name = "txtDonVi";
-        txtDonVi.Size = new System.Drawing.Size(130, 31);
-        txtDonVi.TabIndex = 0;
+        numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        numericUpDown1.Location = new System.Drawing.Point(682, 77);
+        numericUpDown1.Name = "numericUpDown1";
+        numericUpDown1.Size = new System.Drawing.Size(122, 31);
+        numericUpDown1.TabIndex = 11;
         // 
-        // pnlGiaNhap
+        // numericUpDown2
         // 
-        pnlGiaNhap.Controls.Add(lblGiaNhap);
-        pnlGiaNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlGiaNhap.Location = new System.Drawing.Point(620, 3);
-        pnlGiaNhap.Name = "pnlGiaNhap";
-        pnlGiaNhap.Size = new System.Drawing.Size(193, 38);
-        pnlGiaNhap.TabIndex = 6;
+        numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        numericUpDown2.Location = new System.Drawing.Point(810, 77);
+        numericUpDown2.Name = "numericUpDown2";
+        numericUpDown2.Size = new System.Drawing.Size(171, 31);
+        numericUpDown2.TabIndex = 12;
         // 
-        // lblGiaNhap
+        // numericUpDown3
         // 
-        lblGiaNhap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblGiaNhap.AutoSize = true;
-        lblGiaNhap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblGiaNhap.Location = new System.Drawing.Point(6, 6);
-        lblGiaNhap.Name = "lblGiaNhap";
-        lblGiaNhap.Size = new System.Drawing.Size(90, 28);
-        lblGiaNhap.TabIndex = 0;
-        lblGiaNhap.Text = "Giá nhập";
-        // 
-        // panel6
-        // 
-        panel6.Controls.Add(nudGiaNhap);
-        panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel6.Location = new System.Drawing.Point(620, 47);
-        panel6.Name = "panel6";
-        panel6.Size = new System.Drawing.Size(193, 38);
-        panel6.TabIndex = 7;
-        // 
-        // nudGiaNhap
-        // 
-        nudGiaNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-        nudGiaNhap.Location = new System.Drawing.Point(0, 0);
-        nudGiaNhap.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
-        nudGiaNhap.Name = "nudGiaNhap";
-        nudGiaNhap.Size = new System.Drawing.Size(193, 31);
-        nudGiaNhap.TabIndex = 0;
-        nudGiaNhap.ThousandsSeparator = true;
-        // 
-        // pnlTonKho
-        // 
-        pnlTonKho.Controls.Add(lblTonKho);
-        pnlTonKho.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlTonKho.Location = new System.Drawing.Point(819, 3);
-        pnlTonKho.Name = "pnlTonKho";
-        pnlTonKho.Size = new System.Drawing.Size(137, 38);
-        pnlTonKho.TabIndex = 8;
-        // 
-        // lblTonKho
-        // 
-        lblTonKho.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblTonKho.AutoSize = true;
-        lblTonKho.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTonKho.Location = new System.Drawing.Point(6, 6);
-        lblTonKho.Name = "lblTonKho";
-        lblTonKho.Size = new System.Drawing.Size(83, 28);
-        lblTonKho.TabIndex = 0;
-        lblTonKho.Text = "Tồn kho";
-        // 
-        // panel5
-        // 
-        panel5.Controls.Add(nudTonKho);
-        panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel5.Location = new System.Drawing.Point(819, 47);
-        panel5.Name = "panel5";
-        panel5.Size = new System.Drawing.Size(137, 38);
-        panel5.TabIndex = 9;
-        // 
-        // nudTonKho
-        // 
-        nudTonKho.Dock = System.Windows.Forms.DockStyle.Fill;
-        nudTonKho.Location = new System.Drawing.Point(0, 0);
-        nudTonKho.Name = "nudTonKho";
-        nudTonKho.Size = new System.Drawing.Size(137, 31);
-        nudTonKho.TabIndex = 0;
-        // 
-        // panel9
-        // 
-        panel9.Controls.Add(lblTonToiThieu);
-        panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel9.Location = new System.Drawing.Point(962, 3);
-        panel9.Name = "panel9";
-        panel9.Size = new System.Drawing.Size(201, 38);
-        panel9.TabIndex = 12;
-        // 
-        // lblTonToiThieu
-        // 
-        lblTonToiThieu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblTonToiThieu.AutoSize = true;
-        lblTonToiThieu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTonToiThieu.Location = new System.Drawing.Point(6, 6);
-        lblTonToiThieu.Name = "lblTonToiThieu";
-        lblTonToiThieu.Size = new System.Drawing.Size(123, 28);
-        lblTonToiThieu.TabIndex = 0;
-        lblTonToiThieu.Text = "Tồn tối thiểu";
-        // 
-        // panel10
-        // 
-        panel10.Controls.Add(nudTonToiThieu);
-        panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel10.Location = new System.Drawing.Point(962, 47);
-        panel10.Name = "panel10";
-        panel10.Size = new System.Drawing.Size(201, 38);
-        panel10.TabIndex = 13;
-        // 
-        // nudTonToiThieu
-        // 
-        nudTonToiThieu.Dock = System.Windows.Forms.DockStyle.Fill;
-        nudTonToiThieu.Location = new System.Drawing.Point(0, 0);
-        nudTonToiThieu.Name = "nudTonToiThieu";
-        nudTonToiThieu.Size = new System.Drawing.Size(201, 31);
-        nudTonToiThieu.TabIndex = 0;
-        // 
-        // tableLayoutPanel2
-        // 
-        tableLayoutPanel2.ColumnCount = 3;
-        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.836502F));
-        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.163498F));
-        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 902F));
-        tableLayoutPanel2.Controls.Add(pnlMoi, 0, 0);
-        tableLayoutPanel2.Controls.Add(pnlLuu, 1, 0);
-        tableLayoutPanel2.Controls.Add(pnlXoa, 2, 0);
-        tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel2.Location = new System.Drawing.Point(3, 97);
-        tableLayoutPanel2.Name = "tableLayoutPanel2";
-        tableLayoutPanel2.RowCount = 1;
-        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel2.Size = new System.Drawing.Size(1166, 50);
-        tableLayoutPanel2.TabIndex = 1;
-        // 
-        // pnlMoi
-        // 
-        pnlMoi.Controls.Add(btnMoi);
-        pnlMoi.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlMoi.Location = new System.Drawing.Point(3, 3);
-        pnlMoi.Name = "pnlMoi";
-        pnlMoi.Size = new System.Drawing.Size(154, 44);
-        pnlMoi.TabIndex = 0;
-        // 
-        // btnMoi
-        // 
-        btnMoi.BackColor = System.Drawing.Color.Gainsboro;
-        btnMoi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnMoi.Location = new System.Drawing.Point(41, 0);
-        btnMoi.Name = "btnMoi";
-        btnMoi.Size = new System.Drawing.Size(90, 42);
-        btnMoi.TabIndex = 0;
-        btnMoi.Text = "Mới";
-        btnMoi.UseVisualStyleBackColor = false;
-        // 
-        // pnlLuu
-        // 
-        pnlLuu.Controls.Add(button2);
-        pnlLuu.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlLuu.Location = new System.Drawing.Point(163, 3);
-        pnlLuu.Name = "pnlLuu";
-        pnlLuu.Size = new System.Drawing.Size(97, 44);
-        pnlLuu.TabIndex = 1;
+        numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        numericUpDown3.Location = new System.Drawing.Point(987, 77);
+        numericUpDown3.Name = "numericUpDown3";
+        numericUpDown3.Size = new System.Drawing.Size(176, 31);
+        numericUpDown3.TabIndex = 13;
         // 
         // button2
         // 
-        button2.BackColor = System.Drawing.Color.Gainsboro;
-        button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button2.Location = new System.Drawing.Point(0, 0);
+        button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+        button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        button2.Location = new System.Drawing.Point(26, 4);
         button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(90, 42);
+        button2.Size = new System.Drawing.Size(75, 32);
         button2.TabIndex = 0;
-        button2.Text = "Lưu";
-        button2.UseVisualStyleBackColor = false;
+        button2.Text = "Mới";
+        button2.UseVisualStyleBackColor = true;
         // 
-        // pnlXoa
+        // button3
         // 
-        pnlXoa.Controls.Add(btnXoa);
-        pnlXoa.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlXoa.Location = new System.Drawing.Point(266, 3);
-        pnlXoa.Name = "pnlXoa";
-        pnlXoa.Size = new System.Drawing.Size(897, 44);
-        pnlXoa.TabIndex = 2;
+        button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+        button3.Location = new System.Drawing.Point(164, 4);
+        button3.Name = "button3";
+        button3.Size = new System.Drawing.Size(75, 32);
+        button3.TabIndex = 1;
+        button3.Text = "Lưu";
+        button3.UseVisualStyleBackColor = true;
         // 
-        // btnXoa
+        // button4
         // 
-        btnXoa.BackColor = System.Drawing.Color.Gainsboro;
-        btnXoa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnXoa.Location = new System.Drawing.Point(10, 0);
-        btnXoa.Name = "btnXoa";
-        btnXoa.Size = new System.Drawing.Size(90, 42);
-        btnXoa.TabIndex = 0;
-        btnXoa.Text = "Xóa";
-        btnXoa.UseVisualStyleBackColor = false;
-        // 
-        // pnlSanPham
-        // 
-        pnlSanPham.Controls.Add(dgvSanPham);
-        pnlSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlSanPham.Location = new System.Drawing.Point(3, 312);
-        pnlSanPham.Name = "pnlSanPham";
-        pnlSanPham.Size = new System.Drawing.Size(1172, 329);
-        pnlSanPham.TabIndex = 3;
-        // 
-        // dgvSanPham
-        // 
-        dgvSanPham.AllowUserToAddRows = false;
-        dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        dgvSanPham.BackgroundColor = System.Drawing.Color.White;
-        dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvSanPham.Location = new System.Drawing.Point(0, 0);
-        dgvSanPham.Name = "dgvSanPham";
-        dgvSanPham.ReadOnly = true;
-        dgvSanPham.RowHeadersVisible = false;
-        dgvSanPham.RowHeadersWidth = 62;
-        dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvSanPham.Size = new System.Drawing.Size(1172, 329);
-        dgvSanPham.TabIndex = 0;
-        dgvSanPham.Text = "dataGridView1";
+        button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        button4.Location = new System.Drawing.Point(279, 4);
+        button4.Name = "button4";
+        button4.Size = new System.Drawing.Size(75, 32);
+        button4.TabIndex = 2;
+        button4.Text = "Xóa";
+        button4.UseVisualStyleBackColor = true;
         // 
         // FormSanPham
         // 
@@ -567,136 +412,74 @@ partial class FormSanPham
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.WhiteSmoke;
         ClientSize = new System.Drawing.Size(1178, 644);
-        Controls.Add(tableLayoutPanel1);
+        Controls.Add(panel1);
         MinimumSize = new System.Drawing.Size(1200, 700);
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "MiniMart - Quản lý sản phẩm";
         WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        panel1.ResumeLayout(false);
         tableLayoutPanel1.ResumeLayout(false);
-        pnlHeader.ResumeLayout(false);
-        pnlHeader.PerformLayout();
-        pnlTimKiem.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        tableLayoutPanel2.ResumeLayout(false);
+        tableLayoutPanel2.PerformLayout();
+        tableLayoutPanel3.ResumeLayout(false);
         tableLayoutPanel4.ResumeLayout(false);
         tableLayoutPanel4.PerformLayout();
-        tableLayoutPanelThongTin.ResumeLayout(false);
-        tableLayoutPanel3.ResumeLayout(false);
-        panel1.ResumeLayout(false);
-        panel1.PerformLayout();
-        panel2.ResumeLayout(false);
-        panel2.PerformLayout();
-        pnlTenSP.ResumeLayout(false);
-        pnlTenSP.PerformLayout();
-        panel4.ResumeLayout(false);
-        panel4.PerformLayout();
-        pnlDonVi.ResumeLayout(false);
-        pnlDonVi.PerformLayout();
-        panel3.ResumeLayout(false);
-        panel3.PerformLayout();
-        pnlGiaNhap.ResumeLayout(false);
-        pnlGiaNhap.PerformLayout();
-        panel6.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)nudGiaNhap).EndInit();
-        pnlTonKho.ResumeLayout(false);
-        pnlTonKho.PerformLayout();
-        panel5.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)nudTonKho).EndInit();
-        panel9.ResumeLayout(false);
-        panel9.PerformLayout();
-        panel10.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)nudTonToiThieu).EndInit();
-        tableLayoutPanel2.ResumeLayout(false);
-        pnlMoi.ResumeLayout(false);
-        pnlLuu.ResumeLayout(false);
-        pnlXoa.ResumeLayout(false);
-        pnlSanPham.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
+        tableLayoutPanel5.ResumeLayout(false);
+        tableLayoutPanel5.PerformLayout();
+        tableLayoutPanel6.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+        ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.Button button4;
 
-    private System.Windows.Forms.DataGridView dgvSanPham;
-
-    private System.Windows.Forms.Panel pnlSanPham;
-
-    private System.Windows.Forms.Button btnXoa;
-
+    private System.Windows.Forms.NumericUpDown numericUpDown2;
+    private System.Windows.Forms.NumericUpDown numericUpDown3;
     private System.Windows.Forms.Button button2;
 
-    private System.Windows.Forms.Button btnMoi;
+    private System.Windows.Forms.TextBox textBox4;
+    private System.Windows.Forms.TextBox textBox5;
+    private System.Windows.Forms.NumericUpDown numericUpDown1;
 
-    private System.Windows.Forms.Panel pnlXoa;
+    private System.Windows.Forms.TextBox textBox3;
 
-    private System.Windows.Forms.Panel pnlLuu;
-
-    private System.Windows.Forms.Panel pnlMoi;
-
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-
-    private System.Windows.Forms.NumericUpDown nudTonToiThieu;
-
-    private System.Windows.Forms.Label lblTonToiThieu;
-
-    private System.Windows.Forms.Panel panel10;
-
-    private System.Windows.Forms.Panel panel9;
-
-    private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-
-    private System.Windows.Forms.Label lblGiaNhap;
-
-    private System.Windows.Forms.NumericUpDown nudTonKho;
-
-    private System.Windows.Forms.Panel panel5;
-
-    private System.Windows.Forms.Panel pnlGiaNhap;
-
-    private System.Windows.Forms.NumericUpDown nudGiaNhap;
-
-    private System.Windows.Forms.Panel panel6;
-
-    private System.Windows.Forms.Label lblTonKho;
-
-    private System.Windows.Forms.Panel pnlTonKho;
-
-    private System.Windows.Forms.TextBox txtDonVi;
-
-    private System.Windows.Forms.Panel panel3;
-
-    private System.Windows.Forms.Label lblTenSanPham;
-
-    private System.Windows.Forms.Panel pnlDonVi;
-
+    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label label6;
+    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Label label8;
     private System.Windows.Forms.TextBox textBox2;
 
-    private System.Windows.Forms.Panel panel4;
+    private System.Windows.Forms.Label label2;
 
-    private System.Windows.Forms.Label lblDonVi;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
 
-    private System.Windows.Forms.Panel pnlTenSP;
+    private System.Windows.Forms.Button btnTimKiem;
+    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
-    private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.TextBox txtMaSP;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
-    private System.Windows.Forms.Panel panel1;
+    private System.Windows.Forms.Label label1;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanelThongTin;
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 
-    private System.Windows.Forms.Button btnTimKiem;
-
-    private System.Windows.Forms.TextBox textBox1;
-
-    private System.Windows.Forms.Panel pnlTimKiem;
-
-    private System.Windows.Forms.Label lblTitle;
-
-    private System.Windows.Forms.Label lblMaSP;
-
-    private System.Windows.Forms.Panel pnlHeader;
+    private System.Windows.Forms.DataGridView dataGridView1;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+
+    private System.Windows.Forms.Panel panel1;
+
+    private System.Windows.Forms.DataGridView dgvSanPham;
+
+    private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
 
     #endregion
 }

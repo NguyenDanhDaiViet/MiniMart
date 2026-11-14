@@ -31,306 +31,251 @@ partial class FormBanHang
     /// </summary>
     private void InitializeComponent()
     {
+        tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+        tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+        panel1 = new System.Windows.Forms.Panel();
+        lblDanhSachSP = new System.Windows.Forms.Label();
+        panel2 = new System.Windows.Forms.Panel();
+        lblGioHang = new System.Windows.Forms.Label();
+        tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+        pnlTimKiem = new System.Windows.Forms.Panel();
+        btnTimKiem = new System.Windows.Forms.Button();
+        txtTimKiem = new System.Windows.Forms.TextBox();
+        panel3 = new System.Windows.Forms.Panel();
+        dgvSanPham = new System.Windows.Forms.DataGridView();
         pnlHeader = new System.Windows.Forms.Panel();
         lblTitle = new System.Windows.Forms.Label();
-        lblDanhSach = new System.Windows.Forms.Label();
-        txtTimKiem = new System.Windows.Forms.TextBox();
-        btnTimKiem = new System.Windows.Forms.Button();
-        dgvSanPham = new System.Windows.Forms.DataGridView();
-        lblGioHang = new System.Windows.Forms.Label();
-        dgvGioHang = new System.Windows.Forms.DataGridView();
-        labelSoLuong = new System.Windows.Forms.Label();
-        nudSoLuong = new System.Windows.Forms.NumericUpDown();
-        lblGiamGiaDong = new System.Windows.Forms.Label();
-        nudGiamGiaDong = new System.Windows.Forms.NumericUpDown();
-        btnCapNhat = new System.Windows.Forms.Button();
-        btnBoDong = new System.Windows.Forms.Button();
-        lblGiamGiaHoaDon = new System.Windows.Forms.Label();
-        nudGiamGiaHoaDon = new System.Windows.Forms.NumericUpDown();
-        lblKhachDua = new System.Windows.Forms.Label();
-        txtTienKhachDua = new System.Windows.Forms.TextBox();
-        lblTongCong = new System.Windows.Forms.Label();
-        pnlHeader.SuspendLayout();
+        tableLayoutPanel1.SuspendLayout();
+        tableLayoutPanel2.SuspendLayout();
+        panel1.SuspendLayout();
+        panel2.SuspendLayout();
+        tableLayoutPanel3.SuspendLayout();
+        pnlTimKiem.SuspendLayout();
+        panel3.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)nudGiamGiaDong).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).BeginInit();
+        pnlHeader.SuspendLayout();
         SuspendLayout();
+        // 
+        // tableLayoutPanel1
+        // 
+        tableLayoutPanel1.ColumnCount = 1;
+        tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
+        tableLayoutPanel1.Controls.Add(pnlHeader, 0, 0);
+        tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+        tableLayoutPanel1.Name = "tableLayoutPanel1";
+        tableLayoutPanel1.RowCount = 2;
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.680116F));
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.319885F));
+        tableLayoutPanel1.Size = new System.Drawing.Size(1378, 694);
+        tableLayoutPanel1.TabIndex = 0;
+        // 
+        // tableLayoutPanel2
+        // 
+        tableLayoutPanel2.ColumnCount = 2;
+        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.005833F));
+        tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.994167F));
+        tableLayoutPanel2.Controls.Add(panel1, 0, 0);
+        tableLayoutPanel2.Controls.Add(panel2, 1, 0);
+        tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 1);
+        tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel2.Location = new System.Drawing.Point(3, 91);
+        tableLayoutPanel2.Name = "tableLayoutPanel2";
+        tableLayoutPanel2.RowCount = 2;
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.5F));
+        tableLayoutPanel2.Size = new System.Drawing.Size(1372, 600);
+        tableLayoutPanel2.TabIndex = 0;
+        // 
+        // panel1
+        // 
+        panel1.Controls.Add(lblDanhSachSP);
+        panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+        panel1.Location = new System.Drawing.Point(3, 3);
+        panel1.Name = "panel1";
+        panel1.Size = new System.Drawing.Size(488, 39);
+        panel1.TabIndex = 0;
+        // 
+        // lblDanhSachSP
+        // 
+        lblDanhSachSP.AutoSize = true;
+        lblDanhSachSP.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblDanhSachSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblDanhSachSP.Location = new System.Drawing.Point(0, 0);
+        lblDanhSachSP.Name = "lblDanhSachSP";
+        lblDanhSachSP.Size = new System.Drawing.Size(248, 32);
+        lblDanhSachSP.TabIndex = 0;
+        lblDanhSachSP.Text = "Danh sách sản phẩm";
+        // 
+        // panel2
+        // 
+        panel2.Controls.Add(lblGioHang);
+        panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+        panel2.Location = new System.Drawing.Point(497, 3);
+        panel2.Name = "panel2";
+        panel2.Size = new System.Drawing.Size(872, 39);
+        panel2.TabIndex = 1;
+        // 
+        // lblGioHang
+        // 
+        lblGioHang.AutoSize = true;
+        lblGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblGioHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblGioHang.Location = new System.Drawing.Point(0, 0);
+        lblGioHang.Name = "lblGioHang";
+        lblGioHang.Size = new System.Drawing.Size(117, 32);
+        lblGioHang.TabIndex = 0;
+        lblGioHang.Text = "Giỏ hàng";
+        // 
+        // tableLayoutPanel3
+        // 
+        tableLayoutPanel3.ColumnCount = 1;
+        tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.94262F));
+        tableLayoutPanel3.Controls.Add(pnlTimKiem, 0, 0);
+        tableLayoutPanel3.Controls.Add(panel3, 0, 1);
+        tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel3.Location = new System.Drawing.Point(3, 48);
+        tableLayoutPanel3.Name = "tableLayoutPanel3";
+        tableLayoutPanel3.RowCount = 2;
+        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.468124F));
+        tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.531876F));
+        tableLayoutPanel3.Size = new System.Drawing.Size(488, 549);
+        tableLayoutPanel3.TabIndex = 2;
+        // 
+        // pnlTimKiem
+        // 
+        pnlTimKiem.Controls.Add(btnTimKiem);
+        pnlTimKiem.Controls.Add(txtTimKiem);
+        pnlTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+        pnlTimKiem.Location = new System.Drawing.Point(3, 3);
+        pnlTimKiem.Name = "pnlTimKiem";
+        pnlTimKiem.Size = new System.Drawing.Size(482, 35);
+        pnlTimKiem.TabIndex = 0;
+        // 
+        // btnTimKiem
+        // 
+        btnTimKiem.BackColor = System.Drawing.Color.DarkGreen;
+        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.ForeColor = System.Drawing.Color.White;
+        btnTimKiem.Location = new System.Drawing.Point(392, 0);
+        btnTimKiem.Name = "btnTimKiem";
+        btnTimKiem.Size = new System.Drawing.Size(90, 35);
+        btnTimKiem.TabIndex = 1;
+        btnTimKiem.Text = "Tìm";
+        btnTimKiem.UseVisualStyleBackColor = false;
+        // 
+        // txtTimKiem
+        // 
+        txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtTimKiem.Location = new System.Drawing.Point(3, 0);
+        txtTimKiem.Name = "txtTimKiem";
+        txtTimKiem.Size = new System.Drawing.Size(383, 34);
+        txtTimKiem.TabIndex = 0;
+        txtTimKiem.Text = "Nhập mã hoặc tên sản phẩm";
+        // 
+        // panel3
+        // 
+        panel3.Controls.Add(dgvSanPham);
+        panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+        panel3.Location = new System.Drawing.Point(3, 44);
+        panel3.Name = "panel3";
+        panel3.Size = new System.Drawing.Size(482, 502);
+        panel3.TabIndex = 1;
+        // 
+        // dgvSanPham
+        // 
+        dgvSanPham.AllowUserToAddRows = false;
+        dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+        dgvSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
+        dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvSanPham.Location = new System.Drawing.Point(0, 0);
+        dgvSanPham.Name = "dgvSanPham";
+        dgvSanPham.ReadOnly = true;
+        dgvSanPham.RowHeadersWidth = 62;
+        dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+        dgvSanPham.Size = new System.Drawing.Size(482, 502);
+        dgvSanPham.TabIndex = 0;
+        dgvSanPham.Text = "dataGridView1";
         // 
         // pnlHeader
         // 
-        pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         pnlHeader.BackColor = System.Drawing.Color.White;
         pnlHeader.Controls.Add(lblTitle);
-        pnlHeader.Location = new System.Drawing.Point(15, 10);
+        pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+        pnlHeader.Location = new System.Drawing.Point(3, 3);
         pnlHeader.Name = "pnlHeader";
-        pnlHeader.Size = new System.Drawing.Size(1239, 65);
-        pnlHeader.TabIndex = 0;
+        pnlHeader.Size = new System.Drawing.Size(1372, 82);
+        pnlHeader.TabIndex = 1;
         // 
         // lblTitle
         // 
         lblTitle.AutoSize = true;
         lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTitle.ForeColor = System.Drawing.Color.DarkGreen;
-        lblTitle.Location = new System.Drawing.Point(48, 11);
+        lblTitle.Location = new System.Drawing.Point(0, 15);
         lblTitle.Name = "lblTitle";
-        lblTitle.Size = new System.Drawing.Size(203, 46);
+        lblTitle.Size = new System.Drawing.Size(239, 54);
         lblTitle.TabIndex = 0;
         lblTitle.Text = "BÁN HÀNG";
-        // 
-        // lblDanhSach
-        // 
-        lblDanhSach.AutoSize = true;
-        lblDanhSach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblDanhSach.Location = new System.Drawing.Point(20, 90);
-        lblDanhSach.Name = "lblDanhSach";
-        lblDanhSach.Size = new System.Drawing.Size(207, 28);
-        lblDanhSach.TabIndex = 1;
-        lblDanhSach.Text = "Danh sách sán phẩm";
-        // 
-        // txtTimKiem
-        // 
-        txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTimKiem.Location = new System.Drawing.Point(20, 125);
-        txtTimKiem.Name = "txtTimKiem";
-        txtTimKiem.Size = new System.Drawing.Size(342, 30);
-        txtTimKiem.TabIndex = 2;
-        txtTimKiem.Text = "Nhập mã hoặc tên sản phẩm";
-        // 
-        // btnTimKiem
-        // 
-        btnTimKiem.BackColor = System.Drawing.Color.DarkGreen;
-        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnTimKiem.ForeColor = System.Drawing.Color.White;
-        btnTimKiem.Location = new System.Drawing.Point(368, 125);
-        btnTimKiem.Name = "btnTimKiem";
-        btnTimKiem.Size = new System.Drawing.Size(80, 35);
-        btnTimKiem.TabIndex = 3;
-        btnTimKiem.Text = "Tìm";
-        btnTimKiem.UseVisualStyleBackColor = false;
-        // 
-        // dgvSanPham
-        // 
-        dgvSanPham.AllowUserToAddRows = false;
-        dgvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left));
-        dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        dgvSanPham.BackgroundColor = System.Drawing.Color.DarkGray;
-        dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgvSanPham.Location = new System.Drawing.Point(20, 175);
-        dgvSanPham.Name = "dgvSanPham";
-        dgvSanPham.ReadOnly = true;
-        dgvSanPham.RowHeadersWidth = 62;
-        dgvSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvSanPham.Size = new System.Drawing.Size(428, 480);
-        dgvSanPham.TabIndex = 4;
-        dgvSanPham.Text = "dataGridView1";
-        // 
-        // lblGioHang
-        // 
-        lblGioHang.AutoSize = true;
-        lblGioHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblGioHang.Location = new System.Drawing.Point(472, 90);
-        lblGioHang.Name = "lblGioHang";
-        lblGioHang.Size = new System.Drawing.Size(97, 28);
-        lblGioHang.TabIndex = 5;
-        lblGioHang.Text = "Giỏ hàng";
-        // 
-        // dgvGioHang
-        // 
-        dgvGioHang.AllowUserToAddRows = false;
-        dgvGioHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        dgvGioHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        dgvGioHang.BackgroundColor = System.Drawing.Color.White;
-        dgvGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgvGioHang.Location = new System.Drawing.Point(472, 136);
-        dgvGioHang.Name = "dgvGioHang";
-        dgvGioHang.ReadOnly = true;
-        dgvGioHang.RowHeadersWidth = 62;
-        dgvGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvGioHang.Size = new System.Drawing.Size(742, 390);
-        dgvGioHang.TabIndex = 6;
-        dgvGioHang.Text = "dataGridView1";
-        // 
-        // labelSoLuong
-        // 
-        labelSoLuong.Location = new System.Drawing.Point(467, 545);
-        labelSoLuong.Name = "labelSoLuong";
-        labelSoLuong.Size = new System.Drawing.Size(100, 25);
-        labelSoLuong.TabIndex = 7;
-        labelSoLuong.Text = "Số lượng";
-        // 
-        // nudSoLuong
-        // 
-        nudSoLuong.Location = new System.Drawing.Point(472, 575);
-        nudSoLuong.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-        nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-        nudSoLuong.Name = "nudSoLuong";
-        nudSoLuong.Size = new System.Drawing.Size(105, 27);
-        nudSoLuong.TabIndex = 8;
-        nudSoLuong.Value = new decimal(new int[] { 1, 0, 0, 0 });
-        // 
-        // lblGiamGiaDong
-        // 
-        lblGiamGiaDong.Location = new System.Drawing.Point(600, 545);
-        lblGiamGiaDong.Name = "lblGiamGiaDong";
-        lblGiamGiaDong.Size = new System.Drawing.Size(150, 25);
-        lblGiamGiaDong.TabIndex = 9;
-        lblGiamGiaDong.Text = "Giảm giá dòng ";
-        // 
-        // nudGiamGiaDong
-        // 
-        nudGiamGiaDong.Location = new System.Drawing.Point(605, 575);
-        nudGiamGiaDong.Name = "nudGiamGiaDong";
-        nudGiamGiaDong.Size = new System.Drawing.Size(105, 27);
-        nudGiamGiaDong.TabIndex = 10;
-        // 
-        // btnCapNhat
-        // 
-        btnCapNhat.BackColor = System.Drawing.Color.LightGray;
-        btnCapNhat.Location = new System.Drawing.Point(745, 565);
-        btnCapNhat.Name = "btnCapNhat";
-        btnCapNhat.Size = new System.Drawing.Size(120, 40);
-        btnCapNhat.TabIndex = 11;
-        btnCapNhat.Text = "Cập nhật";
-        btnCapNhat.UseVisualStyleBackColor = false;
-        // 
-        // btnBoDong
-        // 
-        btnBoDong.BackColor = System.Drawing.Color.DarkGreen;
-        btnBoDong.ForeColor = System.Drawing.Color.White;
-        btnBoDong.Location = new System.Drawing.Point(880, 565);
-        btnBoDong.Name = "btnBoDong";
-        btnBoDong.Size = new System.Drawing.Size(120, 40);
-        btnBoDong.TabIndex = 12;
-        btnBoDong.Text = "Bỏ dòng";
-        btnBoDong.UseVisualStyleBackColor = false;
-        // 
-        // lblGiamGiaHoaDon
-        // 
-        lblGiamGiaHoaDon.Location = new System.Drawing.Point(472, 625);
-        lblGiamGiaHoaDon.Name = "lblGiamGiaHoaDon";
-        lblGiamGiaHoaDon.Size = new System.Drawing.Size(120, 25);
-        lblGiamGiaHoaDon.TabIndex = 13;
-        lblGiamGiaHoaDon.Text = "Giảm giá (%)";
-        // 
-        // nudGiamGiaHoaDon
-        // 
-        nudGiamGiaHoaDon.Location = new System.Drawing.Point(605, 620);
-        nudGiamGiaHoaDon.Name = "nudGiamGiaHoaDon";
-        nudGiamGiaHoaDon.Size = new System.Drawing.Size(105, 27);
-        nudGiamGiaHoaDon.TabIndex = 14;
-        // 
-        // lblKhachDua
-        // 
-        lblKhachDua.Location = new System.Drawing.Point(745, 625);
-        lblKhachDua.Name = "lblKhachDua";
-        lblKhachDua.Size = new System.Drawing.Size(129, 25);
-        lblKhachDua.TabIndex = 15;
-        lblKhachDua.Text = "Khách đưa (đ)";
-        // 
-        // txtTienKhachDua
-        // 
-        txtTienKhachDua.Location = new System.Drawing.Point(880, 620);
-        txtTienKhachDua.Name = "txtTienKhachDua";
-        txtTienKhachDua.Size = new System.Drawing.Size(120, 27);
-        txtTienKhachDua.TabIndex = 16;
-        txtTienKhachDua.Text = "0";
-        // 
-        // lblTongCong
-        // 
-        lblTongCong.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTongCong.ForeColor = System.Drawing.Color.DarkGreen;
-        lblTongCong.Location = new System.Drawing.Point(1050, 610);
-        lblTongCong.Name = "lblTongCong";
-        lblTongCong.Size = new System.Drawing.Size(300, 50);
-        lblTongCong.TabIndex = 17;
-        lblTongCong.Text = "Tổng cộng: 0đ";
-        lblTongCong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // FormBanHang
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.WhiteSmoke;
-        ClientSize = new System.Drawing.Size(1257, 694);
-        Controls.Add(lblTongCong);
-        Controls.Add(txtTienKhachDua);
-        Controls.Add(lblKhachDua);
-        Controls.Add(nudGiamGiaHoaDon);
-        Controls.Add(lblGiamGiaHoaDon);
-        Controls.Add(btnBoDong);
-        Controls.Add(btnCapNhat);
-        Controls.Add(nudGiamGiaDong);
-        Controls.Add(lblGiamGiaDong);
-        Controls.Add(nudSoLuong);
-        Controls.Add(labelSoLuong);
-        Controls.Add(dgvGioHang);
-        Controls.Add(lblGioHang);
-        Controls.Add(dgvSanPham);
-        Controls.Add(btnTimKiem);
-        Controls.Add(txtTimKiem);
-        Controls.Add(lblDanhSach);
-        Controls.Add(pnlHeader);
-        Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-        MinimumSize = new System.Drawing.Size(1200, 700);
+        ClientSize = new System.Drawing.Size(1378, 694);
+        Controls.Add(tableLayoutPanel1);
+        MinimumSize = new System.Drawing.Size(1100, 650);
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-        Text = "MiniMart - Bán hàng";
+        Text = "FormBanHang";
         WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        tableLayoutPanel1.ResumeLayout(false);
+        tableLayoutPanel2.ResumeLayout(false);
+        panel1.ResumeLayout(false);
+        panel1.PerformLayout();
+        panel2.ResumeLayout(false);
+        panel2.PerformLayout();
+        tableLayoutPanel3.ResumeLayout(false);
+        pnlTimKiem.ResumeLayout(false);
+        pnlTimKiem.PerformLayout();
+        panel3.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
         pnlHeader.ResumeLayout(false);
         pnlHeader.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
-        ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
-        ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
-        ((System.ComponentModel.ISupportInitialize)nudGiamGiaDong).EndInit();
-        ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).EndInit();
         ResumeLayout(false);
-        PerformLayout();
     }
-
-    private System.Windows.Forms.Label lblTongCong;
-
-    private System.Windows.Forms.Label label1;
-
-    private System.Windows.Forms.TextBox txtTienKhachDua;
-
-    private System.Windows.Forms.Label lblKhachDua;
-
-    private System.Windows.Forms.NumericUpDown nudGiamGiaHoaDon;
-
-    private System.Windows.Forms.Label lblGiamGiaHoaDon;
-
-    private System.Windows.Forms.Button btnBoDong;
-
-    private System.Windows.Forms.Button button1;
-
-    private System.Windows.Forms.Button btnCapNhat;
-
-    private System.Windows.Forms.NumericUpDown nudGiamGiaDong;
-
-    private System.Windows.Forms.Label lblGiamGiaDong;
-
-    private System.Windows.Forms.NumericUpDown nudSoLuong;
-
-    private System.Windows.Forms.Label labelSoLuong;
 
     private System.Windows.Forms.DataGridView dgvGioHang;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
-
-    private System.Windows.Forms.Label lblGioHang;
-
     private System.Windows.Forms.DataGridView dgvSanPham;
+
+    private System.Windows.Forms.Panel panel3;
 
     private System.Windows.Forms.Button btnTimKiem;
 
     private System.Windows.Forms.TextBox txtTimKiem;
 
-    private System.Windows.Forms.Label lblDanhSach;
+    private System.Windows.Forms.Panel pnlTimKiem;
+
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+
+    private System.Windows.Forms.Label lblGioHang;
+
+    private System.Windows.Forms.Panel panel2;
+
+    private System.Windows.Forms.Label lblDanhSachSP;
+
+    private System.Windows.Forms.Panel panel1;
 
     private System.Windows.Forms.Label lblTitle;
 
     private System.Windows.Forms.Panel pnlHeader;
+
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+
+    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
     #endregion
 }
