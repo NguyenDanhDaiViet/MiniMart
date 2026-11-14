@@ -6,4 +6,9 @@ public partial class FormQuanLyTaiKhoan : Form
     {
         InitializeComponent();
     }
+
+    private void panel2_Paint(object sender, PaintEventArgs e)
+    {
+        throw new System.NotImplementedException();
+    }
 }
