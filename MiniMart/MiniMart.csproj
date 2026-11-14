@@ -12,6 +12,9 @@
         <Compile Update="**\*.Designer.cs">
             <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('.Designer', '')).cs</DependentUpon>
         </Compile>
+        <Compile Update="Forms\FormBanHang.cs">
+          <SubType>Form</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
