@@ -8,6 +8,6 @@ public class SanPham
     public string DonVi { get; set; } = "Cái";
     public decimal GiaVon { get; set; }   
     public decimal GiaBan { get; set; }
-    public int CoPhan { get; set; }
+    public int TonKho { get; set; }
     public int TonKhoToiThieu { get; set; }
 }
