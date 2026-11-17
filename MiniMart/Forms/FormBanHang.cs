@@ -22,7 +22,6 @@ public partial class FormBanHang : Form
         btnBoDong.Click += XuLyBoDong_Click;
         btnThanhToan.Click += XuLyThanhToan_Click;
         
-        
     }
     
     private void XuLyThemSanPham_Click(Object? sender, EventArgs e) => ThemSanPhamDaChon();
@@ -70,14 +69,21 @@ public partial class FormBanHang : Form
         _cart.RemoveAll(x => x.IdSanPham == id);
     }
     
-    private void XyLyThanhToan_Click(Object? sender, EventArgs e)
+    private void XuLyThanhToan_Click(Object? sender, EventArgs e)
     {
         try
         {
-            decimal KhachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
-            decimal Tong = TinhTongCong();
+            decimal khachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
+            decimal tong = TinhTongCong();
 
-            int id = _sales.ThanhToan(_cart, nudGiamGia.Value, KhachDua);
+            int id = _sales.ThanhToan(_cart, nudGiamGia.Value, khachDua);
+            string hoaDon = _sales.XuatHoaDon(id);
+            MessageBox.Show($"Thanh toán thành công!\nTiền thừa: {khachDua - tong:N0}đ\nHóa đơn: {hoaDon}");
+            
+            _cart.Clear();
+            txtKhachDua.Text = "0";
+            nudGiamGia.Value = 0;
+            
         }
         catch (Exception ex)
         {
@@ -85,5 +91,5 @@ public partial class FormBanHang : Form
         }
     }
 
-    
+    private decimal TinhTongCong() => _cart.Sum(x => x.ThanhTienDong) * (1 - nudGiamGia.Value / 100m);
 }
