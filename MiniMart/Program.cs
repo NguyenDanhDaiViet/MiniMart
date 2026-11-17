@@ -17,7 +17,7 @@ static class Program
 
         using var login = new FormDangNhap();
         if(login.ShowDialog() == DialogResult.OK)
-          Application.Run(new MainForm());
+          Application.Run(new FormQuanLyTaiKhoan());
         
     }
     
