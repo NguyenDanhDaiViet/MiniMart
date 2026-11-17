@@ -47,18 +47,18 @@ partial class FormBanHang
         dataGridView2 = new System.Windows.Forms.DataGridView();
         tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
         lblSoLuong = new System.Windows.Forms.Label();
-        numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+        nudSoLuong = new System.Windows.Forms.NumericUpDown();
         lblGiamGia = new System.Windows.Forms.Label();
-        numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+        nudGiamGia = new System.Windows.Forms.NumericUpDown();
         btnCapNhat = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
+        txtKhachDua = new System.Windows.Forms.TextBox();
         lblTongCong = new System.Windows.Forms.Label();
         lblKhachDua = new System.Windows.Forms.Label();
         tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
         panel2 = new System.Windows.Forms.Panel();
         btnThemVaoGio = new System.Windows.Forms.Button();
         panel3 = new System.Windows.Forms.Panel();
-        button2 = new System.Windows.Forms.Button();
+        btnThanhToan = new System.Windows.Forms.Button();
         btnBoDong = new System.Windows.Forms.Button();
         lblBanHang = new System.Windows.Forms.Label();
         panel1.SuspendLayout();
@@ -72,8 +72,8 @@ partial class FormBanHang
         tableLayoutPanel7.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
         tableLayoutPanel8.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)nudGiamGia).BeginInit();
         tableLayoutPanel9.SuspendLayout();
         panel2.SuspendLayout();
         panel3.SuspendLayout();
@@ -277,11 +277,11 @@ partial class FormBanHang
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
         tableLayoutPanel8.Controls.Add(lblSoLuong, 0, 0);
-        tableLayoutPanel8.Controls.Add(numericUpDown1, 1, 0);
+        tableLayoutPanel8.Controls.Add(nudSoLuong, 1, 0);
         tableLayoutPanel8.Controls.Add(lblGiamGia, 0, 1);
-        tableLayoutPanel8.Controls.Add(numericUpDown2, 1, 1);
+        tableLayoutPanel8.Controls.Add(nudGiamGia, 1, 1);
         tableLayoutPanel8.Controls.Add(btnCapNhat, 2, 0);
-        tableLayoutPanel8.Controls.Add(textBox1, 3, 1);
+        tableLayoutPanel8.Controls.Add(txtKhachDua, 3, 1);
         tableLayoutPanel8.Controls.Add(lblTongCong, 4, 1);
         tableLayoutPanel8.Controls.Add(lblKhachDua, 2, 1);
         tableLayoutPanel8.Controls.Add(tableLayoutPanel9, 4, 0);
@@ -306,13 +306,13 @@ partial class FormBanHang
         lblSoLuong.Text = "Số lượng";
         lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // numericUpDown1
+        // nudSoLuong
         // 
-        numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        numericUpDown1.Location = new System.Drawing.Point(122, 24);
-        numericUpDown1.Name = "numericUpDown1";
-        numericUpDown1.Size = new System.Drawing.Size(126, 31);
-        numericUpDown1.TabIndex = 1;
+        nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        nudSoLuong.Location = new System.Drawing.Point(122, 24);
+        nudSoLuong.Name = "nudSoLuong";
+        nudSoLuong.Size = new System.Drawing.Size(126, 31);
+        nudSoLuong.TabIndex = 1;
         // 
         // lblGiamGia
         // 
@@ -323,13 +323,13 @@ partial class FormBanHang
         lblGiamGia.TabIndex = 2;
         lblGiamGia.Text = "Giảm giá (%)";
         // 
-        // numericUpDown2
+        // nudGiamGia
         // 
-        numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-        numericUpDown2.Location = new System.Drawing.Point(122, 82);
-        numericUpDown2.Name = "numericUpDown2";
-        numericUpDown2.Size = new System.Drawing.Size(126, 31);
-        numericUpDown2.TabIndex = 3;
+        nudGiamGia.Dock = System.Windows.Forms.DockStyle.Fill;
+        nudGiamGia.Location = new System.Drawing.Point(122, 82);
+        nudGiamGia.Name = "nudGiamGia";
+        nudGiamGia.Size = new System.Drawing.Size(126, 31);
+        nudGiamGia.TabIndex = 3;
         // 
         // btnCapNhat
         // 
@@ -342,13 +342,13 @@ partial class FormBanHang
         btnCapNhat.Text = "Cập nhật";
         btnCapNhat.UseVisualStyleBackColor = false;
         // 
-        // textBox1
+        // txtKhachDua
         // 
-        textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        textBox1.Location = new System.Drawing.Point(361, 82);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(108, 31);
-        textBox1.TabIndex = 7;
+        txtKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        txtKhachDua.Location = new System.Drawing.Point(361, 82);
+        txtKhachDua.Name = "txtKhachDua";
+        txtKhachDua.Size = new System.Drawing.Size(108, 31);
+        txtKhachDua.TabIndex = 7;
         // 
         // lblTongCong
         // 
@@ -407,22 +407,22 @@ partial class FormBanHang
         // 
         // panel3
         // 
-        panel3.Controls.Add(button2);
+        panel3.Controls.Add(btnThanhToan);
         panel3.Location = new System.Drawing.Point(131, 3);
         panel3.Name = "panel3";
         panel3.Size = new System.Drawing.Size(121, 67);
         panel3.TabIndex = 1;
         // 
-        // button2
+        // btnThanhToan
         // 
-        button2.BackColor = System.Drawing.Color.DarkGreen;
-        button2.ForeColor = System.Drawing.Color.White;
-        button2.Location = new System.Drawing.Point(7, 29);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(111, 35);
-        button2.TabIndex = 0;
-        button2.Text = "Thanh toán";
-        button2.UseVisualStyleBackColor = false;
+        btnThanhToan.BackColor = System.Drawing.Color.DarkGreen;
+        btnThanhToan.ForeColor = System.Drawing.Color.White;
+        btnThanhToan.Location = new System.Drawing.Point(7, 29);
+        btnThanhToan.Name = "btnThanhToan";
+        btnThanhToan.Size = new System.Drawing.Size(111, 35);
+        btnThanhToan.TabIndex = 0;
+        btnThanhToan.Text = "Thanh toán";
+        btnThanhToan.UseVisualStyleBackColor = false;
         // 
         // btnBoDong
         // 
@@ -466,27 +466,27 @@ partial class FormBanHang
         ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
         tableLayoutPanel8.ResumeLayout(false);
         tableLayoutPanel8.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+        ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
+        ((System.ComponentModel.ISupportInitialize)nudGiamGia).EndInit();
         tableLayoutPanel9.ResumeLayout(false);
         panel2.ResumeLayout(false);
         panel3.ResumeLayout(false);
         ResumeLayout(false);
     }
     private System.Windows.Forms.Button btnThemVaoGio;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button btnThanhToan;
     private System.Windows.Forms.Button btnBoDong;
     private System.Windows.Forms.Label lblBanHang ;
     
      private System.Windows.Forms.Label lblSoLuong;
-     private System.Windows.Forms.NumericUpDown numericUpDown1;
+     private System.Windows.Forms.NumericUpDown nudSoLuong;
      private System.Windows.Forms.Label lblGiamGia;
     
     private System.Windows.Forms.DataGridView dataGridView1;
     private System.Windows.Forms.DataGridView dataGridView2;
     
      private System.Windows.Forms.Button btnCapNhat;
-    private System.Windows.Forms.TextBox textBox1 ;
+    private System.Windows.Forms.TextBox txtKhachDua ;
     private System.Windows.Forms.Label lblTongCong;
     private System.Windows.Forms.Label lblKhachDua;
     
@@ -501,7 +501,7 @@ partial class FormBanHang
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
     private System.Windows.Forms.TextBox txtTraCuu;
-    private System.Windows.Forms.NumericUpDown numericUpDown2;
+    private System.Windows.Forms.NumericUpDown nudGiamGia;
 
     private System.Windows.Forms.DataGridView dgvGioHang;
 

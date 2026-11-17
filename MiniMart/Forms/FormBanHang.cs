@@ -18,8 +18,13 @@ public partial class FormBanHang : Form
         TienIchGiaoDien.DatGoiY(txtTimKiem);
         
         btnThemVaoGio.Click += XuLyThemSanPham_Click;
+        btnCapNhat.Click += XuLyCapNhatSoLuong_Click;
+        btnBoDong.Click += XuLyBoDong_Click;
+        btnThanhToan.Click += XuLyThanhToan_Click;
     }
-
+    
+    private void XuLyThemSanPham_Click(Object? sender, EventArgs e) => ThemSanPhamDaChon();
+    
     private void ThemSanPhamDaChon()
     {
         if (dgvSanPham.CurrentRow?.DataBoundItem is not SanPham p)
@@ -45,6 +50,38 @@ public partial class FormBanHang : Form
             return;
         }
     }
+    private void XuLyCapNhatSoLuong_Click(Object? sender, EventArgs e)
+    {
+        if (dgvSanPham.CurrentRow == null) return;
+        int id = Convert.ToInt32(dgvSanPham.CurrentRow.Cells["IdSanPham"].Value);
+        var item = _cart.FirstOrDefault(x => x.IdSanPham == id);
+        if (item == null) return;
+
+        int qty = (int) nudSoLuong.Value;
+        item.PhanTramChietKhau = nudGiamGia.Value;
+    }
+
+    private void XuLyBoDong_Click(Object? sender, EventArgs e)
+    {
+        if (dgvSanPham.CurrentCell == null) return;
+        int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
+        _cart.RemoveAll(x => x.IdSanPham == id);
+    }
     
-    private void XuLyThemSanPham_Click(Object? sender, EventArgs e) => ThemSanPhamDaChon();
+    private void XyLyThanhToan_Click(Object? sender, EventArgs e)
+    {
+        try
+        {
+            decimal KhachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
+            decimal Tong = TinhTongCong();
+
+            int id = _sales.ThanhToan(_cart, nudGiamGia.Value, KhachDua);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+    }
+
+    
 }
