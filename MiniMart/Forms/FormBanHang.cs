@@ -21,6 +21,8 @@ public partial class FormBanHang : Form
         btnCapNhat.Click += XuLyCapNhatSoLuong_Click;
         btnBoDong.Click += XuLyBoDong_Click;
         btnThanhToan.Click += XuLyThanhToan_Click;
+        
+        
     }
     
     private void XuLyThemSanPham_Click(Object? sender, EventArgs e) => ThemSanPhamDaChon();
