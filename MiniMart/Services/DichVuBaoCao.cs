@@ -41,11 +41,11 @@ public class DichVuBaoCao
     {
         using var db = new CoSoDuLieu();
         return db.SanPhams.AsNoTracking()
-            .Where(x=>x.TonKho <=x.TonKhoToiThieu)
-            .OrderBy(x=> x.TonKho)
-            .Select(x=> new { x.Ten, x.TonKho, x.TonKhoToiThieu})
+            .Where(x=>x.SoLuongHangTon <=x.TonKhoToiThieu)
+            .OrderBy(x=> x.SoLuongHangTon)
+            .Select(x=> new { x.Ten, x.SoLuongHangTon, x.TonKhoToiThieu})
             .ToList()
-            .Select(x=>(x.Ten, x.TonKho, x.TonKhoToiThieu))
+            .Select(x=>(x.Ten, x.SoLuongHangTon, x.TonKhoToiThieu))
             .ToList();
     }
 }
