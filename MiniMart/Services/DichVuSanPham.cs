@@ -28,7 +28,7 @@ public class DichVuSanPham
     {
         if (string.IsNullOrWhiteSpace(sp.Ma) || string.IsNullOrWhiteSpace(sp.Ten))
             throw new InvalidOleVariantTypeException("Mã và tên sản phẩm không được để trống.");
-        if(sp.GiaBan<0|| sp.GiaVon<0|| sp.TonKhoToiThieu<0||sp.TonKho<0)
+        if(sp.GiaBan<0|| sp.GiaVon<0|| sp.TonKhoToiThieu<0||sp.SoLuongHangTon<0)
             throw new InvalidOleVariantTypeException("Giá và số lượng sản phẩm không được âm.");
         
         using var db = new CoSoDuLieu();
@@ -51,8 +51,14 @@ public class DichVuSanPham
         entity.DonVi = sp.DonVi.Trim();
         entity.GiaBan = sp.GiaBan;
         entity.GiaVon = sp.GiaVon;
-        entity.TonKho = sp.TonKho;
+        entity.SoLuongHangTon = sp.SoLuongHangTon;
         entity.TonKhoToiThieu = sp.TonKhoToiThieu;
         db.SaveChanges();
+    }
+
+    public void Xoa(int id)
+    {
+        using var db = new CoSoDuLieu();
+        db.SanPhams.Where(x => x.Id == id).ExecuteDelete();
     }
 }
