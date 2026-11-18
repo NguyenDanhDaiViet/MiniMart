@@ -92,7 +92,7 @@ public class CoSoDuLieu : DbContext
             new SanPham { Id = 11, Ma = "SP011", Ten = "Nước tăng lực Red Bull",DonVi = "Lon",  GiaVon = 9000,  GiaBan = 13000, SoLuongHangTon = 30, TonKhoToiThieu = 10 },
             new SanPham { Id = 12, Ma = "SP012", Ten = "Khăn giấy",             DonVi = "Gói",  GiaVon = 5000,  GiaBan = 8000,  SoLuongHangTon = 50, TonKhoToiThieu = 10 },
             new SanPham { Id = 13, Ma = "SP013", Ten = "Mì Hảo Hảo",            DonVi = "Gói",  GiaVon = 3500,  GiaBan = 5000,  SoLuongHangTon = 100,TonKhoToiThieu = 20 },
-            new SanPham {Id = 14,  Ma = "SP014", Ten = "Nước rửa chén",         DonVi = "Chai", GiaVon = 15000, GiaBan = 20000, SoLuongHangTon = 20, TonKhoToiThieu = 5 });
+            new SanPham { Id = 14, Ma = "SP014", Ten = "Nước rửa chén",         DonVi = "Chai", GiaVon = 15000, GiaBan = 20000, SoLuongHangTon = 20, TonKhoToiThieu = 5 });
     }
 
     

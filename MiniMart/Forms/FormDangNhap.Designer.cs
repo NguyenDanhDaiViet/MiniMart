@@ -264,6 +264,7 @@ partial class FormDangNhap
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(543, 465);
         Controls.Add(panel1);
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "FormDangNhap";
         panel1.ResumeLayout(false);
         tableLayoutPanel1.ResumeLayout(false);
