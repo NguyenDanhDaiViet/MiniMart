@@ -15,7 +15,7 @@ public class DichVuKho
         using var db = new CoSoDuLieu();
         var sp = db.SanPhams.Find(IdSanPham)?? throw new InvalidOperationException("Không tìm thấy sản phẩm");
         
-        sp.TonKho += SoLuong;
+        sp.SoLuongHangTon += SoLuong;
         sp.GiaBan = GiaVon;
         db.PhieuNhapKhos.Add(new PhieuNhapKho
         {
