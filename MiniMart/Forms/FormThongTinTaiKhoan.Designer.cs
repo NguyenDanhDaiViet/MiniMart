@@ -50,10 +50,10 @@ partial class FormThongTinTaiKhoan
         lblXacNhanMatKhau = new System.Windows.Forms.Label();
         txtMatKhauCu = new System.Windows.Forms.TextBox();
         chkHienMatKhau = new System.Windows.Forms.CheckBox();
+        btnDoiMatKhau = new System.Windows.Forms.Button();
         panel2 = new System.Windows.Forms.Panel();
         btnDong = new System.Windows.Forms.Button();
         lblTieuDe = new System.Windows.Forms.Label();
-        btnDoiMatKhau = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -311,6 +311,19 @@ partial class FormThongTinTaiKhoan
         chkHienMatKhau.Text = "Hiện mật khẩu";
         chkHienMatKhau.UseVisualStyleBackColor = true;
         // 
+        // btnDoiMatKhau
+        // 
+        btnDoiMatKhau.BackColor = System.Drawing.Color.Green;
+        btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+        btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
+        btnDoiMatKhau.Location = new System.Drawing.Point(214, 171);
+        btnDoiMatKhau.Name = "btnDoiMatKhau";
+        btnDoiMatKhau.Size = new System.Drawing.Size(279, 39);
+        btnDoiMatKhau.TabIndex = 7;
+        btnDoiMatKhau.Text = "Đổi mật khẩu";
+        btnDoiMatKhau.UseVisualStyleBackColor = false;
+        // 
         // panel2
         // 
         panel2.Controls.Add(btnDong);
@@ -341,19 +354,6 @@ partial class FormThongTinTaiKhoan
         lblTieuDe.TabIndex = 0;
         lblTieuDe.Text = "THÔNG TIN TÀI KHOẢN";
         lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // btnDoiMatKhau
-        // 
-        btnDoiMatKhau.BackColor = System.Drawing.Color.Green;
-        btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
-        btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
-        btnDoiMatKhau.Location = new System.Drawing.Point(214, 171);
-        btnDoiMatKhau.Name = "btnDoiMatKhau";
-        btnDoiMatKhau.Size = new System.Drawing.Size(279, 39);
-        btnDoiMatKhau.TabIndex = 7;
-        btnDoiMatKhau.Text = "Đổi mật khẩu";
-        btnDoiMatKhau.UseVisualStyleBackColor = false;
         // 
         // FormThongTinTaiKhoan
         // 
