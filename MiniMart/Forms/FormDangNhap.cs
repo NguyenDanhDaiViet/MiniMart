@@ -6,8 +6,17 @@ namespace MiniMart.Forms;
 public partial class FormDangNhap : Form
 {
     public static string hienThiTen { get; private set; } = "";
+    public static string hienTenHienTai { get; private set; } = "";
     public static string VaiTro { get; private set; } = "";
-    public FormDangNhap()
+
+    public static void XoaPhienDangNhap()
+    {
+        hienThiTen = "";
+        hienTenHienTai = "";
+        VaiTro = "";
+    }
+
+public FormDangNhap()
     {
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
@@ -28,7 +37,8 @@ public partial class FormDangNhap : Form
 
         if (DichVuTaiKhoan.DangNhap(tenDangNhap.Text, matKhau.Text, out var name, out var vaitro))
         {
-            hienThiTen = name;
+            hienThiTen = tenDangNhap.Text.Trim();
+            hienTenHienTai = name;
             VaiTro = vaitro;
             DialogResult = DialogResult.OK;
             Close();

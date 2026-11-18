@@ -1,4 +1,5 @@
 
+using MiniMart.Data;
 using MiniMart.Forms;
 
 namespace MiniMart;
@@ -15,9 +16,19 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        using var login = new FormDangNhap();
-        if(login.ShowDialog() == DialogResult.OK)
-          Application.Run(new FormQuanLyTaiKhoan());
+        CoSoDuLieu.KhoiTao();
+
+        while (true)
+        {
+            using (var login = new FormDangNhap())
+            {
+                if (login.ShowDialog() != DialogResult.OK) break;
+            }
+
+            var main = new MainForm();
+            Application.Run(main);
+            if (!main.DangXuat) break;
+        }
         
     }
     
