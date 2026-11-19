@@ -55,4 +55,10 @@ public class DichVuSanPham
         entity.TonKhoToiThieu = sp.TonKhoToiThieu;
         db.SaveChanges();
     }
+
+    public void Xoa(int id)
+    {
+        using var db = new CoSoDuLieu();
+        db.SanPhams.Where(x => x.Id == id).ExecuteDelete();
+    }
 }

@@ -1,4 +1,5 @@
-﻿using MiniMart.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniMart.Data;
 using MiniMart.Model;
 
 namespace MiniMart.Services;
@@ -11,21 +12,73 @@ public class DichVuBanHang
         if (phanTramChietKhauTrenHoaDon is < 0 or > 100)
             throw new InvalidOperationException("Phần trăm chiết khấu phải từ 0 đến 100.");
 
-        decimal tongPhu = items.Sum(x => x.SoLuong * x.DonGia);
+        decimal tamTinh = items.Sum(x => x.SoLuong * x.DonGia);
         decimal chietKhauSauDong = items.Sum(x => x.ThanhTienDong);
-        decimal chietKhau = tongPhu - chietKhauSauDong + chietKhauSauDong * phanTramChietKhauTrenHoaDon / 100m;
+        decimal chietKhau = tamTinh - chietKhauSauDong + chietKhauSauDong * phanTramChietKhauTrenHoaDon / 100m;
         decimal tongTien = chietKhauSauDong * (1 - phanTramChietKhauTrenHoaDon / 100m);
         if (tienDaTra < tongTien) throw new InvalidOperationException("Số tiền khách đưa chưa đủ.");
+        
+        using var db = new CoSoDuLieu();
+        using var transaction = db.Database.BeginTransaction();
 
         var hoaDon = new HoaDon
         {
             MaHoaDon = "HD" + DateTime.Now.ToString("yyyyMMddHHmmssfff"),
             NgayLapHoaDon = DateTime.Now,
-            TongPhu = tongPhu,
+            TamTinh = tamTinh,
             ChietKhau = chietKhau,
             TongTien = tongTien,
             TienDaTra = tienDaTra,
             TienThua = tienDaTra - tongTien
         };
+
+        foreach (var item in items)
+        {
+            var sp = db.SanPhams.Find(item.IdSanPham) ?? throw new InvalidOperationException($"Không tìm thấy sản phẩm {item.Ten}.");
+            if (sp.SoLuongHangTon < item.SoLuong)
+                throw new InvalidOperationException($"Sản phẩm {item.Ten} không đủ tồn kho. Còn {sp.SoLuongHangTon}.");
+
+            sp.SoLuongHangTon -= item.SoLuong;
+            hoaDon.Items.Add(new ChiTietHoaDon
+            {
+                IdSanPham = item.IdSanPham,
+                MaSanPham = item.Ma,
+                TenSanPham = item.Ten,
+                SoLuong = item.SoLuong,
+                DonGia = item.DonGia,
+                ChietKhau = item.PhanTramChietKhau,
+                ThanhTienDong = item.ThanhTienDong
+            });
+        }
+
+        db.HoaDons.Add(hoaDon);
+        db.SaveChanges();
+        transaction.Commit();
+        return hoaDon.Id;
+    }
+    
+    public string XuatHoaDon(int maHoaDon)
+    {
+        using var db = new CoSoDuLieu();
+        var h = db.HoaDons.AsNoTracking().FirstOrDefault(x => x.Id == maHoaDon) ?? throw new InvalidOperationException("Không tìm thấy hóa đơn");
+
+        var lines = new List<string>
+        {
+            "MINIMART - HÓA ĐƠN BÁN HÀNG",
+            "Mã hóa đon: " + h.MaHoaDon,
+            "Thời gian: " + h.NgayLapHoaDon.ToString("yyyy-MM-dd  HH:mm:ss"),
+            "------------------------------",
+            $"Tạm tính: {h.TamTinh:NO} VND",
+            $"Giảm giá: {h.ChietKhau:N0} VND",
+            $"Tổng tiền: {h.TongTien:N0} VND",
+            $"Khách đưa: {h.TienDaTra:N0} VND",
+            $"Tiền thừa: {h.TienThua:N0} VND",
+            "Cảm ơn quý khách!"
+        };
+        string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Biên lai MiniMart");
+        Directory.CreateDirectory(folder);
+        string path = Path.Combine(folder, h.MaHoaDon, ".txt");
+        File.WriteAllLines(path, lines);
+        return path;
     }
 }
