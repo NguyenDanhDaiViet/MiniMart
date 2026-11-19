@@ -24,7 +24,7 @@ public partial class FormBanHang : Form
         btnThanhToan.Click += XuLyThanhToan_Click;
         dgvSanPham.CellDoubleClick += XuLyNhanDoiSanPham_CellDoubleClick;
         dgvGioHang.CellClick += XuLyChonDongGioHang_CellClick;
-        nudGiamGia.ValueChanged += XuLyThayDoiGiamGiaHoaDon_ValueChanged;
+        nudGiamGiaHoaDon.ValueChanged += XuLyThayDoiGiamGiaHoaDon_ValueChanged;
         txtKhachDua.Leave += XuLyDinhDangTienKhachDua_Leave;
         
         TaiDanhSachSanPham();
@@ -74,13 +74,13 @@ public partial class FormBanHang : Form
         }
 
         item.SoLuong = qty;
-        item.PhanTramChietKhau = nudGiamGia.Value;
+        item.PhanTramChietKhau = nudGiamGiaDong.Value;
         CapNhatGioHang();
     }
 
     private void XuLyBoDong_Click(object? sender, EventArgs e)
     {
-        if (dgvSanPham.CurrentCell == null) return;
+        if (dgvSanPham.CurrentRow == null) return;
         int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
         _cart.RemoveAll(x => x.IdSanPham == id);
         CapNhatGioHang();
@@ -90,25 +90,36 @@ public partial class FormBanHang : Form
     {
         try
         {
+            if (_cart.Count > 0 && string.IsNullOrWhiteSpace(txtTenKhachHang.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng.", "Thiếu thông tin", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                txtTenKhachHang.Focus();
+                return;
+            }
+            
             decimal khachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
             decimal tong = TinhTongCong();
 
-            int id = _sales.ThanhToan(_cart, nudGiamGia.Value, khachDua);
+            int id = _sales.ThanhToan(_cart, nudGiamGiaHoaDon.Value, khachDua, txtTenKhachHang.Text,txtSoDienThoai.Text);
             string hoaDon = _sales.XuatHoaDon(id);
             MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:NO}đ\nHóa đơn: {hoaDon}");
             
             _cart.Clear();
             txtKhachDua.Text = "0";
-            nudGiamGia.Value = 0;
+            txtTenKhachHang.Clear();
+            txtSoDienThoai.Clear();
+            nudGiamGiaHoaDon.Value = 0;
             CapNhatGioHang();
             TaiDanhSachSanPham();
         }
         catch (Exception ex)
         {
+            string chitiet = ex.InnerException?.Message ?? ex.Message;
             MessageBox.Show(ex.Message, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
-    private decimal TinhTongCong() => _cart.Sum(x => x.ThanhTienDong) * (1 - nudGiamGia.Value / 100m);
+    private decimal TinhTongCong() => _cart.Sum(x => x.ThanhTienDong) * (1 - nudGiamGiaHoaDon.Value / 100m);
 
     private void XuLyNhanDoiSanPham_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
     {
@@ -123,7 +134,7 @@ public partial class FormBanHang : Form
         if (item == null) return;
         
         TienIchGiaoDien.GanGiaTri(nudSoLuong, item.SoLuong);
-        TienIchGiaoDien.GanGiaTri(nudGiamGia, item.PhanTramChietKhau);
+        TienIchGiaoDien.GanGiaTri(nudGiamGiaHoaDon, item.PhanTramChietKhau);
     }
 
     private void XuLyThayDoiGiamGiaHoaDon_ValueChanged(object? sender, EventArgs e) => CapNhatGioHang();
