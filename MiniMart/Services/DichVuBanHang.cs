@@ -6,12 +6,17 @@ namespace MiniMart.Services;
 
 public class DichVuBanHang
 {
-    public int ThanhToan(List<MatHangGioHang> items, decimal phanTramChietKhauTrenHoaDon, decimal tienDaTra)
+    public int ThanhToan(List<MatHangGioHang> items, decimal phanTramChietKhauTrenHoaDon, decimal tienDaTra,string tenKhachHang,String SDTkhachHang)
     {
         if (items.Count == 0) throw new InvalidOperationException("Giỏ hàng đang trống.");
         if (phanTramChietKhauTrenHoaDon is < 0 or > 100)
             throw new InvalidOperationException("Phần trăm chiết khấu phải từ 0 đến 100.");
-
+        
+        string tenKhach = (tenKhachHang ?? "").Trim();
+        if (tenKhach.Length == 0) throw new InvalidOperationException("Vui lòng nhập tên khách hàng.");
+        if (tenKhach.Length > 100) throw new InvalidOperationException("Tên khách hàng tối đa 100 ký tự.");
+        string sdtKhach = ChuanHoaSoDienThoai(SDTkhachHang);
+        
         decimal tamTinh = items.Sum(x => x.SoLuong * x.DonGia);
         decimal chietKhauSauDong = items.Sum(x => x.ThanhTienDong);
         decimal chietKhau = tamTinh - chietKhauSauDong + chietKhauSauDong * phanTramChietKhauTrenHoaDon / 100m;
@@ -29,7 +34,9 @@ public class DichVuBanHang
             ChietKhau = chietKhau,
             TongTien = tongTien,
             TienDaTra = tienDaTra,
-            TienThua = tienDaTra - tongTien
+            TienThua = tienDaTra - tongTien,
+            tenKhachHang = tenKhach,
+            SDTkhachHang  = sdtKhach
         };
 
         foreach (var item in items)
@@ -56,20 +63,39 @@ public class DichVuBanHang
         transaction.Commit();
         return hoaDon.Id;
     }
-    
+
+    private string ChuanHoaSoDienThoai(string so)
+    {
+        string s = new((so ?? "").Where(c => !char.IsWhiteSpace(c) && c is not ('.' or '-' or '(' or ')')).ToArray());
+        if (s.Length == 0) throw new InvalidOperationException("Vui lòng nhập số điện thoại khách hàng.");
+        if (s.StartsWith("+84")) s = "0" + s[3..];
+        if (!s.All(char.IsAsciiDigit) || s[0] != '0' || s.Length is < 10 or > 11)
+            throw new InvalidOperationException("Số điện thoại không hợp lệ. Hãy nhập 10-11 chữ số, bắt đầu bằng số 0 (vd. 0912345678).");
+        return s;
+    }
+
+    // lichsu hoa don
+  //  public List<HoaDon> LayLichSuHoaDon(DateTime tu, DateTime den, string keywork = "")
+//    {
+        
+ //   }
+
     public string XuatHoaDon(int maHoaDon)
     {
         using var db = new CoSoDuLieu();
-        var h = db.HoaDons.AsNoTracking().FirstOrDefault(x => x.Id == maHoaDon) ?? throw new InvalidOperationException("Không tìm thấy hóa đơn");
+        var h = db.HoaDons.AsNoTracking().FirstOrDefault(x => x.Id == maHoaDon)
+                ?? throw new InvalidOperationException("Không tìm thấy hóa đơn");
 
         var lines = new List<string>
         {
             "MINIMART - HÓA ĐƠN BÁN HÀNG",
             "Mã hóa đon: " + h.MaHoaDon,
-            "Thời gian: " + h.NgayLapHoaDon.ToString("yyyy-MM-dd  HH:mm:ss"),
+            "Thời gian: "  + h.NgayLapHoaDon.ToString("yyyy-MM-dd  HH:mm:ss"),
+            "Khách Hàng: " + h.tenKhachHang,
+            "SDT:  "       + h.SDTkhachHang,
             "------------------------------",
-            $"Tạm tính: {h.TamTinh:NO} VND",
-            $"Giảm giá: {h.ChietKhau:N0} VND",
+            $"Tạm tính:  {h.TamTinh:NO} VND",
+            $"Giảm giá:  {h.ChietKhau:N0} VND",
             $"Tổng tiền: {h.TongTien:N0} VND",
             $"Khách đưa: {h.TienDaTra:N0} VND",
             $"Tiền thừa: {h.TienThua:N0} VND",
