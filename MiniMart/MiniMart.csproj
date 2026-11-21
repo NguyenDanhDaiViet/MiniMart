@@ -18,6 +18,9 @@
         <Compile Update="Forms\FormThongTinTaiKhoan.cs">
           <SubType>Form</SubType>
         </Compile>
+        <Compile Update="Forms\FormLichSuDonHang.cs">
+          <SubType>Form</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>

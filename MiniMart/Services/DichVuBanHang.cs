@@ -75,10 +75,34 @@ public class DichVuBanHang
     }
 
     // lichsu hoa don
-  //  public List<HoaDon> LayLichSuHoaDon(DateTime tu, DateTime den, string keywork = "")
-//    {
-        
- //   }
+    public List<HoaDon> LayLichSuHoaDon(DateTime tuNgay, DateTime denNgay, string tuKhoa = "")
+    {
+        using var db = new CoSoDuLieu();
+        var batDau = tuNgay.Date;
+        var ketThuc = denNgay.Date.AddDays(1);
+
+        var danhSach = db.HoaDons.AsNoTracking()
+            .Where(x => x.NgayLapHoaDon >= batDau && x.NgayLapHoaDon < ketThuc)
+            .OrderByDescending(x => x.NgayLapHoaDon)
+            .ToList();
+
+        string k = (tuKhoa ?? "").Trim();
+        if (k.Length == 0) return danhSach;
+
+        // Lọc không phân biệt chữ hoa thường kể cả chữ có dấu 
+        return danhSach.Where(x => x.MaHoaDon.Contains(k, StringComparison.CurrentCultureIgnoreCase)
+                                   || x.tenKhachHang.Contains(k, StringComparison.CurrentCultureIgnoreCase)
+                                   || x.SDTkhachHang.Contains(k))
+            .ToList();
+    }
+    public List<ChiTietHoaDon> LayChiTietHoaDon(int idHoaDon)
+    {
+        using var db = new CoSoDuLieu();
+        return db.ChiTietHoaDons.AsNoTracking()
+            .Where(x => x.IdHoaDon == idHoaDon)
+            .OrderBy(x => x.Id)
+            .ToList();
+    }
 
     public string XuatHoaDon(int maHoaDon)
     {

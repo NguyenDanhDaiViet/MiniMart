@@ -113,7 +113,7 @@ public class CoSoDuLieu : DbContext
         moi.Database.EnsureCreated();
     }
 
-   //Kiểm tra mọi bảng trong file .db có đủ cột của model và không có cột bắt buộc thừa
+   //Kiểm tra mọi bảng trong file db có đủ cột 
     private static bool SchemaHopLe(CoSoDuLieu db)
     {
         var conn = db.Database.GetDbConnection();
@@ -139,11 +139,11 @@ public class CoSoDuLieu : DbContext
                         cotThucTe[rd.GetString(1)] = (rd.GetInt32(3) == 1, !rd.IsDBNull(4), rd.GetInt32(5) > 0);
                 }
 
-                if (cotThucTe.Count == 0) return false;                       // thiếu bảng
-                if (cotModel.Any(c => !cotThucTe.ContainsKey(c!))) return false; // thiếu cột
+                if (cotThucTe.Count == 0) return false;                       
+                if (cotModel.Any(c => !cotThucTe.ContainsKey(c!))) return false; 
                 if (cotThucTe.Any(kv => !cotModel.Contains(kv.Key)
                                         && kv.Value.NotNull && !kv.Value.CoMacDinh && !kv.Value.KhoaChinh))
-                    return false;                                             // thừa cột NOT NULL không có mặc định
+                    return false;                                             
             }
             return true;
         }
