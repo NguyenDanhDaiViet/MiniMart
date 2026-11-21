@@ -6,9 +6,9 @@ namespace MiniMart.Forms;
 
 public partial class FormBanHang : Form
 {
-    public readonly DichVuBanHang _sales = new();
-    public readonly DichVuSanPham _products = new();
-    public readonly List<MatHangGioHang> _cart = new();
+    public readonly DichVuBanHang _banhang = new();
+    public readonly DichVuSanPham _sanPhan = new();
+    public readonly List<MatHangGioHang> _gioHang = new();
     public FormBanHang()
     {
         InitializeComponent();
@@ -47,9 +47,9 @@ public partial class FormBanHang : Form
             return;
         }
 
-        var item = _cart.FirstOrDefault(x => x.IdSanPham == p.Id);
+        var item = _gioHang.FirstOrDefault(x => x.IdSanPham == p.Id);
         if (item == null)
-            _cart.Add(new MatHangGioHang(){ IdSanPham = p.Id, Ma = p.Ma, Ten = p.Ten, DonVi = p.DonVi, SoLuong = 1, SoLuongHangTon = p.SoLuongHangTon, DonGia = p.GiaBan});
+            _gioHang.Add(new MatHangGioHang(){ IdSanPham = p.Id, Ma = p.Ma, Ten = p.Ten, DonVi = p.DonVi, SoLuong = 1, SoLuongHangTon = p.SoLuongHangTon, DonGia = p.GiaBan});
         else if (item.SoLuong < item.SoLuongHangTon)
             item.SoLuong++;
         else
@@ -63,7 +63,7 @@ public partial class FormBanHang : Form
     {
         if (dgvSanPham.CurrentRow == null) return;
         int id = Convert.ToInt32(dgvSanPham.CurrentRow.Cells["IdSanPham"].Value);
-        var item = _cart.FirstOrDefault(x => x.IdSanPham == id);
+        var item = _gioHang.FirstOrDefault(x => x.IdSanPham == id);
         if (item == null) return;
 
         int qty = (int) nudSoLuong.Value;
@@ -82,7 +82,7 @@ public partial class FormBanHang : Form
     {
         if (dgvSanPham.CurrentRow == null) return;
         int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
-        _cart.RemoveAll(x => x.IdSanPham == id);
+        _gioHang.RemoveAll(x => x.IdSanPham == id);
         CapNhatGioHang();
     }
     
@@ -90,22 +90,29 @@ public partial class FormBanHang : Form
     {
         try
         {
-            if (_cart.Count > 0 && string.IsNullOrWhiteSpace(txtTenKhachHang.Text))
+            if (_gioHang.Count > 0 && string.IsNullOrWhiteSpace(txtTenKhachHang.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên khách hàng.", "Thiếu thông tin", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 txtTenKhachHang.Focus();
                 return;
             }
+            if (_gioHang.Count > 0 && string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại khách hàng", "Nhập thiếu thông tin", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                txtSoDienThoai.Focus();
+                return;
+            }
             
             decimal khachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
             decimal tong = TinhTongCong();
 
-            int id = _sales.ThanhToan(_cart, nudGiamGiaHoaDon.Value, khachDua, txtTenKhachHang.Text,txtSoDienThoai.Text);
-            string hoaDon = _sales.XuatHoaDon(id);
+            int id = _banhang.ThanhToan(_gioHang, nudGiamGiaHoaDon.Value, khachDua, txtTenKhachHang.Text,txtSoDienThoai.Text);
+            string hoaDon = _banhang.XuatHoaDon(id);
             MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:NO}đ\nHóa đơn: {hoaDon}");
             
-            _cart.Clear();
+            _gioHang.Clear();
             txtKhachDua.Text = "0";
             txtTenKhachHang.Clear();
             txtSoDienThoai.Clear();
@@ -119,7 +126,7 @@ public partial class FormBanHang : Form
             MessageBox.Show(ex.Message, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
-    private decimal TinhTongCong() => _cart.Sum(x => x.ThanhTienDong) * (1 - nudGiamGiaHoaDon.Value / 100m);
+    private decimal TinhTongCong() => _gioHang.Sum(x => x.ThanhTienDong) * (1 - nudGiamGiaHoaDon.Value / 100m);
 
     private void XuLyNhanDoiSanPham_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
     {
@@ -130,7 +137,7 @@ public partial class FormBanHang : Form
     {
         if (e.RowIndex < 0) return;
         int id = Convert.ToInt32(dgvGioHang.Rows[e.RowIndex].Cells["IdSanPham"].Value);
-        var item = _cart.FirstOrDefault(x => x.IdSanPham == id);
+        var item = _gioHang.FirstOrDefault(x => x.IdSanPham == id);
         if (item == null) return;
         
         TienIchGiaoDien.GanGiaTri(nudSoLuong, item.SoLuong);
@@ -144,7 +151,7 @@ public partial class FormBanHang : Form
         int dongDangChon = dgvGioHang.CurrentRow?.Index ?? -1;
 
         dgvGioHang.DataSource = null;
-        dgvGioHang.DataSource = _cart.Select(x => new { x.IdSanPham, x.Ma, x.Ten, x.DonVi, x.SoLuong, x.SoLuongHangTon, x.DonGia, x.PhanTramChietKhau, x.ThanhTienDong}).ToList();
+        dgvGioHang.DataSource = _gioHang.Select(x => new { x.IdSanPham, x.Ma, x.Ten, x.DonVi, x.SoLuong, x.SoLuongHangTon, x.DonGia, x.PhanTramChietKhau, x.ThanhTienDong}).ToList();
         
         TienIchGiaoDien.AnCot(dgvGioHang, "IdSanPham", "SoLuongHangTon");
         TienIchGiaoDien.DatTieuDe(dgvGioHang, ("Ma", "Mã SP: "), ("Ten", "Tên sản phẩm"), ("DonVi", "Đơn vị"), 
@@ -162,7 +169,7 @@ public partial class FormBanHang : Form
 
     private void TaiDanhSachSanPham()
     {
-        dgvSanPham.DataSource = _products.LayTatCa(txtTimKiem.Text);
+        dgvSanPham.DataSource = _sanPhan.LayTatCa(txtTimKiem.Text);
         TienIchGiaoDien.AnCot(dgvSanPham, "Id", "GiaVon", "TonKhoTonThieu");
         TienIchGiaoDien.DatTieuDe(dgvSanPham, ("Ma", "Mã SP"), ("Ten", "Tên sản phẩm"), ("DonVi", "Đơn vị"),
             ("GiaBan", "Giá bán"), ("SoLuongHangTon", "Tồn kho"));

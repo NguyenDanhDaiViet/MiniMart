@@ -15,6 +15,7 @@ public partial class MainForm : Form
         
         btSanPham.Click += btSanPham_Click;
         btNhapKho.Click += btNhapKho_Click;
+        btnLichSuDon.Click += btnLichSuDon_Click;
         btCanhBao.Click += btCanhBao_Click;
         btBaoCao.Click += btBaoCao_Click;
         btTaiKhoan.Click += btTaiKhoan_Click;
@@ -55,6 +56,10 @@ public partial class MainForm : Form
         manHinh.Controls.Clear();
         manHinh.Controls.Add(page);
         page.Show();
+    }
+    private void btnLichSuDon_Click(object? sender, EventArgs e)
+    {
+        MoManHinh(new FormLichSuDonHang());
     }
 
 
