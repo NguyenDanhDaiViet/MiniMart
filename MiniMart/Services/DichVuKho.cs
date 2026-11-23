@@ -16,10 +16,10 @@ public class DichVuKho
         var sp = db.SanPhams.Find(IdSanPham)?? throw new InvalidOperationException("Không tìm thấy sản phẩm");
         
         sp.SoLuongHangTon += SoLuong;
-        sp.GiaBan = GiaVon;
+        sp.GiaVon = GiaVon;
         db.PhieuNhapKhos.Add(new PhieuNhapKho
         {
-            MaBienNhan = "PN" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+            MaBienNhan = "PN" + DateTime.Now.ToString("yyyyMMddHHmmssfff"),
             MaSanPham = IdSanPham,
             SoLuong = SoLuong,
             GiaVon = GiaVon,
