@@ -12,8 +12,8 @@ public partial class FormCanhBao : Form
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
         
-        TienIchGiaoDien.CauHinhLuoi(dataGridView1);
-        button1.Click += XuLyLamMoi_Click;
+        TienIchGiaoDien.CauHinhLuoi(dgvCanhBao);
+        btnLamMoi.Click += XuLyLamMoi_Click;
         TaiDanhSachCanhBao();
     }
     private void TaiDanhSachCanhBao()
@@ -21,10 +21,10 @@ public partial class FormCanhBao : Form
         var data = _canhBao.LaySanPhamSapHet()
             .Select(x => new { SanPham = x.Ten, tonKhoHienTai = x.Cophan, TonKhoToiThieu = x.Tonkhotoithieu })
             .ToList();
-        dataGridView1.DataSource = data;
-        TienIchGiaoDien.DatTieuDe(dataGridView1,("SanPham","Sản Phẩm"),("tonKhoHienTai","Tồn Kho Hiện Tại"),
+        dgvCanhBao.DataSource = data;
+        TienIchGiaoDien.DatTieuDe(dgvCanhBao,("SanPham","Sản Phẩm"),("tonKhoHienTai","Tồn Kho Hiện Tại"),
             ("TonKhoToiThieu","Tồn Kho Tối Thiểu"));
-        label2.Text = $"Có {data.Count} sản phẩm cần chú ý nhập thêm.";
+        lblSoLuongCanhBao.Text = $"Có {data.Count} sản phẩm cần chú ý nhập thêm.";
     }
 
     private void XuLyLamMoi_Click(object? sender, EventArgs e)

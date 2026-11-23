@@ -61,7 +61,7 @@ public class CoSoDuLieu : DbContext
         mb.Entity<PhieuNhapKho>(e =>
         {
             e.ToTable("PhieuNhapKho");
-            e.HasOne<SanPham>().WithMany().HasForeignKey(x => x.Id).OnDelete(DeleteBehavior.Restrict);
+            e.HasOne<SanPham>().WithMany().HasForeignKey(x => x.MaSanPham).OnDelete(DeleteBehavior.Restrict);
         });
 
         // Tạo dư liệu mẫu

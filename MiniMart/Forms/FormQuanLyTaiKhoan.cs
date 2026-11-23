@@ -5,25 +5,28 @@ namespace MiniMart.Forms;
 
 public partial class FormQuanLyTaiKhoan : Form
 {
+    private const string VaiTroQuanLy = "Quản Lý";
+    private const string VaiTroNhanVien = "Nhân viên";
+    
     private int Iddachon;
-    private string Tennguoidungdachon;
+    private string Tennguoidungdachon= "";
     public FormQuanLyTaiKhoan()
     {
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
         
-        TienIchGiaoDien.CauHinhLuoi(dataGridView1);
-        TienIchGiaoDien.DatGoiY(textBox1);
+        TienIchGiaoDien.CauHinhLuoi(dgvTaiKhoan);
+        TienIchGiaoDien.DatGoiY(txtTimKiem);
         
-        comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-        comboBox1.Items.AddRange(new object[] {"Admin","Nhân viên"});
-        textBox4.UseSystemPasswordChar = true;
+        cboVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
+        cboVaiTro.Items.AddRange(new object[] {VaiTroQuanLy,VaiTroNhanVien});
+        txtMatKhau.UseSystemPasswordChar = true;
 
-        button1.Click += XuLyTimKiem_Click;
-        button2.Click += XuLyTaoMoi_Click;
-        button3.Click += XuLyLuu_Click;
-        button4.Click += XuLyKhoaTaiKhoan_Click;
-        dataGridView1.CellClick += XuLyChonTaiKhoan_CellClick;
+        btnTimKiem.Click += XuLyTimKiem_Click;
+        btnLamMoi.Click += XuLyTaoMoi_Click;
+        btnLuu.Click += XuLyLuu_Click;
+        btnKhoaMoKhoa.Click += XuLyKhoaTaiKhoan_Click;
+        dgvTaiKhoan.CellClick += XuLyChonTaiKhoan_CellClick;
 
         XoaDuLieuNhap();
         TaiDanhSachTaiKhoan();
@@ -32,10 +35,10 @@ public partial class FormQuanLyTaiKhoan : Form
 
     private void TaiDanhSachTaiKhoan()
     {
-        dataGridView1.DataSource = DichVuTaiKhoan.LayTatCa(textBox1.Text);
-        TienIchGiaoDien.AnCot(dataGridView1, "Id");
-        TienIchGiaoDien.DatTieuDe(dataGridView1, ("Username", "Tên đăng nhập"), ("DisplayName", "Họ và tên"),
-            ("Role", "Vai trò"), ("status", "Trạng thái"));
+        dgvTaiKhoan.DataSource = DichVuTaiKhoan.LayTatCa(txtTimKiem.Text);
+        TienIchGiaoDien.AnCot(dgvTaiKhoan, "Id");
+        TienIchGiaoDien.DatTieuDe(dgvTaiKhoan, ("TenNguoiDung", "Tên đăng nhập"), ("TenHienThi", "Họ và tên"),
+            ("VaiTro", "Vai trò"), ("TrangThai", "Trạng thái"));
     }
 
     public void XoaDuLieuNhap()
@@ -43,10 +46,10 @@ public partial class FormQuanLyTaiKhoan : Form
         Iddachon=0;
         Tennguoidungdachon="";
         textBox2.Clear();
-        textBox3.Clear();
-        textBox4.Clear();
-        comboBox1.SelectedIndex = 1;//mặc định nhân viên
-        dataGridView1.ClearSelection();
+        txtHoTen.Clear();
+        txtMatKhau.Clear();
+        cboVaiTro.SelectedIndex = 1;//mặc định nhân viên
+        dgvTaiKhoan.ClearSelection();
     }
     private void XuLyTimKiem_Click(object? sender, EventArgs e)=> TaiDanhSachTaiKhoan();
     private void XuLyTaoMoi_Click(object? sender, EventArgs e)=> XoaDuLieuNhap();
@@ -55,24 +58,24 @@ public partial class FormQuanLyTaiKhoan : Form
     {
         try
         {
-            DichVuTaiKhoan.Luu(Iddachon, textBox2.Text, textBox3.Text,
-               Convert.ToString(comboBox1.SelectedItem)?? "Nhân viên", textBox4.Text );
+            DichVuTaiKhoan.Luu(Iddachon, textBox2.Text, txtHoTen.Text,
+               Convert.ToString(cboVaiTro.SelectedItem)?? VaiTroNhanVien, txtMatKhau.Text );
             TaiDanhSachTaiKhoan();
             XoaDuLieuNhap();
             MessageBox.Show("Đã lưu tài khoản.");
         }
         catch (Exception exception)
         {
-            MessageBox.Show(exception.Message, "Không thể  lưu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(exception.Message, "Không thể  lưu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 
     private void XuLyKhoaTaiKhoan_Click(object? sender, EventArgs e)
     {
-        if (Iddachon == 0) ;
-        if (Tennguoidungdachon=="admin")
+        if (Iddachon == 0) return;
+        if (Tennguoidungdachon=="quanly")
         {
-            MessageBox.Show("Không tể khóa tài khoản quản trị mặc định (admin).");
+            MessageBox.Show("Không tể khóa tài khoản quản trị mặc định (quanly).");
             return;
         }
 
@@ -86,14 +89,15 @@ public partial class FormQuanLyTaiKhoan : Form
     private void XuLyChonTaiKhoan_CellClick(object? sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex < 0) return;
-        var row = dataGridView1.Rows[e.RowIndex];
+        var row = dgvTaiKhoan.Rows[e.RowIndex];
 
         Iddachon = Convert.ToInt32(row.Cells["Id"].Value);
-        Tennguoidungdachon = Convert.ToString(row.Cells["DisplayName"].Value);
+        Tennguoidungdachon = Convert.ToString(row.Cells["TenNguoiDung"].Value);
         textBox2.Text = Tennguoidungdachon;
-        textBox3.Text = Convert.ToString(row.Cells["DisplayName"].Value);
-        comboBox1.SelectedItem = Convert.ToString(row.Cells["Role"].Value);
-        if (comboBox1.SelectedIndex < 0) comboBox1.SelectedIndex = 1;
-        textBox4.Clear(); //để trống giữ nguyên mật khẩu cũ
+        txtHoTen.Text = Convert.ToString(row.Cells["TenHienThi"].Value);
+        
+        int viTri = cboVaiTro.FindStringExact(Convert.ToString(row.Cells["VaiTro"].Value));
+        cboVaiTro.SelectedIndex = viTri >= 0 ? viTri : 1;
+        txtMatKhau.Clear(); 
     }
 }

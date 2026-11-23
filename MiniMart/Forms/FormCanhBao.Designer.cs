@@ -35,15 +35,15 @@ partial class FormCanhBao
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-        label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
+        lblSoLuongCanhBao = new System.Windows.Forms.Label();
+        btnLamMoi = new System.Windows.Forms.Button();
+        lblTieuDe = new System.Windows.Forms.Label();
+        dgvCanhBao = new System.Windows.Forms.DataGridView();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
         tableLayoutPanel3.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvCanhBao).BeginInit();
         SuspendLayout();
         // 
         // panel1
@@ -61,7 +61,7 @@ partial class FormCanhBao
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
-        tableLayoutPanel1.Controls.Add(dataGridView1, 0, 1);
+        tableLayoutPanel1.Controls.Add(dgvCanhBao, 0, 1);
         tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -77,7 +77,7 @@ partial class FormCanhBao
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 1);
-        tableLayoutPanel2.Controls.Add(label1, 0, 0);
+        tableLayoutPanel2.Controls.Add(lblTieuDe, 0, 0);
         tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -92,8 +92,8 @@ partial class FormCanhBao
         tableLayoutPanel3.ColumnCount = 2;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.46853F));
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.53147F));
-        tableLayoutPanel3.Controls.Add(label2, 0, 0);
-        tableLayoutPanel3.Controls.Add(button1, 1, 0);
+        tableLayoutPanel3.Controls.Add(lblSoLuongCanhBao, 0, 0);
+        tableLayoutPanel3.Controls.Add(btnLamMoi, 1, 0);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel3.Location = new System.Drawing.Point(3, 77);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -103,50 +103,50 @@ partial class FormCanhBao
         tableLayoutPanel3.Size = new System.Drawing.Size(858, 69);
         tableLayoutPanel3.TabIndex = 0;
         // 
-        // label1
+        // lblSoLuongCanhBao
         // 
-        label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label1.AutoSize = true;
-        label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.ForeColor = System.Drawing.Color.Red;
-        label1.Location = new System.Drawing.Point(3, 16);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(322, 41);
-        label1.TabIndex = 1;
-        label1.Text = "CẢNH BÁO TỒN KHO";
-        label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+        lblSoLuongCanhBao.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblSoLuongCanhBao.AutoSize = true;
+        lblSoLuongCanhBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblSoLuongCanhBao.Location = new System.Drawing.Point(3, 20);
+        lblSoLuongCanhBao.Name = "lblSoLuongCanhBao";
+        lblSoLuongCanhBao.Size = new System.Drawing.Size(251, 28);
+        lblSoLuongCanhBao.TabIndex = 0;
+        lblSoLuongCanhBao.Text = "Có 0 sản phẩm cần chú ý.";
         // 
-        // label2
+        // btnLamMoi
         // 
-        label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label2.AutoSize = true;
-        label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label2.Location = new System.Drawing.Point(3, 20);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(251, 28);
-        label2.TabIndex = 0;
-        label2.Text = "Có 0 sản phẩm cần chú ý.";
+        btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnLamMoi.Location = new System.Drawing.Point(716, 12);
+        btnLamMoi.Name = "btnLamMoi";
+        btnLamMoi.Size = new System.Drawing.Size(124, 44);
+        btnLamMoi.TabIndex = 1;
+        btnLamMoi.Text = "Làm mới";
+        btnLamMoi.UseVisualStyleBackColor = true;
         // 
-        // button1
+        // lblTieuDe
         // 
-        button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button1.Location = new System.Drawing.Point(716, 12);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(124, 44);
-        button1.TabIndex = 1;
-        button1.Text = "Làm mới";
-        button1.UseVisualStyleBackColor = true;
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTieuDe.AutoSize = true;
+        lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTieuDe.ForeColor = System.Drawing.Color.Red;
+        lblTieuDe.Location = new System.Drawing.Point(3, 16);
+        lblTieuDe.Name = "lblTieuDe";
+        lblTieuDe.Size = new System.Drawing.Size(322, 41);
+        lblTieuDe.TabIndex = 1;
+        lblTieuDe.Text = "CẢNH BÁO TỒN KHO";
+        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
-        // dataGridView1
+        // dgvCanhBao
         // 
-        dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Location = new System.Drawing.Point(3, 158);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(864, 463);
-        dataGridView1.TabIndex = 1;
-        dataGridView1.Text = "dataGridView1";
+        dgvCanhBao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        dgvCanhBao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvCanhBao.Location = new System.Drawing.Point(3, 158);
+        dgvCanhBao.Name = "dgvCanhBao";
+        dgvCanhBao.RowHeadersWidth = 51;
+        dgvCanhBao.Size = new System.Drawing.Size(864, 463);
+        dgvCanhBao.TabIndex = 1;
+        dgvCanhBao.Text = "dataGridView1";
         // 
         // FormCanhBao
         // 
@@ -162,17 +162,17 @@ partial class FormCanhBao
         tableLayoutPanel2.PerformLayout();
         tableLayoutPanel3.ResumeLayout(false);
         tableLayoutPanel3.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvCanhBao).EndInit();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.DataGridView dgvCanhBao;
 
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnLamMoi;
 
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label lblSoLuongCanhBao;
 
-    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label lblTieuDe;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 

@@ -34,10 +34,10 @@ public partial class FormSanPham : Form
         dgvSanPham.DataSource = _dichVu.LayTatCa(txtTimKiem.Text);
         TienIchGiaoDien.AnCot(dgvSanPham, "Id");
         TienIchGiaoDien.DatTieuDe(dgvSanPham,
-            ("Ma", "Mã SP"), ("Ten", "Tên sản phẩm"), ("DonVi", "Đon vị"),
-            ("GiaNhap", "Giá nhập"), ("GiaBan", "Giá bán"),
+            ("Ma", "Mã SP"), ("Ten", "Tên sản phẩm"), ("DonVi", "Đơn vị"),
+            ("GiaVon", "Giá nhập"), ("GiaBan", "Giá bán"),
             ("SoLuongHangTon", "Tồn kho"), ("TonKhoToiThieu", "Tồn tối thiểu"));
-        TienIchGiaoDien.DinhDangSo(dgvSanPham, "GiaNhap", "GiaBan");
+        TienIchGiaoDien.DinhDangSo(dgvSanPham, "GiaVon", "GiaBan");
     }
 
     private void XuLyTaoMoi_Click(object? sender, EventArgs e) => XoaDuLieuNhap();

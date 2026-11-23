@@ -34,37 +34,37 @@ partial class FormNhapKho
         panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-        label1 = new System.Windows.Forms.Label();
+        lblTieuDe = new System.Windows.Forms.Label();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-        textBox1 = new System.Windows.Forms.TextBox();
-        button1 = new System.Windows.Forms.Button();
+        txtTimKiem = new System.Windows.Forms.TextBox();
+        btnTimKiem = new System.Windows.Forms.Button();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-        groupBox1 = new System.Windows.Forms.GroupBox();
+        grpThongTinPhieuNhap = new System.Windows.Forms.GroupBox();
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-        label2 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
+        lblSanPham = new System.Windows.Forms.Label();
+        lblTenSanPham = new System.Windows.Forms.Label();
         tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-        label4 = new System.Windows.Forms.Label();
-        label5 = new System.Windows.Forms.Label();
-        textBox2 = new System.Windows.Forms.TextBox();
-        numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-        label6 = new System.Windows.Forms.Label();
-        numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-        button2 = new System.Windows.Forms.Button();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
+        lblMaSanPham = new System.Windows.Forms.Label();
+        lblSoLuong = new System.Windows.Forms.Label();
+        txtMaSanPham = new System.Windows.Forms.TextBox();
+        nudSoLuong = new System.Windows.Forms.NumericUpDown();
+        lblGiaNhap = new System.Windows.Forms.Label();
+        nudGiaNhap = new System.Windows.Forms.NumericUpDown();
+        btnXacNhan = new System.Windows.Forms.Button();
+        dgvSanPham = new System.Windows.Forms.DataGridView();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
         tableLayoutPanel3.SuspendLayout();
         tableLayoutPanel4.SuspendLayout();
-        groupBox1.SuspendLayout();
+        grpThongTinPhieuNhap.SuspendLayout();
         tableLayoutPanel5.SuspendLayout();
         tableLayoutPanel6.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)nudGiaNhap).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
         SuspendLayout();
         // 
         // panel1
@@ -98,7 +98,7 @@ partial class FormNhapKho
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel2.Controls.Add(label1, 0, 0);
+        tableLayoutPanel2.Controls.Add(lblTieuDe, 0, 0);
         tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 1);
         tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -109,27 +109,27 @@ partial class FormNhapKho
         tableLayoutPanel2.Size = new System.Drawing.Size(954, 103);
         tableLayoutPanel2.TabIndex = 0;
         // 
-        // label1
+        // lblTieuDe
         // 
-        label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label1.AutoSize = true;
-        label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-        label1.Location = new System.Drawing.Point(3, 5);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(344, 41);
-        label1.TabIndex = 0;
-        label1.Text = "NHẬP HÀNG VÀO KHO";
-        label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTieuDe.AutoSize = true;
+        lblTieuDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTieuDe.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+        lblTieuDe.Location = new System.Drawing.Point(3, 5);
+        lblTieuDe.Name = "lblTieuDe";
+        lblTieuDe.Size = new System.Drawing.Size(344, 41);
+        lblTieuDe.TabIndex = 0;
+        lblTieuDe.Text = "NHẬP HÀNG VÀO KHO";
+        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
         // tableLayoutPanel3
         // 
         tableLayoutPanel3.ColumnCount = 2;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.3555F));
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.6445F));
-        tableLayoutPanel3.Controls.Add(textBox1, 0, 0);
-        tableLayoutPanel3.Controls.Add(button1, 1, 0);
+        tableLayoutPanel3.Controls.Add(txtTimKiem, 0, 0);
+        tableLayoutPanel3.Controls.Add(btnTimKiem, 1, 0);
         tableLayoutPanel3.Location = new System.Drawing.Point(3, 54);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
         tableLayoutPanel3.RowCount = 1;
@@ -138,33 +138,33 @@ partial class FormNhapKho
         tableLayoutPanel3.Size = new System.Drawing.Size(906, 46);
         tableLayoutPanel3.TabIndex = 1;
         // 
-        // textBox1
+        // txtTimKiem
         // 
-        textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        textBox1.Location = new System.Drawing.Point(3, 3);
-        textBox1.Name = "textBox1";
-        textBox1.PlaceholderText = "Tìm sản phẩm...";
-        textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-        textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-        textBox1.Size = new System.Drawing.Size(640, 27);
-        textBox1.TabIndex = 0;
+        txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        txtTimKiem.Location = new System.Drawing.Point(3, 3);
+        txtTimKiem.Name = "txtTimKiem";
+        txtTimKiem.PlaceholderText = "Tìm sản phẩm...";
+        txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+        txtTimKiem.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+        txtTimKiem.Size = new System.Drawing.Size(640, 27);
+        txtTimKiem.TabIndex = 0;
         // 
-        // button1
+        // btnTimKiem
         // 
-        button1.Location = new System.Drawing.Point(649, 3);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(106, 27);
-        button1.TabIndex = 1;
-        button1.Text = "Tìm";
-        button1.UseVisualStyleBackColor = true;
+        btnTimKiem.Location = new System.Drawing.Point(649, 3);
+        btnTimKiem.Name = "btnTimKiem";
+        btnTimKiem.Size = new System.Drawing.Size(106, 27);
+        btnTimKiem.TabIndex = 1;
+        btnTimKiem.Text = "Tìm";
+        btnTimKiem.UseVisualStyleBackColor = true;
         // 
         // tableLayoutPanel4
         // 
         tableLayoutPanel4.ColumnCount = 2;
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.02935F));
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.97065F));
-        tableLayoutPanel4.Controls.Add(groupBox1, 1, 0);
-        tableLayoutPanel4.Controls.Add(dataGridView1, 0, 0);
+        tableLayoutPanel4.Controls.Add(grpThongTinPhieuNhap, 1, 0);
+        tableLayoutPanel4.Controls.Add(dgvSanPham, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 112);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -175,17 +175,17 @@ partial class FormNhapKho
         tableLayoutPanel4.Size = new System.Drawing.Size(954, 511);
         tableLayoutPanel4.TabIndex = 1;
         // 
-        // groupBox1
+        // grpThongTinPhieuNhap
         // 
-        groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        groupBox1.Controls.Add(tableLayoutPanel5);
-        groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox1.Location = new System.Drawing.Point(652, 3);
-        groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(299, 335);
-        groupBox1.TabIndex = 0;
-        groupBox1.TabStop = false;
-        groupBox1.Text = "Thông tin phiếu nhập";
+        grpThongTinPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        grpThongTinPhieuNhap.Controls.Add(tableLayoutPanel5);
+        grpThongTinPhieuNhap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        grpThongTinPhieuNhap.Location = new System.Drawing.Point(652, 3);
+        grpThongTinPhieuNhap.Name = "grpThongTinPhieuNhap";
+        grpThongTinPhieuNhap.Size = new System.Drawing.Size(299, 335);
+        grpThongTinPhieuNhap.TabIndex = 0;
+        grpThongTinPhieuNhap.TabStop = false;
+        grpThongTinPhieuNhap.Text = "Thông tin phiếu nhập";
         // 
         // tableLayoutPanel5
         // 
@@ -194,9 +194,9 @@ partial class FormNhapKho
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
         tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 1);
-        tableLayoutPanel5.Controls.Add(label6, 0, 2);
-        tableLayoutPanel5.Controls.Add(numericUpDown2, 0, 3);
-        tableLayoutPanel5.Controls.Add(button2, 0, 4);
+        tableLayoutPanel5.Controls.Add(lblGiaNhap, 0, 2);
+        tableLayoutPanel5.Controls.Add(nudGiaNhap, 0, 3);
+        tableLayoutPanel5.Controls.Add(btnXacNhan, 0, 4);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 26);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -214,8 +214,8 @@ partial class FormNhapKho
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel6.Controls.Add(label2, 0, 0);
-        tableLayoutPanel6.Controls.Add(label3, 0, 1);
+        tableLayoutPanel6.Controls.Add(lblSanPham, 0, 0);
+        tableLayoutPanel6.Controls.Add(lblTenSanPham, 0, 1);
         tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -225,25 +225,25 @@ partial class FormNhapKho
         tableLayoutPanel6.Size = new System.Drawing.Size(287, 80);
         tableLayoutPanel6.TabIndex = 0;
         // 
-        // label2
+        // lblSanPham
         // 
-        label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label2.Location = new System.Drawing.Point(3, 8);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(100, 23);
-        label2.TabIndex = 0;
-        label2.Text = "Sản Phẩm:";
-        label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+        lblSanPham.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblSanPham.Location = new System.Drawing.Point(3, 8);
+        lblSanPham.Name = "lblSanPham";
+        lblSanPham.Size = new System.Drawing.Size(100, 23);
+        lblSanPham.TabIndex = 0;
+        lblSanPham.Text = "Sản Phẩm:";
+        lblSanPham.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
-        // label3
+        // lblTenSanPham
         // 
-        label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label3.Location = new System.Drawing.Point(3, 48);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(100, 23);
-        label3.TabIndex = 1;
-        label3.Text = "Chưa Chọn";
-        label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lblTenSanPham.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTenSanPham.Location = new System.Drawing.Point(3, 48);
+        lblTenSanPham.Name = "lblTenSanPham";
+        lblTenSanPham.Size = new System.Drawing.Size(100, 23);
+        lblTenSanPham.TabIndex = 1;
+        lblTenSanPham.Text = "Chưa Chọn";
+        lblTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // tableLayoutPanel7
         // 
@@ -251,10 +251,10 @@ partial class FormNhapKho
         tableLayoutPanel5.SetColumnSpan(tableLayoutPanel7, 2);
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel7.Controls.Add(label4, 0, 0);
-        tableLayoutPanel7.Controls.Add(label5, 1, 0);
-        tableLayoutPanel7.Controls.Add(textBox2, 0, 1);
-        tableLayoutPanel7.Controls.Add(numericUpDown1, 1, 1);
+        tableLayoutPanel7.Controls.Add(lblMaSanPham, 0, 0);
+        tableLayoutPanel7.Controls.Add(lblSoLuong, 1, 0);
+        tableLayoutPanel7.Controls.Add(txtMaSanPham, 0, 1);
+        tableLayoutPanel7.Controls.Add(nudSoLuong, 1, 1);
         tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel7.Location = new System.Drawing.Point(3, 89);
         tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -264,80 +264,80 @@ partial class FormNhapKho
         tableLayoutPanel7.Size = new System.Drawing.Size(287, 97);
         tableLayoutPanel7.TabIndex = 1;
         // 
-        // label4
+        // lblMaSanPham
         // 
-        label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label4.Location = new System.Drawing.Point(3, 12);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(100, 23);
-        label4.TabIndex = 0;
-        label4.Text = "Mã Sản Phẩm";
-        label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        lblMaSanPham.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblMaSanPham.Location = new System.Drawing.Point(3, 12);
+        lblMaSanPham.Name = "lblMaSanPham";
+        lblMaSanPham.Size = new System.Drawing.Size(100, 23);
+        lblMaSanPham.TabIndex = 0;
+        lblMaSanPham.Text = "Mã Sản Phẩm";
+        lblMaSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // label5
+        // lblSoLuong
         // 
-        label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label5.Location = new System.Drawing.Point(146, 12);
-        label5.Name = "label5";
-        label5.Size = new System.Drawing.Size(100, 23);
-        label5.TabIndex = 1;
-        label5.Text = "Số Lượng";
-        label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        lblSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblSoLuong.Location = new System.Drawing.Point(146, 12);
+        lblSoLuong.Name = "lblSoLuong";
+        lblSoLuong.Size = new System.Drawing.Size(100, 23);
+        lblSoLuong.TabIndex = 1;
+        lblSoLuong.Text = "Số Lượng";
+        lblSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // textBox2
+        // txtMaSanPham
         // 
-        textBox2.Location = new System.Drawing.Point(3, 51);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(137, 30);
-        textBox2.TabIndex = 2;
+        txtMaSanPham.Location = new System.Drawing.Point(3, 51);
+        txtMaSanPham.Name = "txtMaSanPham";
+        txtMaSanPham.Size = new System.Drawing.Size(137, 30);
+        txtMaSanPham.TabIndex = 2;
         // 
-        // numericUpDown1
+        // nudSoLuong
         // 
-        numericUpDown1.Location = new System.Drawing.Point(146, 51);
-        numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-        numericUpDown1.Name = "numericUpDown1";
-        numericUpDown1.Size = new System.Drawing.Size(138, 30);
-        numericUpDown1.TabIndex = 3;
-        numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        nudSoLuong.Location = new System.Drawing.Point(146, 51);
+        nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        nudSoLuong.Name = "nudSoLuong";
+        nudSoLuong.Size = new System.Drawing.Size(138, 30);
+        nudSoLuong.TabIndex = 3;
+        nudSoLuong.Value = new decimal(new int[] { 1, 0, 0, 0 });
         // 
-        // label6
+        // lblGiaNhap
         // 
-        label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        label6.Location = new System.Drawing.Point(3, 189);
-        label6.Name = "label6";
-        label6.Size = new System.Drawing.Size(100, 23);
-        label6.TabIndex = 2;
-        label6.Text = "Giá Nhập";
-        label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        lblGiaNhap.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblGiaNhap.Location = new System.Drawing.Point(3, 189);
+        lblGiaNhap.Name = "lblGiaNhap";
+        lblGiaNhap.Size = new System.Drawing.Size(100, 23);
+        lblGiaNhap.TabIndex = 2;
+        lblGiaNhap.Text = "Giá Nhập";
+        lblGiaNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // numericUpDown2
+        // nudGiaNhap
         // 
-        numericUpDown2.Location = new System.Drawing.Point(3, 215);
-        numericUpDown2.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
-        numericUpDown2.Name = "numericUpDown2";
-        numericUpDown2.Size = new System.Drawing.Size(271, 30);
-        numericUpDown2.TabIndex = 3;
+        nudGiaNhap.Location = new System.Drawing.Point(3, 215);
+        nudGiaNhap.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+        nudGiaNhap.Name = "nudGiaNhap";
+        nudGiaNhap.Size = new System.Drawing.Size(271, 30);
+        nudGiaNhap.TabIndex = 3;
         // 
-        // button2
+        // btnXacNhan
         // 
-        button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button2.Location = new System.Drawing.Point(99, 267);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(94, 34);
-        button2.TabIndex = 4;
-        button2.Text = "Xác Nhận";
-        button2.UseVisualStyleBackColor = true;
+        btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnXacNhan.Location = new System.Drawing.Point(99, 267);
+        btnXacNhan.Name = "btnXacNhan";
+        btnXacNhan.Size = new System.Drawing.Size(94, 34);
+        btnXacNhan.TabIndex = 4;
+        btnXacNhan.Text = "Xác Nhận";
+        btnXacNhan.UseVisualStyleBackColor = true;
         // 
-        // dataGridView1
+        // dgvSanPham
         // 
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-        dataGridView1.Location = new System.Drawing.Point(3, 3);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(643, 505);
-        dataGridView1.TabIndex = 3;
-        dataGridView1.Text = "dataGridView1";
+        dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvSanPham.Location = new System.Drawing.Point(3, 3);
+        dgvSanPham.Name = "dgvSanPham";
+        dgvSanPham.RowHeadersWidth = 51;
+        dgvSanPham.Size = new System.Drawing.Size(643, 505);
+        dgvSanPham.TabIndex = 3;
+        dgvSanPham.Text = "dataGridView1";
         // 
         // FormNhapKho
         // 
@@ -355,51 +355,51 @@ partial class FormNhapKho
         tableLayoutPanel3.ResumeLayout(false);
         tableLayoutPanel3.PerformLayout();
         tableLayoutPanel4.ResumeLayout(false);
-        groupBox1.ResumeLayout(false);
+        grpThongTinPhieuNhap.ResumeLayout(false);
         tableLayoutPanel5.ResumeLayout(false);
         tableLayoutPanel6.ResumeLayout(false);
         tableLayoutPanel7.ResumeLayout(false);
         tableLayoutPanel7.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-        ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
+        ((System.ComponentModel.ISupportInitialize)nudGiaNhap).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button btnXacNhan;
 
-    private System.Windows.Forms.NumericUpDown numericUpDown2;
+    private System.Windows.Forms.NumericUpDown nudGiaNhap;
 
-    private System.Windows.Forms.Label label6;
+    private System.Windows.Forms.Label lblGiaNhap;
 
-    private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.NumericUpDown numericUpDown1;
+    private System.Windows.Forms.Label lblSoLuong;
+    private System.Windows.Forms.TextBox txtMaSanPham;
+    private System.Windows.Forms.NumericUpDown nudSoLuong;
 
-    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label lblMaSanPham;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
 
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label lblTenSanPham;
 
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label lblSanPham;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.DataGridView dgvSanPham;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
-    private System.Windows.Forms.GroupBox groupBox1;
+    private System.Windows.Forms.GroupBox grpThongTinPhieuNhap;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnTimKiem;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox txtTimKiem;
 
-    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label lblTieuDe;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 
