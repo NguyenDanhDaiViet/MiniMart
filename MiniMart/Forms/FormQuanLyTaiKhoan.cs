@@ -92,7 +92,7 @@ public partial class FormQuanLyTaiKhoan : Form
         var row = dgvTaiKhoan.Rows[e.RowIndex];
 
         Iddachon = Convert.ToInt32(row.Cells["Id"].Value);
-        Tennguoidungdachon = Convert.ToString(row.Cells["TenNguoiDung"].Value);
+        Tennguoidungdachon = Convert.ToString(row.Cells["TenNguoiDung"].Value)?? "";
         textBox2.Text = Tennguoidungdachon;
         txtHoTen.Text = Convert.ToString(row.Cells["TenHienThi"].Value);
         
