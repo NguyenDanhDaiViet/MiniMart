@@ -35,11 +35,11 @@ public class DichVuTaiKhoan
             .OrderBy(x => x.Id)
             .ToList();
         var table = new DataTable();
-        table.Columns.Add("ID", typeof(int));
+        table.Columns.Add("Id", typeof(int));
         table.Columns.Add("TenNguoiDung", typeof(string));
         table.Columns.Add("TenHienThi", typeof(string));
         table.Columns.Add("VaiTro", typeof(string));
-        table.Columns.Add("Trạng thái", typeof(string));
+        table.Columns.Add("TrangThai", typeof(string));
         foreach (var u in user)
             table.Rows.Add(u.Id, u.TenNguoiDung, u.TenHienThi, u.VaiTro, u.DangHoatDong ? "Hoạt động" : "Đã khóa");
         return table;
@@ -74,12 +74,27 @@ public class DichVuTaiKhoan
         db.SaveChanges();
     }
 
+    public static void DoiMatKhau(string tenNguoiDung, string matKhauCu, string matKhauMoi)
+    {
+        if (string.IsNullOrEmpty(matKhauMoi)) throw new Exception("Vui lòng nhập mật khẩu mới.");
+
+        using var db = new CoSoDuLieu();
+        var user = db.NguoiDungs.FirstOrDefault(x => x.TenNguoiDung == tenNguoiDung && x.DangHoatDong)
+                   ?? throw new Exception("Không tìm thấy tài khoản.");
+        if (user.MatKhauBam != BamMatKhau(matKhauCu))
+            throw new Exception("Mật khẩu hiện tại không đúng.");
+
+        user.MatKhauBam = BamMatKhau(matKhauMoi);
+        db.SaveChanges();
+    }
+
     public static void ChuyenTrangThaiHoatDong(int id)
     {
         using var db = new CoSoDuLieu();
-        var user = db.NguoiDungs.FirstOrDefault(x=>x.Id==id && x.TenNguoiDung !="quanLy");
+        var user = db.NguoiDungs.FirstOrDefault(x=>x.Id==id && x.TenNguoiDung !="quanly");
         if(user == null) return;
         user.DangHoatDong = !user.DangHoatDong;
         db.SaveChanges();
     }
+    
 }

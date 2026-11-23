@@ -34,25 +34,25 @@ partial class FormQuanLyTaiKhoan
         panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-        label1 = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
+        lblTieuDe = new System.Windows.Forms.Label();
+        btnTimKiem = new System.Windows.Forms.Button();
+        txtTimKiem = new System.Windows.Forms.TextBox();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-        button4 = new System.Windows.Forms.Button();
-        button3 = new System.Windows.Forms.Button();
-        button2 = new System.Windows.Forms.Button();
+        btnKhoaMoKhoa = new System.Windows.Forms.Button();
+        btnLuu = new System.Windows.Forms.Button();
+        btnLamMoi = new System.Windows.Forms.Button();
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-        textBox4 = new System.Windows.Forms.TextBox();
-        textBox3 = new System.Windows.Forms.TextBox();
+        txtMatKhau = new System.Windows.Forms.TextBox();
+        txtHoTen = new System.Windows.Forms.TextBox();
         label5 = new System.Windows.Forms.Label();
-        label4 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
+        lblMatKhau = new System.Windows.Forms.Label();
+        lblHoTen = new System.Windows.Forms.Label();
+        lblTenDangNhap = new System.Windows.Forms.Label();
         textBox2 = new System.Windows.Forms.TextBox();
-        comboBox1 = new System.Windows.Forms.ComboBox();
+        cboVaiTro = new System.Windows.Forms.ComboBox();
         panel3 = new System.Windows.Forms.Panel();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
+        dgvTaiKhoan = new System.Windows.Forms.DataGridView();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -60,7 +60,7 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel4.SuspendLayout();
         tableLayoutPanel5.SuspendLayout();
         panel3.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvTaiKhoan).BeginInit();
         SuspendLayout();
         // 
         // panel1
@@ -93,9 +93,9 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel2.ColumnCount = 2;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.22891F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.771084F));
-        tableLayoutPanel2.Controls.Add(label1, 0, 0);
-        tableLayoutPanel2.Controls.Add(button1, 1, 1);
-        tableLayoutPanel2.Controls.Add(textBox1, 0, 1);
+        tableLayoutPanel2.Controls.Add(lblTieuDe, 0, 0);
+        tableLayoutPanel2.Controls.Add(btnTimKiem, 1, 1);
+        tableLayoutPanel2.Controls.Add(txtTimKiem, 0, 1);
         tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -105,40 +105,40 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel2.Size = new System.Drawing.Size(1113, 148);
         tableLayoutPanel2.TabIndex = 0;
         // 
-        // label1
+        // lblTieuDe
         // 
-        label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label1.AutoSize = true;
-        label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(308, 18);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(299, 38);
-        label1.TabIndex = 0;
-        label1.Text = "QUẢN LÝ TÀI KHOẢN";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblTieuDe.AutoSize = true;
+        lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTieuDe.Location = new System.Drawing.Point(308, 18);
+        lblTieuDe.Name = "lblTieuDe";
+        lblTieuDe.Size = new System.Drawing.Size(299, 38);
+        lblTieuDe.TabIndex = 0;
+        lblTieuDe.Text = "QUẢN LÝ TÀI KHOẢN";
+        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
-        // button1
+        // btnTimKiem
         // 
-        button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button1.AutoSize = true;
-        button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button1.Location = new System.Drawing.Point(926, 90);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(176, 42);
-        button1.TabIndex = 2;
-        button1.Text = "Tìm kiếm";
-        button1.UseVisualStyleBackColor = true;
+        btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnTimKiem.AutoSize = true;
+        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.Location = new System.Drawing.Point(926, 90);
+        btnTimKiem.Name = "btnTimKiem";
+        btnTimKiem.Size = new System.Drawing.Size(176, 42);
+        btnTimKiem.TabIndex = 2;
+        btnTimKiem.Text = "Tìm kiếm";
+        btnTimKiem.UseVisualStyleBackColor = true;
         // 
-        // textBox1
+        // txtTimKiem
         // 
-        textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        textBox1.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox1.Location = new System.Drawing.Point(3, 97);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(909, 27);
-        textBox1.TabIndex = 3;
-        textBox1.Text = "Tìm tên đăng nhập hoặc họ tên";
-        textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        txtTimKiem.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtTimKiem.Location = new System.Drawing.Point(3, 97);
+        txtTimKiem.Name = "txtTimKiem";
+        txtTimKiem.Size = new System.Drawing.Size(909, 27);
+        txtTimKiem.TabIndex = 3;
+        txtTimKiem.Text = "Tìm tên đăng nhập hoặc họ tên";
+        txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
         // 
         // tableLayoutPanel3
         // 
@@ -162,9 +162,9 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
-        tableLayoutPanel4.Controls.Add(button4, 2, 0);
-        tableLayoutPanel4.Controls.Add(button3, 1, 0);
-        tableLayoutPanel4.Controls.Add(button2, 0, 0);
+        tableLayoutPanel4.Controls.Add(btnKhoaMoKhoa, 2, 0);
+        tableLayoutPanel4.Controls.Add(btnLuu, 1, 0);
+        tableLayoutPanel4.Controls.Add(btnLamMoi, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 101);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -173,38 +173,38 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel4.Size = new System.Drawing.Size(1107, 44);
         tableLayoutPanel4.TabIndex = 0;
         // 
-        // button4
+        // btnKhoaMoKhoa
         // 
-        button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button4.AutoSize = true;
-        button4.Location = new System.Drawing.Point(843, 7);
-        button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(162, 30);
-        button4.TabIndex = 2;
-        button4.Text = "button4";
-        button4.UseVisualStyleBackColor = true;
+        btnKhoaMoKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnKhoaMoKhoa.AutoSize = true;
+        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 7);
+        btnKhoaMoKhoa.Name = "btnKhoaMoKhoa";
+        btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 30);
+        btnKhoaMoKhoa.TabIndex = 2;
+        btnKhoaMoKhoa.Text = "Khóa / Mở khóa";
+        btnKhoaMoKhoa.UseVisualStyleBackColor = true;
         // 
-        // button3
+        // btnLuu
         // 
-        button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button3.AutoSize = true;
-        button3.Location = new System.Drawing.Point(453, 5);
-        button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(200, 34);
-        button3.TabIndex = 1;
-        button3.Text = "button3";
-        button3.UseVisualStyleBackColor = true;
+        btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnLuu.AutoSize = true;
+        btnLuu.Location = new System.Drawing.Point(453, 5);
+        btnLuu.Name = "btnLuu";
+        btnLuu.Size = new System.Drawing.Size(200, 34);
+        btnLuu.TabIndex = 1;
+        btnLuu.Text = "Lưu";
+        btnLuu.UseVisualStyleBackColor = true;
         // 
-        // button2
+        // btnLamMoi
         // 
-        button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-        button2.AutoSize = true;
-        button2.Location = new System.Drawing.Point(82, 5);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(200, 34);
-        button2.TabIndex = 0;
-        button2.Text = "button2";
-        button2.UseVisualStyleBackColor = true;
+        btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnLamMoi.AutoSize = true;
+        btnLamMoi.Location = new System.Drawing.Point(82, 5);
+        btnLamMoi.Name = "btnLamMoi";
+        btnLamMoi.Size = new System.Drawing.Size(200, 34);
+        btnLamMoi.TabIndex = 0;
+        btnLamMoi.Text = "Làm mới";
+        btnLamMoi.UseVisualStyleBackColor = true;
         // 
         // tableLayoutPanel5
         // 
@@ -213,14 +213,14 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.112917F));
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-        tableLayoutPanel5.Controls.Add(textBox4, 2, 1);
-        tableLayoutPanel5.Controls.Add(textBox3, 1, 1);
+        tableLayoutPanel5.Controls.Add(txtMatKhau, 2, 1);
+        tableLayoutPanel5.Controls.Add(txtHoTen, 1, 1);
         tableLayoutPanel5.Controls.Add(label5, 3, 0);
-        tableLayoutPanel5.Controls.Add(label4, 2, 0);
-        tableLayoutPanel5.Controls.Add(label3, 1, 0);
-        tableLayoutPanel5.Controls.Add(label2, 0, 0);
+        tableLayoutPanel5.Controls.Add(lblMatKhau, 2, 0);
+        tableLayoutPanel5.Controls.Add(lblHoTen, 1, 0);
+        tableLayoutPanel5.Controls.Add(lblTenDangNhap, 0, 0);
         tableLayoutPanel5.Controls.Add(textBox2, 0, 1);
-        tableLayoutPanel5.Controls.Add(comboBox1, 3, 1);
+        tableLayoutPanel5.Controls.Add(cboVaiTro, 3, 1);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -230,21 +230,21 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5.Size = new System.Drawing.Size(1107, 92);
         tableLayoutPanel5.TabIndex = 1;
         // 
-        // textBox4
+        // txtMatKhau
         // 
-        textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-        textBox4.Location = new System.Drawing.Point(573, 55);
-        textBox4.Name = "textBox4";
-        textBox4.Size = new System.Drawing.Size(234, 27);
-        textBox4.TabIndex = 6;
+        txtMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+        txtMatKhau.Location = new System.Drawing.Point(573, 55);
+        txtMatKhau.Name = "txtMatKhau";
+        txtMatKhau.Size = new System.Drawing.Size(234, 27);
+        txtMatKhau.TabIndex = 6;
         // 
-        // textBox3
+        // txtHoTen
         // 
-        textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-        textBox3.Location = new System.Drawing.Point(301, 55);
-        textBox3.Name = "textBox3";
-        textBox3.Size = new System.Drawing.Size(224, 27);
-        textBox3.TabIndex = 5;
+        txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
+        txtHoTen.Location = new System.Drawing.Point(301, 55);
+        txtHoTen.Name = "txtHoTen";
+        txtHoTen.Size = new System.Drawing.Size(224, 27);
+        txtHoTen.TabIndex = 5;
         // 
         // label5
         // 
@@ -253,35 +253,35 @@ partial class FormQuanLyTaiKhoan
         label5.Name = "label5";
         label5.Size = new System.Drawing.Size(100, 23);
         label5.TabIndex = 3;
-        label5.Text = "label5";
+        label5.Text = "Vai trò";
         label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
-        // label4
+        // lblMatKhau
         // 
-        label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label4.Location = new System.Drawing.Point(574, 11);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(232, 23);
-        label4.TabIndex = 2;
-        label4.Text = "label4";
+        lblMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblMatKhau.Location = new System.Drawing.Point(574, 11);
+        lblMatKhau.Name = "lblMatKhau";
+        lblMatKhau.Size = new System.Drawing.Size(232, 23);
+        lblMatKhau.TabIndex = 2;
+        lblMatKhau.Text = "Mật khẩu";
         // 
-        // label3
+        // lblHoTen
         // 
-        label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label3.Location = new System.Drawing.Point(301, 11);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(223, 23);
-        label3.TabIndex = 1;
-        label3.Text = "label3";
+        lblHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblHoTen.Location = new System.Drawing.Point(301, 11);
+        lblHoTen.Name = "lblHoTen";
+        lblHoTen.Size = new System.Drawing.Size(223, 23);
+        lblHoTen.TabIndex = 1;
+        lblHoTen.Text = "Họ và tên";
         // 
-        // label2
+        // lblTenDangNhap
         // 
-        label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label2.Location = new System.Drawing.Point(23, 11);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(228, 23);
-        label2.TabIndex = 0;
-        label2.Text = "label2";
+        lblTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblTenDangNhap.Location = new System.Drawing.Point(23, 11);
+        lblTenDangNhap.Name = "lblTenDangNhap";
+        lblTenDangNhap.Size = new System.Drawing.Size(228, 23);
+        lblTenDangNhap.TabIndex = 0;
+        lblTenDangNhap.Text = "Tên đăng nhập";
         // 
         // textBox2
         // 
@@ -291,34 +291,34 @@ partial class FormQuanLyTaiKhoan
         textBox2.Size = new System.Drawing.Size(229, 27);
         textBox2.TabIndex = 4;
         // 
-        // comboBox1
+        // cboVaiTro
         // 
-        comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new System.Drawing.Point(862, 55);
-        comboBox1.Name = "comboBox1";
-        comboBox1.Size = new System.Drawing.Size(212, 28);
-        comboBox1.TabIndex = 7;
+        cboVaiTro.Anchor = System.Windows.Forms.AnchorStyles.None;
+        cboVaiTro.FormattingEnabled = true;
+        cboVaiTro.Location = new System.Drawing.Point(862, 55);
+        cboVaiTro.Name = "cboVaiTro";
+        cboVaiTro.Size = new System.Drawing.Size(212, 28);
+        cboVaiTro.TabIndex = 7;
         // 
         // panel3
         // 
-        panel3.Controls.Add(dataGridView1);
+        panel3.Controls.Add(dgvTaiKhoan);
         panel3.Dock = System.Windows.Forms.DockStyle.Fill;
         panel3.Location = new System.Drawing.Point(0, 308);
         panel3.Name = "panel3";
         panel3.Size = new System.Drawing.Size(1119, 420);
         panel3.TabIndex = 2;
         // 
-        // dataGridView1
+        // dgvTaiKhoan
         // 
-        dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-        dataGridView1.Location = new System.Drawing.Point(0, 0);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(1119, 420);
-        dataGridView1.TabIndex = 0;
-        dataGridView1.Text = "dataGridView1";
+        dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
+        dgvTaiKhoan.Name = "dgvTaiKhoan";
+        dgvTaiKhoan.RowHeadersWidth = 51;
+        dgvTaiKhoan.Size = new System.Drawing.Size(1119, 420);
+        dgvTaiKhoan.TabIndex = 0;
+        dgvTaiKhoan.Text = "dataGridView1";
         // 
         // FormQuanLyTaiKhoan
         // 
@@ -338,27 +338,27 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5.ResumeLayout(false);
         tableLayoutPanel5.PerformLayout();
         panel3.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvTaiKhoan).EndInit();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.ComboBox comboBox1;
+    private System.Windows.Forms.TextBox txtHoTen;
+    private System.Windows.Forms.TextBox txtMatKhau;
+    private System.Windows.Forms.ComboBox cboVaiTro;
 
     private System.Windows.Forms.TextBox textBox2;
 
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label lblTenDangNhap;
+    private System.Windows.Forms.Label lblHoTen;
+    private System.Windows.Forms.Label lblMatKhau;
     private System.Windows.Forms.Label label5;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button btnLuu;
+    private System.Windows.Forms.Button btnKhoaMoKhoa;
 
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button btnLamMoi;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
 
@@ -368,11 +368,11 @@ partial class FormQuanLyTaiKhoan
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.DataGridView dgvTaiKhoan;
 
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.Label lblTieuDe;
+    private System.Windows.Forms.Button btnTimKiem;
+    private System.Windows.Forms.TextBox txtTimKiem;
 
     private System.Windows.Forms.Panel panel3;
 

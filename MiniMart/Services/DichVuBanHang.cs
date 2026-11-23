@@ -113,12 +113,12 @@ public class DichVuBanHang
         var lines = new List<string>
         {
             "MINIMART - HÓA ĐƠN BÁN HÀNG",
-            "Mã hóa đon: " + h.MaHoaDon,
+            "Mã hóa đơn: " + h.MaHoaDon,
             "Thời gian: "  + h.NgayLapHoaDon.ToString("yyyy-MM-dd  HH:mm:ss"),
             "Khách Hàng: " + h.tenKhachHang,
             "SDT:  "       + h.SDTkhachHang,
             "------------------------------",
-            $"Tạm tính:  {h.TamTinh:NO} VND",
+            $"Tạm tính:  {h.TamTinh:N0} VND",
             $"Giảm giá:  {h.ChietKhau:N0} VND",
             $"Tổng tiền: {h.TongTien:N0} VND",
             $"Khách đưa: {h.TienDaTra:N0} VND",
@@ -127,7 +127,7 @@ public class DichVuBanHang
         };
         string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Biên lai MiniMart");
         Directory.CreateDirectory(folder);
-        string path = Path.Combine(folder, h.MaHoaDon, ".txt");
+        string path = Path.Combine(folder, h.MaHoaDon + ".txt");
         File.WriteAllLines(path, lines);
         return path;
     }

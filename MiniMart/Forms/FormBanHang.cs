@@ -6,9 +6,9 @@ namespace MiniMart.Forms;
 
 public partial class FormBanHang : Form
 {
-    public readonly DichVuBanHang _banhang = new();
-    public readonly DichVuSanPham _sanPhan = new();
-    public readonly List<MatHangGioHang> _gioHang = new();
+    private readonly DichVuBanHang _banhang = new();
+    private readonly DichVuSanPham _sanPhan = new();
+    private readonly List<MatHangGioHang> _gioHang = new();
     public FormBanHang()
     {
         InitializeComponent();
@@ -61,8 +61,8 @@ public partial class FormBanHang : Form
     }
     private void XuLyCapNhatSoLuong_Click(object? sender, EventArgs e)
     {
-        if (dgvSanPham.CurrentRow == null) return;
-        int id = Convert.ToInt32(dgvSanPham.CurrentRow.Cells["IdSanPham"].Value);
+        if (dgvGioHang.CurrentRow == null) return;
+        int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
         var item = _gioHang.FirstOrDefault(x => x.IdSanPham == id);
         if (item == null) return;
 
@@ -80,7 +80,7 @@ public partial class FormBanHang : Form
 
     private void XuLyBoDong_Click(object? sender, EventArgs e)
     {
-        if (dgvSanPham.CurrentRow == null) return;
+        if (dgvGioHang.CurrentRow == null) return;
         int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
         _gioHang.RemoveAll(x => x.IdSanPham == id);
         CapNhatGioHang();
@@ -92,7 +92,7 @@ public partial class FormBanHang : Form
         {
             if (_gioHang.Count > 0 && string.IsNullOrWhiteSpace(txtTenKhachHang.Text))
             {
-                MessageBox.Show("Vui lòng nhập tên khách hàng.", "Thiếu thông tin", MessageBoxButtons.OK,
+                MessageBox.Show("Vui lòng nhập tên khách hàng.", "Nhập thiếu thông tin", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 txtTenKhachHang.Focus();
                 return;
@@ -122,8 +122,8 @@ public partial class FormBanHang : Form
         }
         catch (Exception ex)
         {
-            string chitiet = ex.InnerException?.Message ?? ex.Message;
-            MessageBox.Show(ex.Message, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            string chiTiet = ex.InnerException?.Message ?? ex.Message;
+            MessageBox.Show(chiTiet, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
     private decimal TinhTongCong() => _gioHang.Sum(x => x.ThanhTienDong) * (1 - nudGiamGiaHoaDon.Value / 100m);
@@ -170,7 +170,7 @@ public partial class FormBanHang : Form
     private void TaiDanhSachSanPham()
     {
         dgvSanPham.DataSource = _sanPhan.LayTatCa(txtTimKiem.Text);
-        TienIchGiaoDien.AnCot(dgvSanPham, "Id", "GiaVon", "TonKhoTonThieu");
+        TienIchGiaoDien.AnCot(dgvSanPham, "Id", "GiaVon", "TonKhoToiThieu");
         TienIchGiaoDien.DatTieuDe(dgvSanPham, ("Ma", "Mã SP"), ("Ten", "Tên sản phẩm"), ("DonVi", "Đơn vị"),
             ("GiaBan", "Giá bán"), ("SoLuongHangTon", "Tồn kho"));
         TienIchGiaoDien.DinhDangSo(dgvSanPham, "GiaBan");

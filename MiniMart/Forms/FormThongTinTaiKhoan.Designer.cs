@@ -43,8 +43,8 @@ partial class FormThongTinTaiKhoan
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
         grpDoiMatKhau = new System.Windows.Forms.GroupBox();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-        textBox3 = new System.Windows.Forms.TextBox();
-        textBox2 = new System.Windows.Forms.TextBox();
+        txtXacNhanMatKhau = new System.Windows.Forms.TextBox();
+        txtMatKhauMoi = new System.Windows.Forms.TextBox();
         lblMatKhauCu = new System.Windows.Forms.Label();
         lblMatKhauMoi = new System.Windows.Forms.Label();
         lblXacNhanMatKhau = new System.Windows.Forms.Label();
@@ -218,8 +218,8 @@ partial class FormThongTinTaiKhoan
         tableLayoutPanel4.ColumnCount = 2;
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.54032F));
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.45968F));
-        tableLayoutPanel4.Controls.Add(textBox3, 1, 2);
-        tableLayoutPanel4.Controls.Add(textBox2, 1, 1);
+        tableLayoutPanel4.Controls.Add(txtXacNhanMatKhau, 1, 2);
+        tableLayoutPanel4.Controls.Add(txtMatKhauMoi, 1, 1);
         tableLayoutPanel4.Controls.Add(lblMatKhauCu, 0, 0);
         tableLayoutPanel4.Controls.Add(lblMatKhauMoi, 0, 1);
         tableLayoutPanel4.Controls.Add(lblXacNhanMatKhau, 0, 2);
@@ -237,27 +237,27 @@ partial class FormThongTinTaiKhoan
         tableLayoutPanel4.Size = new System.Drawing.Size(496, 213);
         tableLayoutPanel4.TabIndex = 0;
         // 
-        // textBox3
+        // txtXacNhanMatKhau
         // 
-        textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        textBox3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox3.Location = new System.Drawing.Point(214, 89);
-        textBox3.Name = "textBox3";
-        textBox3.Size = new System.Drawing.Size(279, 31);
-        textBox3.TabIndex = 5;
-        textBox3.UseSystemPasswordChar = true;
+        txtXacNhanMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        txtXacNhanMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        txtXacNhanMatKhau.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtXacNhanMatKhau.Location = new System.Drawing.Point(214, 89);
+        txtXacNhanMatKhau.Name = "txtXacNhanMatKhau";
+        txtXacNhanMatKhau.Size = new System.Drawing.Size(279, 31);
+        txtXacNhanMatKhau.TabIndex = 5;
+        txtXacNhanMatKhau.UseSystemPasswordChar = true;
         // 
-        // textBox2
+        // txtMatKhauMoi
         // 
-        textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        textBox2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox2.Location = new System.Drawing.Point(214, 47);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(279, 31);
-        textBox2.TabIndex = 3;
-        textBox2.UseSystemPasswordChar = true;
+        txtMatKhauMoi.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        txtMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        txtMatKhauMoi.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtMatKhauMoi.Location = new System.Drawing.Point(214, 47);
+        txtMatKhauMoi.Name = "txtMatKhauMoi";
+        txtMatKhauMoi.Size = new System.Drawing.Size(279, 31);
+        txtMatKhauMoi.TabIndex = 3;
+        txtMatKhauMoi.UseSystemPasswordChar = true;
         // 
         // lblMatKhauCu
         // 
@@ -383,8 +383,8 @@ partial class FormThongTinTaiKhoan
 
     private System.Windows.Forms.CheckBox chkHienMatKhau;
 
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.TextBox textBox3;
+    private System.Windows.Forms.TextBox txtMatKhauMoi;
+    private System.Windows.Forms.TextBox txtXacNhanMatKhau;
 
     private System.Windows.Forms.Label lblXacNhanMatKhau;
     private System.Windows.Forms.Label lblMatKhauMoi;

@@ -14,52 +14,52 @@ public partial class FormNhapKho : Form
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
         
-        TienIchGiaoDien.CauHinhLuoi(dataGridView1);
-        TienIchGiaoDien.DatGoiY(textBox1);
+        TienIchGiaoDien.CauHinhLuoi(dgvSanPham);
+        TienIchGiaoDien.DatGoiY(txtTimKiem);
 
-        button1.Click += XuLyTimKiem_Click;
-        button2.Click += XuLyNhapKho_Click;
-        dataGridView1.CellClick += XuLyChonSanPham_CellClick;
-        textBox2.Leave += XuLyNhapMaSanPham_Leave;
+        btnTimKiem.Click += XuLyTimKiem_Click;
+        btnXacNhan.Click += XuLyNhapKho_Click;
+        dgvSanPham.CellClick += XuLyChonSanPham_CellClick;
+        txtMaSanPham.Leave += XuLyNhapMaSanPham_Leave;
 
         TaiDanhSachSanPham();
     }
 
     private void TaiDanhSachSanPham()
     {
-        dataGridView1.DataSource = danhSachSanPham.LayTatCa(textBox1.Text);
-        TienIchGiaoDien.AnCot(dataGridView1,"ID", "Giá Bán", "Tồn Kho Tối Thiểu");
-        TienIchGiaoDien.DatTieuDe(dataGridView1,("Ma", "Mã Sản Phẩm"),("Ten","Tên Sản Phẩm")
-            ,("DonVi","Đơn Vị"),("GiaNhap","Giá Nhập"),("TonKho","Tồn Kho"));
-        TienIchGiaoDien.DinhDangSo(dataGridView1,"GiaNhap");
+        dgvSanPham.DataSource = danhSachSanPham.LayTatCa(txtTimKiem.Text);
+        TienIchGiaoDien.AnCot(dgvSanPham,"ID", "Giá Bán", "Tồn Kho Tối Thiểu");
+        TienIchGiaoDien.DatTieuDe(dgvSanPham,("Ma", "Mã Sản Phẩm"),("Ten","Tên Sản Phẩm")
+            ,("DonVi","Đơn Vị"),("GiaVon","Giá Nhập"),("SoLuongHangTon","Tồn Kho"));
+        TienIchGiaoDien.DinhDangSo(dgvSanPham,"GiaVon");
     }
 
     private void XuLyNhapMaSanPham_Leave(object? sender, EventArgs e)
     {
-        var sp = string.IsNullOrWhiteSpace(textBox2.Text) ? null : danhSachSanPham.layTheoMa(textBox2.Text);
-        label3.Text = sp ?.Ten ?? "Chưa Chọn";
-        if(sp != null) TienIchGiaoDien.GanGiaTri(numericUpDown2,sp.GiaVon);
+        var sp = string.IsNullOrWhiteSpace(txtMaSanPham.Text) ? null : danhSachSanPham.layTheoMa(txtMaSanPham.Text);
+        lblTenSanPham.Text = sp ?.Ten ?? "Chưa Chọn";
+        if(sp != null) TienIchGiaoDien.GanGiaTri(nudGiaNhap,sp.GiaVon);
     }
 
     private void XuLyChonSanPham_CellClick(object? sender, DataGridViewCellEventArgs e)
     {
         if(e.RowIndex<0) return;
-        if(dataGridView1.Rows[e.RowIndex].DataBoundItem is not SanPham p) return;
+        if(dgvSanPham.Rows[e.RowIndex].DataBoundItem is not SanPham p) return;
 
-        textBox2.Text = p.Ma;
-        label3.Text = p.Ten;
-        TienIchGiaoDien.GanGiaTri(numericUpDown2,p.GiaVon);
+        txtMaSanPham.Text = p.Ma;
+        lblTenSanPham.Text = p.Ten;
+        TienIchGiaoDien.GanGiaTri(nudGiaNhap,p.GiaVon);
     }
 
     private void XuLyNhapKho_Click(object? sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(textBox2.Text))
+        if (string.IsNullOrWhiteSpace(txtMaSanPham.Text))
         {
             MessageBox.Show("Hãy chọn sản phẩm trong danh sách hoặc nhập mã sản phẩm");
             return;
         }
 
-        var sp = danhSachSanPham.layTheoMa(textBox2.Text);
+        var sp = danhSachSanPham.layTheoMa(txtMaSanPham.Text);
         if (sp == null)
         {
             MessageBox.Show("không tìm thấy sản phẩm có mã trên vui lòng nhập lại.");
@@ -68,9 +68,9 @@ public partial class FormNhapKho : Form
 
         try
         {
-            danhSachKho.NhapKho(sp.Id,(int)numericUpDown1.Value,numericUpDown2.Value);
-            MessageBox.Show($"Nhập Kho Thành Công{sp.Ten}+{numericUpDown1.Value:N0}.");
-            numericUpDown1.Value = 1;
+            danhSachKho.NhapKho(sp.Id,(int)nudSoLuong.Value,nudGiaNhap.Value);
+            MessageBox.Show($"Nhập Kho Thành Công{sp.Ten}+{nudSoLuong.Value:N0}.");
+            nudSoLuong.Value = 1;
             TaiDanhSachSanPham();
 
         }
