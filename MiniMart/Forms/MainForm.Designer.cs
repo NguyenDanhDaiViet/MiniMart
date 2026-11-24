@@ -102,6 +102,7 @@ partial class MainForm
         // 
         // tableLayoutPanel2
         // 
+        tableLayoutPanel2.BackColor = System.Drawing.Color.Navy;
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -186,7 +187,7 @@ partial class MainForm
         // btBanHang
         // 
         btBanHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btBanHang.BackColor = System.Drawing.Color.LimeGreen;
+        btBanHang.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btBanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btBanHang.ForeColor = System.Drawing.Color.White;
         btBanHang.Location = new System.Drawing.Point(3, 3);
@@ -200,7 +201,7 @@ partial class MainForm
         // btTaiKhoan
         // 
         btTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btTaiKhoan.BackColor = System.Drawing.Color.LimeGreen;
+        btTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btTaiKhoan.ForeColor = System.Drawing.Color.White;
         btTaiKhoan.Location = new System.Drawing.Point(3, 357);
@@ -214,7 +215,7 @@ partial class MainForm
         // btBaoCao
         // 
         btBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btBaoCao.BackColor = System.Drawing.Color.LimeGreen;
+        btBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btBaoCao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btBaoCao.ForeColor = System.Drawing.Color.White;
         btBaoCao.Location = new System.Drawing.Point(3, 298);
@@ -228,7 +229,7 @@ partial class MainForm
         // btCanhBao
         // 
         btCanhBao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btCanhBao.BackColor = System.Drawing.Color.LimeGreen;
+        btCanhBao.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btCanhBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btCanhBao.ForeColor = System.Drawing.Color.White;
         btCanhBao.Location = new System.Drawing.Point(3, 239);
@@ -242,7 +243,7 @@ partial class MainForm
         // btNhapKho
         // 
         btNhapKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btNhapKho.BackColor = System.Drawing.Color.LimeGreen;
+        btNhapKho.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btNhapKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btNhapKho.ForeColor = System.Drawing.Color.White;
         btNhapKho.Location = new System.Drawing.Point(3, 180);
@@ -256,7 +257,7 @@ partial class MainForm
         // btSanPham
         // 
         btSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btSanPham.BackColor = System.Drawing.Color.LimeGreen;
+        btSanPham.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btSanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btSanPham.ForeColor = System.Drawing.Color.White;
         btSanPham.Location = new System.Drawing.Point(3, 62);
@@ -270,7 +271,7 @@ partial class MainForm
         // btnLichSuDon
         // 
         btnLichSuDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btnLichSuDon.BackColor = System.Drawing.Color.LimeGreen;
+        btnLichSuDon.BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)0)), ((int)((byte)192)));
         btnLichSuDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnLichSuDon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         btnLichSuDon.Location = new System.Drawing.Point(3, 121);
@@ -328,7 +329,7 @@ partial class MainForm
         // 
         btnNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         btnNguoiDung.AutoEllipsis = true;
-        btnNguoiDung.BackColor = System.Drawing.Color.DarkGreen;
+        btnNguoiDung.BackColor = System.Drawing.Color.RoyalBlue;
         btnNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnNguoiDung.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         btnNguoiDung.Location = new System.Drawing.Point(3, 32);
