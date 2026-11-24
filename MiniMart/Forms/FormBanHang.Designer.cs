@@ -40,6 +40,7 @@ partial class FormBanHang
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         txtTimKiem = new System.Windows.Forms.TextBox();
         btnTimKiem = new System.Windows.Forms.Button();
+        btnThemVaoGio = new System.Windows.Forms.Button();
         dgvSanPham = new System.Windows.Forms.DataGridView();
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,7 +70,6 @@ partial class FormBanHang
         panel5 = new System.Windows.Forms.Panel();
         lblGiamGiaHoaDon = new System.Windows.Forms.Label();
         lblBanHang = new System.Windows.Forms.Label();
-        btnThemVaoGio = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -208,7 +208,7 @@ partial class FormBanHang
         // 
         btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         btnTimKiem.AutoSize = true;
-        btnTimKiem.BackColor = System.Drawing.Color.Green;
+        btnTimKiem.BackColor = System.Drawing.Color.Navy;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTimKiem.ForeColor = System.Drawing.Color.White;
         btnTimKiem.Location = new System.Drawing.Point(205, 8);
@@ -217,6 +217,21 @@ partial class FormBanHang
         btnTimKiem.TabIndex = 1;
         btnTimKiem.Text = "Tìm";
         btnTimKiem.UseVisualStyleBackColor = false;
+        // 
+        // btnThemVaoGio
+        // 
+        btnThemVaoGio.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        btnThemVaoGio.BackColor = System.Drawing.Color.Navy;
+        btnThemVaoGio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+        btnThemVaoGio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+        btnThemVaoGio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnThemVaoGio.ForeColor = System.Drawing.Color.Snow;
+        btnThemVaoGio.Location = new System.Drawing.Point(314, 6);
+        btnThemVaoGio.Name = "btnThemVaoGio";
+        btnThemVaoGio.Size = new System.Drawing.Size(110, 39);
+        btnThemVaoGio.TabIndex = 2;
+        btnThemVaoGio.Text = "Thêm vào giỏ";
+        btnThemVaoGio.UseVisualStyleBackColor = false;
         // 
         // dgvSanPham
         // 
@@ -443,7 +458,7 @@ partial class FormBanHang
         // btnThanhToan
         // 
         btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        btnThanhToan.BackColor = System.Drawing.Color.Green;
+        btnThanhToan.BackColor = System.Drawing.Color.Navy;
         btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnThanhToan.ForeColor = System.Drawing.Color.White;
         btnThanhToan.Location = new System.Drawing.Point(131, 15);
@@ -456,7 +471,7 @@ partial class FormBanHang
         // btnBoDong
         // 
         btnBoDong.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnBoDong.BackColor = System.Drawing.Color.Green;
+        btnBoDong.BackColor = System.Drawing.Color.Navy;
         btnBoDong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnBoDong.ForeColor = System.Drawing.Color.White;
         btnBoDong.Location = new System.Drawing.Point(331, 22);
@@ -471,7 +486,7 @@ partial class FormBanHang
         lblTongCong.Anchor = System.Windows.Forms.AnchorStyles.Left;
         lblTongCong.AutoSize = true;
         lblTongCong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTongCong.ForeColor = System.Drawing.Color.Green;
+        lblTongCong.ForeColor = System.Drawing.Color.Navy;
         lblTongCong.Location = new System.Drawing.Point(475, 98);
         lblTongCong.Name = "lblTongCong";
         lblTongCong.Size = new System.Drawing.Size(220, 41);
@@ -562,28 +577,13 @@ partial class FormBanHang
         // lblBanHang
         // 
         lblBanHang.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblBanHang.ForeColor = System.Drawing.Color.Green;
+        lblBanHang.ForeColor = System.Drawing.Color.Navy;
         lblBanHang.Location = new System.Drawing.Point(3, 0);
         lblBanHang.Name = "lblBanHang";
         lblBanHang.Size = new System.Drawing.Size(262, 100);
         lblBanHang.TabIndex = 1;
         lblBanHang.Text = "BÁN HÀNG";
         lblBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // btnThemVaoGio
-        // 
-        btnThemVaoGio.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        btnThemVaoGio.BackColor = System.Drawing.Color.Green;
-        btnThemVaoGio.FlatAppearance.BorderColor = System.Drawing.Color.White;
-        btnThemVaoGio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-        btnThemVaoGio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnThemVaoGio.ForeColor = System.Drawing.Color.Snow;
-        btnThemVaoGio.Location = new System.Drawing.Point(314, 6);
-        btnThemVaoGio.Name = "btnThemVaoGio";
-        btnThemVaoGio.Size = new System.Drawing.Size(110, 39);
-        btnThemVaoGio.TabIndex = 2;
-        btnThemVaoGio.Text = "Thêm vào giỏ";
-        btnThemVaoGio.UseVisualStyleBackColor = false;
         // 
         // FormBanHang
         // 

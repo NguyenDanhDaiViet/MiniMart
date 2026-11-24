@@ -121,13 +121,15 @@ partial class FormQuanLyTaiKhoan
         // 
         btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnTimKiem.AutoSize = true;
+        btnTimKiem.BackColor = System.Drawing.Color.Navy;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.ForeColor = System.Drawing.Color.White;
         btnTimKiem.Location = new System.Drawing.Point(926, 90);
         btnTimKiem.Name = "btnTimKiem";
         btnTimKiem.Size = new System.Drawing.Size(176, 42);
         btnTimKiem.TabIndex = 2;
         btnTimKiem.Text = "Tìm kiếm";
-        btnTimKiem.UseVisualStyleBackColor = true;
+        btnTimKiem.UseVisualStyleBackColor = false;
         // 
         // txtTimKiem
         // 

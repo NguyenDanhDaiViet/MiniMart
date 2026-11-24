@@ -117,7 +117,7 @@ partial class FormCanhBao
         // btnLamMoi
         // 
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnLamMoi.BackColor = System.Drawing.Color.Green;
+        btnLamMoi.BackColor = System.Drawing.Color.Navy;
         btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnLamMoi.ForeColor = System.Drawing.Color.White;
         btnLamMoi.Location = new System.Drawing.Point(706, 12);

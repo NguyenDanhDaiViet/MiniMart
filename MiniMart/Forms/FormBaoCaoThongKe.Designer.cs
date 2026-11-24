@@ -50,12 +50,12 @@ partial class FormBaoCaoThongKe
         dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
         dataGridView1 = new System.Windows.Forms.DataGridView();
-        lbTopsanphambanchay = new System.Windows.Forms.Label();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
         lbDoanhThu = new System.Windows.Forms.Label();
         tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
         lbSohoadon = new System.Windows.Forms.Label();
+        lbTopsanphambanchay = new System.Windows.Forms.Label();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -111,7 +111,7 @@ partial class FormBaoCaoThongKe
         lbBaocaothongke.Anchor = System.Windows.Forms.AnchorStyles.None;
         lbBaocaothongke.AutoSize = true;
         lbBaocaothongke.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lbBaocaothongke.ForeColor = System.Drawing.Color.DarkGreen;
+        lbBaocaothongke.ForeColor = System.Drawing.Color.Blue;
         lbBaocaothongke.Location = new System.Drawing.Point(377, 11);
         lbBaocaothongke.Name = "lbBaocaothongke";
         lbBaocaothongke.Size = new System.Drawing.Size(312, 41);
@@ -206,7 +206,7 @@ partial class FormBaoCaoThongKe
         btXuatfilecsv.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         btXuatfilecsv.AutoSize = true;
         btXuatfilecsv.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btXuatfilecsv.ForeColor = System.Drawing.Color.DarkGreen;
+        btXuatfilecsv.ForeColor = System.Drawing.Color.Blue;
         btXuatfilecsv.Location = new System.Drawing.Point(132, 17);
         btXuatfilecsv.Name = "btXuatfilecsv";
         btXuatfilecsv.Size = new System.Drawing.Size(253, 33);
@@ -263,7 +263,7 @@ partial class FormBaoCaoThongKe
         btXembaocao.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         btXembaocao.AutoSize = true;
         btXembaocao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btXembaocao.ForeColor = System.Drawing.Color.DarkGreen;
+        btXembaocao.ForeColor = System.Drawing.Color.Blue;
         btXembaocao.Location = new System.Drawing.Point(132, 14);
         btXembaocao.Name = "btXembaocao";
         btXembaocao.Size = new System.Drawing.Size(253, 38);
@@ -322,18 +322,6 @@ partial class FormBaoCaoThongKe
         dataGridView1.TabIndex = 0;
         dataGridView1.Text = "dataGridView1";
         // 
-        // lbTopsanphambanchay
-        // 
-        lbTopsanphambanchay.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lbTopsanphambanchay.AutoSize = true;
-        lbTopsanphambanchay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lbTopsanphambanchay.Location = new System.Drawing.Point(3, 71);
-        lbTopsanphambanchay.Name = "lbTopsanphambanchay";
-        lbTopsanphambanchay.Size = new System.Drawing.Size(271, 28);
-        lbTopsanphambanchay.TabIndex = 1;
-        lbTopsanphambanchay.Text = "TOP SẢN PHẨM BÁN CHẠY";
-        lbTopsanphambanchay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
         // tableLayoutPanel4
         // 
         tableLayoutPanel4.ColumnCount = 2;
@@ -367,7 +355,7 @@ partial class FormBaoCaoThongKe
         // 
         lbDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
         lbDoanhThu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lbDoanhThu.ForeColor = System.Drawing.Color.DarkGreen;
+        lbDoanhThu.ForeColor = System.Drawing.Color.Blue;
         lbDoanhThu.Location = new System.Drawing.Point(133, 0);
         lbDoanhThu.Name = "lbDoanhThu";
         lbDoanhThu.Size = new System.Drawing.Size(254, 53);
@@ -394,13 +382,25 @@ partial class FormBaoCaoThongKe
         // 
         lbSohoadon.Dock = System.Windows.Forms.DockStyle.Fill;
         lbSohoadon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lbSohoadon.ForeColor = System.Drawing.Color.DarkGreen;
+        lbSohoadon.ForeColor = System.Drawing.Color.Blue;
         lbSohoadon.Location = new System.Drawing.Point(133, 0);
         lbSohoadon.Name = "lbSohoadon";
         lbSohoadon.Size = new System.Drawing.Size(255, 53);
         lbSohoadon.TabIndex = 2;
         lbSohoadon.Text = "SỐ HÓA ĐƠN";
         lbSohoadon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lbTopsanphambanchay
+        // 
+        lbTopsanphambanchay.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lbTopsanphambanchay.AutoSize = true;
+        lbTopsanphambanchay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lbTopsanphambanchay.Location = new System.Drawing.Point(3, 71);
+        lbTopsanphambanchay.Name = "lbTopsanphambanchay";
+        lbTopsanphambanchay.Size = new System.Drawing.Size(271, 28);
+        lbTopsanphambanchay.TabIndex = 1;
+        lbTopsanphambanchay.Text = "TOP SẢN PHẨM BÁN CHẠY";
+        lbTopsanphambanchay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // FormBaoCaoThongKe
         // 

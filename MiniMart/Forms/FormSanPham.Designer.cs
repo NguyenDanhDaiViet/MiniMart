@@ -157,7 +157,7 @@ partial class FormSanPham
         // 
         btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
         btnTimKiem.AutoSize = true;
-        btnTimKiem.BackColor = System.Drawing.Color.Green;
+        btnTimKiem.BackColor = System.Drawing.Color.Navy;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTimKiem.ForeColor = System.Drawing.Color.White;
         btnTimKiem.Location = new System.Drawing.Point(822, 12);
@@ -379,7 +379,7 @@ partial class FormSanPham
         // btnXoa
         // 
         btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        btnXoa.BackColor = System.Drawing.Color.Green;
+        btnXoa.BackColor = System.Drawing.Color.Navy;
         btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnXoa.ForeColor = System.Drawing.Color.White;
         btnXoa.Location = new System.Drawing.Point(332, 3);
@@ -392,7 +392,7 @@ partial class FormSanPham
         // btnLuu
         // 
         btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnLuu.BackColor = System.Drawing.Color.Green;
+        btnLuu.BackColor = System.Drawing.Color.Navy;
         btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnLuu.ForeColor = System.Drawing.Color.White;
         btnLuu.Location = new System.Drawing.Point(173, 3);
@@ -405,7 +405,7 @@ partial class FormSanPham
         // btnMoi
         // 
         btnMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnMoi.BackColor = System.Drawing.Color.Green;
+        btnMoi.BackColor = System.Drawing.Color.Navy;
         btnMoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnMoi.ForeColor = System.Drawing.Color.White;
         btnMoi.Location = new System.Drawing.Point(8, 3);
@@ -422,7 +422,7 @@ partial class FormSanPham
         BackColor = System.Drawing.Color.WhiteSmoke;
         ClientSize = new System.Drawing.Size(1182, 653);
         Controls.Add(panel1);
-        Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+        Margin = new System.Windows.Forms.Padding(2);
         MinimumSize = new System.Drawing.Size(1200, 700);
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "MiniMart - Quản lý sản phẩm";

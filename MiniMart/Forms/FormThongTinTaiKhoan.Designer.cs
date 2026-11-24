@@ -313,7 +313,7 @@ partial class FormThongTinTaiKhoan
         // 
         // btnDoiMatKhau
         // 
-        btnDoiMatKhau.BackColor = System.Drawing.Color.Green;
+        btnDoiMatKhau.BackColor = System.Drawing.Color.Navy;
         btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
         btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
@@ -347,7 +347,7 @@ partial class FormThongTinTaiKhoan
         // 
         lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTieuDe.ForeColor = System.Drawing.Color.Green;
+        lblTieuDe.ForeColor = System.Drawing.Color.Navy;
         lblTieuDe.Location = new System.Drawing.Point(20, 4);
         lblTieuDe.Name = "lblTieuDe";
         lblTieuDe.Size = new System.Drawing.Size(499, 49);
