@@ -46,9 +46,9 @@ partial class MainForm
         btSanPham = new System.Windows.Forms.Button();
         btnLichSuDon = new System.Windows.Forms.Button();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+        btnDangXuat = new System.Windows.Forms.Button();
         label2 = new System.Windows.Forms.Label();
         btnNguoiDung = new System.Windows.Forms.Button();
-        btnDangXuat = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         panel3.SuspendLayout();
@@ -63,7 +63,7 @@ partial class MainForm
         panel1.Dock = System.Windows.Forms.DockStyle.Fill;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(860, 617);
+        panel1.Size = new System.Drawing.Size(1056, 686);
         panel1.TabIndex = 0;
         // 
         // tableLayoutPanel1
@@ -79,15 +79,15 @@ partial class MainForm
         tableLayoutPanel1.RowCount = 1;
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel1.Size = new System.Drawing.Size(860, 617);
+        tableLayoutPanel1.Size = new System.Drawing.Size(1056, 686);
         tableLayoutPanel1.TabIndex = 0;
         // 
         // manHinh
         // 
         manHinh.Dock = System.Windows.Forms.DockStyle.Fill;
-        manHinh.Location = new System.Drawing.Point(199, 3);
+        manHinh.Location = new System.Drawing.Point(243, 3);
         manHinh.Name = "manHinh";
-        manHinh.Size = new System.Drawing.Size(658, 611);
+        manHinh.Size = new System.Drawing.Size(810, 680);
         manHinh.TabIndex = 0;
         // 
         // panel3
@@ -97,7 +97,7 @@ partial class MainForm
         panel3.Dock = System.Windows.Forms.DockStyle.Fill;
         panel3.Location = new System.Drawing.Point(3, 3);
         panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(190, 611);
+        panel3.Size = new System.Drawing.Size(234, 680);
         panel3.TabIndex = 1;
         // 
         // tableLayoutPanel2
@@ -131,8 +131,8 @@ partial class MainForm
         tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
         tableLayoutPanel2.RowCount = 3;
-        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.93722F));
-        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.06278F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.704845F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.29515F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 156F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -144,7 +144,7 @@ partial class MainForm
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-        tableLayoutPanel2.Size = new System.Drawing.Size(190, 611);
+        tableLayoutPanel2.Size = new System.Drawing.Size(234, 680);
         tableLayoutPanel2.TabIndex = 0;
         // 
         // label1
@@ -152,7 +152,7 @@ partial class MainForm
         label1.Anchor = System.Windows.Forms.AnchorStyles.None;
         label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label1.ForeColor = System.Drawing.Color.White;
-        label1.Location = new System.Drawing.Point(15, 22);
+        label1.Location = new System.Drawing.Point(37, 36);
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(160, 36);
         label1.TabIndex = 0;
@@ -167,10 +167,10 @@ partial class MainForm
         tableLayoutPanel3.Controls.Add(btBaoCao, 0, 5);
         tableLayoutPanel3.Controls.Add(btCanhBao, 0, 4);
         tableLayoutPanel3.Controls.Add(btNhapKho, 0, 3);
-        tableLayoutPanel3.Controls.Add(btSanPham, 0, 2);
-        tableLayoutPanel3.Controls.Add(btnLichSuDon, 0, 1);
+        tableLayoutPanel3.Controls.Add(btSanPham, 0, 1);
+        tableLayoutPanel3.Controls.Add(btnLichSuDon, 0, 2);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel3.Location = new System.Drawing.Point(3, 84);
+        tableLayoutPanel3.Location = new System.Drawing.Point(3, 111);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
         tableLayoutPanel3.RowCount = 7;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.619886F));
@@ -180,7 +180,7 @@ partial class MainForm
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.619884F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.619884F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.280703F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(184, 367);
+        tableLayoutPanel3.Size = new System.Drawing.Size(228, 409);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // btBanHang
@@ -191,7 +191,7 @@ partial class MainForm
         btBanHang.ForeColor = System.Drawing.Color.White;
         btBanHang.Location = new System.Drawing.Point(3, 3);
         btBanHang.Name = "btBanHang";
-        btBanHang.Size = new System.Drawing.Size(178, 47);
+        btBanHang.Size = new System.Drawing.Size(222, 53);
         btBanHang.TabIndex = 0;
         btBanHang.Text = "Bán hàng";
         btBanHang.UseVisualStyleBackColor = false;
@@ -203,9 +203,9 @@ partial class MainForm
         btTaiKhoan.BackColor = System.Drawing.Color.LimeGreen;
         btTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btTaiKhoan.ForeColor = System.Drawing.Color.White;
-        btTaiKhoan.Location = new System.Drawing.Point(3, 321);
+        btTaiKhoan.Location = new System.Drawing.Point(3, 357);
         btTaiKhoan.Name = "btTaiKhoan";
-        btTaiKhoan.Size = new System.Drawing.Size(178, 43);
+        btTaiKhoan.Size = new System.Drawing.Size(222, 49);
         btTaiKhoan.TabIndex = 5;
         btTaiKhoan.Text = "Tài khoản";
         btTaiKhoan.UseVisualStyleBackColor = false;
@@ -217,9 +217,9 @@ partial class MainForm
         btBaoCao.BackColor = System.Drawing.Color.LimeGreen;
         btBaoCao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btBaoCao.ForeColor = System.Drawing.Color.White;
-        btBaoCao.Location = new System.Drawing.Point(3, 268);
+        btBaoCao.Location = new System.Drawing.Point(3, 298);
         btBaoCao.Name = "btBaoCao";
-        btBaoCao.Size = new System.Drawing.Size(178, 47);
+        btBaoCao.Size = new System.Drawing.Size(222, 53);
         btBaoCao.TabIndex = 4;
         btBaoCao.Text = "Báo cáo";
         btBaoCao.UseVisualStyleBackColor = false;
@@ -231,9 +231,9 @@ partial class MainForm
         btCanhBao.BackColor = System.Drawing.Color.LimeGreen;
         btCanhBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btCanhBao.ForeColor = System.Drawing.Color.White;
-        btCanhBao.Location = new System.Drawing.Point(3, 215);
+        btCanhBao.Location = new System.Drawing.Point(3, 239);
         btCanhBao.Name = "btCanhBao";
-        btCanhBao.Size = new System.Drawing.Size(178, 47);
+        btCanhBao.Size = new System.Drawing.Size(222, 53);
         btCanhBao.TabIndex = 3;
         btCanhBao.Text = "Cảnh báo tồn";
         btCanhBao.UseVisualStyleBackColor = false;
@@ -245,9 +245,9 @@ partial class MainForm
         btNhapKho.BackColor = System.Drawing.Color.LimeGreen;
         btNhapKho.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btNhapKho.ForeColor = System.Drawing.Color.White;
-        btNhapKho.Location = new System.Drawing.Point(3, 162);
+        btNhapKho.Location = new System.Drawing.Point(3, 180);
         btNhapKho.Name = "btNhapKho";
-        btNhapKho.Size = new System.Drawing.Size(178, 47);
+        btNhapKho.Size = new System.Drawing.Size(222, 53);
         btNhapKho.TabIndex = 2;
         btNhapKho.Text = "Nhập kho";
         btNhapKho.UseVisualStyleBackColor = false;
@@ -259,9 +259,9 @@ partial class MainForm
         btSanPham.BackColor = System.Drawing.Color.LimeGreen;
         btSanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btSanPham.ForeColor = System.Drawing.Color.White;
-        btSanPham.Location = new System.Drawing.Point(3, 109);
+        btSanPham.Location = new System.Drawing.Point(3, 62);
         btSanPham.Name = "btSanPham";
-        btSanPham.Size = new System.Drawing.Size(178, 47);
+        btSanPham.Size = new System.Drawing.Size(222, 53);
         btSanPham.TabIndex = 1;
         btSanPham.Text = "Sản phẩm";
         btSanPham.UseVisualStyleBackColor = false;
@@ -273,9 +273,9 @@ partial class MainForm
         btnLichSuDon.BackColor = System.Drawing.Color.LimeGreen;
         btnLichSuDon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnLichSuDon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-        btnLichSuDon.Location = new System.Drawing.Point(3, 56);
+        btnLichSuDon.Location = new System.Drawing.Point(3, 121);
         btnLichSuDon.Name = "btnLichSuDon";
-        btnLichSuDon.Size = new System.Drawing.Size(178, 47);
+        btnLichSuDon.Size = new System.Drawing.Size(222, 53);
         btnLichSuDon.TabIndex = 6;
         btnLichSuDon.Text = "Lịch Sử Đơn";
         btnLichSuDon.UseVisualStyleBackColor = false;
@@ -289,14 +289,28 @@ partial class MainForm
         tableLayoutPanel4.Controls.Add(label2, 0, 0);
         tableLayoutPanel4.Controls.Add(btnNguoiDung, 0, 1);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel4.Location = new System.Drawing.Point(3, 457);
+        tableLayoutPanel4.Location = new System.Drawing.Point(3, 526);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
         tableLayoutPanel4.RowCount = 3;
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.802467F));
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.19753F));
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-        tableLayoutPanel4.Size = new System.Drawing.Size(184, 151);
+        tableLayoutPanel4.Size = new System.Drawing.Size(228, 151);
         tableLayoutPanel4.TabIndex = 2;
+        // 
+        // btnDangXuat
+        // 
+        btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        btnDangXuat.AutoEllipsis = true;
+        btnDangXuat.BackColor = System.Drawing.Color.Red;
+        btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+        btnDangXuat.Location = new System.Drawing.Point(3, 84);
+        btnDangXuat.Name = "btnDangXuat";
+        btnDangXuat.Size = new System.Drawing.Size(222, 64);
+        btnDangXuat.TabIndex = 2;
+        btnDangXuat.Text = "Đăng Xuất";
+        btnDangXuat.UseVisualStyleBackColor = false;
         // 
         // label2
         // 
@@ -305,7 +319,7 @@ partial class MainForm
         label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
         label2.Location = new System.Drawing.Point(3, 0);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(178, 29);
+        label2.Size = new System.Drawing.Size(222, 29);
         label2.TabIndex = 0;
         label2.Text = "Đang đăng nhập";
         label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -319,30 +333,16 @@ partial class MainForm
         btnNguoiDung.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
         btnNguoiDung.Location = new System.Drawing.Point(3, 32);
         btnNguoiDung.Name = "btnNguoiDung";
-        btnNguoiDung.Size = new System.Drawing.Size(178, 46);
+        btnNguoiDung.Size = new System.Drawing.Size(222, 46);
         btnNguoiDung.TabIndex = 1;
         btnNguoiDung.Text = "Tên Người Dùng";
         btnNguoiDung.UseVisualStyleBackColor = false;
-        // 
-        // btnDangXuat
-        // 
-        btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        btnDangXuat.AutoEllipsis = true;
-        btnDangXuat.BackColor = System.Drawing.Color.Red;
-        btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-        btnDangXuat.Location = new System.Drawing.Point(3, 84);
-        btnDangXuat.Name = "btnDangXuat";
-        btnDangXuat.Size = new System.Drawing.Size(178, 64);
-        btnDangXuat.TabIndex = 2;
-        btnDangXuat.Text = "Đăng Xuất";
-        btnDangXuat.UseVisualStyleBackColor = false;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(860, 617);
+        ClientSize = new System.Drawing.Size(1056, 686);
         Controls.Add(panel1);
         Cursor = System.Windows.Forms.Cursors.IBeam;
         Text = "MainForm";

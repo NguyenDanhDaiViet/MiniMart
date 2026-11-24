@@ -1,39 +1,75 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MiniMart.Data;
+using MiniMart.Model;
 
 namespace MiniMart.Services;
 
 public class DichVuBaoCao
 {
-    public (decimal Doanhthu, int Sohoadon) LayTongQuan(DateTime Tungay, DateTime Denngay)
+    public (decimal Doanhthu, int Sohoadon) LayTongQuan(DateTime tuNgay, DateTime denNgay)
     {
         using var db = new CoSoDuLieu();
-        var start = Tungay.Date;
-        var end = Denngay.AddDays(1);
+        var batDau = tuNgay.Date;
+        var ketThuc = denNgay.AddDays(1);
 
 
-        var totals = db.HoaDons.AsNoTracking()
-            .Where(x => x.NgayLapHoaDon >= start && x.NgayLapHoaDon <= end)
+        var tongTien = db.HoaDons.AsNoTracking()
+            .Where(x => x.NgayLapHoaDon >= batDau && x.NgayLapHoaDon <= ketThuc)
             .Select(x => x.TongTien)
             .ToList();
 
-        return (totals.Sum(), totals.Count);
+        return (tongTien.Sum(), tongTien.Count);
     }
 
-    public List<(String Ten, int Soluong)> LaySamPhamBanChay(DateTime Tungay, DateTime denNgay)
+    public List<(String Ten, int Soluong)> LaySamPhamBanChay(DateTime tuNgay, DateTime denNgay)
     {
         using var db = new CoSoDuLieu();
-        var start = Tungay.Date;
-        var end = denNgay.Date.AddDays(1);
+        var batDau = tuNgay.Date;
+        var ketThuc = denNgay.Date.AddDays(1);
 
-        return db.ChiTietHoaDons.AsNoTracking()
-            .Where(x => x.HoaDon!.NgayLapHoaDon >= start && x.HoaDon.NgayLapHoaDon < end)
-            .GroupBy(x => new { x.IdSanPham, x.TenSanPham })
-            .Select(g => new { g.Key.TenSanPham, Qty = g.Sum(x => x.SoLuong) })
-            .OrderByDescending(x => x.Qty)
+        var dong = db.ChiTietHoaDons.AsNoTracking()
+            .Join(db.HoaDons.AsNoTracking().Where(h => h.NgayLapHoaDon >= batDau && h.NgayLapHoaDon < ketThuc),
+                ct => ct.IdHoaDon, h => h.Id,
+                (ct, h) => new { ct.IdSanPham, ct.TenSanPham, ct.SoLuong })
+            .ToList();
+
+        return dong
+            .GroupBy(x => x.IdSanPham)
+            .Select(g => (Ten: g.First().TenSanPham, SoLuong: g.Sum(x => x.SoLuong)))
+            .OrderByDescending(x => x.SoLuong)
+            .ThenBy(x => x.Ten)
             .Take(10)
-            .ToList()
-            .Select(x=>(x.TenSanPham, x.Qty))
+            .ToList();
+    }
+
+    public List<ThongKeSanPham> LayThongKeSanPham(DateTime tuNgay, DateTime denNgay)
+    {
+        using var db = new CoSoDuLieu();
+        var batDau = tuNgay.Date;
+        var ketThuc = denNgay.Date.AddDays(1);
+
+        var dong = db.ChiTietHoaDons.AsNoTracking()
+            .Join(db.HoaDons.AsNoTracking().Where(h => h.NgayLapHoaDon >= batDau && h.NgayLapHoaDon < ketThuc),
+                ct => ct.IdHoaDon, h => h.Id,
+                (ct, h) => new { ct.IdHoaDon, ct.IdSanPham, ct.MaSanPham, ct.TenSanPham, ct.SoLuong, ct.ThanhTienDong, TongTienHoaDon = h.TongTien })
+            .ToList();
+
+        var heSo = dong
+            .GroupBy(x => x.IdHoaDon)
+            .ToDictionary(g => g.Key, g =>
+            {
+                decimal sauChietKhauDong = g.Sum(x => x.ThanhTienDong);
+                return sauChietKhauDong == 0 ? 1m : g.First().TongTienHoaDon / sauChietKhauDong;
+            });
+
+        return dong
+            .GroupBy(x => x.IdSanPham)
+            .Select(g => new ThongKeSanPham(
+                g.Key,
+                g.First().MaSanPham,
+                g.First().TenSanPham,
+                g.Sum(x => x.SoLuong),
+                g.Sum(x => x.ThanhTienDong * heSo[x.IdHoaDon])))
             .ToList();
     }
 
