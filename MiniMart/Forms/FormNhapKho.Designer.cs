@@ -78,7 +78,7 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel1
         // 
-        tableLayoutPanel1.BackColor = System.Drawing.Color.Snow;
+        tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -321,12 +321,14 @@ partial class FormNhapKho
         // btnXacNhan
         // 
         btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnXacNhan.BackColor = System.Drawing.Color.Navy;
+        btnXacNhan.ForeColor = System.Drawing.Color.White;
         btnXacNhan.Location = new System.Drawing.Point(99, 267);
         btnXacNhan.Name = "btnXacNhan";
         btnXacNhan.Size = new System.Drawing.Size(94, 34);
         btnXacNhan.TabIndex = 4;
         btnXacNhan.Text = "Xác Nhận";
-        btnXacNhan.UseVisualStyleBackColor = true;
+        btnXacNhan.UseVisualStyleBackColor = false;
         // 
         // dgvSanPham
         // 
