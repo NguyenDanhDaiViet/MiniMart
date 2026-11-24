@@ -6,8 +6,9 @@ namespace MiniMart.Data;
 
 public class CoSoDuLieu : DbContext
 {
-    private static readonly string Folder =
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MiniMart");
+// Ví dụ 1: Lưu ngay trong thư mục Data của project / thư mục chạy app
+    private static readonly string Folder = Path.Combine(AppContext.BaseDirectory, "Data");
+    
 
     public static string DbPath => Path.Combine(Folder, "minimart.db");
 

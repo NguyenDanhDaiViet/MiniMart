@@ -129,6 +129,6 @@ public class DichVuBanHang
         Directory.CreateDirectory(folder);
         string path = Path.Combine(folder, h.MaHoaDon + ".txt");
         File.WriteAllLines(path, lines);
-        return path;
+        return string.Join(Environment.NewLine, lines);
     }
 }
