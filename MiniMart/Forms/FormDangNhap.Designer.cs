@@ -34,15 +34,15 @@ partial class FormDangNhap
         panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-        label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
+        lblTenUngDung = new System.Windows.Forms.Label();
+        lblTieuDe = new System.Windows.Forms.Label();
         tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
         tenDangNhap = new System.Windows.Forms.TextBox();
-        label3 = new System.Windows.Forms.Label();
+        lblTenDangNhap = new System.Windows.Forms.Label();
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         matKhau = new System.Windows.Forms.TextBox();
-        label4 = new System.Windows.Forms.Label();
+        lblMatKhau = new System.Windows.Forms.Label();
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
         hienMatKhau = new System.Windows.Forms.CheckBox();
         btDangNhap = new System.Windows.Forms.Button();
@@ -88,8 +88,8 @@ partial class FormDangNhap
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel2.Controls.Add(label1, 0, 0);
-        tableLayoutPanel2.Controls.Add(label2, 0, 1);
+        tableLayoutPanel2.Controls.Add(lblTenUngDung, 0, 0);
+        tableLayoutPanel2.Controls.Add(lblTieuDe, 0, 1);
         tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -99,32 +99,32 @@ partial class FormDangNhap
         tableLayoutPanel2.Size = new System.Drawing.Size(537, 143);
         tableLayoutPanel2.TabIndex = 0;
         // 
-        // label1
+        // lblTenUngDung
         // 
-        label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        label1.AutoSize = true;
-        label1.BackColor = System.Drawing.Color.Green;
-        label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.ForeColor = System.Drawing.Color.White;
-        label1.Location = new System.Drawing.Point(3, 0);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(531, 71);
-        label1.TabIndex = 0;
-        label1.Text = "MiniMart";
-        label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+        lblTenUngDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        lblTenUngDung.AutoSize = true;
+        lblTenUngDung.BackColor = System.Drawing.Color.Green;
+        lblTenUngDung.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTenUngDung.ForeColor = System.Drawing.Color.White;
+        lblTenUngDung.Location = new System.Drawing.Point(3, 0);
+        lblTenUngDung.Name = "lblTenUngDung";
+        lblTenUngDung.Size = new System.Drawing.Size(531, 71);
+        lblTenUngDung.TabIndex = 0;
+        lblTenUngDung.Text = "MiniMart";
+        lblTenUngDung.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
-        // label2
+        // lblTieuDe
         // 
-        label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label2.AutoSize = true;
-        label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label2.Location = new System.Drawing.Point(40, 88);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(457, 38);
-        label2.TabIndex = 1;
-        label2.Text = "ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ";
-        label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblTieuDe.AutoSize = true;
+        lblTieuDe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+        lblTieuDe.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTieuDe.Location = new System.Drawing.Point(40, 88);
+        lblTieuDe.Name = "lblTieuDe";
+        lblTieuDe.Size = new System.Drawing.Size(457, 38);
+        lblTieuDe.TabIndex = 1;
+        lblTieuDe.Text = "ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ";
+        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
         // 
         // tableLayoutPanel3
         // 
@@ -150,7 +150,7 @@ partial class FormDangNhap
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel4.Controls.Add(tenDangNhap, 0, 1);
-        tableLayoutPanel4.Controls.Add(label3, 0, 0);
+        tableLayoutPanel4.Controls.Add(lblTenDangNhap, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -169,16 +169,16 @@ partial class FormDangNhap
         tenDangNhap.Size = new System.Drawing.Size(298, 27);
         tenDangNhap.TabIndex = 0;
         // 
-        // label3
+        // lblTenDangNhap
         // 
-        label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label3.Location = new System.Drawing.Point(116, 11);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(299, 30);
-        label3.TabIndex = 1;
-        label3.Text = "Tên Đăng Nhập";
+        lblTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblTenDangNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+        lblTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTenDangNhap.Location = new System.Drawing.Point(116, 11);
+        lblTenDangNhap.Name = "lblTenDangNhap";
+        lblTenDangNhap.Size = new System.Drawing.Size(299, 30);
+        lblTenDangNhap.TabIndex = 1;
+        lblTenDangNhap.Text = "Tên Đăng Nhập";
         // 
         // tableLayoutPanel5
         // 
@@ -188,7 +188,7 @@ partial class FormDangNhap
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.Controls.Add(matKhau, 0, 1);
-        tableLayoutPanel5.Controls.Add(label4, 0, 0);
+        tableLayoutPanel5.Controls.Add(lblMatKhau, 0, 0);
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 115);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
         tableLayoutPanel5.RowCount = 2;
@@ -207,15 +207,15 @@ partial class FormDangNhap
         matKhau.Size = new System.Drawing.Size(298, 27);
         matKhau.TabIndex = 1;
         // 
-        // label4
+        // lblMatKhau
         // 
-        label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label4.Location = new System.Drawing.Point(117, 9);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(296, 23);
-        label4.TabIndex = 0;
-        label4.Text = "Mật Khẩu";
+        lblMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblMatKhau.Location = new System.Drawing.Point(117, 9);
+        lblMatKhau.Name = "lblMatKhau";
+        lblMatKhau.Size = new System.Drawing.Size(296, 23);
+        lblMatKhau.TabIndex = 0;
+        lblMatKhau.Text = "Mật Khẩu";
         // 
         // tableLayoutPanel6
         // 
@@ -290,11 +290,11 @@ partial class FormDangNhap
 
     private System.Windows.Forms.TextBox matKhau;
 
-    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label lblMatKhau;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label lblTenDangNhap;
 
     private System.Windows.Forms.TextBox tenDangNhap;
 
@@ -302,9 +302,9 @@ partial class FormDangNhap
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label lblTieuDe;
 
-    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label lblTenUngDung;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 
