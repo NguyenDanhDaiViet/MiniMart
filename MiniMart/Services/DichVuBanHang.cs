@@ -89,12 +89,13 @@ public class DichVuBanHang
         string k = (tuKhoa ?? "").Trim();
         if (k.Length == 0) return danhSach;
 
-        // Lọc không phân biệt chữ hoa thường kể cả chữ có dấu 
+        // Lọc ở phía C# để không phân biệt hoa/thường kể cả chữ có dấu (SQLite LIKE chỉ làm được với chữ không dấu)
         return danhSach.Where(x => x.MaHoaDon.Contains(k, StringComparison.CurrentCultureIgnoreCase)
                                    || x.tenKhachHang.Contains(k, StringComparison.CurrentCultureIgnoreCase)
                                    || x.SDTkhachHang.Contains(k))
             .ToList();
     }
+
     public List<ChiTietHoaDon> LayChiTietHoaDon(int idHoaDon)
     {
         using var db = new CoSoDuLieu();
