@@ -16,7 +16,7 @@ public partial class FormDangNhap : Form
         VaiTro = "";
     }
 
-public FormDangNhap()
+    public FormDangNhap()
     {
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
