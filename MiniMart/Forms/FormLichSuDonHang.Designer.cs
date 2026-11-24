@@ -42,9 +42,9 @@ partial class FormLichSuDonHang
         lblTuNgay = new System.Windows.Forms.Label();
         lblDenNgay = new System.Windows.Forms.Label();
         txtTimKiem = new System.Windows.Forms.TextBox();
-        dtpDenNgay = new System.Windows.Forms.DateTimePicker();
         dtpTuNgay = new System.Windows.Forms.DateTimePicker();
         btnTimKiem = new System.Windows.Forms.Button();
+        dtpDenNgay = new System.Windows.Forms.DateTimePicker();
         dgvDonHang = new System.Windows.Forms.DataGridView();
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         dgvChiTiet = new System.Windows.Forms.DataGridView();
@@ -91,7 +91,7 @@ partial class FormLichSuDonHang
         lblTieuDe.BackColor = System.Drawing.Color.White;
         lblTieuDe.Dock = System.Windows.Forms.DockStyle.Fill;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 19.800001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTieuDe.ForeColor = System.Drawing.Color.DarkGreen;
+        lblTieuDe.ForeColor = System.Drawing.Color.Green;
         lblTieuDe.Location = new System.Drawing.Point(3, 0);
         lblTieuDe.Name = "lblTieuDe";
         lblTieuDe.Size = new System.Drawing.Size(974, 66);
@@ -109,8 +109,8 @@ partial class FormLichSuDonHang
         tableLayoutPanel2.Location = new System.Drawing.Point(3, 69);
         tableLayoutPanel2.Name = "tableLayoutPanel2";
         tableLayoutPanel2.RowCount = 2;
-        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.037037F));
+        tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.962963F));
         tableLayoutPanel2.Size = new System.Drawing.Size(974, 324);
         tableLayoutPanel2.TabIndex = 1;
         // 
@@ -119,25 +119,26 @@ partial class FormLichSuDonHang
         tableLayoutPanel3.ColumnCount = 1;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Controls.Add(lblTongKet, 0, 1);
         tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
+        tableLayoutPanel3.Controls.Add(lblTongKet, 0, 1);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
         tableLayoutPanel3.RowCount = 2;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.42056F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.57944F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(968, 107);
+        tableLayoutPanel3.Size = new System.Drawing.Size(968, 114);
         tableLayoutPanel3.TabIndex = 0;
         // 
         // lblTongKet
         // 
-        lblTongKet.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        lblTongKet.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTongKet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         lblTongKet.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTongKet.ForeColor = System.Drawing.Color.DarkGreen;
-        lblTongKet.Location = new System.Drawing.Point(3, 70);
+        lblTongKet.ForeColor = System.Drawing.Color.Green;
+        lblTongKet.Location = new System.Drawing.Point(3, 75);
         lblTongKet.Name = "lblTongKet";
-        lblTongKet.Size = new System.Drawing.Size(962, 37);
+        lblTongKet.Size = new System.Drawing.Size(615, 37);
         lblTongKet.TabIndex = 0;
         lblTongKet.Text = "Số đơn: 0 - Tổng tiền: 0 đ";
         lblTongKet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,23 +154,23 @@ partial class FormLichSuDonHang
         tableLayoutPanel4.Controls.Add(lblTuNgay, 0, 0);
         tableLayoutPanel4.Controls.Add(lblDenNgay, 1, 0);
         tableLayoutPanel4.Controls.Add(txtTimKiem, 2, 1);
-        tableLayoutPanel4.Controls.Add(dtpDenNgay, 1, 1);
         tableLayoutPanel4.Controls.Add(dtpTuNgay, 0, 1);
         tableLayoutPanel4.Controls.Add(btnTimKiem, 3, 1);
+        tableLayoutPanel4.Controls.Add(dtpDenNgay, 1, 1);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
         tableLayoutPanel4.RowCount = 2;
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.0625F));
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.9375F));
-        tableLayoutPanel4.Size = new System.Drawing.Size(962, 64);
+        tableLayoutPanel4.Size = new System.Drawing.Size(962, 68);
         tableLayoutPanel4.TabIndex = 1;
         // 
         // lblTimKiem
         // 
-        lblTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
         lblTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTimKiem.Location = new System.Drawing.Point(387, 0);
+        lblTimKiem.Location = new System.Drawing.Point(387, 1);
         lblTimKiem.Name = "lblTimKiem";
         lblTimKiem.Size = new System.Drawing.Size(378, 25);
         lblTimKiem.TabIndex = 3;
@@ -177,19 +178,19 @@ partial class FormLichSuDonHang
         // 
         // lblTuNgay
         // 
-        lblTuNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left));
         lblTuNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTuNgay.Location = new System.Drawing.Point(3, 0);
         lblTuNgay.Name = "lblTuNgay";
-        lblTuNgay.Size = new System.Drawing.Size(186, 25);
+        lblTuNgay.Size = new System.Drawing.Size(186, 26);
         lblTuNgay.TabIndex = 1;
         lblTuNgay.Text = "Từ ngày:";
         // 
         // lblDenNgay
         // 
-        lblDenNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
         lblDenNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblDenNgay.Location = new System.Drawing.Point(195, 0);
+        lblDenNgay.Location = new System.Drawing.Point(195, 1);
         lblDenNgay.Name = "lblDenNgay";
         lblDenNgay.Size = new System.Drawing.Size(186, 25);
         lblDenNgay.TabIndex = 2;
@@ -200,44 +201,45 @@ partial class FormLichSuDonHang
         txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
         txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTimKiem.Location = new System.Drawing.Point(387, 33);
+        txtTimKiem.Location = new System.Drawing.Point(387, 35);
         txtTimKiem.Name = "txtTimKiem";
         txtTimKiem.PlaceholderText = "Mã đơn, tên khách hoặc số điện thoại";
         txtTimKiem.Size = new System.Drawing.Size(378, 23);
         txtTimKiem.TabIndex = 5;
         // 
-        // dtpDenNgay
-        // 
-        dtpDenNgay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-        dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpDenNgay.Location = new System.Drawing.Point(197, 28);
-        dtpDenNgay.Name = "dtpDenNgay";
-        dtpDenNgay.Size = new System.Drawing.Size(181, 27);
-        dtpDenNgay.TabIndex = 6;
-        // 
         // dtpTuNgay
         // 
-        dtpTuNgay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+        dtpTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         dtpTuNgay.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpTuNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpTuNgay.Location = new System.Drawing.Point(3, 28);
+        dtpTuNgay.Location = new System.Drawing.Point(3, 32);
         dtpTuNgay.Name = "dtpTuNgay";
         dtpTuNgay.Size = new System.Drawing.Size(186, 30);
-        dtpTuNgay.TabIndex = 7;
+        dtpTuNgay.TabIndex = 6;
         // 
         // btnTimKiem
         // 
-        btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom));
+        btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnTimKiem.BackColor = System.Drawing.Color.DarkGreen;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTimKiem.ForeColor = System.Drawing.Color.White;
-        btnTimKiem.Location = new System.Drawing.Point(792, 28);
+        btnTimKiem.Location = new System.Drawing.Point(787, 31);
         btnTimKiem.Name = "btnTimKiem";
-        btnTimKiem.Size = new System.Drawing.Size(145, 33);
+        btnTimKiem.Size = new System.Drawing.Size(155, 32);
         btnTimKiem.TabIndex = 6;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
+        // 
+        // dtpDenNgay
+        // 
+        dtpDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        dtpDenNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        dtpDenNgay.Location = new System.Drawing.Point(195, 32);
+        dtpDenNgay.Name = "dtpDenNgay";
+        dtpDenNgay.Size = new System.Drawing.Size(186, 30);
+        dtpDenNgay.TabIndex = 6;
         // 
         // dgvDonHang
         // 
@@ -246,11 +248,11 @@ partial class FormLichSuDonHang
         dgvDonHang.BackgroundColor = System.Drawing.Color.White;
         dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvDonHang.Location = new System.Drawing.Point(3, 116);
+        dgvDonHang.Location = new System.Drawing.Point(3, 123);
         dgvDonHang.Name = "dgvDonHang";
         dgvDonHang.RowHeadersWidth = 51;
         dgvDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvDonHang.Size = new System.Drawing.Size(968, 205);
+        dgvDonHang.Size = new System.Drawing.Size(968, 198);
         dgvDonHang.TabIndex = 1;
         dgvDonHang.Text = "dataGridView1";
         // 
@@ -287,9 +289,8 @@ partial class FormLichSuDonHang
         // 
         // lblChiTiet
         // 
-        lblChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
         lblChiTiet.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblChiTiet.ForeColor = System.Drawing.Color.DarkGreen;
+        lblChiTiet.ForeColor = System.Drawing.Color.Green;
         lblChiTiet.Location = new System.Drawing.Point(3, 0);
         lblChiTiet.Name = "lblChiTiet";
         lblChiTiet.Size = new System.Drawing.Size(968, 37);

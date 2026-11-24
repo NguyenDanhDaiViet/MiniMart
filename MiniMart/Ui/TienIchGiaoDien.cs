@@ -35,7 +35,7 @@ public class TienIchGiaoDien
     {
         foreach (var ten in tenCot)
         {
-            if(grid.Columns[ten]!=null) grid.Columns[ten]!.DefaultCellStyle.Format= "No";
+            if(grid.Columns[ten]!=null) grid.Columns[ten]!.DefaultCellStyle.Format= "N0";
         }
     }
 

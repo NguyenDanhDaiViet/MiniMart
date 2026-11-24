@@ -26,6 +26,8 @@ public partial class FormBanHang : Form
         dgvGioHang.CellClick += XuLyChonDongGioHang_CellClick;
         nudGiamGiaHoaDon.ValueChanged += XuLyThayDoiGiamGiaHoaDon_ValueChanged;
         txtKhachDua.Leave += XuLyDinhDangTienKhachDua_Leave;
+        txtTimKiem.TextChanged += XuLyTimKiemSanPham_TextChanged;
+        txtTimKiem.KeyDown += XuLyTimKiemSanPham_KeyDown;
         
         TaiDanhSachSanPham();
         CapNhatGioHang();
@@ -110,8 +112,8 @@ public partial class FormBanHang : Form
 
             int id = _banhang.ThanhToan(_gioHang, nudGiamGiaHoaDon.Value, khachDua, txtTenKhachHang.Text,txtSoDienThoai.Text);
             string hoaDon = _banhang.XuatHoaDon(id);
-            MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:NO}đ\nHóa đơn: {hoaDon}");
-            
+            MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:N0}đ\n\n{hoaDon}");
+
             _gioHang.Clear();
             txtKhachDua.Text = "0";
             txtTenKhachHang.Clear();
@@ -175,5 +177,17 @@ public partial class FormBanHang : Form
             ("GiaBan", "Giá bán"), ("SoLuongHangTon", "Tồn kho"));
         TienIchGiaoDien.DinhDangSo(dgvSanPham, "GiaBan");
     }
-    
+    private void XuLyTimKiemSanPham_TextChanged(object? sender, EventArgs e)
+        => TaiDanhSachSanPham();
+
+    private void XuLyTimKiemSanPham_KeyDown(object? sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Escape)
+        {
+            txtTimKiem.Clear();
+            TaiDanhSachSanPham();
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+        }
+    }
 }

@@ -117,12 +117,15 @@ partial class FormCanhBao
         // btnLamMoi
         // 
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnLamMoi.Location = new System.Drawing.Point(716, 12);
+        btnLamMoi.BackColor = System.Drawing.Color.Green;
+        btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnLamMoi.ForeColor = System.Drawing.Color.White;
+        btnLamMoi.Location = new System.Drawing.Point(706, 12);
         btnLamMoi.Name = "btnLamMoi";
-        btnLamMoi.Size = new System.Drawing.Size(124, 44);
+        btnLamMoi.Size = new System.Drawing.Size(144, 44);
         btnLamMoi.TabIndex = 1;
         btnLamMoi.Text = "Làm mới";
-        btnLamMoi.UseVisualStyleBackColor = true;
+        btnLamMoi.UseVisualStyleBackColor = false;
         // 
         // lblTieuDe
         // 

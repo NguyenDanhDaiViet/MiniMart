@@ -44,32 +44,32 @@ partial class FormBanHang
         tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
         dgvGioHang = new System.Windows.Forms.DataGridView();
-        tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-        btnCapNhat = new System.Windows.Forms.Button();
-        txtKhachDua = new System.Windows.Forms.TextBox();
-        lblTongCong = new System.Windows.Forms.Label();
-        lblKhachDua = new System.Windows.Forms.Label();
-        tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-        panel2 = new System.Windows.Forms.Panel();
-        btnThemVaoGio = new System.Windows.Forms.Button();
-        panel3 = new System.Windows.Forms.Panel();
-        btnThanhToan = new System.Windows.Forms.Button();
-        btnBoDong = new System.Windows.Forms.Button();
-        lblBanHang = new System.Windows.Forms.Label();
         tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+        txtSoDienThoai = new System.Windows.Forms.TextBox();
+        lblSoDienThoai = new System.Windows.Forms.Label();
         lblGioHang = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         txtTenKhachHang = new System.Windows.Forms.TextBox();
-        lblSoDienThoai = new System.Windows.Forms.Label();
-        txtSoDienThoai = new System.Windows.Forms.TextBox();
-        tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+        tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
         tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-        lblGiamGiaHoaDon = new System.Windows.Forms.Label();
-        lblGiamGiaDong = new System.Windows.Forms.Label();
         label4 = new System.Windows.Forms.Label();
         nudSoLuong = new System.Windows.Forms.NumericUpDown();
+        btnCapNhat = new System.Windows.Forms.Button();
+        txtKhachDua = new System.Windows.Forms.TextBox();
+        tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+        btnThanhToan = new System.Windows.Forms.Button();
+        btnBoDong = new System.Windows.Forms.Button();
+        lblTongCong = new System.Windows.Forms.Label();
+        tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
         nudGiamGiaDong = new System.Windows.Forms.NumericUpDown();
+        lblGiamGiaDong = new System.Windows.Forms.Label();
+        panel4 = new System.Windows.Forms.Panel();
+        lblKhachDua = new System.Windows.Forms.Label();
         nudGiamGiaHoaDon = new System.Windows.Forms.NumericUpDown();
+        panel5 = new System.Windows.Forms.Panel();
+        lblGiamGiaHoaDon = new System.Windows.Forms.Label();
+        lblBanHang = new System.Windows.Forms.Label();
+        btnThemVaoGio = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -80,16 +80,16 @@ partial class FormBanHang
         tableLayoutPanel6.SuspendLayout();
         tableLayoutPanel7.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvGioHang).BeginInit();
-        tableLayoutPanel8.SuspendLayout();
-        tableLayoutPanel9.SuspendLayout();
-        panel2.SuspendLayout();
-        panel3.SuspendLayout();
         tableLayoutPanel10.SuspendLayout();
-        tableLayoutPanel11.SuspendLayout();
+        tableLayoutPanel8.SuspendLayout();
         tableLayoutPanel12.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
+        tableLayoutPanel9.SuspendLayout();
+        tableLayoutPanel11.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaDong).BeginInit();
+        panel4.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).BeginInit();
+        panel5.SuspendLayout();
         SuspendLayout();
         // 
         // panel1
@@ -179,11 +179,13 @@ partial class FormBanHang
         // 
         // tableLayoutPanel5
         // 
-        tableLayoutPanel5.ColumnCount = 2;
-        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.733025F));
-        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.26698F));
+        tableLayoutPanel5.ColumnCount = 3;
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.89028F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.10972F));
+        tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
         tableLayoutPanel5.Controls.Add(txtTimKiem, 0, 0);
         tableLayoutPanel5.Controls.Add(btnTimKiem, 1, 0);
+        tableLayoutPanel5.Controls.Add(btnThemVaoGio, 2, 0);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 59);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -198,7 +200,7 @@ partial class FormBanHang
         txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtTimKiem.Location = new System.Drawing.Point(3, 12);
         txtTimKiem.Name = "txtTimKiem";
-        txtTimKiem.Size = new System.Drawing.Size(343, 27);
+        txtTimKiem.Size = new System.Drawing.Size(196, 27);
         txtTimKiem.TabIndex = 0;
         txtTimKiem.Text = "Nhập mã hoặc tên sản phẩm";
         // 
@@ -206,12 +208,12 @@ partial class FormBanHang
         // 
         btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         btnTimKiem.AutoSize = true;
-        btnTimKiem.BackColor = System.Drawing.Color.DarkGreen;
+        btnTimKiem.BackColor = System.Drawing.Color.Green;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTimKiem.ForeColor = System.Drawing.Color.White;
-        btnTimKiem.Location = new System.Drawing.Point(352, 8);
+        btnTimKiem.Location = new System.Drawing.Point(205, 8);
         btnTimKiem.Name = "btnTimKiem";
-        btnTimKiem.Size = new System.Drawing.Size(72, 35);
+        btnTimKiem.Size = new System.Drawing.Size(103, 35);
         btnTimKiem.TabIndex = 1;
         btnTimKiem.Text = "Tìm";
         btnTimKiem.UseVisualStyleBackColor = false;
@@ -271,151 +273,6 @@ partial class FormBanHang
         dgvGioHang.TabIndex = 1;
         dgvGioHang.Text = "dataGridView2";
         // 
-        // tableLayoutPanel8
-        // 
-        tableLayoutPanel8.ColumnCount = 5;
-        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.94382F));
-        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.05618F));
-        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
-        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
-        tableLayoutPanel8.Controls.Add(nudGiamGiaHoaDon, 1, 1);
-        tableLayoutPanel8.Controls.Add(tableLayoutPanel12, 0, 0);
-        tableLayoutPanel8.Controls.Add(btnCapNhat, 2, 0);
-        tableLayoutPanel8.Controls.Add(txtKhachDua, 3, 1);
-        tableLayoutPanel8.Controls.Add(tableLayoutPanel9, 4, 0);
-        tableLayoutPanel8.Controls.Add(btnBoDong, 3, 0);
-        tableLayoutPanel8.Controls.Add(lblTongCong, 4, 1);
-        tableLayoutPanel8.Controls.Add(lblKhachDua, 2, 1);
-        tableLayoutPanel8.Controls.Add(tableLayoutPanel11, 1, 0);
-        tableLayoutPanel8.Controls.Add(lblGiamGiaHoaDon, 0, 1);
-        tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel8.Location = new System.Drawing.Point(3, 498);
-        tableLayoutPanel8.Name = "tableLayoutPanel8";
-        tableLayoutPanel8.RowCount = 2;
-        tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel8.Size = new System.Drawing.Size(733, 159);
-        tableLayoutPanel8.TabIndex = 1;
-        // 
-        // btnCapNhat
-        // 
-        btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnCapNhat.BackColor = System.Drawing.Color.LightGray;
-        btnCapNhat.Location = new System.Drawing.Point(214, 22);
-        btnCapNhat.Name = "btnCapNhat";
-        btnCapNhat.Size = new System.Drawing.Size(101, 35);
-        btnCapNhat.TabIndex = 5;
-        btnCapNhat.Text = "Cập nhật";
-        btnCapNhat.UseVisualStyleBackColor = false;
-        // 
-        // txtKhachDua
-        // 
-        txtKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        txtKhachDua.Location = new System.Drawing.Point(322, 82);
-        txtKhachDua.Name = "txtKhachDua";
-        txtKhachDua.Size = new System.Drawing.Size(147, 27);
-        txtKhachDua.TabIndex = 7;
-        // 
-        // lblTongCong
-        // 
-        lblTongCong.Anchor = System.Windows.Forms.AnchorStyles.None;
-        lblTongCong.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTongCong.ForeColor = System.Drawing.Color.DarkGreen;
-        lblTongCong.Location = new System.Drawing.Point(475, 92);
-        lblTongCong.Name = "lblTongCong";
-        lblTongCong.Size = new System.Drawing.Size(255, 54);
-        lblTongCong.TabIndex = 8;
-        lblTongCong.Text = "Tổng cộng: 0đ";
-        lblTongCong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-        // 
-        // lblKhachDua
-        // 
-        lblKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        lblKhachDua.AutoSize = true;
-        lblKhachDua.Location = new System.Drawing.Point(214, 79);
-        lblKhachDua.Name = "lblKhachDua";
-        lblKhachDua.Size = new System.Drawing.Size(102, 20);
-        lblKhachDua.TabIndex = 4;
-        lblKhachDua.Text = "Khách đưa (đ)\r\n";
-        lblKhachDua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // tableLayoutPanel9
-        // 
-        tableLayoutPanel9.ColumnCount = 2;
-        tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.199203F));
-        tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.800797F));
-        tableLayoutPanel9.Controls.Add(panel2, 0, 0);
-        tableLayoutPanel9.Controls.Add(panel3, 1, 0);
-        tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel9.Location = new System.Drawing.Point(475, 3);
-        tableLayoutPanel9.Name = "tableLayoutPanel9";
-        tableLayoutPanel9.RowCount = 1;
-        tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel9.Size = new System.Drawing.Size(255, 73);
-        tableLayoutPanel9.TabIndex = 9;
-        // 
-        // panel2
-        // 
-        panel2.Controls.Add(btnThemVaoGio);
-        panel2.Location = new System.Drawing.Point(3, 3);
-        panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(122, 67);
-        panel2.TabIndex = 0;
-        // 
-        // btnThemVaoGio
-        // 
-        btnThemVaoGio.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        btnThemVaoGio.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnThemVaoGio.Location = new System.Drawing.Point(0, 20);
-        btnThemVaoGio.Name = "btnThemVaoGio";
-        btnThemVaoGio.Size = new System.Drawing.Size(122, 35);
-        btnThemVaoGio.TabIndex = 0;
-        btnThemVaoGio.Text = "Thêm vào giỏ";
-        btnThemVaoGio.UseVisualStyleBackColor = true;
-        // 
-        // panel3
-        // 
-        panel3.Controls.Add(btnThanhToan);
-        panel3.Location = new System.Drawing.Point(131, 3);
-        panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(121, 67);
-        panel3.TabIndex = 1;
-        // 
-        // btnThanhToan
-        // 
-        btnThanhToan.BackColor = System.Drawing.Color.DarkGreen;
-        btnThanhToan.ForeColor = System.Drawing.Color.White;
-        btnThanhToan.Location = new System.Drawing.Point(3, 20);
-        btnThanhToan.Name = "btnThanhToan";
-        btnThanhToan.Size = new System.Drawing.Size(111, 35);
-        btnThanhToan.TabIndex = 0;
-        btnThanhToan.Text = "Thanh toán";
-        btnThanhToan.UseVisualStyleBackColor = false;
-        // 
-        // btnBoDong
-        // 
-        btnBoDong.Anchor = System.Windows.Forms.AnchorStyles.None;
-        btnBoDong.BackColor = System.Drawing.Color.DarkGreen;
-        btnBoDong.ForeColor = System.Drawing.Color.White;
-        btnBoDong.Location = new System.Drawing.Point(331, 22);
-        btnBoDong.Name = "btnBoDong";
-        btnBoDong.Size = new System.Drawing.Size(128, 35);
-        btnBoDong.TabIndex = 6;
-        btnBoDong.Text = "Bỏ dòng";
-        btnBoDong.UseVisualStyleBackColor = false;
-        // 
-        // lblBanHang
-        // 
-        lblBanHang.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblBanHang.ForeColor = System.Drawing.Color.DarkGreen;
-        lblBanHang.Location = new System.Drawing.Point(3, 0);
-        lblBanHang.Name = "lblBanHang";
-        lblBanHang.Size = new System.Drawing.Size(262, 100);
-        lblBanHang.TabIndex = 1;
-        lblBanHang.Text = "BÁN HÀNG";
-        lblBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
         // tableLayoutPanel10
         // 
         tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
@@ -437,6 +294,25 @@ partial class FormBanHang
         tableLayoutPanel10.Size = new System.Drawing.Size(727, 53);
         tableLayoutPanel10.TabIndex = 2;
         // 
+        // txtSoDienThoai
+        // 
+        txtSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        txtSoDienThoai.Location = new System.Drawing.Point(583, 13);
+        txtSoDienThoai.MaxLength = 100;
+        txtSoDienThoai.Name = "txtSoDienThoai";
+        txtSoDienThoai.Size = new System.Drawing.Size(141, 27);
+        txtSoDienThoai.TabIndex = 23;
+        // 
+        // lblSoDienThoai
+        // 
+        lblSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        lblSoDienThoai.Location = new System.Drawing.Point(438, 15);
+        lblSoDienThoai.Name = "lblSoDienThoai";
+        lblSoDienThoai.Size = new System.Drawing.Size(139, 23);
+        lblSoDienThoai.TabIndex = 22;
+        lblSoDienThoai.Text = "Số điện thoại:";
+        lblSoDienThoai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+        // 
         // lblGioHang
         // 
         lblGioHang.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
@@ -456,7 +332,7 @@ partial class FormBanHang
         label2.Size = new System.Drawing.Size(112, 23);
         label2.TabIndex = 1;
         label2.Text = "Khách hàng:";
-        label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
         // 
         // txtTenKhachHang
         // 
@@ -467,40 +343,32 @@ partial class FormBanHang
         txtTenKhachHang.Size = new System.Drawing.Size(166, 27);
         txtTenKhachHang.TabIndex = 21;
         // 
-        // lblSoDienThoai
+        // tableLayoutPanel8
         // 
-        lblSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        lblSoDienThoai.Location = new System.Drawing.Point(438, 15);
-        lblSoDienThoai.Name = "lblSoDienThoai";
-        lblSoDienThoai.Size = new System.Drawing.Size(139, 23);
-        lblSoDienThoai.TabIndex = 22;
-        lblSoDienThoai.Text = "Số điện thoại:";
-        lblSoDienThoai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtSoDienThoai
-        // 
-        txtSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtSoDienThoai.Location = new System.Drawing.Point(583, 13);
-        txtSoDienThoai.MaxLength = 100;
-        txtSoDienThoai.Name = "txtSoDienThoai";
-        txtSoDienThoai.Size = new System.Drawing.Size(141, 27);
-        txtSoDienThoai.TabIndex = 23;
-        // 
-        // tableLayoutPanel11
-        // 
-        tableLayoutPanel11.ColumnCount = 1;
-        tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel11.Controls.Add(nudGiamGiaDong, 0, 1);
-        tableLayoutPanel11.Controls.Add(lblGiamGiaDong, 0, 0);
-        tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel11.Location = new System.Drawing.Point(98, 3);
-        tableLayoutPanel11.Name = "tableLayoutPanel11";
-        tableLayoutPanel11.RowCount = 2;
-        tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.39726F));
-        tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.60274F));
-        tableLayoutPanel11.Size = new System.Drawing.Size(110, 73);
-        tableLayoutPanel11.TabIndex = 10;
+        tableLayoutPanel8.ColumnCount = 5;
+        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.94382F));
+        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.05618F));
+        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+        tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+        tableLayoutPanel8.Controls.Add(tableLayoutPanel12, 0, 0);
+        tableLayoutPanel8.Controls.Add(btnCapNhat, 2, 0);
+        tableLayoutPanel8.Controls.Add(txtKhachDua, 3, 1);
+        tableLayoutPanel8.Controls.Add(tableLayoutPanel9, 4, 0);
+        tableLayoutPanel8.Controls.Add(btnBoDong, 3, 0);
+        tableLayoutPanel8.Controls.Add(lblTongCong, 4, 1);
+        tableLayoutPanel8.Controls.Add(tableLayoutPanel11, 1, 0);
+        tableLayoutPanel8.Controls.Add(panel4, 2, 1);
+        tableLayoutPanel8.Controls.Add(nudGiamGiaHoaDon, 1, 1);
+        tableLayoutPanel8.Controls.Add(panel5, 0, 1);
+        tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel8.Location = new System.Drawing.Point(3, 498);
+        tableLayoutPanel8.Name = "tableLayoutPanel8";
+        tableLayoutPanel8.RowCount = 2;
+        tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel8.Size = new System.Drawing.Size(733, 159);
+        tableLayoutPanel8.TabIndex = 1;
         // 
         // tableLayoutPanel12
         // 
@@ -518,33 +386,19 @@ partial class FormBanHang
         tableLayoutPanel12.Size = new System.Drawing.Size(89, 73);
         tableLayoutPanel12.TabIndex = 11;
         // 
-        // lblGiamGiaHoaDon
-        // 
-        lblGiamGiaHoaDon.Location = new System.Drawing.Point(3, 79);
-        lblGiamGiaHoaDon.Name = "lblGiamGiaHoaDon";
-        lblGiamGiaHoaDon.Size = new System.Drawing.Size(89, 23);
-        lblGiamGiaHoaDon.TabIndex = 12;
-        lblGiamGiaHoaDon.Text = "Giảm giá (%)";
-        // 
-        // lblGiamGiaDong
-        // 
-        lblGiamGiaDong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        lblGiamGiaDong.Location = new System.Drawing.Point(3, 0);
-        lblGiamGiaDong.Name = "lblGiamGiaDong";
-        lblGiamGiaDong.Size = new System.Drawing.Size(104, 20);
-        lblGiamGiaDong.TabIndex = 13;
-        lblGiamGiaDong.Text = "Giảm giá dòng ";
-        // 
         // label4
         // 
+        label4.AutoSize = true;
         label4.Location = new System.Drawing.Point(3, 0);
         label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(83, 20);
+        label4.Size = new System.Drawing.Size(69, 20);
         label4.TabIndex = 13;
         label4.Text = "Số lượng";
         // 
         // nudSoLuong
         // 
+        nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        nudSoLuong.AutoSize = true;
         nudSoLuong.Location = new System.Drawing.Point(3, 23);
         nudSoLuong.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
         nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -553,13 +407,131 @@ partial class FormBanHang
         nudSoLuong.TabIndex = 8;
         nudSoLuong.Value = new decimal(new int[] { 1, 0, 0, 0 });
         // 
+        // btnCapNhat
+        // 
+        btnCapNhat.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnCapNhat.BackColor = System.Drawing.Color.LightGray;
+        btnCapNhat.Location = new System.Drawing.Point(214, 22);
+        btnCapNhat.Name = "btnCapNhat";
+        btnCapNhat.Size = new System.Drawing.Size(101, 35);
+        btnCapNhat.TabIndex = 5;
+        btnCapNhat.Text = "Cập nhật";
+        btnCapNhat.UseVisualStyleBackColor = false;
+        // 
+        // txtKhachDua
+        // 
+        txtKhachDua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        txtKhachDua.Location = new System.Drawing.Point(322, 82);
+        txtKhachDua.Name = "txtKhachDua";
+        txtKhachDua.Size = new System.Drawing.Size(147, 27);
+        txtKhachDua.TabIndex = 7;
+        // 
+        // tableLayoutPanel9
+        // 
+        tableLayoutPanel9.ColumnCount = 2;
+        tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.199203F));
+        tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.800797F));
+        tableLayoutPanel9.Controls.Add(btnThanhToan, 1, 0);
+        tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel9.Location = new System.Drawing.Point(475, 3);
+        tableLayoutPanel9.Name = "tableLayoutPanel9";
+        tableLayoutPanel9.RowCount = 1;
+        tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel9.Size = new System.Drawing.Size(255, 73);
+        tableLayoutPanel9.TabIndex = 9;
+        // 
+        // btnThanhToan
+        // 
+        btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        btnThanhToan.BackColor = System.Drawing.Color.Green;
+        btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnThanhToan.ForeColor = System.Drawing.Color.White;
+        btnThanhToan.Location = new System.Drawing.Point(131, 15);
+        btnThanhToan.Name = "btnThanhToan";
+        btnThanhToan.Size = new System.Drawing.Size(121, 42);
+        btnThanhToan.TabIndex = 2;
+        btnThanhToan.Text = "Thanh toán";
+        btnThanhToan.UseVisualStyleBackColor = false;
+        // 
+        // btnBoDong
+        // 
+        btnBoDong.Anchor = System.Windows.Forms.AnchorStyles.None;
+        btnBoDong.BackColor = System.Drawing.Color.Green;
+        btnBoDong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnBoDong.ForeColor = System.Drawing.Color.White;
+        btnBoDong.Location = new System.Drawing.Point(331, 22);
+        btnBoDong.Name = "btnBoDong";
+        btnBoDong.Size = new System.Drawing.Size(128, 35);
+        btnBoDong.TabIndex = 6;
+        btnBoDong.Text = "Bỏ dòng";
+        btnBoDong.UseVisualStyleBackColor = false;
+        // 
+        // lblTongCong
+        // 
+        lblTongCong.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTongCong.AutoSize = true;
+        lblTongCong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTongCong.ForeColor = System.Drawing.Color.Green;
+        lblTongCong.Location = new System.Drawing.Point(475, 98);
+        lblTongCong.Name = "lblTongCong";
+        lblTongCong.Size = new System.Drawing.Size(220, 41);
+        lblTongCong.TabIndex = 8;
+        lblTongCong.Text = "Tổng cộng: 0đ";
+        lblTongCong.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+        // 
+        // tableLayoutPanel11
+        // 
+        tableLayoutPanel11.ColumnCount = 1;
+        tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel11.Controls.Add(nudGiamGiaDong, 0, 1);
+        tableLayoutPanel11.Controls.Add(lblGiamGiaDong, 0, 0);
+        tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+        tableLayoutPanel11.Location = new System.Drawing.Point(98, 3);
+        tableLayoutPanel11.Name = "tableLayoutPanel11";
+        tableLayoutPanel11.RowCount = 2;
+        tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.39726F));
+        tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.60274F));
+        tableLayoutPanel11.Size = new System.Drawing.Size(110, 73);
+        tableLayoutPanel11.TabIndex = 10;
+        // 
         // nudGiamGiaDong
         // 
         nudGiamGiaDong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        nudGiamGiaDong.AutoSize = true;
         nudGiamGiaDong.Location = new System.Drawing.Point(3, 23);
         nudGiamGiaDong.Name = "nudGiamGiaDong";
         nudGiamGiaDong.Size = new System.Drawing.Size(104, 27);
         nudGiamGiaDong.TabIndex = 15;
+        // 
+        // lblGiamGiaDong
+        // 
+        lblGiamGiaDong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        lblGiamGiaDong.AutoSize = true;
+        lblGiamGiaDong.Location = new System.Drawing.Point(3, 0);
+        lblGiamGiaDong.Name = "lblGiamGiaDong";
+        lblGiamGiaDong.Size = new System.Drawing.Size(104, 20);
+        lblGiamGiaDong.TabIndex = 13;
+        lblGiamGiaDong.Text = "Giảm giá từng món";
+        // 
+        // panel4
+        // 
+        panel4.Controls.Add(lblKhachDua);
+        panel4.Location = new System.Drawing.Point(214, 82);
+        panel4.Name = "panel4";
+        panel4.Size = new System.Drawing.Size(102, 74);
+        panel4.TabIndex = 16;
+        // 
+        // lblKhachDua
+        // 
+        lblKhachDua.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblKhachDua.AutoSize = true;
+        lblKhachDua.Location = new System.Drawing.Point(0, 3);
+        lblKhachDua.Name = "lblKhachDua";
+        lblKhachDua.Size = new System.Drawing.Size(102, 20);
+        lblKhachDua.TabIndex = 5;
+        lblKhachDua.Text = "Khách đưa (đ)\r\n";
+        lblKhachDua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // nudGiamGiaHoaDon
         // 
@@ -568,6 +540,50 @@ partial class FormBanHang
         nudGiamGiaHoaDon.Name = "nudGiamGiaHoaDon";
         nudGiamGiaHoaDon.Size = new System.Drawing.Size(110, 27);
         nudGiamGiaHoaDon.TabIndex = 15;
+        // 
+        // panel5
+        // 
+        panel5.Controls.Add(lblGiamGiaHoaDon);
+        panel5.Location = new System.Drawing.Point(3, 82);
+        panel5.Name = "panel5";
+        panel5.Size = new System.Drawing.Size(89, 74);
+        panel5.TabIndex = 17;
+        // 
+        // lblGiamGiaHoaDon
+        // 
+        lblGiamGiaHoaDon.AutoSize = true;
+        lblGiamGiaHoaDon.Location = new System.Drawing.Point(0, 2);
+        lblGiamGiaHoaDon.Name = "lblGiamGiaHoaDon";
+        lblGiamGiaHoaDon.Size = new System.Drawing.Size(95, 20);
+        lblGiamGiaHoaDon.TabIndex = 13;
+        lblGiamGiaHoaDon.Text = "Giảm giá (%)";
+        lblGiamGiaHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+        // 
+        // lblBanHang
+        // 
+        lblBanHang.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblBanHang.ForeColor = System.Drawing.Color.Green;
+        lblBanHang.Location = new System.Drawing.Point(3, 0);
+        lblBanHang.Name = "lblBanHang";
+        lblBanHang.Size = new System.Drawing.Size(262, 100);
+        lblBanHang.TabIndex = 1;
+        lblBanHang.Text = "BÁN HÀNG";
+        lblBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        // 
+        // btnThemVaoGio
+        // 
+        btnThemVaoGio.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        btnThemVaoGio.BackColor = System.Drawing.Color.Green;
+        btnThemVaoGio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+        btnThemVaoGio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+        btnThemVaoGio.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnThemVaoGio.ForeColor = System.Drawing.Color.Snow;
+        btnThemVaoGio.Location = new System.Drawing.Point(314, 6);
+        btnThemVaoGio.Name = "btnThemVaoGio";
+        btnThemVaoGio.Size = new System.Drawing.Size(110, 39);
+        btnThemVaoGio.TabIndex = 2;
+        btnThemVaoGio.Text = "Thêm vào giỏ";
+        btnThemVaoGio.UseVisualStyleBackColor = false;
         // 
         // FormBanHang
         // 
@@ -585,20 +601,28 @@ partial class FormBanHang
         tableLayoutPanel6.ResumeLayout(false);
         tableLayoutPanel7.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
-        tableLayoutPanel8.ResumeLayout(false);
-        tableLayoutPanel8.PerformLayout();
-        tableLayoutPanel9.ResumeLayout(false);
-        panel2.ResumeLayout(false);
-        panel3.ResumeLayout(false);
         tableLayoutPanel10.ResumeLayout(false);
         tableLayoutPanel10.PerformLayout();
-        tableLayoutPanel11.ResumeLayout(false);
+        tableLayoutPanel8.ResumeLayout(false);
+        tableLayoutPanel8.PerformLayout();
         tableLayoutPanel12.ResumeLayout(false);
+        tableLayoutPanel12.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
+        tableLayoutPanel9.ResumeLayout(false);
+        tableLayoutPanel11.ResumeLayout(false);
+        tableLayoutPanel11.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaDong).EndInit();
+        panel4.ResumeLayout(false);
+        panel4.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).EndInit();
+        panel5.ResumeLayout(false);
+        panel5.PerformLayout();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Panel panel4;
+    private System.Windows.Forms.Label lblKhachDua;
+    private System.Windows.Forms.Panel panel5;
 
     private System.Windows.Forms.TextBox txtSoDienThoai;
 
@@ -624,14 +648,13 @@ partial class FormBanHang
     private System.Windows.Forms.Button btnThemVaoGio;
     private System.Windows.Forms.Button btnThanhToan;
     private System.Windows.Forms.Button btnBoDong;
-    private System.Windows.Forms.Label lblBanHang ;
+    private System.Windows.Forms.Label lblBanHang;
     
     
      private System.Windows.Forms.Button btnCapNhat;
     private System.Windows.Forms.TextBox txtKhachDua;
     private System.Windows.Forms.Label lblTongCong;
-    private System.Windows.Forms.Label lblKhachDua;
-    
+
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
@@ -647,16 +670,12 @@ partial class FormBanHang
 
     private System.Windows.Forms.DataGridView dgvSanPham;
 
-    private System.Windows.Forms.Panel panel3;
-
     private System.Windows.Forms.Button btnTimKiem;
 
     private System.Windows.Forms.TextBox txtTimKiem;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 
-    private System.Windows.Forms.Panel panel2;
-    
 
     private System.Windows.Forms.Panel panel1;
     
