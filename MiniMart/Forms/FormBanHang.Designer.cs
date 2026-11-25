@@ -70,6 +70,21 @@ partial class FormBanHang
         panel5 = new System.Windows.Forms.Panel();
         lblGiamGiaHoaDon = new System.Windows.Forms.Label();
         lblBanHang = new System.Windows.Forms.Label();
+        flpKhuyenMai = new System.Windows.Forms.FlowLayoutPanel();
+        lblMaKhuyenMai = new System.Windows.Forms.Label();
+        txtMaKhuyenMai = new System.Windows.Forms.TextBox();
+        btnApDungKhuyenMai = new System.Windows.Forms.Button();
+        lblKhuyenMai = new System.Windows.Forms.Label();
+        flpTienNhanh = new System.Windows.Forms.FlowLayoutPanel();
+        lblTienNhanh = new System.Windows.Forms.Label();
+        btnTien10k = new System.Windows.Forms.Button();
+        btnTien20k = new System.Windows.Forms.Button();
+        btnTien50k = new System.Windows.Forms.Button();
+        btnTien100k = new System.Windows.Forms.Button();
+        btnTien200k = new System.Windows.Forms.Button();
+        btnTien500k = new System.Windows.Forms.Button();
+        btnDuTien = new System.Windows.Forms.Button();
+        lblTienThua = new System.Windows.Forms.Label();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -90,6 +105,8 @@ partial class FormBanHang
         panel4.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).BeginInit();
         panel5.SuspendLayout();
+        flpKhuyenMai.SuspendLayout();
+        flpTienNhanh.SuspendLayout();
         SuspendLayout();
         // 
         // panel1
@@ -107,16 +124,220 @@ partial class FormBanHang
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
+        tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
         tableLayoutPanel1.Controls.Add(lblBanHang, 0, 0);
+        tableLayoutPanel1.Controls.Add(flpKhuyenMai, 0, 1);
         tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
-        tableLayoutPanel1.RowCount = 2;
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.070867F));
-        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.92913F));
+        tableLayoutPanel1.RowCount = 3;
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+        tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
         tableLayoutPanel1.Size = new System.Drawing.Size(1196, 773);
         tableLayoutPanel1.TabIndex = 0;
+        // 
+        // flpKhuyenMai
+        // 
+        flpKhuyenMai.BackColor = System.Drawing.Color.White;
+        flpKhuyenMai.Controls.Add(lblMaKhuyenMai);
+        flpKhuyenMai.Controls.Add(txtMaKhuyenMai);
+        flpKhuyenMai.Controls.Add(btnApDungKhuyenMai);
+        flpKhuyenMai.Controls.Add(lblKhuyenMai);
+        flpKhuyenMai.Dock = System.Windows.Forms.DockStyle.Fill;
+        flpKhuyenMai.Location = new System.Drawing.Point(3, 80);
+        flpKhuyenMai.Name = "flpKhuyenMai";
+        flpKhuyenMai.Padding = new System.Windows.Forms.Padding(8, 3, 0, 0);
+        flpKhuyenMai.Size = new System.Drawing.Size(1190, 40);
+        flpKhuyenMai.TabIndex = 2;
+        flpKhuyenMai.WrapContents = false;
+        // 
+        // lblMaKhuyenMai
+        // 
+        lblMaKhuyenMai.AutoSize = true;
+        lblMaKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblMaKhuyenMai.Location = new System.Drawing.Point(11, 0);
+        lblMaKhuyenMai.Name = "lblMaKhuyenMai";
+        lblMaKhuyenMai.Padding = new System.Windows.Forms.Padding(0, 9, 4, 0);
+        lblMaKhuyenMai.Size = new System.Drawing.Size(128, 32);
+        lblMaKhuyenMai.TabIndex = 0;
+        lblMaKhuyenMai.Text = "Mã khuyến mãi:";
+        // 
+        // txtMaKhuyenMai
+        // 
+        txtMaKhuyenMai.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+        txtMaKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtMaKhuyenMai.Location = new System.Drawing.Point(146, 6);
+        txtMaKhuyenMai.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+        txtMaKhuyenMai.Name = "txtMaKhuyenMai";
+        txtMaKhuyenMai.PlaceholderText = "VD: SALE10";
+        txtMaKhuyenMai.Size = new System.Drawing.Size(170, 30);
+        txtMaKhuyenMai.TabIndex = 1;
+        // 
+        // btnApDungKhuyenMai
+        // 
+        btnApDungKhuyenMai.BackColor = System.Drawing.Color.Navy;
+        btnApDungKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnApDungKhuyenMai.ForeColor = System.Drawing.Color.White;
+        btnApDungKhuyenMai.Location = new System.Drawing.Point(322, 3);
+        btnApDungKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
+        btnApDungKhuyenMai.Name = "btnApDungKhuyenMai";
+        btnApDungKhuyenMai.Size = new System.Drawing.Size(120, 34);
+        btnApDungKhuyenMai.TabIndex = 2;
+        btnApDungKhuyenMai.Text = "Áp dụng mã";
+        btnApDungKhuyenMai.UseVisualStyleBackColor = false;
+        // 
+        // lblKhuyenMai
+        // 
+        lblKhuyenMai.AutoSize = true;
+        lblKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblKhuyenMai.ForeColor = System.Drawing.Color.Navy;
+        lblKhuyenMai.Location = new System.Drawing.Point(446, 0);
+        lblKhuyenMai.Name = "lblKhuyenMai";
+        lblKhuyenMai.Padding = new System.Windows.Forms.Padding(0, 9, 4, 0);
+        lblKhuyenMai.Size = new System.Drawing.Size(140, 32);
+        lblKhuyenMai.TabIndex = 3;
+        lblKhuyenMai.Text = "Chưa áp dụng mã";
+        // 
+        // flpTienNhanh
+        // 
+        flpTienNhanh.BackColor = System.Drawing.Color.White;
+        flpTienNhanh.Controls.Add(lblTienNhanh);
+        flpTienNhanh.Controls.Add(btnTien10k);
+        flpTienNhanh.Controls.Add(btnTien20k);
+        flpTienNhanh.Controls.Add(btnTien50k);
+        flpTienNhanh.Controls.Add(btnTien100k);
+        flpTienNhanh.Controls.Add(btnTien200k);
+        flpTienNhanh.Controls.Add(btnTien500k);
+        flpTienNhanh.Controls.Add(btnDuTien);
+        flpTienNhanh.Controls.Add(lblTienThua);
+        flpTienNhanh.Dock = System.Windows.Forms.DockStyle.Fill;
+        flpTienNhanh.Location = new System.Drawing.Point(3, 118);
+        flpTienNhanh.Name = "flpTienNhanh";
+        flpTienNhanh.Padding = new System.Windows.Forms.Padding(2, 2, 0, 0);
+        flpTienNhanh.Size = new System.Drawing.Size(727, 38);
+        flpTienNhanh.TabIndex = 20;
+        flpTienNhanh.WrapContents = false;
+        // 
+        // lblTienNhanh
+        // 
+        lblTienNhanh.AutoSize = true;
+        lblTienNhanh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTienNhanh.Location = new System.Drawing.Point(5, 0);
+        lblTienNhanh.Name = "lblTienNhanh";
+        lblTienNhanh.Padding = new System.Windows.Forms.Padding(0, 9, 4, 0);
+        lblTienNhanh.Size = new System.Drawing.Size(96, 32);
+        lblTienNhanh.TabIndex = 0;
+        lblTienNhanh.Text = "Tiền nhanh:";
+        // 
+        // btnTien10k
+        // 
+        btnTien10k.BackColor = System.Drawing.Color.Navy;
+        btnTien10k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien10k.ForeColor = System.Drawing.Color.White;
+        btnTien10k.Location = new System.Drawing.Point(105, 3);
+        btnTien10k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien10k.Name = "btnTien10k";
+        btnTien10k.Size = new System.Drawing.Size(60, 34);
+        btnTien10k.TabIndex = 1;
+        btnTien10k.Tag = "10000";
+        btnTien10k.Text = "10k";
+        btnTien10k.UseVisualStyleBackColor = false;
+        // 
+        // btnTien20k
+        // 
+        btnTien20k.BackColor = System.Drawing.Color.Navy;
+        btnTien20k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien20k.ForeColor = System.Drawing.Color.White;
+        btnTien20k.Location = new System.Drawing.Point(169, 3);
+        btnTien20k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien20k.Name = "btnTien20k";
+        btnTien20k.Size = new System.Drawing.Size(60, 34);
+        btnTien20k.TabIndex = 2;
+        btnTien20k.Tag = "20000";
+        btnTien20k.Text = "20k";
+        btnTien20k.UseVisualStyleBackColor = false;
+        // 
+        // btnTien50k
+        // 
+        btnTien50k.BackColor = System.Drawing.Color.Navy;
+        btnTien50k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien50k.ForeColor = System.Drawing.Color.White;
+        btnTien50k.Location = new System.Drawing.Point(233, 3);
+        btnTien50k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien50k.Name = "btnTien50k";
+        btnTien50k.Size = new System.Drawing.Size(60, 34);
+        btnTien50k.TabIndex = 3;
+        btnTien50k.Tag = "50000";
+        btnTien50k.Text = "50k";
+        btnTien50k.UseVisualStyleBackColor = false;
+        // 
+        // btnTien100k
+        // 
+        btnTien100k.BackColor = System.Drawing.Color.Navy;
+        btnTien100k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien100k.ForeColor = System.Drawing.Color.White;
+        btnTien100k.Location = new System.Drawing.Point(297, 3);
+        btnTien100k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien100k.Name = "btnTien100k";
+        btnTien100k.Size = new System.Drawing.Size(60, 34);
+        btnTien100k.TabIndex = 4;
+        btnTien100k.Tag = "100000";
+        btnTien100k.Text = "100k";
+        btnTien100k.UseVisualStyleBackColor = false;
+        // 
+        // btnTien200k
+        // 
+        btnTien200k.BackColor = System.Drawing.Color.Navy;
+        btnTien200k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien200k.ForeColor = System.Drawing.Color.White;
+        btnTien200k.Location = new System.Drawing.Point(361, 3);
+        btnTien200k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien200k.Name = "btnTien200k";
+        btnTien200k.Size = new System.Drawing.Size(60, 34);
+        btnTien200k.TabIndex = 5;
+        btnTien200k.Tag = "200000";
+        btnTien200k.Text = "200k";
+        btnTien200k.UseVisualStyleBackColor = false;
+        // 
+        // btnTien500k
+        // 
+        btnTien500k.BackColor = System.Drawing.Color.Navy;
+        btnTien500k.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTien500k.ForeColor = System.Drawing.Color.White;
+        btnTien500k.Location = new System.Drawing.Point(425, 3);
+        btnTien500k.Margin = new System.Windows.Forms.Padding(2);
+        btnTien500k.Name = "btnTien500k";
+        btnTien500k.Size = new System.Drawing.Size(60, 34);
+        btnTien500k.TabIndex = 6;
+        btnTien500k.Tag = "500000";
+        btnTien500k.Text = "500k";
+        btnTien500k.UseVisualStyleBackColor = false;
+        // 
+        // btnDuTien
+        // 
+        btnDuTien.BackColor = System.Drawing.Color.Navy;
+        btnDuTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnDuTien.ForeColor = System.Drawing.Color.White;
+        btnDuTien.Location = new System.Drawing.Point(489, 3);
+        btnDuTien.Margin = new System.Windows.Forms.Padding(2);
+        btnDuTien.Name = "btnDuTien";
+        btnDuTien.Size = new System.Drawing.Size(80, 34);
+        btnDuTien.TabIndex = 7;
+        btnDuTien.Text = "Đủ tiền";
+        btnDuTien.UseVisualStyleBackColor = false;
+        // 
+        // lblTienThua
+        // 
+        lblTienThua.AutoSize = true;
+        lblTienThua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTienThua.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)100)), ((int)((byte)70)));
+        lblTienThua.Location = new System.Drawing.Point(573, 0);
+        lblTienThua.Name = "lblTienThua";
+        lblTienThua.Padding = new System.Windows.Forms.Padding(0, 9, 4, 0);
+        lblTienThua.Size = new System.Drawing.Size(120, 32);
+        lblTienThua.TabIndex = 8;
+        lblTienThua.Text = "Tiền thừa: 0đ";
         // 
         // tableLayoutPanel2
         // 
@@ -235,7 +456,6 @@ partial class FormBanHang
         // 
         // dgvSanPham
         // 
-        dgvSanPham.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvSanPham.Location = new System.Drawing.Point(3, 122);
@@ -256,8 +476,8 @@ partial class FormBanHang
         tableLayoutPanel6.Location = new System.Drawing.Point(448, 3);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
         tableLayoutPanel6.RowCount = 2;
-        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.136116F));
-        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.863884F));
+        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
+        tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32F));
         tableLayoutPanel6.Size = new System.Drawing.Size(739, 660);
         tableLayoutPanel6.TabIndex = 1;
         // 
@@ -377,12 +597,15 @@ partial class FormBanHang
         tableLayoutPanel8.Controls.Add(panel4, 2, 1);
         tableLayoutPanel8.Controls.Add(nudGiamGiaHoaDon, 1, 1);
         tableLayoutPanel8.Controls.Add(panel5, 0, 1);
+        tableLayoutPanel8.Controls.Add(flpTienNhanh, 0, 2);
+        tableLayoutPanel8.SetColumnSpan(flpTienNhanh, 5);
         tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel8.Location = new System.Drawing.Point(3, 498);
         tableLayoutPanel8.Name = "tableLayoutPanel8";
-        tableLayoutPanel8.RowCount = 2;
+        tableLayoutPanel8.RowCount = 3;
         tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+        tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
         tableLayoutPanel8.Size = new System.Drawing.Size(733, 159);
         tableLayoutPanel8.TabIndex = 1;
         // 
@@ -618,8 +841,30 @@ partial class FormBanHang
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).EndInit();
         panel5.ResumeLayout(false);
         panel5.PerformLayout();
+        flpKhuyenMai.ResumeLayout(false);
+        flpKhuyenMai.PerformLayout();
+        flpTienNhanh.ResumeLayout(false);
+        flpTienNhanh.PerformLayout();
         ResumeLayout(false);
     }
+
+
+    // [MỚI] Khuyến mãi và tiền nhanh
+    private System.Windows.Forms.FlowLayoutPanel flpKhuyenMai;
+    private System.Windows.Forms.Label lblMaKhuyenMai;
+    private System.Windows.Forms.TextBox txtMaKhuyenMai;
+    private System.Windows.Forms.Button btnApDungKhuyenMai;
+    private System.Windows.Forms.Label lblKhuyenMai;
+    private System.Windows.Forms.FlowLayoutPanel flpTienNhanh;
+    private System.Windows.Forms.Label lblTienNhanh;
+    private System.Windows.Forms.Button btnTien10k;
+    private System.Windows.Forms.Button btnTien20k;
+    private System.Windows.Forms.Button btnTien50k;
+    private System.Windows.Forms.Button btnTien100k;
+    private System.Windows.Forms.Button btnTien200k;
+    private System.Windows.Forms.Button btnTien500k;
+    private System.Windows.Forms.Button btnDuTien;
+    private System.Windows.Forms.Label lblTienThua;
 
     private System.Windows.Forms.Panel panel4;
     private System.Windows.Forms.Label lblKhachDua;

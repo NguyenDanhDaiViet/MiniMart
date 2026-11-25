@@ -118,6 +118,7 @@ public class DichVuBanHang
             "Thời gian: "  + h.NgayLapHoaDon.ToString("yyyy-MM-dd  HH:mm:ss"),
             "Khách Hàng: " + h.tenKhachHang,
             "SDT:  "       + h.SDTkhachHang,
+            "Mã khuyến mãi: " + (string.IsNullOrWhiteSpace(h.MaKhuyenMai) ? "Không áp dụng" : h.MaKhuyenMai),
             "------------------------------",
             $"Tạm tính:  {h.TamTinh:N0} VND",
             $"Giảm giá:  {h.ChietKhau:N0} VND",
