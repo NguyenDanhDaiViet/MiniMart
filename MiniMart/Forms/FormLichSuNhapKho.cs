@@ -4,9 +4,6 @@ using MiniMart.Ui;
 
 namespace MiniMart.Forms;
 
-// Tên control theo Designer: dtpTuNgay / dtpDenNgay = khoảng ngày, txtTimKiem = tìm theo mã phiếu / nhà cung cấp / SĐT / sản phẩm,
-// btnTimKiem = Tìm kiếm, lblTongKet = số phiếu và tổng tiền nhập, dgvPhieuNhap = danh sách phiếu nhập,
-// lblChiTiet + txtThongTinNhaCungCap + dgvChiTiet = chi tiết của phiếu đang chọn.
 public partial class FormLichSuNhapKho : Form
 {
     private readonly DichVuKho _kho = new();
@@ -20,7 +17,7 @@ public partial class FormLichSuNhapKho : Form
         TienIchGiaoDien.CauHinhLuoi(dgvPhieuNhap);
         TienIchGiaoDien.CauHinhLuoi(dgvChiTiet);
 
-        dtpTuNgay.Value = DateTime.Today.AddDays(-30); // mặc định xem 30 ngày gần nhất
+        dtpTuNgay.Value = DateTime.Today.AddDays(-30); 
         dtpDenNgay.Value = DateTime.Today;
 
         btnTimKiem.Click += XuLyTimKiem_Click;
