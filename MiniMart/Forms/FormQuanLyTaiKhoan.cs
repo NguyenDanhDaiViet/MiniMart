@@ -22,7 +22,9 @@ public partial class FormQuanLyTaiKhoan : Form
         cboVaiTro.Items.AddRange(new object[] {VaiTroQuanLy, VaiTroNhanVien});
         txtMatKhau.UseSystemPasswordChar = true;
 
-        btnTimKiem.Click += XuLyTimKiem_Click;
+        // Tìm kiếm: bấm nút hoặc gõ phím (gõ tới đâu lọc tới đó).
+        btnTimKiem.Click += (_, _) => TaiDanhSachTaiKhoan();
+        txtTimKiem.TextChanged += XuLyTimKiem_TextChanged;
         btnLamMoi.Click += XuLyTaoMoi_Click;
         btnLuu.Click += XuLyLuu_Click;
         btnKhoaMoKhoa.Click += XuLyKhoaTaiKhoan_Click;
@@ -48,21 +50,25 @@ public partial class FormQuanLyTaiKhoan : Form
         txtTenDangNhap.Clear();
         txtHoTen.Clear();
         txtMatKhau.Clear();
-        cboVaiTro.SelectedIndex = 1;//mặc định nhân viên
+        cboVaiTro.SelectedIndex = 1;
         dgvTaiKhoan.ClearSelection();
     }
-    private void XuLyTimKiem_Click(object? sender, EventArgs e)=> TaiDanhSachTaiKhoan();
+    private void XuLyTimKiem_TextChanged(object? sender, EventArgs e)=> TaiDanhSachTaiKhoan();
     private void XuLyTaoMoi_Click(object? sender, EventArgs e)=> XoaDuLieuNhap();
 
     private void XuLyLuu_Click(object? sender, EventArgs e)
     {
         try
         {
+            bool laThemMoi = Iddachon == 0;
+            bool datLaiMatKhau = !string.IsNullOrWhiteSpace(txtMatKhau.Text);
             DichVuTaiKhoan.Luu(Iddachon, txtTenDangNhap.Text, txtHoTen.Text,
                Convert.ToString(cboVaiTro.SelectedItem)?? VaiTroNhanVien, txtMatKhau.Text );
             TaiDanhSachTaiKhoan();
             XoaDuLieuNhap();
-            MessageBox.Show("Đã lưu tài khoản.");
+            string thongBao = laThemMoi ? "Thêm tài khoản thành công." : "Cập nhật tài khoản thành công.";
+            if (datLaiMatKhau) thongBao += "\nNgười dùng sẽ phải đổi mật khẩu ở lần đăng nhập tới.";
+            MessageBox.Show(thongBao, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception exception)
         {
@@ -83,6 +89,7 @@ public partial class FormQuanLyTaiKhoan : Form
         
         DichVuTaiKhoan.ChuyenTrangThaiHoatDong(Iddachon);
         TaiDanhSachTaiKhoan();
+        MessageBox.Show("Khóa / mở khóa tài khoản thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
       
     }
 

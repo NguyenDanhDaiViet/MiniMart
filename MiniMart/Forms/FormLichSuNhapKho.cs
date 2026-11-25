@@ -19,19 +19,22 @@ public partial class FormLichSuNhapKho : Form
 
         dtpTuNgay.Value = DateTime.Today.AddDays(-30); 
         dtpDenNgay.Value = DateTime.Today;
-
-        btnTimKiem.Click += XuLyTimKiem_Click;
+        
+        btnTimKiem.Click += (_, _) => TaiDanhSach();
+        txtTimKiem.TextChanged += (_, _) => TaiDanhSach(baoLoiNgay: false);
         txtTimKiem.KeyDown += XuLyTimKiem_KeyDown;
+        dtpTuNgay.ValueChanged += (_, _) => TaiDanhSach();
+        dtpDenNgay.ValueChanged += (_, _) => TaiDanhSach();
         dgvPhieuNhap.SelectionChanged += XuLyChonPhieuNhap_SelectionChanged;
 
         TaiDanhSach();
     }
 
-    private void TaiDanhSach()
+    private void TaiDanhSach(bool baoLoiNgay = true)
     {
         if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
         {
-            MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
+            if (baoLoiNgay) MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
@@ -111,8 +114,6 @@ public partial class FormLichSuNhapKho : Form
     }
 
     private static string HienGiaTri(string giaTri) => string.IsNullOrWhiteSpace(giaTri) ? "—" : giaTri;
-
-    private void XuLyTimKiem_Click(object? sender, EventArgs e) => TaiDanhSach();
 
     private void XuLyTimKiem_KeyDown(object? sender, KeyEventArgs e)
     {

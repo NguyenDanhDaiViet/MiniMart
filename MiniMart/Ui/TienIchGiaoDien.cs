@@ -5,7 +5,6 @@ namespace MiniMart.Ui;
 public class TienIchGiaoDien
 {
     public static readonly Color XanhDam = Color.FromArgb(22, 65, 112);
-    public static readonly Color XanhHover = Color.FromArgb(54, 132, 198);
     public static readonly Color VangDangChon = Color.FromArgb(255, 232, 145);
     public static readonly Color ChuDam = Color.FromArgb(35, 48, 65);
     public static bool DangThietKe => LicenseManager.UsageMode == LicenseUsageMode.Designtime;
