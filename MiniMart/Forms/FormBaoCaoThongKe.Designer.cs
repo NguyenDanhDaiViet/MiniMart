@@ -217,7 +217,7 @@ partial class FormBaoCaoThongKe
         btInbaocao.Name = "btInbaocao";
         btInbaocao.Size = new System.Drawing.Size(253, 33);
         btInbaocao.TabIndex = 5;
-        btInbaocao.Text = "XUẤT FILE CSV";
+        btInbaocao.Text = "IN BÁO CÁO\r\n";
         btInbaocao.UseVisualStyleBackColor = false;
         // 
         // tableLayoutPanel5

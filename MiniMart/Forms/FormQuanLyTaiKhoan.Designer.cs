@@ -45,11 +45,11 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
         txtMatKhau = new System.Windows.Forms.TextBox();
         txtHoTen = new System.Windows.Forms.TextBox();
-        label5 = new System.Windows.Forms.Label();
+        lblVaiTro = new System.Windows.Forms.Label();
         lblMatKhau = new System.Windows.Forms.Label();
         lblHoTen = new System.Windows.Forms.Label();
         lblTenDangNhap = new System.Windows.Forms.Label();
-        textBox2 = new System.Windows.Forms.TextBox();
+        txtTenDangNhap = new System.Windows.Forms.TextBox();
         cboVaiTro = new System.Windows.Forms.ComboBox();
         panel3 = new System.Windows.Forms.Panel();
         dgvTaiKhoan = new System.Windows.Forms.DataGridView();
@@ -179,43 +179,34 @@ partial class FormQuanLyTaiKhoan
         // 
         btnKhoaMoKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnKhoaMoKhoa.AutoSize = true;
-        btnKhoaMoKhoa.BackColor = System.Drawing.Color.Navy;
-        btnKhoaMoKhoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnKhoaMoKhoa.ForeColor = System.Drawing.Color.White;
-        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 5);
+        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 7);
         btnKhoaMoKhoa.Name = "btnKhoaMoKhoa";
-        btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 33);
+        btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 30);
         btnKhoaMoKhoa.TabIndex = 2;
         btnKhoaMoKhoa.Text = "Khóa / Mở khóa";
-        btnKhoaMoKhoa.UseVisualStyleBackColor = false;
+        btnKhoaMoKhoa.UseVisualStyleBackColor = true;
         // 
         // btnLuu
         // 
         btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLuu.AutoSize = true;
-        btnLuu.BackColor = System.Drawing.Color.Navy;
-        btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnLuu.ForeColor = System.Drawing.Color.White;
         btnLuu.Location = new System.Drawing.Point(453, 5);
         btnLuu.Name = "btnLuu";
         btnLuu.Size = new System.Drawing.Size(200, 34);
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
-        btnLuu.UseVisualStyleBackColor = false;
+        btnLuu.UseVisualStyleBackColor = true;
         // 
         // btnLamMoi
         // 
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLamMoi.AutoSize = true;
-        btnLamMoi.BackColor = System.Drawing.Color.Navy;
-        btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnLamMoi.ForeColor = System.Drawing.Color.White;
         btnLamMoi.Location = new System.Drawing.Point(82, 5);
         btnLamMoi.Name = "btnLamMoi";
         btnLamMoi.Size = new System.Drawing.Size(200, 34);
         btnLamMoi.TabIndex = 0;
         btnLamMoi.Text = "Làm mới";
-        btnLamMoi.UseVisualStyleBackColor = false;
+        btnLamMoi.UseVisualStyleBackColor = true;
         // 
         // tableLayoutPanel5
         // 
@@ -226,11 +217,11 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel5.Controls.Add(txtMatKhau, 2, 1);
         tableLayoutPanel5.Controls.Add(txtHoTen, 1, 1);
-        tableLayoutPanel5.Controls.Add(label5, 3, 0);
+        tableLayoutPanel5.Controls.Add(lblVaiTro, 3, 0);
         tableLayoutPanel5.Controls.Add(lblMatKhau, 2, 0);
         tableLayoutPanel5.Controls.Add(lblHoTen, 1, 0);
         tableLayoutPanel5.Controls.Add(lblTenDangNhap, 0, 0);
-        tableLayoutPanel5.Controls.Add(textBox2, 0, 1);
+        tableLayoutPanel5.Controls.Add(txtTenDangNhap, 0, 1);
         tableLayoutPanel5.Controls.Add(cboVaiTro, 3, 1);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
@@ -257,15 +248,15 @@ partial class FormQuanLyTaiKhoan
         txtHoTen.Size = new System.Drawing.Size(224, 27);
         txtHoTen.TabIndex = 5;
         // 
-        // label5
+        // lblVaiTro
         // 
-        label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-        label5.Location = new System.Drawing.Point(918, 11);
-        label5.Name = "label5";
-        label5.Size = new System.Drawing.Size(100, 23);
-        label5.TabIndex = 3;
-        label5.Text = "Vai trò";
-        label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lblVaiTro.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblVaiTro.Location = new System.Drawing.Point(918, 11);
+        lblVaiTro.Name = "lblVaiTro";
+        lblVaiTro.Size = new System.Drawing.Size(100, 23);
+        lblVaiTro.TabIndex = 3;
+        lblVaiTro.Text = "Vai trò";
+        lblVaiTro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblMatKhau
         // 
@@ -294,13 +285,13 @@ partial class FormQuanLyTaiKhoan
         lblTenDangNhap.TabIndex = 0;
         lblTenDangNhap.Text = "Tên đăng nhập";
         // 
-        // textBox2
+        // txtTenDangNhap
         // 
-        textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-        textBox2.Location = new System.Drawing.Point(22, 55);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(229, 27);
-        textBox2.TabIndex = 4;
+        txtTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+        txtTenDangNhap.Location = new System.Drawing.Point(22, 55);
+        txtTenDangNhap.Name = "txtTenDangNhap";
+        txtTenDangNhap.Size = new System.Drawing.Size(229, 27);
+        txtTenDangNhap.TabIndex = 4;
         // 
         // cboVaiTro
         // 
@@ -357,12 +348,12 @@ partial class FormQuanLyTaiKhoan
     private System.Windows.Forms.TextBox txtMatKhau;
     private System.Windows.Forms.ComboBox cboVaiTro;
 
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox txtTenDangNhap;
 
     private System.Windows.Forms.Label lblTenDangNhap;
     private System.Windows.Forms.Label lblHoTen;
     private System.Windows.Forms.Label lblMatKhau;
-    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label lblVaiTro;
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 
