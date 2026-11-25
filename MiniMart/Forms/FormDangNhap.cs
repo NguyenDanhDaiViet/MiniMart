@@ -40,6 +40,7 @@ public partial class FormDangNhap : Form
             hienThiTen = tenDangNhap.Text.Trim();
             hienTenHienTai = name;
             VaiTro = vaitro;
+            DichVuLichSuHoatDong.Ghi("Đăng nhập", "Đăng nhập hệ thống thành công");
             DialogResult = DialogResult.OK;
             Close();
         }
