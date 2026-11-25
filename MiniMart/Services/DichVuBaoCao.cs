@@ -21,27 +21,6 @@ public class DichVuBaoCao
         return (tongTien.Sum(), tongTien.Count);
     }
 
-    public List<(String Ten, int Soluong)> LaySamPhamBanChay(DateTime tuNgay, DateTime denNgay)
-    {
-        using var db = new CoSoDuLieu();
-        var batDau = tuNgay.Date;
-        var ketThuc = denNgay.Date.AddDays(1);
-
-        var dong = db.ChiTietHoaDons.AsNoTracking()
-            .Join(db.HoaDons.AsNoTracking().Where(h => h.NgayLapHoaDon >= batDau && h.NgayLapHoaDon < ketThuc),
-                ct => ct.IdHoaDon, h => h.Id,
-                (ct, h) => new { ct.IdSanPham, ct.TenSanPham, ct.SoLuong })
-            .ToList();
-
-        return dong
-            .GroupBy(x => x.IdSanPham)
-            .Select(g => (Ten: g.First().TenSanPham, SoLuong: g.Sum(x => x.SoLuong)))
-            .OrderByDescending(x => x.SoLuong)
-            .ThenBy(x => x.Ten)
-            .Take(10)
-            .ToList();
-    }
-
     public List<ThongKeSanPham> LayThongKeSanPham(DateTime tuNgay, DateTime denNgay)
     {
         using var db = new CoSoDuLieu();
@@ -82,6 +61,27 @@ public class DichVuBaoCao
             .Select(x=> new { x.Ten, x.SoLuongHangTon, x.TonKhoToiThieu})
             .ToList()
             .Select(x=>(x.Ten, x.SoLuongHangTon, x.TonKhoToiThieu))
+            .ToList();
+    }
+
+    public List<(string Ten, int SoLuong)> LaySanPhamBanChay(DateTime tuNgay, DateTime denNgay)
+    {
+        using var db = new CoSoDuLieu();
+        var batDau = tuNgay.Date;
+        var ketThuc = denNgay.Date.AddDays(1);
+        
+        var dong = db.ChiTietHoaDons.AsNoTracking()
+            .Join(db.HoaDons.AsNoTracking().Where(h => h.NgayLapHoaDon >= batDau && h.NgayLapHoaDon < ketThuc),
+                ct => ct.IdHoaDon, h => h.Id,
+                (ct, h) => new { ct.IdSanPham, ct.TenSanPham, ct.SoLuong })
+            .ToList();
+
+        return dong
+            .GroupBy(x => x.IdSanPham)
+            .Select(g => (Ten: g.First().TenSanPham, SoLuong: g.Sum(x => x.SoLuong)))
+            .OrderByDescending(x => x.SoLuong)
+            .ThenBy(x => x.Ten)
+            .Take(10)
             .ToList();
     }
 }
