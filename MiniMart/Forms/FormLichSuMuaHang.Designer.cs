@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace MiniMart.Forms;
 
-partial class FormHanSuDungcs
+partial class FormLichSuMuaHang
 {
     /// <summary>
     /// Required designer variable.
@@ -34,7 +34,7 @@ partial class FormHanSuDungcs
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "FormHanSuDungcs";
+        this.Text = "FormLichSuMuaHang";
     }
 
     #endregion
