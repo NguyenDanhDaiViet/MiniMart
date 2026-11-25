@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Drawing.Printing;
+using System.Text;
 using MiniMart.Services;
 using MiniMart.Ui;
 
@@ -8,69 +9,91 @@ public partial class FormBaoCaoThongKe : Form
 {
     private readonly DichVuBaoCao _baoCao = new();
     
-    public FormBaoCaoThongKe()
+     public FormBaoCaoThongKe()
     {
         InitializeComponent();
         if (TienIchGiaoDien.DangThietKe)return;
         
-        TienIchGiaoDien.CauHinhLuoi(dataGridView2);
+        TienIchGiaoDien.CauHinhLuoi(dgvTopSanPham);
         btXembaocao.Click += XuLyXemBaoCao_Click;
-        btXuatfilecsv.Click += XuLyXuatBaoCao_Click;
+        btInbaocao.Click += XuLyInBaoCao_Click;
+        btXemtop.Click += XuLyXemTop_Click;
     }
-
-    private void FormBaoCaoThongKe_Load(object sender, EventArgs e)
+     
+    private void FormBaoCaoThongKe_Load(object? sender, EventArgs e)
     {
         if (TienIchGiaoDien.DangThietKe) return;
 
-        var homnay = DateTime.Today; 
-            dateTimePicker1.Value= new DateTime(homnay.Year, homnay.Month, 1);
-            dateTimePicker2.Value = homnay;
-            TaiBaoCao();
+        var homNay = DateTime.Today;
+        dtpTuNgay.Value = new DateTime(homNay.Year, homNay.Month, 1); // đầu tháng
+        dtpDenNgay.Value = homNay;
+        TaiBaoCao();
     }
 
     private bool KhoangNgayHopLe()
     {
-        if (dateTimePicker1.Value.Date <= dateTimePicker2.Value.Date) return true;
-        MessageBox.Show("Ngàu bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
+        if (dtpTuNgay.Value.Date <= dtpDenNgay.Value.Date) return true;
+        MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
             MessageBoxButtons.OK, MessageBoxIcon.Warning);
         return false;
-        
     }
 
     private void TaiBaoCao()
     {
-        if (!KhoangNgayHopLe())return;
+        if (!KhoangNgayHopLe()) return;
 
-        var Tungay = dateTimePicker1.Value.Date;
-        var Denngay = dateTimePicker2.Value.Date;
+        var tuNgay = dtpTuNgay.Value.Date;
+        var denNgay = dtpDenNgay.Value.Date;
 
-        var tongQuan = _baoCao.LayTongQuan(Tungay, Denngay);
-            lbDoanhThu.Text= $"Doanh thu: {tongQuan.Doanhthu:N0}đ";
-            lbSohoadon.Text = $"Số hóa đơn: {tongQuan.Sohoadon}";
+        var tongQuan = _baoCao.LayTongQuan(tuNgay, denNgay);
+        lbDoanhThu.Text = $"Doanh thu: {tongQuan.Doanhthu:N0}đ";
+        lbSohoadon.Text = $"Số hóa đơn: {tongQuan.Sohoadon}";
 
-            dataGridView2.DataSource = _baoCao.LaySamPhamBanChay(Tungay, Denngay)
-                .Select(x => new { Sanpham =x.Ten, SoLuongBan =x.Soluong })
-                .ToList();
-            TienIchGiaoDien.DatTieuDe(dataGridView2, ("SanPham", "Sản Phẩm"), ("SoLuongban", "Số Lượng Bán"));
+        var top = _baoCao.LaySanPhamBanChay(tuNgay, denNgay);
+        dgvTopSanPham.DataSource = top
+            .Select((x, i) => new { Hang = i + 1, SanPham = x.Ten, SoLuongBan = x.SoLuong })
+            .ToList();
+        TienIchGiaoDien.DatTieuDe(dgvTopSanPham, ("Hang", "Hạng"), ("SanPham", "Sản phẩm"), ("SoLuongBan", "Số lượng bán"));
+        if (dgvTopSanPham.Columns["Hang"] != null) dgvTopSanPham.Columns["Hang"]!.FillWeight = 25;
+
+        lbTopsanphambanchay.Text = top.Count == 0
+            ? "TOP SẢN PHẨM BÁN CHẠY (trống)"
+            : "TOP SẢN PHẨM BÁN CHẠY";
     }
 
     private void XuLyXemBaoCao_Click(object? sender, EventArgs e) => TaiBaoCao();
 
-    private void XuLyXuatBaoCao_Click(object? sender, EventArgs e)
+    // Mở form riêng (rộng hơn) với đúng khoảng ngày đang chọn
+    private void XuLyXemTop_Click(object? sender, EventArgs e)
     {
-        if (!KhoangNgayHopLe())return;
+        if (!KhoangNgayHopLe()) return;
 
-        using var dialog = new SaveFileDialog {Filter = "CSV (*.csv)|*.csv", FileName ="BaoCaoMiniMart.csv"};
-        if (dialog.ShowDialog() == DialogResult.OK)return;
-            
-            var rows = _baoCao.LaySamPhamBanChay(dateTimePicker1.Value.Date, dateTimePicker2.Value.Date);
-            var lines = new[] { "Sảm phẩm,Số lượng bán" }
-                .Concat(rows.Select(x => $"\"{x.Ten.Replace("\"", "\"\"")}, {x.Soluong}"));
-            
-            File.WriteAllLines(dialog.FileName, lines, new UTF8Encoding(true));
-            MessageBox.Show("Đã xuát báo cáo");
-            
+        using var f = new FormTopSanPham(dtpTuNgay.Value.Date, dtpDenNgay.Value.Date);
+        f.ShowDialog();
     }
 
+    private void XuLyInBaoCao_Click(object? sender, EventArgs e)// viết lại chỗ này (xóa cái xuất pdf đi)
+    {
+        if (!KhoangNgayHopLe()) return;
+
+        var tuNgay = dtpTuNgay.Value.Date;
+        var denNgay = dtpDenNgay.Value.Date;
+
+        try
+        {
+            var tongQuan = _baoCao.LayTongQuan(tuNgay, denNgay);
+            var top = _baoCao.LaySanPhamBanChay(tuNgay, denNgay);
+            DichVuInBaoCao.In(this, tuNgay, denNgay, tongQuan.Doanhthu, tongQuan.Sohoadon, top);
+        }
+        catch (InvalidPrinterException)
+        {
+            MessageBox.Show("Máy tính chưa có máy in nào. Hãy cài máy in (hoặc dùng Microsoft Print to PDF) rồi thử lại.",
+                "Không thể in báo cáo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Không thể in báo cáo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+    }
 
 }
