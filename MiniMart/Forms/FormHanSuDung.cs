@@ -1,8 +1,8 @@
 ﻿namespace MiniMart.Forms;
 
-public partial class FormHanSuDungcs : Form
+public partial class FormHanSuDung : Form
 {
-    public FormHanSuDungcs()
+    public FormHanSuDung()
     {
         InitializeComponent();
     }

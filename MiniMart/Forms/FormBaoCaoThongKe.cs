@@ -46,8 +46,8 @@ public partial class FormBaoCaoThongKe : Form
         var denNgay = dtpDenNgay.Value.Date;
 
         var tongQuan = _baoCao.LayTongQuan(tuNgay, denNgay);
-        lbDoanhThu.Text = $"Doanh thu: {tongQuan.Doanhthu:N0}đ";
-        lbSohoadon.Text = $"Số hóa đơn: {tongQuan.Sohoadon}";
+        lbDoanhThu.Text = $"Doanh thu: {tongQuan.DoanhThu:N0}đ";
+        lbSohoadon.Text = $"Số hóa đơn: {tongQuan.SoHoaDon}";
 
         var top = _baoCao.LaySanPhamBanChay(tuNgay, denNgay);
         dgvTopSanPham.DataSource = top
@@ -83,7 +83,7 @@ public partial class FormBaoCaoThongKe : Form
         {
             var tongQuan = _baoCao.LayTongQuan(tuNgay, denNgay);
             var top = _baoCao.LaySanPhamBanChay(tuNgay, denNgay);
-            DichVuInBaoCao.In(this, tuNgay, denNgay, tongQuan.Doanhthu, tongQuan.Sohoadon, top);
+            DichVuInBaoCao.In(this, tuNgay, denNgay, tongQuan.DoanhThu, tongQuan.SoHoaDon, top);
         }
         catch (InvalidPrinterException)
         {
