@@ -15,8 +15,12 @@ public partial class FormLichSuHoatDong : Form
         TienIchGiaoDien.CauHinhLuoi(dgvLichSu);
         dtpTuNgay.Value = DateTime.Today.AddDays(-30);
         dtpDenNgay.Value = DateTime.Today;
-
+        
+        
         btnLoc.Click += (_, _) => TaiDanhSach();
+        txtTuKhoa.TextChanged += (_, _) => TaiDanhSach(baoLoiNgay: false);
+        dtpTuNgay.ValueChanged += (_, _) => TaiDanhSach();
+        dtpDenNgay.ValueChanged += (_, _) => TaiDanhSach();
         txtTuKhoa.KeyDown += (_, e) =>
         {
             if (e.KeyCode != Keys.Enter) return;
@@ -27,11 +31,11 @@ public partial class FormLichSuHoatDong : Form
         TaiDanhSach();
     }
 
-    private void TaiDanhSach()
+    private void TaiDanhSach(bool baoLoiNgay = true)
     {
         if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
         {
-            MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
+            if (baoLoiNgay) MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc.", "Khoảng ngày không hợp lệ",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }

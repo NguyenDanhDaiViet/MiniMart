@@ -3,9 +3,6 @@ using MiniMart.Ui;
 
 namespace MiniMart.Forms;
 
-// [MỚI] Quản lý lô hàng và hạn sử dụng. Control nằm trong FormHanSuDung.Designer.cs:
-// cboSanPham / txtMaLo / nudSoLuong / dtpNgaySanXuat / dtpHanSuDung + btnTaoLo = tạo lô,
-// txtTimKiem + btnLoc = tìm, btnXoaLo = xóa lô chưa xuất, dgvLoHang = danh sách lô.
 public partial class FormHanSuDung : Form
 {
     private readonly DichVuHanSuDung _dichVu = new();
@@ -24,6 +21,7 @@ public partial class FormHanSuDung : Form
 
         btnTaoLo.Click += XuLyTaoLo_Click;
         btnLoc.Click += (_, _) => TaiDanhSach();
+        txtTimKiem.TextChanged += (_, _) => TaiDanhSach();
         btnXoaLo.Click += XuLyXoaLo_Click;
         txtTimKiem.KeyDown += (_, e) =>
         {
@@ -65,7 +63,7 @@ public partial class FormHanSuDung : Form
             TaiDanhSach();
             txtMaLo.Clear();
             nudSoLuong.Value = 1;
-            MessageBox.Show("Đã tạo lô hàng.");
+            MessageBox.Show("Tạo lô hàng thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -73,7 +71,6 @@ public partial class FormHanSuDung : Form
         }
     }
 
-    // Chỉ xóa được lô chưa phát sinh xuất bán/điều chỉnh.
     private void XuLyXoaLo_Click(object? sender, EventArgs e)
     {
         if (dgvLoHang.CurrentRow == null || !dgvLoHang.Columns.Contains("MaLo") || dgvLoHang.CurrentRow.Cells["MaLo"].Value == null)
@@ -87,7 +84,7 @@ public partial class FormHanSuDung : Form
         {
             _dichVu.Xoa(maLo);
             TaiDanhSach();
-            MessageBox.Show("Đã xóa lô hàng.");
+            MessageBox.Show("Xóa lô hàng thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {

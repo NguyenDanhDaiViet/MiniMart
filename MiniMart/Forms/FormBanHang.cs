@@ -44,6 +44,7 @@ public partial class FormBanHang : Form
         dgvGioHang.CellClick += XuLyChonDongGioHang_CellClick;
         nudGiamGiaHoaDon.ValueChanged += XuLyThayDoiGiamGiaHoaDon_ValueChanged;
         txtKhachDua.Leave += XuLyDinhDangTienKhachDua_Leave;
+        btnTimKiem.Click += (_, _) => TaiDanhSachSanPham(); 
         txtTimKiem.TextChanged += XuLyTimKiemSanPham_TextChanged;
         txtTimKiem.KeyDown += XuLyTimKiemSanPham_KeyDown;
         
@@ -85,6 +86,7 @@ public partial class FormBanHang : Form
 
         nudSoLuong.Value = 1;
         CapNhatGioHang();
+        MessageBox.Show($"Thêm \"{p.Ten}\" vào giỏ hàng thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
     private void XuLyCapNhatSoLuong_Click(object? sender, EventArgs e)
     {
@@ -103,6 +105,7 @@ public partial class FormBanHang : Form
         item.SoLuong = qty;
         item.PhanTramChietKhau = nudGiamGiaDong.Value;
         CapNhatGioHang();
+        MessageBox.Show($"Cập nhật \"{item.Ten}\" thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
     private void XuLyBoDong_Click(object? sender, EventArgs e)
@@ -111,34 +114,21 @@ public partial class FormBanHang : Form
         int id = Convert.ToInt32(dgvGioHang.CurrentRow.Cells["IdSanPham"].Value);
         _gioHang.RemoveAll(x => x.IdSanPham == id);
         CapNhatGioHang();
+        MessageBox.Show("Bỏ sản phẩm khỏi giỏ hàng thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
     
     private void XuLyThanhToan_Click(object? sender, EventArgs e)
     {
         try
         {
-            // Mỗi đơn hàng phải có tên và số điện thoại khách hàng
-            if (_gioHang.Count > 0 && string.IsNullOrWhiteSpace(txtTenKhachHang.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên khách hàng.", "Thiếu thông tin", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                txtTenKhachHang.Focus();
-                return;
-            }
-            if (_gioHang.Count > 0 && string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại khách hàng.", "Thiếu thông tin", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                txtSoDienThoai.Focus();
-                return;
-            }
-            
+        
             decimal khachDua = TienIchGiaoDien.DocSoTien(txtKhachDua.Text);
             decimal tong = TinhTongCong();
 
             int id = _banHang.ThanhToan(_gioHang, nudGiamGiaHoaDon.Value, khachDua, txtTenKhachHang.Text,txtSoDienThoai.Text, _maKhuyenMai);
             string hoaDon = _banHang.XuatHoaDon(id);
-            MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:N0}đ\n\n{hoaDon}");
+            MessageBox.Show($"Thanh toán thành công\nTiền thừa: {khachDua - tong:N0}đ\n\n{hoaDon}", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             
             _gioHang.Clear();
             _maKhuyenMai = ""; _tienGiamKhuyenMai = 0; txtMaKhuyenMai.Clear(); lblKhuyenMai.Text = "Chưa áp dụng mã";
@@ -151,7 +141,7 @@ public partial class FormBanHang : Form
         }
         catch (Exception ex)
         {
-            string chiTiet = ex.InnerException?.Message ?? ex.Message; // lỗi gốc từ database (nếu có)
+            string chiTiet = ex.InnerException?.Message ?? ex.Message; 
             MessageBox.Show(chiTiet, "Thanh toán thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
@@ -179,6 +169,8 @@ public partial class FormBanHang : Form
             _maKhuyenMai = km.MaCode;
             lblKhuyenMai.Text = $"{km.MaCode}: giảm {_tienGiamKhuyenMai:N0}đ";
             CapNhatGioHang();
+            MessageBox.Show($"Áp dụng mã {km.MaCode} thành công: giảm {_tienGiamKhuyenMai:N0}đ.", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex) { _maKhuyenMai = ""; _tienGiamKhuyenMai = 0; lblKhuyenMai.Text = "Mã không hợp lệ"; MessageBox.Show(ex.Message); CapNhatGioHang(); }
     }
@@ -194,7 +186,7 @@ public partial class FormBanHang : Form
         }
         else
         {
-            // Nếu tên trước đó được tự điền từ khách cũ thì xóa để tránh gắn nhầm khách.
+           
             if (_tenTuDongNhanDien.Length > 0 && txtTenKhachHang.Text == _tenTuDongNhanDien) txtTenKhachHang.Clear();
             _tenTuDongNhanDien = "";
             txtTenKhachHang.PlaceholderText = "Khách mới • nhập họ tên để tự lưu";

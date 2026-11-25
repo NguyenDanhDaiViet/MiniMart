@@ -28,9 +28,9 @@ public class DichVuKhachHang
         KhachHang e = kh.Id == 0 ? new KhachHang() : db.KhachHangs.Find(kh.Id) ?? throw new InvalidOperationException("Không tìm thấy khách hàng.");
         
         if (kh.Id == 0) db.KhachHangs.Add(e);
-        e.HoTen = ten; e.SoDienThoai = sdt; 
-        e.DiaChi = (kh.DiaChi ?? "").Trim();
-        
+        e.HoTen = ten; e.SoDienThoai = sdt;
+        e.DiaChi = (kh.DiaChi ?? "").Trim(); 
+        e.HangThanhVien = KhachHang.DanhSachHang.Contains(kh.HangThanhVien) ? kh.HangThanhVien : KhachHang.DanhSachHang[0];
         db.SaveChanges();
         if (kh.Id == 0)
         {
@@ -84,5 +84,9 @@ public class DichVuKhachHang
         kh.TongSoDonHang++;
         kh.TongGiaTriMuaHang += tongTien;
         kh.DiemTichLuy = (int)(kh.TongGiaTriMuaHang / 10000m);
+      
+        string hangMoi = KhachHang.HangTheoChiTieu(kh.TongGiaTriMuaHang);
+        if (Array.IndexOf(KhachHang.DanhSachHang, hangMoi) > Array.IndexOf(KhachHang.DanhSachHang, kh.HangThanhVien))
+            kh.HangThanhVien = hangMoi;
     }
 }

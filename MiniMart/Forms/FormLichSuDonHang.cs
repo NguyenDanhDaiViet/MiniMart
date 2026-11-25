@@ -17,18 +17,22 @@ public partial class FormLichSuDonHang : Form
         dtpTuNgay.Value = DateTime.Today.AddDays(-30);
         dtpDenNgay.Value = DateTime.Today;
 
-        btnTimKiem.Click += XuLyTimKiem_Click;
+       
+        btnTimKiem.Click += (_, _) => TaiDanhSach();
+        txtTimKiem.TextChanged += (_, _) => TaiDanhSach(baoLoiNgay: false);
         txtTimKiem.KeyDown += XuLyTimKiem_KeyDown;
+        dtpTuNgay.ValueChanged += (_, _) => TaiDanhSach();
+        dtpDenNgay.ValueChanged += (_, _) => TaiDanhSach();
         dgvDonHang.SelectionChanged += XuLyChonDonHang_SelectionChanged;
 
         TaiDanhSach();
     }
 
-    private void TaiDanhSach()
+    private void TaiDanhSach(bool baoLoiNgay = true)
     {
         if (dtpTuNgay.Value.Date > dtpDenNgay.Value.Date)
         {
-            MessageBox.Show("Ngày bắt đầu phải trước ngày kết thúc.", "Chọn khoản ngày không hợp lệ",
+            if (baoLoiNgay) MessageBox.Show("Ngày bắt đầu phải trước ngày kết thúc.", "Chọn khoản ngày không hợp lệ",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
@@ -91,8 +95,6 @@ public partial class FormLichSuDonHang : Form
             ("DonGia", "Đơn giá"), ("ChietKhau", "Giảm giá (%)"), ("ThanhTienDong", "Thành tiền"));
         TienIchGiaoDien.DinhDangSo(dgvChiTiet, "DonGia", "ThanhTienDong");
     }
-
-    private void XuLyTimKiem_Click(object? sender, EventArgs e) => TaiDanhSach();
 
     private void XuLyTimKiem_KeyDown(object? sender, KeyEventArgs e)
     {

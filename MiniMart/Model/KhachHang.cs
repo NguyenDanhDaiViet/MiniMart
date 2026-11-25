@@ -11,6 +11,11 @@ public class KhachHang
     public int DiemTichLuy { get; set; }
     public DateTime NgayTao { get; set; } = DateTime.Now;
     public List<HoaDon> HoaDons { get; set; } = new();
-    
-    public string HangThanhVien => TongGiaTriMuaHang >= 10000000m ? "Kim cương" : TongGiaTriMuaHang >= 5000000m ? "Vàng" : TongGiaTriMuaHang >= 1000000m ? "Bạc" : "Thành viên mới";
+   
+    public string HangThanhVien { get; set; } = "Thành viên mới";
+
+    public static readonly string[] DanhSachHang = { "Thành viên mới", "Bạc", "Vàng", "Kim cương" };
+
+    public static string HangTheoChiTieu(decimal tongChiTieu) =>
+        tongChiTieu >= 10000000m ? "Kim cương" : tongChiTieu >= 5000000m ? "Vàng" : tongChiTieu >= 1000000m ? "Bạc" : "Thành viên mới";
 }
