@@ -18,6 +18,17 @@ public partial class FormThongTinTaiKhoan : Form
         btnDong.Click += XuLyDong_Click;
         chkHienMatKhau.CheckedChanged += XuLyHienMatKhau_CheckedChanged;
     }
+    
+    public FormThongTinTaiKhoan(bool batBuocDoiMatKhau) : this()
+    {
+        if (!batBuocDoiMatKhau || TienIchGiaoDien.DangThietKe) return;
+        Text = "Đổi mật khẩu lần đầu";
+        lblTieuDe.Text = "ĐỔI MẬT KHẨU LẦN ĐẦU";
+        grpDoiMatKhau.Text = "Bạn cần đổi mật khẩu trước khi sử dụng";
+        btnDong.Text = "Hủy";
+        StartPosition = FormStartPosition.CenterScreen;
+        Shown += (_, _) => txtMatKhauCu.Focus();
+    }
 
     private void XuLyDong_Click(object? sender, EventArgs e) => Close();
 
@@ -49,7 +60,7 @@ public partial class FormThongTinTaiKhoan : Form
         try
         {
             DichVuTaiKhoan.DoiMatKhau(FormDangNhap.hienThiTen, txtMatKhauCu.Text, txtMatKhauMoi.Text);
-            MessageBox.Show("Đổi mật khẩu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Đổi mật khẩu thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
             Close();
         }

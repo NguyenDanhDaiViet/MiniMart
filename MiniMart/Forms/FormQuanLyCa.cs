@@ -31,7 +31,7 @@ public partial class FormQuanLyCa : Form
             _dichVu.MoCa(nudTienDauCa.Value);
             CapNhatTrangThai();
             TaiDanhSach();
-            MessageBox.Show("Mở ca thành công.");
+            MessageBox.Show("Mở ca thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -43,11 +43,20 @@ public partial class FormQuanLyCa : Form
     {
         try
         {
+            var caDangMo = _dichVu.LayCaDangMo(FormDangNhap.hienThiTen);
+            if (caDangMo != null && nudTienCuoiCa.Value < caDangMo.TienDauCa)
+            {
+                MessageBox.Show(
+                    $"Số tiền đóng ca ({nudTienCuoiCa.Value:N0} đ) đang bé hơn số tiền mở ca ({caDangMo.TienDauCa:N0} đ).\n" +
+                    $"Chênh lệch: {nudTienCuoiCa.Value - caDangMo.TienDauCa:N0} đ. Ca vẫn sẽ được đóng.",
+                    "Tiền đóng ca bé hơn tiền mở ca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             _dichVu.DongCa(nudTienCuoiCa.Value, txtGhiChu.Text);
             CapNhatTrangThai();
             TaiDanhSach();
             txtGhiChu.Clear();
-            MessageBox.Show("Đóng ca thành công.");
+            MessageBox.Show("Đóng ca thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -75,9 +84,17 @@ public partial class FormQuanLyCa : Form
         dgvCaLamViec.DataSource = _dichVu.LayDanhSach(dtpTuNgay.Value, dtpDenNgay.Value);
         TienIchGiaoDien.AnCot(dgvCaLamViec, "Id");
         TienIchGiaoDien.DatTieuDe(dgvCaLamViec,
-            ("MaCa", "Mã ca"), ("TenDangNhap", "Nhân viên"), ("GioMoCa", "Giờ mở"), ("GioDongCa", "Giờ đóng"),
-            ("TienDauCa", "Tiền đầu ca"), ("DoanhThu", "Doanh thu"), ("TienCuoiCa", "Tiền cuối ca"),
-            ("TienMatDuKien", "Tiền mặt dự kiến"), ("ChenhLechTienMat", "Chênh lệch"), ("GhiChu", "Ghi chú"), ("DangMo", "Đang mở"));
+            ("MaCa", "Mã ca"), 
+            ("TenDangNhap", "Nhân viên"), 
+            ("GioMoCa", "Giờ mở"), 
+            ("GioDongCa", "Giờ đóng"),
+            ("TienDauCa", "Tiền đầu ca"), 
+            ("DoanhThu", "Doanh thu"), 
+            ("TienCuoiCa", "Tiền cuối ca"),
+            ("TienMatDuKien", "Tiền mặt dự kiến"), 
+            ("ChenhLechTienMat", "Chênh lệch"), 
+            ("GhiChu", "Ghi chú"), 
+            ("DangMo", "Đang mở"));
         TienIchGiaoDien.DinhDangSo(dgvCaLamViec, "TienDauCa", "DoanhThu", "TienCuoiCa", "TienMatDuKien", "ChenhLechTienMat");
         foreach (var cot in new[] { "GioMoCa", "GioDongCa" })
             if (dgvCaLamViec.Columns[cot] != null) dgvCaLamViec.Columns[cot]!.DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";

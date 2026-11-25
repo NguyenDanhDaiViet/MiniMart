@@ -18,8 +18,9 @@ public partial class FormNhapKho : Form
         TienIchGiaoDien.CauHinhLuoi(dgvSanPham);
         TienIchGiaoDien.DatGoiY(txtTimKiem);
         dtpHanSuDung.Value = DateTime.Today.AddMonths(6);
-
-        btnTimKiem.Click += XuLyTimKiem_Click;
+        
+        btnTimKiem.Click += (_, _) => TaiDanhSachSanPham();
+        txtTimKiem.TextChanged += XuLyTimKiem_TextChanged;
         btnXacNhan.Click += XuLyNhapKho_Click;
         dgvSanPham.CellClick += XuLyChonSanPham_CellClick;
         txtMaSanPham.Leave += XuLyNhapMaSanPham_Leave;
@@ -89,7 +90,8 @@ public partial class FormNhapKho : Form
             string maPhieu = danhSachKho.NhapKho(sp.Id, (int)nudSoLuong.Value, nudGiaNhap.Value, nhaCungCap,
                 txtMaLo.Text, dtpNgaySanXuat.Checked ? dtpNgaySanXuat.Value.Date : null,
                 dtpHanSuDung.Checked ? dtpHanSuDung.Value.Date : null);
-            MessageBox.Show($"Nhập kho thành công: {sp.Ten} +{nudSoLuong.Value:N0}.\nNhà cung cấp: {txtTenNhaCungCap.Text.Trim()}\nMã phiếu: {maPhieu}");
+            MessageBox.Show($"Nhập kho thành công: {sp.Ten} +{nudSoLuong.Value:N0}.\nNhà cung cấp: {txtTenNhaCungCap.Text.Trim()}\nMã phiếu: {maPhieu}",
+                "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             nudSoLuong.Value = 1;
             txtMaLo.Clear(); dtpNgaySanXuat.Checked = false; dtpHanSuDung.Checked = false;
             txtGhiChu.Clear(); 
@@ -102,7 +104,7 @@ public partial class FormNhapKho : Form
         }
     }
 
-    private void XuLyTimKiem_Click(object? sender, EventArgs e)
+    private void XuLyTimKiem_TextChanged(object? sender, EventArgs e)
     {
         TaiDanhSachSanPham();
     }

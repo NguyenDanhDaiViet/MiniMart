@@ -17,7 +17,8 @@ public partial class FormSanPham : Form
         TienIchGiaoDien.CauHinhLuoi(dgvSanPham);
         TienIchGiaoDien.DatGoiY(txtTimKiem);
         
-        btnTimKiem.Click += XuLyTimKiem_Click;
+        btnTimKiem.Click += (_, _) => TaiDanhSachSanPham();
+        txtTimKiem.TextChanged += XuLyTimKiem_TextChanged;
         btnMoi.Click += XuLyTaoMoi_Click;
         btnLuu.Click += XuLyLuu_Click;
         btnXoa.Click += XuLyXoaSanPham_Click;
@@ -27,7 +28,7 @@ public partial class FormSanPham : Form
         TaiDanhSachSanPham();
     }
 
-    private void XuLyTimKiem_Click(object? sender, EventArgs e) => TaiDanhSachSanPham();
+    private void XuLyTimKiem_TextChanged(object? sender, EventArgs e) => TaiDanhSachSanPham();
 
     private void TaiDanhSachSanPham()
     {
@@ -59,6 +60,7 @@ public partial class FormSanPham : Form
     {
         try
         {
+            bool laThemMoi = _idDuocChon == 0;
             _dichVu.LuuSp(new SanPham()
             {
                 Id = _idDuocChon,
@@ -72,7 +74,8 @@ public partial class FormSanPham : Form
             });
             TaiDanhSachSanPham();
             XoaDuLieuNhap();
-            MessageBox.Show("Đã lưu sản phẩm.");
+            MessageBox.Show(laThemMoi ? "Thêm sản phẩm thành công." : "Cập nhật sản phẩm thành công.", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -89,6 +92,7 @@ public partial class FormSanPham : Form
             _dichVu.Xoa(_idDuocChon);
             TaiDanhSachSanPham();
             XoaDuLieuNhap();
+            MessageBox.Show("Xóa sản phẩm thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch
         {
