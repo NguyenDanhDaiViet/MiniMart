@@ -13,10 +13,11 @@ public class DichVuBanHang
         if (phanTramChietKhauTrenHoaDon is < 0 or > 100)
             throw new InvalidOperationException("Phần trăm chiết khấu phải từ 0 đến 100.");
         
-        string tenKhach = (tenKhachHang ?? "").Trim();
-        if (tenKhach.Length == 0) throw new InvalidOperationException("Vui lòng nhập tên khách hàng.");
-        if (tenKhach.Length > 100) throw new InvalidOperationException("Tên khách hàng tối đa 100 ký tự.");
-        string sdtKhach = ChuanHoaSoDienThoai(SDTkhachHang);
+       
+        string tenNhap = (tenKhachHang ?? "").Trim();
+        if (tenNhap.Length > 100) throw new InvalidOperationException("Tên khách hàng tối đa 100 ký tự.");
+        string tenKhach = tenNhap.Length == 0 ? "Khách lẻ" : tenNhap;
+        string sdtKhach = ChuanHoaSoDienThoai(SDTkhachHang); // rỗng nếu không nhập
         
         decimal tamTinh = items.Sum(x => x.SoLuong * x.DonGia);
         decimal chietKhauSauDong = items.Sum(x => x.ThanhTienDong);
@@ -35,17 +36,21 @@ public class DichVuBanHang
         
         using var db = new CoSoDuLieu();
         using var transaction = db.Database.BeginTransaction();
-        string sdtTim = new((sdtKhach ?? "").Where(char.IsAsciiDigit).ToArray());
-        var khach = db.KhachHangs.FirstOrDefault(x => x.SoDienThoai == sdtTim);
-        if (khach == null)
+        
+        KhachHang? khach = null;
+        if (sdtKhach.Length > 0)
         {
-            khach = new KhachHang { HoTen = tenKhach, SoDienThoai = sdtTim, NgayTao = DateTime.Now };
-            db.KhachHangs.Add(khach);
-            db.SaveChanges(); 
-        }
-        else
-        {
-            khach.HoTen = tenKhach;
+            khach = db.KhachHangs.FirstOrDefault(x => x.SoDienThoai == sdtKhach);
+            if (khach == null)
+            {
+                khach = new KhachHang { HoTen = tenKhach, SoDienThoai = sdtKhach, NgayTao = DateTime.Now };
+                db.KhachHangs.Add(khach);
+                db.SaveChanges();
+            }
+            else if (tenNhap.Length > 0)
+            {
+                khach.HoTen = tenNhap;
+            }
         }
         var ca = db.CaLamViecs.FirstOrDefault(x => x.TenDangNhap == MiniMart.Forms.FormDangNhap.hienThiTen && x.DangMo);
         if (ca == null) throw new InvalidOperationException("Bạn cần mở ca làm việc trước khi thanh toán.");
@@ -61,7 +66,7 @@ public class DichVuBanHang
             TienThua = tienDaTra - tongTien,
             tenKhachHang = tenKhach,
             SDTkhachHang  = sdtKhach,
-            IdKhachHang = khach.Id, MaKhuyenMai = km?.MaCode ?? "", IdCaLamViec = ca.Id
+            IdKhachHang = khach?.Id, MaKhuyenMai = km?.MaCode ?? "", IdCaLamViec = ca.Id
         };
 
         foreach (var item in items)
@@ -103,7 +108,7 @@ public class DichVuBanHang
 
         db.HoaDons.Add(hoaDon);
         db.SaveChanges();
-        DichVuKhachHang.CapNhatSauMua(db, khach.Id, tongTien);
+        if (khach != null) DichVuKhachHang.CapNhatSauMua(db, khach.Id, tongTien);
         DichVuCaLamViec.CongDoanhThu(db, ca.Id, tongTien);
         db.SaveChanges();
         transaction.Commit();
@@ -114,7 +119,7 @@ public class DichVuBanHang
     private string ChuanHoaSoDienThoai(string so)
     {
         string s = new((so ?? "").Where(c => !char.IsWhiteSpace(c) && c is not ('.' or '-' or '(' or ')')).ToArray());
-        if (s.Length == 0) throw new InvalidOperationException("Vui lòng nhập số điện thoại khách hàng.");
+        if (s.Length == 0) return ""; // không nhập số điện thoại
         if (s.StartsWith("+84")) s = "0" + s[3..];
         else if (s.StartsWith("84") && s.Length >= 11) s = "0" + s[2..];
         if (!s.All(char.IsAsciiDigit) || s[0] != '0' || s.Length is < 10 or > 11)

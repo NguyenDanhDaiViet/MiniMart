@@ -26,6 +26,13 @@ public class DichVuTaiKhoan
 
     }
 
+    public static bool CanDoiMatKhau(string tenNguoiDung)
+    {
+        using var db = new CoSoDuLieu();
+        string u = (tenNguoiDung ?? "").Trim();
+        return db.NguoiDungs.AsNoTracking().Any(x => x.TenNguoiDung == u && x.PhaiDoiMatKhau);
+    }
+
     public static DataTable LayTatCa(string timKiem = "")
     {
         using var db = new CoSoDuLieu();
@@ -59,13 +66,18 @@ public class DichVuTaiKhoan
         if (id == 0)
         {
             if(string.IsNullOrWhiteSpace(matKhau)) throw new Exception("Tài khoản mới cần có mật khẩu.");
-            user = new NguoiDung{ MatKhauBam = BamMatKhau(matKhau), DangHoatDong = true, DuocTaoVao = DateTime.Now };
+            user = new NguoiDung{ MatKhauBam = BamMatKhau(matKhau), DangHoatDong = true, DuocTaoVao = DateTime.Now, PhaiDoiMatKhau = true };
             db.NguoiDungs.Add(user);
         }
         else
         {
             user = db.NguoiDungs.Find(id) ?? throw new Exception("Không tìm thấy tài khoản.");
-            if(!string.IsNullOrWhiteSpace(matKhau)) user.MatKhauBam = BamMatKhau(matKhau);
+            if (!string.IsNullOrWhiteSpace(matKhau))
+            {
+                
+                user.MatKhauBam = BamMatKhau(matKhau);
+                user.PhaiDoiMatKhau = true;
+            }
         }
 
         user.TenNguoiDung = u;
@@ -85,6 +97,7 @@ public class DichVuTaiKhoan
             throw new Exception("Mật khẩu hiện tại không đúng.");
 
         user.MatKhauBam = BamMatKhau(matKhauMoi);
+        user.PhaiDoiMatKhau = false;
         db.SaveChanges();
     }
 

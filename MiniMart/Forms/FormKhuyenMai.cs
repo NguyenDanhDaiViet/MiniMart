@@ -24,7 +24,9 @@ public partial class FormKhuyenMai : Form
         btnLuu.Click += XuLyLuu_Click;
         btnTaoMoi.Click += (_, _) => LamMoi();
         btnXoa.Click += XuLyXoa_Click;
+      
         btnTim.Click += (_, _) => TaiDanhSach();
+        txtTimKiem.TextChanged += (_, _) => TaiDanhSach();
         btnLamMoiDanhSach.Click += (_, _) => { txtTimKiem.Clear(); TaiDanhSach(); };
         dgvKhuyenMai.CellClick += XuLyChonKhuyenMai_CellClick;
 
@@ -83,6 +85,7 @@ public partial class FormKhuyenMai : Form
     {
         try
         {
+            bool laThemMoi = _idDuocChon == 0;
             _dichVu.Luu(new KhuyenMai
             {
                 Id = _idDuocChon,
@@ -96,7 +99,8 @@ public partial class FormKhuyenMai : Form
                 DangHoatDong = chkDangHoatDong.Checked
             });
             TaiDanhSach();
-            MessageBox.Show("Đã lưu chương trình khuyến mãi.");
+            MessageBox.Show(laThemMoi ? "Thêm chương trình khuyến mãi thành công." : "Cập nhật chương trình khuyến mãi thành công.",
+                "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -114,7 +118,7 @@ public partial class FormKhuyenMai : Form
             _dichVu.Xoa(_idDuocChon);
             LamMoi();
             TaiDanhSach();
-            MessageBox.Show("Đã xóa mã khuyến mãi.");
+            MessageBox.Show("Xóa mã khuyến mãi thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {

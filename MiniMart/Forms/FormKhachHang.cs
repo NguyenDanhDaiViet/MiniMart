@@ -16,7 +16,11 @@ public partial class FormKhachHang : Form
 
         TienIchGiaoDien.CauHinhLuoi(dgvKhachHang);
 
+        cboHangThanhVien.SelectedIndex = 0; 
+
+       
         btnTimKiem.Click += (_, _) => TaiDanhSach();
+        txtTimKiem.TextChanged += (_, _) => TaiDanhSach();
         txtTimKiem.KeyDown += XuLyTimKiem_KeyDown;
         btnLuu.Click += XuLyLuu_Click;
         btnLamMoi.Click += (_, _) => LamMoi();
@@ -53,6 +57,7 @@ public partial class FormKhachHang : Form
         txtHoTen.Clear();
         txtSoDienThoai.Clear();
         txtDiaChi.Clear();
+        cboHangThanhVien.SelectedIndex = 0;
         dgvKhachHang.ClearSelection();
         txtHoTen.Focus();
     }
@@ -63,11 +68,14 @@ public partial class FormKhachHang : Form
         {
             _dichVu.Luu(new KhachHang
             {
-                Id = _idDuocChon, HoTen = txtHoTen.Text, SoDienThoai = txtSoDienThoai.Text, DiaChi = txtDiaChi.Text
+                Id = _idDuocChon, HoTen = txtHoTen.Text, SoDienThoai = txtSoDienThoai.Text, DiaChi = txtDiaChi.Text,
+                HangThanhVien = Convert.ToString(cboHangThanhVien.SelectedItem) ?? KhachHang.DanhSachHang[0]
             });
+            bool laThemMoi = _idDuocChon == 0;
             TaiDanhSach();
             LamMoi();
-            MessageBox.Show("Đã lưu thông tin khách hàng.");
+            MessageBox.Show(laThemMoi ? "Thêm khách hàng thành công." : "Cập nhật khách hàng thành công.", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -75,7 +83,7 @@ public partial class FormKhachHang : Form
         }
     }
 
-    // Xóa hồ sơ có xác nhận; hóa đơn cũ vẫn giữ tên/số điện thoại, chỉ bỏ liên kết hồ sơ.
+   
     private void XuLyXoa_Click(object? sender, EventArgs e)
     {
         if (_idDuocChon == 0) { MessageBox.Show("Hãy chọn khách hàng cần xóa."); return; }
@@ -86,7 +94,7 @@ public partial class FormKhachHang : Form
             _dichVu.Xoa(_idDuocChon);
             TaiDanhSach();
             LamMoi();
-            MessageBox.Show("Đã xóa khách hàng.");
+            MessageBox.Show("Xóa khách hàng thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         catch (Exception ex)
         {
@@ -108,5 +116,7 @@ public partial class FormKhachHang : Form
         txtHoTen.Text = k.HoTen;
         txtSoDienThoai.Text = k.SoDienThoai;
         txtDiaChi.Text = k.DiaChi;
+        int viTri = cboHangThanhVien.Items.IndexOf(k.HangThanhVien);
+        cboHangThanhVien.SelectedIndex = viTri >= 0 ? viTri : 0;
     }
 }

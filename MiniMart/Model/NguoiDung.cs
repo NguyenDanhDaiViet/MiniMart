@@ -10,4 +10,6 @@ public class NguoiDung
     public bool DangHoatDong { get; set; } = true;
     public DateTime DuocTaoVao { get; set; }= DateTime.Now;
     
+    public bool PhaiDoiMatKhau { get; set; }
+    
 }

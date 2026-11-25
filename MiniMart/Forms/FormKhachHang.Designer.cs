@@ -4,9 +4,7 @@ namespace MiniMart.Forms;
 
 partial class FormKhachHang
 {
-    /// <summary>
-    /// Required designer variable.
-    /// </summary>
+  
     private IContainer components = null;
 
     /// <summary>
@@ -25,10 +23,7 @@ partial class FormKhachHang
 
     #region Windows Form Designer generated code
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
+  
     private void InitializeComponent()
     {
         panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +41,8 @@ partial class FormKhachHang
         txtHoTen = new System.Windows.Forms.TextBox();
         txtSoDienThoai = new System.Windows.Forms.TextBox();
         txtDiaChi = new System.Windows.Forms.TextBox();
+        lblHangThanhVien = new System.Windows.Forms.Label();
+        cboHangThanhVien = new System.Windows.Forms.ComboBox();
         flpNutLenh = new System.Windows.Forms.FlowLayoutPanel();
         btnLuu = new System.Windows.Forms.Button();
         btnLamMoi = new System.Windows.Forms.Button();
@@ -60,18 +57,18 @@ partial class FormKhachHang
         flpNutLenh.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvKhachHang).BeginInit();
         SuspendLayout();
-        // 
+         
         // panel1
-        // 
+         
         panel1.Controls.Add(tableLayoutPanel1);
         panel1.Dock = System.Windows.Forms.DockStyle.Fill;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
         panel1.Size = new System.Drawing.Size(1000, 660);
         panel1.TabIndex = 0;
-        // 
+         
         // tableLayoutPanel1
-        // 
+         
         tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)((byte)224)), ((int)((byte)224)), ((int)((byte)224)));
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -89,9 +86,9 @@ partial class FormKhachHang
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        // 
+        
         // lblTieuDe
-        // 
+         
         lblTieuDe.BackColor = System.Drawing.Color.White;
         lblTieuDe.Dock = System.Windows.Forms.DockStyle.Fill;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
@@ -102,9 +99,9 @@ partial class FormKhachHang
         lblTieuDe.TabIndex = 0;
         lblTieuDe.Text = "KHÁCH HÀNG THÂN THIẾT";
         lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
+        
         // tlpTimKiem
-        // 
+         
         tlpTimKiem.ColumnCount = 4;
         tlpTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
         tlpTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
@@ -120,9 +117,9 @@ partial class FormKhachHang
         tlpTimKiem.TabIndex = 1;
         tlpTimKiem.RowCount = 1;
         tlpTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        // 
+         
         // lblTimKiem
-        // 
+         
         lblTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
         lblTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTimKiem.Location = new System.Drawing.Point(3, 0);
@@ -131,9 +128,9 @@ partial class FormKhachHang
         lblTimKiem.TabIndex = 0;
         lblTimKiem.Text = "Tìm tên / số điện thoại:";
         lblTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
+         
         // txtTimKiem
-        // 
+         
         txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         txtTimKiem.Location = new System.Drawing.Point(3, 3);
@@ -142,9 +139,9 @@ partial class FormKhachHang
         txtTimKiem.PlaceholderText = "Nhập tên hoặc số điện thoại...";
         txtTimKiem.Size = new System.Drawing.Size(180, 30);
         txtTimKiem.TabIndex = 1;
-        // 
+         
         // btnTimKiem
-        // 
+         
         btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnTimKiem.BackColor = System.Drawing.Color.Navy;
         btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -157,9 +154,9 @@ partial class FormKhachHang
         btnTimKiem.TabIndex = 2;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
-        // 
+         
         // grpThongTin
-        // 
+         
         grpThongTin.Controls.Add(tlpThongTin);
         grpThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
         grpThongTin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
@@ -170,19 +167,22 @@ partial class FormKhachHang
         grpThongTin.TabIndex = 2;
         grpThongTin.TabStop = false;
         grpThongTin.Text = "Thông tin khách hàng";
-        // 
+        
         // tlpThongTin
-        // 
-        tlpThongTin.ColumnCount = 3;
-        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+         
+        tlpThongTin.ColumnCount = 4;
+        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27F));
+        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+        tlpThongTin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
         tlpThongTin.Controls.Add(lblHoTen, 0, 0);
         tlpThongTin.Controls.Add(lblSoDienThoai, 1, 0);
         tlpThongTin.Controls.Add(lblDiaChi, 2, 0);
         tlpThongTin.Controls.Add(txtHoTen, 0, 1);
         tlpThongTin.Controls.Add(txtSoDienThoai, 1, 1);
         tlpThongTin.Controls.Add(txtDiaChi, 2, 1);
+        tlpThongTin.Controls.Add(lblHangThanhVien, 3, 0);
+        tlpThongTin.Controls.Add(cboHangThanhVien, 3, 1);
         tlpThongTin.Controls.Add(flpNutLenh, 0, 2);
         tlpThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
         tlpThongTin.Location = new System.Drawing.Point(3, 3);
@@ -193,10 +193,10 @@ partial class FormKhachHang
         tlpThongTin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
         tlpThongTin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
         tlpThongTin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpThongTin.SetColumnSpan(flpNutLenh, 3);
-        // 
+        tlpThongTin.SetColumnSpan(flpNutLenh, 4);
+         
         // lblHoTen
-        // 
+         
         lblHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
         lblHoTen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblHoTen.Location = new System.Drawing.Point(3, 0);
@@ -205,9 +205,9 @@ partial class FormKhachHang
         lblHoTen.TabIndex = 0;
         lblHoTen.Text = "Họ và tên";
         lblHoTen.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-        // 
+         
         // lblSoDienThoai
-        // 
+         
         lblSoDienThoai.Dock = System.Windows.Forms.DockStyle.Fill;
         lblSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblSoDienThoai.Location = new System.Drawing.Point(3, 0);
@@ -216,20 +216,20 @@ partial class FormKhachHang
         lblSoDienThoai.TabIndex = 1;
         lblSoDienThoai.Text = "Số điện thoại";
         lblSoDienThoai.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-        // 
+        
         // lblDiaChi
-        // 
+         
         lblDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
         lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblDiaChi.Location = new System.Drawing.Point(3, 0);
         lblDiaChi.Name = "lblDiaChi";
         lblDiaChi.Size = new System.Drawing.Size(180, 26);
         lblDiaChi.TabIndex = 2;
-        lblDiaChi.Text = "Địa chỉ";
+        lblDiaChi.Text = "Địa chỉ (không bắt buộc)";
         lblDiaChi.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-        // 
+        
         // txtHoTen
-        // 
+         
         txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtHoTen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         txtHoTen.Location = new System.Drawing.Point(3, 3);
@@ -237,9 +237,9 @@ partial class FormKhachHang
         txtHoTen.Name = "txtHoTen";
         txtHoTen.Size = new System.Drawing.Size(180, 30);
         txtHoTen.TabIndex = 3;
-        // 
+         
         // txtSoDienThoai
-        // 
+         
         txtSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtSoDienThoai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         txtSoDienThoai.Location = new System.Drawing.Point(3, 3);
@@ -248,19 +248,43 @@ partial class FormKhachHang
         txtSoDienThoai.PlaceholderText = "VD: 0912345678";
         txtSoDienThoai.Size = new System.Drawing.Size(180, 30);
         txtSoDienThoai.TabIndex = 4;
-        // 
+         
         // txtDiaChi
-        // 
+        
         txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         txtDiaChi.Location = new System.Drawing.Point(3, 3);
         txtDiaChi.MaxLength = 200;
         txtDiaChi.Name = "txtDiaChi";
+        txtDiaChi.PlaceholderText = "Có thể bỏ trống";
         txtDiaChi.Size = new System.Drawing.Size(180, 30);
         txtDiaChi.TabIndex = 5;
-        // 
+         
+        // lblHangThanhVien
+         
+        lblHangThanhVien.Dock = System.Windows.Forms.DockStyle.Fill;
+        lblHangThanhVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblHangThanhVien.Location = new System.Drawing.Point(3, 0);
+        lblHangThanhVien.Name = "lblHangThanhVien";
+        lblHangThanhVien.Size = new System.Drawing.Size(180, 26);
+        lblHangThanhVien.TabIndex = 7;
+        lblHangThanhVien.Text = "Hạng thành viên";
+        lblHangThanhVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+         
+        // cboHangThanhVien
+         
+        cboHangThanhVien.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
+        cboHangThanhVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        cboHangThanhVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        cboHangThanhVien.FormattingEnabled = true;
+        cboHangThanhVien.Items.AddRange(new object[] { "Thành viên mới", "Bạc", "Vàng", "Kim cương" });
+        cboHangThanhVien.Location = new System.Drawing.Point(3, 3);
+        cboHangThanhVien.Name = "cboHangThanhVien";
+        cboHangThanhVien.Size = new System.Drawing.Size(180, 31);
+        cboHangThanhVien.TabIndex = 8;
+         
         // flpNutLenh
-        // 
+        
         flpNutLenh.Controls.Add(btnLuu);
         flpNutLenh.Controls.Add(btnLamMoi);
         flpNutLenh.Controls.Add(btnLichSuMua);
@@ -272,9 +296,9 @@ partial class FormKhachHang
         flpNutLenh.Size = new System.Drawing.Size(960, 44);
         flpNutLenh.TabIndex = 6;
         flpNutLenh.WrapContents = false;
-        // 
+        
         // btnLuu
-        // 
+         
         btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLuu.BackColor = System.Drawing.Color.Navy;
         btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -287,9 +311,9 @@ partial class FormKhachHang
         btnLuu.TabIndex = 0;
         btnLuu.Text = "Lưu khách hàng";
         btnLuu.UseVisualStyleBackColor = false;
-        // 
+         
         // btnLamMoi
-        // 
+         
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLamMoi.BackColor = System.Drawing.Color.Navy;
         btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -302,9 +326,9 @@ partial class FormKhachHang
         btnLamMoi.TabIndex = 1;
         btnLamMoi.Text = "Làm mới";
         btnLamMoi.UseVisualStyleBackColor = false;
-        // 
+         
         // btnLichSuMua
-        // 
+         
         btnLichSuMua.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLichSuMua.BackColor = System.Drawing.Color.Navy;
         btnLichSuMua.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -317,9 +341,9 @@ partial class FormKhachHang
         btnLichSuMua.TabIndex = 2;
         btnLichSuMua.Text = "Lịch sử mua";
         btnLichSuMua.UseVisualStyleBackColor = false;
-        // 
+         
         // btnXoa
-        // 
+         
         btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnXoa.BackColor = System.Drawing.Color.Firebrick;
         btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -332,9 +356,9 @@ partial class FormKhachHang
         btnXoa.TabIndex = 3;
         btnXoa.Text = "Xóa khách";
         btnXoa.UseVisualStyleBackColor = false;
-        // 
+         
         // dgvKhachHang
-        // 
+         
         dgvKhachHang.AllowUserToAddRows = false;
         dgvKhachHang.AllowUserToDeleteRows = false;
         dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -349,9 +373,9 @@ partial class FormKhachHang
         dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
         dgvKhachHang.Size = new System.Drawing.Size(968, 300);
         dgvKhachHang.TabIndex = 3;
-        // 
+        
         // FormKhachHang
-        // 
+         
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1000, 660);
@@ -387,6 +411,8 @@ partial class FormKhachHang
     private System.Windows.Forms.TextBox txtHoTen;
     private System.Windows.Forms.TextBox txtSoDienThoai;
     private System.Windows.Forms.TextBox txtDiaChi;
+    private System.Windows.Forms.Label lblHangThanhVien;
+    private System.Windows.Forms.ComboBox cboHangThanhVien;
     private System.Windows.Forms.FlowLayoutPanel flpNutLenh;
     private System.Windows.Forms.Button btnLuu;
     private System.Windows.Forms.Button btnLamMoi;
