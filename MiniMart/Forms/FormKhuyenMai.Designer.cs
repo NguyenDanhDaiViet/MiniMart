@@ -2,7 +2,7 @@
 
 namespace MiniMart.Forms;
 
-partial class FormKhuyenMaii
+partial class FormKhuyenMai
 {
     /// <summary>
     /// Required designer variable.

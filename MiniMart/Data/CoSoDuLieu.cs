@@ -18,6 +18,11 @@ public class CoSoDuLieu : DbContext
     public DbSet<HoaDon> HoaDons => Set<HoaDon>();
     public DbSet<ChiTietHoaDon> ChiTietHoaDons => Set<ChiTietHoaDon>();
     public DbSet<PhieuNhapKho> PhieuNhapKhos => Set<PhieuNhapKho>();
+    public DbSet<KhachHang> KhachHangs => Set<KhachHang>();
+    public DbSet<LichSuHoatDong> LichSuHoatDongs => Set<LichSuHoatDong>();
+    public DbSet<LoHang> LoHangs => Set<LoHang>();
+    public DbSet<KhuyenMai> KhuyenMais => Set<KhuyenMai>();
+    public DbSet<CaLamViec> CaLamViecs => Set<CaLamViec>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
@@ -44,6 +49,22 @@ public class CoSoDuLieu : DbContext
             e.ToTable("SanPham");
             e.HasIndex(x => x.Ma).IsUnique();
         });
+        
+        mb.Entity<KhachHang>(e =>
+        {
+            e.ToTable("KhachHang");
+            e.HasIndex(x => x.SoDienThoai).IsUnique();
+        });
+        mb.Entity<LichSuHoatDong>().ToTable("LichSuHoatDong");
+        mb.Entity<LoHang>(e =>
+        {
+            e.ToTable("LoHang");
+            e.HasIndex(x => x.MaLo).IsUnique();
+            e.HasOne(x => x.SanPham).WithMany().HasForeignKey(x => x.IdSanPham).OnDelete(DeleteBehavior.Restrict);
+        });
+        mb.Entity<KhuyenMai>(e => { e.ToTable("KhuyenMai"); e.HasIndex(x => x.MaCode).IsUnique(); });
+        mb.Entity<CaLamViec>(e => e.ToTable("CaLamViec"));
+
 
         mb.Entity<HoaDon>(e =>
         {

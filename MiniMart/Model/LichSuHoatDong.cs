@@ -1,6 +1,6 @@
 ﻿namespace MiniMart.Model;
 
-public class LichSuHoatHong
+public class LichSuHoatDong
 {
     public int Id { get; set; }
     public string TenDangNhap { get; set; } = "";
