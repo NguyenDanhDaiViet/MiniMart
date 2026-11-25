@@ -125,6 +125,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel2
         // 
+        tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel2.ColumnCount = 2;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -140,6 +141,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel6
         // 
+        tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel6.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -153,7 +155,7 @@ partial class FormBaoCaoThongKe
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-        tableLayoutPanel6.Size = new System.Drawing.Size(524, 142);
+        tableLayoutPanel6.Size = new System.Drawing.Size(525, 142);
         tableLayoutPanel6.TabIndex = 1;
         // 
         // tableLayoutPanel12
@@ -168,13 +170,13 @@ partial class FormBaoCaoThongKe
         tableLayoutPanel12.Name = "tableLayoutPanel12";
         tableLayoutPanel12.RowCount = 1;
         tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tableLayoutPanel12.Size = new System.Drawing.Size(518, 28);
+        tableLayoutPanel12.Size = new System.Drawing.Size(519, 28);
         tableLayoutPanel12.TabIndex = 5;
         // 
         // dtpDenNgay
         // 
         dtpDenNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-        dtpDenNgay.Location = new System.Drawing.Point(94, 3);
+        dtpDenNgay.Location = new System.Drawing.Point(95, 3);
         dtpDenNgay.Name = "dtpDenNgay";
         dtpDenNgay.Size = new System.Drawing.Size(327, 27);
         dtpDenNgay.TabIndex = 3;
@@ -184,7 +186,7 @@ partial class FormBaoCaoThongKe
         lbDenngay.Anchor = System.Windows.Forms.AnchorStyles.None;
         lbDenngay.AutoSize = true;
         lbDenngay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lbDenngay.Location = new System.Drawing.Point(211, 5);
+        lbDenngay.Location = new System.Drawing.Point(212, 5);
         lbDenngay.Name = "lbDenngay";
         lbDenngay.Size = new System.Drawing.Size(101, 23);
         lbDenngay.TabIndex = 1;
@@ -222,6 +224,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel5
         // 
+        tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel5.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel5.ColumnCount = 1;
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -375,13 +378,13 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel8
         // 
+        tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel8.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel8.ColumnCount = 3;
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel8.Controls.Add(lbSohoadon, 1, 0);
-        tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
         tableLayoutPanel8.Location = new System.Drawing.Point(530, 3);
         tableLayoutPanel8.Name = "tableLayoutPanel8";
         tableLayoutPanel8.RowCount = 1;
@@ -403,12 +406,12 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel13
         // 
+        tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel13.ColumnCount = 2;
         tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.317535F));
         tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.682465F));
         tableLayoutPanel13.Controls.Add(lbTopsanphambanchay, 0, 0);
         tableLayoutPanel13.Controls.Add(btXemtop, 1, 0);
-        tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Top;
         tableLayoutPanel13.Location = new System.Drawing.Point(3, 72);
         tableLayoutPanel13.Name = "tableLayoutPanel13";
         tableLayoutPanel13.RowCount = 1;
