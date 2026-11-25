@@ -8,6 +8,11 @@ public class HoaDon
     
     public string tenKhachHang  { get; set; } = "";
     public string SDTkhachHang  { get; set; } = "";
+    public int? IdKhachHang { get; set; }
+    
+    public KhachHang? KhachHang { get; set; }
+    public string MaKhuyenMai { get; set; } = "";
+    public int? IdCaLamViec { get; set; }
     public decimal TamTinh { get; set; }
     public decimal ChietKhau { get; set; }
     public decimal TongTien { get; set; }
