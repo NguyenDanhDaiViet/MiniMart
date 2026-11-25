@@ -21,7 +21,7 @@ public partial class FormDangNhap : Form
         InitializeComponent();
         if(TienIchGiaoDien.DangThietKe) return;
 
-        AcceptButton = btDangNhap; // nhan enter de dang nhap
+        AcceptButton = btDangNhap; 
         btDangNhap.Click += XuLyDangNhap_Click;
         hienMatKhau.CheckedChanged += XuLyHienMatKhau_CheckedChanged;
     }
@@ -40,7 +40,26 @@ public partial class FormDangNhap : Form
             hienThiTen = tenDangNhap.Text.Trim();
             hienTenHienTai = name;
             VaiTro = vaitro;
+            
+            if (DichVuTaiKhoan.CanDoiMatKhau(hienThiTen))
+            {
+                MessageBox.Show("Đây là lần đăng nhập đầu tiên. Vui lòng đổi mật khẩu để tiếp tục.",
+                    "Yêu cầu đổi mật khẩu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using var doiMatKhau = new FormThongTinTaiKhoan(batBuocDoiMatKhau: true);
+                if (doiMatKhau.ShowDialog(this) != DialogResult.OK)
+                {
+                    XoaPhienDangNhap();
+                    MessageBox.Show("Bạn chưa đổi mật khẩu nên chưa thể vào hệ thống.", "Chưa đổi mật khẩu",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    matKhau.Clear();
+                    matKhau.Focus();
+                    return;
+                }
+            }
+
             DichVuLichSuHoatDong.Ghi("Đăng nhập", "Đăng nhập hệ thống thành công");
+            MessageBox.Show($"Đăng nhập thành công. Xin chào {name}!", "Thành công",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
             Close();
         }
