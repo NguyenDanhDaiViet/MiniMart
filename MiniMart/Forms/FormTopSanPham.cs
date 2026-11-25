@@ -67,11 +67,7 @@ public partial class FormTopSanPham : Form
     }
 
     private void XuLyXem_Click(object? sender, EventArgs e) => TaiDuLieu();
-
-    private void label2_Click(object sender, EventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 
 
 }

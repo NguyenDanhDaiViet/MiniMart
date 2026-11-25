@@ -95,6 +95,7 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel2
         // 
+        tableLayoutPanel2.BackColor = System.Drawing.Color.White;
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -125,6 +126,8 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel3
         // 
+        tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel3.ColumnCount = 2;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.3555F));
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.6445F));
@@ -135,7 +138,7 @@ partial class FormNhapKho
         tableLayoutPanel3.RowCount = 1;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(906, 46);
+        tableLayoutPanel3.Size = new System.Drawing.Size(948, 46);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // txtTimKiem
@@ -146,12 +149,12 @@ partial class FormNhapKho
         txtTimKiem.PlaceholderText = "Tìm sản phẩm...";
         txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
         txtTimKiem.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-        txtTimKiem.Size = new System.Drawing.Size(640, 27);
+        txtTimKiem.Size = new System.Drawing.Size(670, 27);
         txtTimKiem.TabIndex = 0;
         // 
         // btnTimKiem
         // 
-        btnTimKiem.Location = new System.Drawing.Point(649, 3);
+        btnTimKiem.Location = new System.Drawing.Point(679, 3);
         btnTimKiem.Name = "btnTimKiem";
         btnTimKiem.Size = new System.Drawing.Size(106, 27);
         btnTimKiem.TabIndex = 1;
@@ -178,6 +181,7 @@ partial class FormNhapKho
         // grpThongTinPhieuNhap
         // 
         grpThongTinPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        grpThongTinPhieuNhap.BackColor = System.Drawing.Color.White;
         grpThongTinPhieuNhap.Controls.Add(tableLayoutPanel5);
         grpThongTinPhieuNhap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         grpThongTinPhieuNhap.Location = new System.Drawing.Point(652, 3);
@@ -211,6 +215,7 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel6
         // 
+        tableLayoutPanel6.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -247,6 +252,7 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel7
         // 
+        tableLayoutPanel7.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel7.ColumnCount = 2;
         tableLayoutPanel5.SetColumnSpan(tableLayoutPanel7, 2);
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -312,10 +318,11 @@ partial class FormNhapKho
         // 
         // nudGiaNhap
         // 
+        nudGiaNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         nudGiaNhap.Location = new System.Drawing.Point(3, 215);
         nudGiaNhap.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
         nudGiaNhap.Name = "nudGiaNhap";
-        nudGiaNhap.Size = new System.Drawing.Size(271, 30);
+        nudGiaNhap.Size = new System.Drawing.Size(287, 30);
         nudGiaNhap.TabIndex = 3;
         // 
         // btnXacNhan
@@ -332,6 +339,7 @@ partial class FormNhapKho
         // 
         // dgvSanPham
         // 
+        dgvSanPham.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvSanPham.Location = new System.Drawing.Point(3, 3);

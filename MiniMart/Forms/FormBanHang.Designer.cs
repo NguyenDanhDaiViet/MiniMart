@@ -235,6 +235,7 @@ partial class FormBanHang
         // 
         // dgvSanPham
         // 
+        dgvSanPham.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvSanPham.Location = new System.Drawing.Point(3, 122);

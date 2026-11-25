@@ -94,6 +94,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel1
         // 
+        tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
         tableLayoutPanel1.Controls.Add(lbBaocaothongke, 0, 0);
@@ -139,6 +140,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel6
         // 
+        tableLayoutPanel6.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -220,6 +222,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel5
         // 
+        tableLayoutPanel5.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel5.ColumnCount = 1;
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -318,6 +321,7 @@ partial class FormBaoCaoThongKe
         // 
         // dgvTopSanPham
         // 
+        dgvTopSanPham.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvTopSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvTopSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvTopSanPham.Location = new System.Drawing.Point(3, 118);
@@ -344,6 +348,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel7
         // 
+        tableLayoutPanel7.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel7.ColumnCount = 3;
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -370,6 +375,7 @@ partial class FormBaoCaoThongKe
         // 
         // tableLayoutPanel8
         // 
+        tableLayoutPanel8.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel8.ColumnCount = 3;
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
         tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
