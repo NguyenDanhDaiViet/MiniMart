@@ -73,7 +73,7 @@ public class DichVuTaiKhoan
         user.VaiTro = vaiTro;
         db.SaveChanges();
     }
-
+    
     public static void DoiMatKhau(string tenNguoiDung, string matKhauCu, string matKhauMoi)
     {
         if (string.IsNullOrEmpty(matKhauMoi)) throw new Exception("Vui lòng nhập mật khẩu mới.");
@@ -96,5 +96,4 @@ public class DichVuTaiKhoan
         user.DangHoatDong = !user.DangHoatDong;
         db.SaveChanges();
     }
-    
 }

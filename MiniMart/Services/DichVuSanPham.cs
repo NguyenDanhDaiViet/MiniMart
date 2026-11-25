@@ -28,10 +28,12 @@ public class DichVuSanPham
     {
         if (string.IsNullOrWhiteSpace(sp.Ma) || string.IsNullOrWhiteSpace(sp.Ten))
             throw new InvalidOleVariantTypeException("Mã và tên sản phẩm không được để trống.");
-        if(sp.GiaBan<0|| sp.GiaVon<0|| sp.TonKhoToiThieu<0||sp.SoLuongHangTon<0)
-            throw new InvalidOleVariantTypeException("Giá và số lượng sản phẩm không được âm.");
+        
+        if(sp.GiaVon<=0 || sp.GiaBan<=0 || sp.GiaBan<=sp.GiaVon || sp.TonKhoToiThieu<0 || sp.SoLuongHangTon<0)
+            throw new InvalidOleVariantTypeException("Giá nhập phải lớn hơn 0; giá bán phải lớn hơn giá nhập; số lượng không được âm.");
         
         using var db = new CoSoDuLieu();
+        bool laThemMoi = sp.Id == 0;
         string ma = sp.Ma.Trim();
         if(db.SanPhams.Any(x=>x.Id !=sp.Id && x.Ma.ToLower()==ma.ToLower()))
             throw new InvalidOleVariantTypeException("Mã sản phẩm đã tồn tại.");
@@ -54,11 +56,14 @@ public class DichVuSanPham
         entity.SoLuongHangTon = sp.SoLuongHangTon;
         entity.TonKhoToiThieu = sp.TonKhoToiThieu;
         db.SaveChanges();
+        DichVuLichSuHoatDong.Ghi(laThemMoi ? "Thêm sản phẩm" : "Cập nhật sản phẩm", sp.Ma + " - " + sp.Ten);
     }
 
     public void Xoa(int id)
     {
         using var db = new CoSoDuLieu();
+        var sp = db.SanPhams.AsNoTracking().FirstOrDefault(x => x.Id == id);
         db.SanPhams.Where(x => x.Id == id).ExecuteDelete();
+        if (sp != null) DichVuLichSuHoatDong.Ghi("Xóa sản phẩm", sp.Ma + " - " + sp.Ten);
     }
 }
