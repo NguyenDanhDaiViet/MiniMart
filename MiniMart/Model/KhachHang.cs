@@ -1,6 +1,6 @@
 ﻿namespace MiniMart.Model;
 
-public class KhachHangThanThiet
+public class KhachHang
 {
     public int Id { get; set; }
     public string HoTen { get; set; } = "";
@@ -11,6 +11,6 @@ public class KhachHangThanThiet
     public int DiemTichLuy { get; set; }
     public DateTime NgayTao { get; set; } = DateTime.Now;
     public List<HoaDon> HoaDons { get; set; } = new();
-    [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+    
     public string HangThanhVien => TongGiaTriMuaHang >= 10000000m ? "Kim cương" : TongGiaTriMuaHang >= 5000000m ? "Vàng" : TongGiaTriMuaHang >= 1000000m ? "Bạc" : "Thành viên mới";
 }

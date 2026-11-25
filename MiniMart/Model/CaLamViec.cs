@@ -12,8 +12,6 @@ public class CaLamViec
     public decimal DoanhThu { get; set; }
     public string GhiChu { get; set; } = "";
     public bool DangMo { get; set; } = true;
-    [System.ComponentModel.DataAnnotations.Schema.NotMapped]
     public decimal TienMatDuKien => TienDauCa + DoanhThu;
-    [System.ComponentModel.DataAnnotations.Schema.NotMapped]
     public decimal ChenhLechTienMat => TienCuoiCa - TienMatDuKien;
 }

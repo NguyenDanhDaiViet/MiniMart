@@ -1,8 +1,8 @@
 ﻿namespace MiniMart.Forms;
 
-public partial class FormKhuyenMaii : Form
+public partial class FormKhuyenMai : Form
 {
-    public FormKhuyenMaii()
+    public FormKhuyenMai()
     {
         InitializeComponent();
     }
