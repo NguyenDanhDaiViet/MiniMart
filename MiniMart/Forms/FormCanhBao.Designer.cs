@@ -73,6 +73,7 @@ partial class FormCanhBao
         // 
         // tableLayoutPanel2
         // 
+        tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -143,6 +144,7 @@ partial class FormCanhBao
         // dgvCanhBao
         // 
         dgvCanhBao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        dgvCanhBao.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvCanhBao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvCanhBao.Location = new System.Drawing.Point(3, 158);
         dgvCanhBao.Name = "dgvCanhBao";

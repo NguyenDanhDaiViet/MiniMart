@@ -61,7 +61,7 @@ partial class FormTopSanPham
         panel1.Dock = System.Windows.Forms.DockStyle.Fill;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(892, 644);
+        panel1.Size = new System.Drawing.Size(1022, 644);
         panel1.TabIndex = 0;
         // 
         // tableLayoutPanel1
@@ -78,7 +78,7 @@ partial class FormTopSanPham
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.484472F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.608696F));
-        tableLayoutPanel1.Size = new System.Drawing.Size(892, 644);
+        tableLayoutPanel1.Size = new System.Drawing.Size(1022, 644);
         tableLayoutPanel1.TabIndex = 0;
         // 
         // panel2
@@ -89,7 +89,7 @@ partial class FormTopSanPham
         panel2.Dock = System.Windows.Forms.DockStyle.Fill;
         panel2.Location = new System.Drawing.Point(3, 3);
         panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(886, 90);
+        panel2.Size = new System.Drawing.Size(1016, 90);
         panel2.TabIndex = 0;
         // 
         // btnDong
@@ -127,7 +127,7 @@ partial class FormTopSanPham
         panel3.Dock = System.Windows.Forms.DockStyle.Fill;
         panel3.Location = new System.Drawing.Point(3, 99);
         panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(886, 170);
+        panel3.Size = new System.Drawing.Size(1016, 170);
         panel3.TabIndex = 1;
         // 
         // lblTongKet
@@ -158,6 +158,7 @@ partial class FormTopSanPham
         // cboHienThi
         // 
         cboHienThi.FormattingEnabled = true;
+        cboHienThi.Items.AddRange(new object[] { "Top 10", "Top 20", "Top 50", "Tất cả" });
         cboHienThi.Location = new System.Drawing.Point(519, 63);
         cboHienThi.Name = "cboHienThi";
         cboHienThi.Size = new System.Drawing.Size(167, 28);
@@ -174,27 +175,31 @@ partial class FormTopSanPham
         // 
         // cboSapXep
         // 
+        cboSapXep.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         cboSapXep.FormattingEnabled = true;
+        cboSapXep.Items.AddRange(new object[] { "Doanh thu", "Số lượng bán" });
         cboSapXep.Location = new System.Drawing.Point(335, 63);
         cboSapXep.Name = "cboSapXep";
-        cboSapXep.Size = new System.Drawing.Size(144, 28);
+        cboSapXep.Size = new System.Drawing.Size(144, 31);
         cboSapXep.TabIndex = 5;
         // 
         // dtpDenNgay
         // 
+        dtpDenNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         dtpDenNgay.Location = new System.Drawing.Point(182, 61);
         dtpDenNgay.Name = "dtpDenNgay";
-        dtpDenNgay.Size = new System.Drawing.Size(127, 27);
-        dtpDenNgay.TabIndex = 4;
+        dtpDenNgay.Size = new System.Drawing.Size(127, 30);
+        dtpDenNgay.TabIndex = 3;
         // 
         // dtpTuNgay
         // 
+        dtpTuNgay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         dtpTuNgay.Location = new System.Drawing.Point(26, 61);
         dtpTuNgay.Name = "dtpTuNgay";
-        dtpTuNgay.Size = new System.Drawing.Size(127, 27);
-        dtpTuNgay.TabIndex = 3;
+        dtpTuNgay.Size = new System.Drawing.Size(127, 30);
+        dtpTuNgay.TabIndex = 1;
         // 
         // lblSapXep
         // 
@@ -231,7 +236,7 @@ partial class FormTopSanPham
         dgvTop.Location = new System.Drawing.Point(3, 275);
         dgvTop.Name = "dgvTop";
         dgvTop.RowHeadersWidth = 51;
-        dgvTop.Size = new System.Drawing.Size(886, 366);
+        dgvTop.Size = new System.Drawing.Size(1016, 366);
         dgvTop.TabIndex = 2;
         dgvTop.Text = "dataGridView1";
         // 
@@ -239,8 +244,9 @@ partial class FormTopSanPham
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(892, 644);
+        ClientSize = new System.Drawing.Size(1022, 644);
         Controls.Add(panel1);
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "FormTopSanPham";
         panel1.ResumeLayout(false);
         tableLayoutPanel1.ResumeLayout(false);

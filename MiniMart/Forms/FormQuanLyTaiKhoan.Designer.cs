@@ -179,34 +179,43 @@ partial class FormQuanLyTaiKhoan
         // 
         btnKhoaMoKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnKhoaMoKhoa.AutoSize = true;
-        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 7);
+        btnKhoaMoKhoa.BackColor = System.Drawing.Color.Navy;
+        btnKhoaMoKhoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnKhoaMoKhoa.ForeColor = System.Drawing.Color.White;
+        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 5);
         btnKhoaMoKhoa.Name = "btnKhoaMoKhoa";
-        btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 30);
+        btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 33);
         btnKhoaMoKhoa.TabIndex = 2;
         btnKhoaMoKhoa.Text = "Khóa / Mở khóa";
-        btnKhoaMoKhoa.UseVisualStyleBackColor = true;
+        btnKhoaMoKhoa.UseVisualStyleBackColor = false;
         // 
         // btnLuu
         // 
         btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLuu.AutoSize = true;
+        btnLuu.BackColor = System.Drawing.Color.Navy;
+        btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnLuu.ForeColor = System.Drawing.Color.White;
         btnLuu.Location = new System.Drawing.Point(453, 5);
         btnLuu.Name = "btnLuu";
         btnLuu.Size = new System.Drawing.Size(200, 34);
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
-        btnLuu.UseVisualStyleBackColor = true;
+        btnLuu.UseVisualStyleBackColor = false;
         // 
         // btnLamMoi
         // 
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLamMoi.AutoSize = true;
+        btnLamMoi.BackColor = System.Drawing.Color.Navy;
+        btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnLamMoi.ForeColor = System.Drawing.Color.White;
         btnLamMoi.Location = new System.Drawing.Point(82, 5);
         btnLamMoi.Name = "btnLamMoi";
         btnLamMoi.Size = new System.Drawing.Size(200, 34);
         btnLamMoi.TabIndex = 0;
         btnLamMoi.Text = "Làm mới";
-        btnLamMoi.UseVisualStyleBackColor = true;
+        btnLamMoi.UseVisualStyleBackColor = false;
         // 
         // tableLayoutPanel5
         // 
