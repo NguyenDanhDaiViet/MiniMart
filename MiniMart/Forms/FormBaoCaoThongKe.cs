@@ -1,4 +1,5 @@
 ﻿using System.Drawing.Printing;
+using System.Text;
 using MiniMart.Services;
 using MiniMart.Ui;
 
@@ -8,7 +9,7 @@ public partial class FormBaoCaoThongKe : Form
 {
     private readonly DichVuBaoCao _baoCao = new();
     
-    public FormBaoCaoThongKe()
+     public FormBaoCaoThongKe()
     {
         InitializeComponent();
         if (TienIchGiaoDien.DangThietKe)return;
@@ -18,12 +19,13 @@ public partial class FormBaoCaoThongKe : Form
         btInbaocao.Click += XuLyInBaoCao_Click;
         btXemtop.Click += XuLyXemTop_Click;
     }
+     
     private void FormBaoCaoThongKe_Load(object? sender, EventArgs e)
     {
         if (TienIchGiaoDien.DangThietKe) return;
 
         var homNay = DateTime.Today;
-        dtpTuNgay.Value = new DateTime(homNay.Year, homNay.Month, 1); 
+        dtpTuNgay.Value = new DateTime(homNay.Year, homNay.Month, 1); // đầu tháng
         dtpDenNgay.Value = homNay;
         TaiBaoCao();
     }
@@ -60,7 +62,8 @@ public partial class FormBaoCaoThongKe : Form
     }
 
     private void XuLyXemBaoCao_Click(object? sender, EventArgs e) => TaiBaoCao();
-    
+
+    // Mở form riêng (rộng hơn) với đúng khoảng ngày đang chọn
     private void XuLyXemTop_Click(object? sender, EventArgs e)
     {
         if (!KhoangNgayHopLe()) return;
@@ -69,7 +72,7 @@ public partial class FormBaoCaoThongKe : Form
         f.ShowDialog();
     }
 
-    private void XuLyInBaoCao_Click(object? sender, EventArgs e)
+    private void XuLyInBaoCao_Click(object? sender, EventArgs e)// viết lại chỗ này (xóa cái xuất pdf đi)
     {
         if (!KhoangNgayHopLe()) return;
 
@@ -92,4 +95,5 @@ public partial class FormBaoCaoThongKe : Form
             MessageBox.Show(ex.Message, "Không thể in báo cáo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
+
 }

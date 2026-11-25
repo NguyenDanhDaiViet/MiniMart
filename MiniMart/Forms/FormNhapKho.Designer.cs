@@ -53,29 +53,6 @@ partial class FormNhapKho
         nudGiaNhap = new System.Windows.Forms.NumericUpDown();
         btnXacNhan = new System.Windows.Forms.Button();
         dgvSanPham = new System.Windows.Forms.DataGridView();
-        pnlPhieuNhap = new System.Windows.Forms.Panel();
-        tlpPhieuNhap = new System.Windows.Forms.TableLayoutPanel();
-        grpNhaCungCap = new System.Windows.Forms.GroupBox();
-        tlpNhaCungCap = new System.Windows.Forms.TableLayoutPanel();
-        lblMaNhaCungCap = new System.Windows.Forms.Label();
-        txtMaNhaCungCap = new System.Windows.Forms.TextBox();
-        lblTenNhaCungCap = new System.Windows.Forms.Label();
-        txtTenNhaCungCap = new System.Windows.Forms.TextBox();
-        lblSoDienThoaiNhaCungCap = new System.Windows.Forms.Label();
-        txtSoDienThoaiNhaCungCap = new System.Windows.Forms.TextBox();
-        lblDiaChiNhaCungCap = new System.Windows.Forms.Label();
-        txtDiaChiNhaCungCap = new System.Windows.Forms.TextBox();
-        lblEmailNhaCungCap = new System.Windows.Forms.Label();
-        txtEmailNhaCungCap = new System.Windows.Forms.TextBox();
-        lblGhiChu = new System.Windows.Forms.Label();
-        txtGhiChu = new System.Windows.Forms.TextBox();
-        tlpLoHang = new System.Windows.Forms.TableLayoutPanel();
-        lblMaLo = new System.Windows.Forms.Label();
-        txtMaLo = new System.Windows.Forms.TextBox();
-        lblNgaySanXuat = new System.Windows.Forms.Label();
-        dtpNgaySanXuat = new System.Windows.Forms.DateTimePicker();
-        lblHanSuDung = new System.Windows.Forms.Label();
-        dtpHanSuDung = new System.Windows.Forms.DateTimePicker();
         panel1.SuspendLayout();
         tableLayoutPanel1.SuspendLayout();
         tableLayoutPanel2.SuspendLayout();
@@ -88,11 +65,6 @@ partial class FormNhapKho
         ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
         ((System.ComponentModel.ISupportInitialize)nudGiaNhap).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
-        pnlPhieuNhap.SuspendLayout();
-        tlpPhieuNhap.SuspendLayout();
-        grpNhaCungCap.SuspendLayout();
-        tlpNhaCungCap.SuspendLayout();
-        tlpLoHang.SuspendLayout();
         SuspendLayout();
         // 
         // panel1
@@ -123,6 +95,7 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel2
         // 
+        tableLayoutPanel2.BackColor = System.Drawing.Color.White;
         tableLayoutPanel2.ColumnCount = 1;
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -153,6 +126,8 @@ partial class FormNhapKho
         // 
         // tableLayoutPanel3
         // 
+        tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel3.ColumnCount = 2;
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.3555F));
         tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.6445F));
@@ -163,7 +138,7 @@ partial class FormNhapKho
         tableLayoutPanel3.RowCount = 1;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(906, 46);
+        tableLayoutPanel3.Size = new System.Drawing.Size(948, 46);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // txtTimKiem
@@ -174,12 +149,12 @@ partial class FormNhapKho
         txtTimKiem.PlaceholderText = "Tìm sản phẩm...";
         txtTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
         txtTimKiem.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-        txtTimKiem.Size = new System.Drawing.Size(640, 27);
+        txtTimKiem.Size = new System.Drawing.Size(670, 27);
         txtTimKiem.TabIndex = 0;
         // 
         // btnTimKiem
         // 
-        btnTimKiem.Location = new System.Drawing.Point(649, 3);
+        btnTimKiem.Location = new System.Drawing.Point(679, 3);
         btnTimKiem.Name = "btnTimKiem";
         btnTimKiem.Size = new System.Drawing.Size(106, 27);
         btnTimKiem.TabIndex = 1;
@@ -189,9 +164,9 @@ partial class FormNhapKho
         // tableLayoutPanel4
         // 
         tableLayoutPanel4.ColumnCount = 2;
-        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-        tableLayoutPanel4.Controls.Add(pnlPhieuNhap, 1, 0);
+        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.02935F));
+        tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.97065F));
+        tableLayoutPanel4.Controls.Add(grpThongTinPhieuNhap, 1, 0);
         tableLayoutPanel4.Controls.Add(dgvSanPham, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel4.Location = new System.Drawing.Point(3, 112);
@@ -205,12 +180,13 @@ partial class FormNhapKho
         // 
         // grpThongTinPhieuNhap
         // 
+        grpThongTinPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        grpThongTinPhieuNhap.BackColor = System.Drawing.Color.White;
         grpThongTinPhieuNhap.Controls.Add(tableLayoutPanel5);
-        grpThongTinPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
         grpThongTinPhieuNhap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        grpThongTinPhieuNhap.Location = new System.Drawing.Point(3, 3);
+        grpThongTinPhieuNhap.Location = new System.Drawing.Point(652, 3);
         grpThongTinPhieuNhap.Name = "grpThongTinPhieuNhap";
-        grpThongTinPhieuNhap.Size = new System.Drawing.Size(344, 384);
+        grpThongTinPhieuNhap.Size = new System.Drawing.Size(299, 335);
         grpThongTinPhieuNhap.TabIndex = 0;
         grpThongTinPhieuNhap.TabStop = false;
         grpThongTinPhieuNhap.Text = "Thông tin phiếu nhập";
@@ -224,21 +200,22 @@ partial class FormNhapKho
         tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 1);
         tableLayoutPanel5.Controls.Add(lblGiaNhap, 0, 2);
         tableLayoutPanel5.Controls.Add(nudGiaNhap, 0, 3);
-        tableLayoutPanel5.Controls.Add(tlpLoHang, 0, 4);
+        tableLayoutPanel5.Controls.Add(btnXacNhan, 0, 4);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 26);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
         tableLayoutPanel5.RowCount = 5;
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tableLayoutPanel5.Size = new System.Drawing.Size(338, 355);
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.614037F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.385963F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+        tableLayoutPanel5.Size = new System.Drawing.Size(293, 306);
         tableLayoutPanel5.TabIndex = 0;
         // 
         // tableLayoutPanel6
         // 
+        tableLayoutPanel6.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -250,7 +227,7 @@ partial class FormNhapKho
         tableLayoutPanel6.RowCount = 2;
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel6.Size = new System.Drawing.Size(332, 64);
+        tableLayoutPanel6.Size = new System.Drawing.Size(287, 80);
         tableLayoutPanel6.TabIndex = 0;
         // 
         // lblSanPham
@@ -268,13 +245,14 @@ partial class FormNhapKho
         lblTenSanPham.Anchor = System.Windows.Forms.AnchorStyles.Left;
         lblTenSanPham.Location = new System.Drawing.Point(3, 48);
         lblTenSanPham.Name = "lblTenSanPham";
-        lblTenSanPham.Size = new System.Drawing.Size(320, 23);
+        lblTenSanPham.Size = new System.Drawing.Size(100, 23);
         lblTenSanPham.TabIndex = 1;
         lblTenSanPham.Text = "Chưa Chọn";
-        lblTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        lblTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // tableLayoutPanel7
         // 
+        tableLayoutPanel7.BackColor = System.Drawing.SystemColors.ButtonFace;
         tableLayoutPanel7.ColumnCount = 2;
         tableLayoutPanel5.SetColumnSpan(tableLayoutPanel7, 2);
         tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -289,7 +267,7 @@ partial class FormNhapKho
         tableLayoutPanel7.RowCount = 2;
         tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel7.Size = new System.Drawing.Size(332, 76);
+        tableLayoutPanel7.Size = new System.Drawing.Size(287, 97);
         tableLayoutPanel7.TabIndex = 1;
         // 
         // lblMaSanPham
@@ -314,7 +292,6 @@ partial class FormNhapKho
         // 
         // txtMaSanPham
         // 
-        txtMaSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtMaSanPham.Location = new System.Drawing.Point(3, 51);
         txtMaSanPham.Name = "txtMaSanPham";
         txtMaSanPham.Size = new System.Drawing.Size(137, 30);
@@ -322,7 +299,6 @@ partial class FormNhapKho
         // 
         // nudSoLuong
         // 
-        nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         nudSoLuong.Location = new System.Drawing.Point(146, 51);
         nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         nudSoLuong.Name = "nudSoLuong";
@@ -346,7 +322,7 @@ partial class FormNhapKho
         nudGiaNhap.Location = new System.Drawing.Point(3, 215);
         nudGiaNhap.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
         nudGiaNhap.Name = "nudGiaNhap";
-        nudGiaNhap.Size = new System.Drawing.Size(326, 30);
+        nudGiaNhap.Size = new System.Drawing.Size(287, 30);
         nudGiaNhap.TabIndex = 3;
         // 
         // btnXacNhan
@@ -354,303 +330,22 @@ partial class FormNhapKho
         btnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnXacNhan.BackColor = System.Drawing.Color.Navy;
         btnXacNhan.ForeColor = System.Drawing.Color.White;
-        btnXacNhan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnXacNhan.Location = new System.Drawing.Point(105, 699);
+        btnXacNhan.Location = new System.Drawing.Point(99, 267);
         btnXacNhan.Name = "btnXacNhan";
-        btnXacNhan.Size = new System.Drawing.Size(140, 40);
-        btnXacNhan.TabIndex = 2;
+        btnXacNhan.Size = new System.Drawing.Size(94, 34);
+        btnXacNhan.TabIndex = 4;
         btnXacNhan.Text = "Xác Nhận";
         btnXacNhan.UseVisualStyleBackColor = false;
         // 
-        // pnlPhieuNhap
-        // 
-        pnlPhieuNhap.AutoScroll = true;
-        pnlPhieuNhap.Controls.Add(tlpPhieuNhap);
-        pnlPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-        pnlPhieuNhap.Location = new System.Drawing.Point(575, 3);
-        pnlPhieuNhap.Name = "pnlPhieuNhap";
-        pnlPhieuNhap.Size = new System.Drawing.Size(376, 505);
-        pnlPhieuNhap.TabIndex = 4;
-        // 
-        // tlpPhieuNhap
-        // 
-        tlpPhieuNhap.ColumnCount = 1;
-        tlpPhieuNhap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpPhieuNhap.Controls.Add(grpThongTinPhieuNhap, 0, 0);
-        tlpPhieuNhap.Controls.Add(grpNhaCungCap, 0, 1);
-        tlpPhieuNhap.Controls.Add(btnXacNhan, 0, 2);
-        tlpPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
-        tlpPhieuNhap.Location = new System.Drawing.Point(0, 0);
-        tlpPhieuNhap.Name = "tlpPhieuNhap";
-        tlpPhieuNhap.RowCount = 3;
-        tlpPhieuNhap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 390F));
-        tlpPhieuNhap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-        tlpPhieuNhap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-        tlpPhieuNhap.Size = new System.Drawing.Size(350, 746);
-        tlpPhieuNhap.TabIndex = 0;
-        // 
-        // grpNhaCungCap
-        // 
-        grpNhaCungCap.Controls.Add(tlpNhaCungCap);
-        grpNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
-        grpNhaCungCap.ForeColor = System.Drawing.Color.Navy;
-        grpNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        grpNhaCungCap.Location = new System.Drawing.Point(3, 393);
-        grpNhaCungCap.Name = "grpNhaCungCap";
-        grpNhaCungCap.Size = new System.Drawing.Size(344, 294);
-        grpNhaCungCap.TabIndex = 1;
-        grpNhaCungCap.TabStop = false;
-        grpNhaCungCap.Text = "Thông tin nhà cung cấp";
-        // 
-        // tlpNhaCungCap
-        // 
-        tlpNhaCungCap.ColumnCount = 2;
-        tlpNhaCungCap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-        tlpNhaCungCap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpNhaCungCap.Controls.Add(lblMaNhaCungCap, 0, 0);
-        tlpNhaCungCap.Controls.Add(txtMaNhaCungCap, 1, 0);
-        tlpNhaCungCap.Controls.Add(lblTenNhaCungCap, 0, 1);
-        tlpNhaCungCap.Controls.Add(txtTenNhaCungCap, 1, 1);
-        tlpNhaCungCap.Controls.Add(lblSoDienThoaiNhaCungCap, 0, 2);
-        tlpNhaCungCap.Controls.Add(txtSoDienThoaiNhaCungCap, 1, 2);
-        tlpNhaCungCap.Controls.Add(lblDiaChiNhaCungCap, 0, 3);
-        tlpNhaCungCap.Controls.Add(txtDiaChiNhaCungCap, 1, 3);
-        tlpNhaCungCap.Controls.Add(lblEmailNhaCungCap, 0, 4);
-        tlpNhaCungCap.Controls.Add(txtEmailNhaCungCap, 1, 4);
-        tlpNhaCungCap.Controls.Add(lblGhiChu, 0, 5);
-        tlpNhaCungCap.Controls.Add(txtGhiChu, 1, 5);
-        tlpNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
-        tlpNhaCungCap.Location = new System.Drawing.Point(3, 26);
-        tlpNhaCungCap.Name = "tlpNhaCungCap";
-        tlpNhaCungCap.RowCount = 6;
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-        tlpNhaCungCap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpNhaCungCap.Size = new System.Drawing.Size(338, 265);
-        tlpNhaCungCap.TabIndex = 0;
-        // 
-        // lblMaNhaCungCap
-        // 
-        lblMaNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblMaNhaCungCap.Location = new System.Drawing.Point(3, 7);
-        lblMaNhaCungCap.Name = "lblMaNhaCungCap";
-        lblMaNhaCungCap.Size = new System.Drawing.Size(124, 23);
-        lblMaNhaCungCap.TabIndex = 0;
-        lblMaNhaCungCap.Text = "Mã NCC:";
-        lblMaNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtMaNhaCungCap
-        // 
-        txtMaNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtMaNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtMaNhaCungCap.Location = new System.Drawing.Point(133, 4);
-        txtMaNhaCungCap.MaxLength = 30;
-        txtMaNhaCungCap.Name = "txtMaNhaCungCap";
-        txtMaNhaCungCap.PlaceholderText = "VD: NCC001";
-        txtMaNhaCungCap.Size = new System.Drawing.Size(209, 30);
-        txtMaNhaCungCap.TabIndex = 1;
-        // 
-        // lblTenNhaCungCap
-        // 
-        lblTenNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblTenNhaCungCap.Location = new System.Drawing.Point(3, 45);
-        lblTenNhaCungCap.Name = "lblTenNhaCungCap";
-        lblTenNhaCungCap.Size = new System.Drawing.Size(124, 23);
-        lblTenNhaCungCap.TabIndex = 2;
-        lblTenNhaCungCap.Text = "Tên NCC:";
-        lblTenNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtTenNhaCungCap
-        // 
-        txtTenNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtTenNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTenNhaCungCap.Location = new System.Drawing.Point(133, 42);
-        txtTenNhaCungCap.MaxLength = 100;
-        txtTenNhaCungCap.Name = "txtTenNhaCungCap";
-        txtTenNhaCungCap.Size = new System.Drawing.Size(209, 30);
-        txtTenNhaCungCap.TabIndex = 3;
-        // 
-        // lblSoDienThoaiNhaCungCap
-        // 
-        lblSoDienThoaiNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblSoDienThoaiNhaCungCap.Location = new System.Drawing.Point(3, 83);
-        lblSoDienThoaiNhaCungCap.Name = "lblSoDienThoaiNhaCungCap";
-        lblSoDienThoaiNhaCungCap.Size = new System.Drawing.Size(124, 23);
-        lblSoDienThoaiNhaCungCap.TabIndex = 4;
-        lblSoDienThoaiNhaCungCap.Text = "Số điện thoại:";
-        lblSoDienThoaiNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtSoDienThoaiNhaCungCap
-        // 
-        txtSoDienThoaiNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtSoDienThoaiNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtSoDienThoaiNhaCungCap.Location = new System.Drawing.Point(133, 80);
-        txtSoDienThoaiNhaCungCap.MaxLength = 20;
-        txtSoDienThoaiNhaCungCap.Name = "txtSoDienThoaiNhaCungCap";
-        txtSoDienThoaiNhaCungCap.PlaceholderText = "VD: 0912345678";
-        txtSoDienThoaiNhaCungCap.Size = new System.Drawing.Size(209, 30);
-        txtSoDienThoaiNhaCungCap.TabIndex = 5;
-        // 
-        // lblDiaChiNhaCungCap
-        // 
-        lblDiaChiNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblDiaChiNhaCungCap.Location = new System.Drawing.Point(3, 121);
-        lblDiaChiNhaCungCap.Name = "lblDiaChiNhaCungCap";
-        lblDiaChiNhaCungCap.Size = new System.Drawing.Size(124, 23);
-        lblDiaChiNhaCungCap.TabIndex = 6;
-        lblDiaChiNhaCungCap.Text = "Địa chỉ:";
-        lblDiaChiNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtDiaChiNhaCungCap
-        // 
-        txtDiaChiNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtDiaChiNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtDiaChiNhaCungCap.Location = new System.Drawing.Point(133, 118);
-        txtDiaChiNhaCungCap.MaxLength = 200;
-        txtDiaChiNhaCungCap.Name = "txtDiaChiNhaCungCap";
-        txtDiaChiNhaCungCap.Size = new System.Drawing.Size(209, 30);
-        txtDiaChiNhaCungCap.TabIndex = 7;
-        // 
-        // lblEmailNhaCungCap
-        // 
-        lblEmailNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblEmailNhaCungCap.Location = new System.Drawing.Point(3, 159);
-        lblEmailNhaCungCap.Name = "lblEmailNhaCungCap";
-        lblEmailNhaCungCap.Size = new System.Drawing.Size(124, 23);
-        lblEmailNhaCungCap.TabIndex = 8;
-        lblEmailNhaCungCap.Text = "Email:";
-        lblEmailNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtEmailNhaCungCap
-        // 
-        txtEmailNhaCungCap.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtEmailNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtEmailNhaCungCap.Location = new System.Drawing.Point(133, 156);
-        txtEmailNhaCungCap.MaxLength = 100;
-        txtEmailNhaCungCap.Name = "txtEmailNhaCungCap";
-        txtEmailNhaCungCap.PlaceholderText = "VD: ncc@example.com";
-        txtEmailNhaCungCap.Size = new System.Drawing.Size(209, 30);
-        txtEmailNhaCungCap.TabIndex = 9;
-        // 
-        // lblGhiChu
-        // 
-        lblGhiChu.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left));
-        lblGhiChu.Location = new System.Drawing.Point(3, 197);
-        lblGhiChu.Name = "lblGhiChu";
-        lblGhiChu.Size = new System.Drawing.Size(124, 23);
-        lblGhiChu.TabIndex = 10;
-        lblGhiChu.Text = "Ghi chú:";
-        lblGhiChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtGhiChu
-        // 
-        txtGhiChu.Dock = System.Windows.Forms.DockStyle.Fill;
-        txtGhiChu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtGhiChu.Location = new System.Drawing.Point(133, 194);
-        txtGhiChu.MaxLength = 500;
-        txtGhiChu.Multiline = true;
-        txtGhiChu.Name = "txtGhiChu";
-        txtGhiChu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-        txtGhiChu.Size = new System.Drawing.Size(209, 60);
-        txtGhiChu.TabIndex = 11;
-        // 
-        // tlpLoHang
-        // 
-        tlpLoHang.ColumnCount = 2;
-        tlpLoHang.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-        tlpLoHang.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpLoHang.Controls.Add(lblMaLo, 0, 0);
-        tlpLoHang.Controls.Add(txtMaLo, 1, 0);
-        tlpLoHang.Controls.Add(lblNgaySanXuat, 0, 1);
-        tlpLoHang.Controls.Add(dtpNgaySanXuat, 1, 1);
-        tlpLoHang.Controls.Add(lblHanSuDung, 0, 2);
-        tlpLoHang.Controls.Add(dtpHanSuDung, 1, 2);
-        tlpLoHang.Dock = System.Windows.Forms.DockStyle.Fill;
-        tlpLoHang.Location = new System.Drawing.Point(3, 221);
-        tlpLoHang.Name = "tlpLoHang";
-        tlpLoHang.RowCount = 3;
-        tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-        tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-        tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-        tlpLoHang.Size = new System.Drawing.Size(332, 131);
-        tlpLoHang.TabIndex = 5;
-        // 
-        // lblMaLo
-        // 
-        lblMaLo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblMaLo.Location = new System.Drawing.Point(3, 10);
-        lblMaLo.Name = "lblMaLo";
-        lblMaLo.Size = new System.Drawing.Size(124, 23);
-        lblMaLo.TabIndex = 0;
-        lblMaLo.Text = "Mã lô:";
-        lblMaLo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // txtMaLo
-        // 
-        txtMaLo.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        txtMaLo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtMaLo.Location = new System.Drawing.Point(133, 6);
-        txtMaLo.MaxLength = 40;
-        txtMaLo.Name = "txtMaLo";
-        txtMaLo.PlaceholderText = "Để trống để tự tạo";
-        txtMaLo.Size = new System.Drawing.Size(196, 30);
-        txtMaLo.TabIndex = 1;
-        // 
-        // lblNgaySanXuat
-        // 
-        lblNgaySanXuat.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblNgaySanXuat.Location = new System.Drawing.Point(3, 53);
-        lblNgaySanXuat.Name = "lblNgaySanXuat";
-        lblNgaySanXuat.Size = new System.Drawing.Size(124, 23);
-        lblNgaySanXuat.TabIndex = 2;
-        lblNgaySanXuat.Text = "Ngày SX:";
-        lblNgaySanXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // dtpNgaySanXuat
-        // 
-        dtpNgaySanXuat.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        dtpNgaySanXuat.Checked = false;
-        dtpNgaySanXuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        dtpNgaySanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpNgaySanXuat.Location = new System.Drawing.Point(133, 49);
-        dtpNgaySanXuat.Name = "dtpNgaySanXuat";
-        dtpNgaySanXuat.ShowCheckBox = true;
-        dtpNgaySanXuat.Size = new System.Drawing.Size(196, 30);
-        dtpNgaySanXuat.TabIndex = 3;
-        // 
-        // lblHanSuDung
-        // 
-        lblHanSuDung.Anchor = System.Windows.Forms.AnchorStyles.Left;
-        lblHanSuDung.Location = new System.Drawing.Point(3, 96);
-        lblHanSuDung.Name = "lblHanSuDung";
-        lblHanSuDung.Size = new System.Drawing.Size(124, 23);
-        lblHanSuDung.TabIndex = 4;
-        lblHanSuDung.Text = "Hạn sử dụng:";
-        lblHanSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // dtpHanSuDung
-        // 
-        dtpHanSuDung.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
-        dtpHanSuDung.Checked = false;
-        dtpHanSuDung.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        dtpHanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpHanSuDung.Location = new System.Drawing.Point(133, 92);
-        dtpHanSuDung.Name = "dtpHanSuDung";
-        dtpHanSuDung.ShowCheckBox = true;
-        dtpHanSuDung.Size = new System.Drawing.Size(196, 30);
-        dtpHanSuDung.TabIndex = 5;
-        // 
         // dgvSanPham
         // 
+        dgvSanPham.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvSanPham.Location = new System.Drawing.Point(3, 3);
         dgvSanPham.Name = "dgvSanPham";
         dgvSanPham.RowHeadersWidth = 51;
-        dgvSanPham.Size = new System.Drawing.Size(566, 505);
+        dgvSanPham.Size = new System.Drawing.Size(643, 505);
         dgvSanPham.TabIndex = 3;
         dgvSanPham.Text = "dataGridView1";
         // 
@@ -678,13 +373,6 @@ partial class FormNhapKho
         ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
         ((System.ComponentModel.ISupportInitialize)nudGiaNhap).EndInit();
         ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
-        pnlPhieuNhap.ResumeLayout(false);
-        tlpPhieuNhap.ResumeLayout(false);
-        grpNhaCungCap.ResumeLayout(false);
-        tlpNhaCungCap.ResumeLayout(false);
-        tlpNhaCungCap.PerformLayout();
-        tlpLoHang.ResumeLayout(false);
-        tlpLoHang.PerformLayout();
         ResumeLayout(false);
     }
 
@@ -728,38 +416,6 @@ partial class FormNhapKho
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
     private System.Windows.Forms.Panel panel1;
-    
-    private System.Windows.Forms.Panel pnlPhieuNhap;
-    
-    private System.Windows.Forms.TableLayoutPanel tlpPhieuNhap;
-    private System.Windows.Forms.GroupBox grpNhaCungCap;
-    
-    private System.Windows.Forms.TableLayoutPanel tlpNhaCungCap;
-    private System.Windows.Forms.Label lblMaNhaCungCap;
-    private System.Windows.Forms.TextBox txtMaNhaCungCap;
-    
-    private System.Windows.Forms.Label lblTenNhaCungCap;
-    
-    private System.Windows.Forms.TextBox txtTenNhaCungCap;
-    private System.Windows.Forms.Label lblSoDienThoaiNhaCungCap;
-    private System.Windows.Forms.TextBox txtSoDienThoaiNhaCungCap;
-    
-    private System.Windows.Forms.Label lblDiaChiNhaCungCap;
-    private System.Windows.Forms.TextBox txtDiaChiNhaCungCap;
-    private System.Windows.Forms.Label lblEmailNhaCungCap;
-    private System.Windows.Forms.TextBox txtEmailNhaCungCap;
-    
-    private System.Windows.Forms.Label lblGhiChu;
-    private System.Windows.Forms.TextBox txtGhiChu;
-    private System.Windows.Forms.TableLayoutPanel tlpLoHang;
-    private System.Windows.Forms.Label lblMaLo;
-    
-    private System.Windows.Forms.TextBox txtMaLo;
-    private System.Windows.Forms.Label lblNgaySanXuat;
-    private System.Windows.Forms.DateTimePicker dtpNgaySanXuat;
-    
-    private System.Windows.Forms.Label lblHanSuDung;
-    private System.Windows.Forms.DateTimePicker dtpHanSuDung;
 
     #endregion
     

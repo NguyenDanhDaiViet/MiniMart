@@ -3,11 +3,11 @@ using MiniMart.Ui;
 
 namespace MiniMart.Forms;
 
-
 public partial class FormQuanLyTaiKhoan : Form
 {
     private const string VaiTroQuanLy = "Quản Lý";
     private const string VaiTroNhanVien = "Nhân viên";
+    
     private int Iddachon;
     private string Tennguoidungdachon= "";
     public FormQuanLyTaiKhoan()
@@ -19,7 +19,7 @@ public partial class FormQuanLyTaiKhoan : Form
         TienIchGiaoDien.DatGoiY(txtTimKiem);
         
         cboVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
-        cboVaiTro.Items.AddRange(new object[] {VaiTroQuanLy, VaiTroNhanVien});
+        cboVaiTro.Items.AddRange(new object[] {VaiTroQuanLy,VaiTroNhanVien});
         txtMatKhau.UseSystemPasswordChar = true;
 
         btnTimKiem.Click += XuLyTimKiem_Click;
@@ -45,7 +45,7 @@ public partial class FormQuanLyTaiKhoan : Form
     {
         Iddachon=0;
         Tennguoidungdachon="";
-        txtTenDangNhap.Clear();
+        textBox2.Clear();
         txtHoTen.Clear();
         txtMatKhau.Clear();
         cboVaiTro.SelectedIndex = 1;//mặc định nhân viên
@@ -58,7 +58,7 @@ public partial class FormQuanLyTaiKhoan : Form
     {
         try
         {
-            DichVuTaiKhoan.Luu(Iddachon, txtTenDangNhap.Text, txtHoTen.Text,
+            DichVuTaiKhoan.Luu(Iddachon, textBox2.Text, txtHoTen.Text,
                Convert.ToString(cboVaiTro.SelectedItem)?? VaiTroNhanVien, txtMatKhau.Text );
             TaiDanhSachTaiKhoan();
             XoaDuLieuNhap();
@@ -66,7 +66,7 @@ public partial class FormQuanLyTaiKhoan : Form
         }
         catch (Exception exception)
         {
-            MessageBox.Show(exception.Message, "Không thể lưu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(exception.Message, "Không thể  lưu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 
@@ -75,7 +75,7 @@ public partial class FormQuanLyTaiKhoan : Form
         if (Iddachon == 0) return;
         if (Tennguoidungdachon=="quanly")
         {
-            MessageBox.Show("Không thể khóa tài khoản quản lý mặc định (quanly).");
+            MessageBox.Show("Không tể khóa tài khoản quản trị mặc định (quanly).");
             return;
         }
 
@@ -92,12 +92,12 @@ public partial class FormQuanLyTaiKhoan : Form
         var row = dgvTaiKhoan.Rows[e.RowIndex];
 
         Iddachon = Convert.ToInt32(row.Cells["Id"].Value);
-        Tennguoidungdachon = Convert.ToString(row.Cells["TenNguoiDung"].Value) ?? "";
-        txtTenDangNhap.Text = Tennguoidungdachon;
+        Tennguoidungdachon = Convert.ToString(row.Cells["TenNguoiDung"].Value)?? "";
+        textBox2.Text = Tennguoidungdachon;
         txtHoTen.Text = Convert.ToString(row.Cells["TenHienThi"].Value);
         
         int viTri = cboVaiTro.FindStringExact(Convert.ToString(row.Cells["VaiTro"].Value));
         cboVaiTro.SelectedIndex = viTri >= 0 ? viTri : 1;
-        txtMatKhau.Clear();
+        txtMatKhau.Clear(); 
     }
 }

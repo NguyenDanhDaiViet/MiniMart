@@ -12,18 +12,15 @@ public partial class FormNhapKho : Form
     public FormNhapKho()
     {
         InitializeComponent();
-
         if(TienIchGiaoDien.DangThietKe) return;
         
         TienIchGiaoDien.CauHinhLuoi(dgvSanPham);
         TienIchGiaoDien.DatGoiY(txtTimKiem);
-        dtpHanSuDung.Value = DateTime.Today.AddMonths(6);
 
         btnTimKiem.Click += XuLyTimKiem_Click;
         btnXacNhan.Click += XuLyNhapKho_Click;
         dgvSanPham.CellClick += XuLyChonSanPham_CellClick;
         txtMaSanPham.Leave += XuLyNhapMaSanPham_Leave;
-        txtMaNhaCungCap.Leave += XuLyNhapMaNhaCungCap_Leave;
 
         TaiDanhSachSanPham();
     }
@@ -31,7 +28,7 @@ public partial class FormNhapKho : Form
     private void TaiDanhSachSanPham()
     {
         dgvSanPham.DataSource = danhSachSanPham.LayTatCa(txtTimKiem.Text);
-        TienIchGiaoDien.AnCot(dgvSanPham,"Id", "GiaBan", "TonKhoToiThieu");
+        TienIchGiaoDien.AnCot(dgvSanPham,"ID", "Giá Bán", "Tồn Kho Tối Thiểu");
         TienIchGiaoDien.DatTieuDe(dgvSanPham,("Ma", "Mã Sản Phẩm"),("Ten","Tên Sản Phẩm")
             ,("DonVi","Đơn Vị"),("GiaVon","Giá Nhập"),("SoLuongHangTon","Tồn Kho"));
         TienIchGiaoDien.DinhDangSo(dgvSanPham,"GiaVon");
@@ -42,17 +39,6 @@ public partial class FormNhapKho : Form
         var sp = string.IsNullOrWhiteSpace(txtMaSanPham.Text) ? null : danhSachSanPham.layTheoMa(txtMaSanPham.Text);
         lblTenSanPham.Text = sp ?.Ten ?? "Chưa Chọn";
         if(sp != null) TienIchGiaoDien.GanGiaTri(nudGiaNhap,sp.GiaVon);
-    }
-    
-    private void XuLyNhapMaNhaCungCap_Leave(object? sender, EventArgs e)
-    {
-        var ncc = danhSachKho.LayNhaCungCapTheoMa(txtMaNhaCungCap.Text);
-        if (ncc == null) return;
-
-        txtTenNhaCungCap.Text = ncc.Ten;
-        txtSoDienThoaiNhaCungCap.Text = ncc.SoDienThoai;
-        txtDiaChiNhaCungCap.Text = ncc.DiaChi;
-        txtEmailNhaCungCap.Text = ncc.Email;
     }
 
     private void XuLyChonSanPham_CellClick(object? sender, DataGridViewCellEventArgs e)
@@ -82,17 +68,9 @@ public partial class FormNhapKho : Form
 
         try
         {
-            var nhaCungCap = new ThongTinNhaCungCap(
-                txtMaNhaCungCap.Text, txtTenNhaCungCap.Text, txtSoDienThoaiNhaCungCap.Text,
-                txtDiaChiNhaCungCap.Text, txtEmailNhaCungCap.Text, txtGhiChu.Text);
-
-            string maPhieu = danhSachKho.NhapKho(sp.Id, (int)nudSoLuong.Value, nudGiaNhap.Value, nhaCungCap,
-                txtMaLo.Text, dtpNgaySanXuat.Checked ? dtpNgaySanXuat.Value.Date : null,
-                dtpHanSuDung.Checked ? dtpHanSuDung.Value.Date : null);
-            MessageBox.Show($"Nhập kho thành công: {sp.Ten} +{nudSoLuong.Value:N0}.\nNhà cung cấp: {txtTenNhaCungCap.Text.Trim()}\nMã phiếu: {maPhieu}");
+            danhSachKho.NhapKho(sp.Id,(int)nudSoLuong.Value,nudGiaNhap.Value);
+            MessageBox.Show($"Nhập Kho Thành Công{sp.Ten}+{nudSoLuong.Value:N0}.");
             nudSoLuong.Value = 1;
-            txtMaLo.Clear(); dtpNgaySanXuat.Checked = false; dtpHanSuDung.Checked = false;
-            txtGhiChu.Clear(); 
             TaiDanhSachSanPham();
 
         }
