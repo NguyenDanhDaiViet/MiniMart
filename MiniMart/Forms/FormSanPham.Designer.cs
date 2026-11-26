@@ -129,10 +129,11 @@ partial class FormSanPham
         // 
         // lblHeader
         // 
-        lblHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
+        lblHeader.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblHeader.AutoSize = true;
         lblHeader.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblHeader.Location = new System.Drawing.Point(3, 24);
+        lblHeader.ForeColor = System.Drawing.Color.Navy;
+        lblHeader.Location = new System.Drawing.Point(408, 12);
         lblHeader.Name = "lblHeader";
         lblHeader.Size = new System.Drawing.Size(359, 46);
         lblHeader.TabIndex = 0;

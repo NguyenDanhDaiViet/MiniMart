@@ -137,6 +137,7 @@ partial class FormDangNhap
         lblTieuDe.AutoSize = true;
         lblTieuDe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTieuDe.ForeColor = System.Drawing.Color.Navy;
         lblTieuDe.Location = new System.Drawing.Point(37, 0);
         lblTieuDe.Name = "lblTieuDe";
         lblTieuDe.Size = new System.Drawing.Size(332, 58);
@@ -161,19 +162,19 @@ partial class FormDangNhap
         // 
         // tableLayoutPanel6
         // 
-        tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         tableLayoutPanel6.AutoSize = true;
         tableLayoutPanel6.ColumnCount = 1;
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel6.Controls.Add(lblMatKhau, 0, 0);
         tableLayoutPanel6.Controls.Add(matKhau, 0, 1);
+        tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel6.Location = new System.Drawing.Point(3, 99);
         tableLayoutPanel6.Name = "tableLayoutPanel6";
         tableLayoutPanel6.RowCount = 2;
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.774193F));
         tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.225807F));
-        tableLayoutPanel6.Size = new System.Drawing.Size(401, 90);
+        tableLayoutPanel6.Size = new System.Drawing.Size(401, 91);
         tableLayoutPanel6.TabIndex = 2;
         // 
         // lblMatKhau
@@ -190,7 +191,7 @@ partial class FormDangNhap
         // 
         matKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
         matKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        matKhau.Location = new System.Drawing.Point(51, 52);
+        matKhau.Location = new System.Drawing.Point(51, 53);
         matKhau.Name = "matKhau";
         matKhau.PasswordChar = '*';
         matKhau.Size = new System.Drawing.Size(298, 27);
@@ -204,19 +205,20 @@ partial class FormDangNhap
         tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel5.Controls.Add(tenDangNhap, 0, 1);
         tableLayoutPanel5.Controls.Add(lblTenDangNhap, 0, 0);
+        tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
         tableLayoutPanel5.RowCount = 2;
         tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.827587F));
         tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.172413F));
-        tableLayoutPanel5.Size = new System.Drawing.Size(401, 87);
+        tableLayoutPanel5.Size = new System.Drawing.Size(401, 90);
         tableLayoutPanel5.TabIndex = 0;
         // 
         // tenDangNhap
         // 
         tenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
         tenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        tenDangNhap.Location = new System.Drawing.Point(51, 49);
+        tenDangNhap.Location = new System.Drawing.Point(51, 51);
         tenDangNhap.Name = "tenDangNhap";
         tenDangNhap.Size = new System.Drawing.Size(298, 27);
         tenDangNhap.TabIndex = 0;
@@ -226,7 +228,7 @@ partial class FormDangNhap
         lblTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblTenDangNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
         lblTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTenDangNhap.Location = new System.Drawing.Point(51, 4);
+        lblTenDangNhap.Location = new System.Drawing.Point(51, 5);
         lblTenDangNhap.Name = "lblTenDangNhap";
         lblTenDangNhap.Size = new System.Drawing.Size(299, 30);
         lblTenDangNhap.TabIndex = 1;
