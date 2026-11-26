@@ -353,7 +353,7 @@ partial class FormThongTinTaiKhoan
         lblTieuDe.Size = new System.Drawing.Size(499, 49);
         lblTieuDe.TabIndex = 0;
         lblTieuDe.Text = "THÔNG TIN TÀI KHOẢN";
-        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // FormThongTinTaiKhoan
         // 

@@ -286,7 +286,7 @@ public class CoSoDuLieu : DbContext
         DateTime CuoiNgay(DateTime d) => d.Date.AddDays(1).AddTicks(-1);
         db.KhuyenMais.AddRange(
           
-            new KhuyenMai { MaCode = "SALE10",   TenKhuyenMai = "Giảm 10% mọi đơn",            LoaiGiam = "PhanTram", GiaTriGiam = 10,    DonHangToiThieu = 0,      TuNgay = homNay.AddDays(-7),  DenNgay = CuoiNgay(homNay.AddDays(30)), DangHoatDong = true },
+            new KhuyenMai { MaCode = "SALE10",   TenKhuyenMai = "Giảm 10% mọi đơn",             LoaiGiam = "PhanTram",  GiaTriGiam = 10,   DonHangToiThieu = 0,      TuNgay = homNay.AddDays(-7),  DenNgay = CuoiNgay(homNay.AddDays(30)), DangHoatDong = true },
             new KhuyenMai { MaCode = "GIAM20K",  TenKhuyenMai = "Giảm 20.000đ đơn từ 100.000đ", LoaiGiam = "SoTien",   GiaTriGiam = 20000, DonHangToiThieu = 100000, TuNgay = homNay.AddDays(-3),  DenNgay = CuoiNgay(homNay.AddDays(14)), DangHoatDong = true },
             new KhuyenMai { MaCode = "VIP15",    TenKhuyenMai = "Giảm 15% đơn từ 200.000đ",     LoaiGiam = "PhanTram", GiaTriGiam = 15,    DonHangToiThieu = 200000, TuNgay = homNay.AddDays(-1),  DenNgay = CuoiNgay(homNay.AddDays(60)), DangHoatDong = true },
            

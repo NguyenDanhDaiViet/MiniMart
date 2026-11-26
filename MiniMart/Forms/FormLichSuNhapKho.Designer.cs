@@ -44,16 +44,16 @@ public partial class FormLichSuNhapKho
         lblTongKet = new System.Windows.Forms.Label();
         dgvPhieuNhap = new System.Windows.Forms.DataGridView();
         pnlChiTiet = new System.Windows.Forms.Panel();
-        lblChiTiet = new System.Windows.Forms.Label();
+        dgvChiTiet = new System.Windows.Forms.DataGridView();
         pnlThongTinNhaCungCap = new System.Windows.Forms.Panel();
         txtThongTinNhaCungCap = new System.Windows.Forms.TextBox();
-        dgvChiTiet = new System.Windows.Forms.DataGridView();
+        lblChiTiet = new System.Windows.Forms.Label();
         pnlTieuDe.SuspendLayout();
         pnlLoc.SuspendLayout();
-        pnlChiTiet.SuspendLayout();
-        pnlThongTinNhaCungCap.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvPhieuNhap).BeginInit();
+        pnlChiTiet.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvChiTiet).BeginInit();
+        pnlThongTinNhaCungCap.SuspendLayout();
         SuspendLayout();
         // 
         // pnlTieuDe
@@ -68,12 +68,13 @@ public partial class FormLichSuNhapKho
         // 
         // lblTieuDe
         // 
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblTieuDe.AutoSize = true;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTieuDe.ForeColor = System.Drawing.Color.Navy;
-        lblTieuDe.Location = new System.Drawing.Point(20, 10);
+        lblTieuDe.Location = new System.Drawing.Point(366, 9);
         lblTieuDe.Name = "lblTieuDe";
-        lblTieuDe.Size = new System.Drawing.Size(363, 54);
+        lblTieuDe.Size = new System.Drawing.Size(340, 46);
         lblTieuDe.TabIndex = 0;
         lblTieuDe.Text = "LỊCH SỬ NHẬP KHO";
         // 
@@ -108,7 +109,7 @@ public partial class FormLichSuNhapKho
         dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         dtpTuNgay.Location = new System.Drawing.Point(20, 43);
         dtpTuNgay.Name = "dtpTuNgay";
-        dtpTuNgay.Size = new System.Drawing.Size(170, 34);
+        dtpTuNgay.Size = new System.Drawing.Size(170, 30);
         dtpTuNgay.TabIndex = 1;
         // 
         // lblDenNgay
@@ -126,7 +127,7 @@ public partial class FormLichSuNhapKho
         dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         dtpDenNgay.Location = new System.Drawing.Point(215, 43);
         dtpDenNgay.Name = "dtpDenNgay";
-        dtpDenNgay.Size = new System.Drawing.Size(170, 34);
+        dtpDenNgay.Size = new System.Drawing.Size(170, 30);
         dtpDenNgay.TabIndex = 3;
         // 
         // lblTimKiem
@@ -144,7 +145,7 @@ public partial class FormLichSuNhapKho
         txtTimKiem.Location = new System.Drawing.Point(410, 43);
         txtTimKiem.Name = "txtTimKiem";
         txtTimKiem.PlaceholderText = "Mã phiếu, nhà cung cấp, SĐT hoặc sản phẩm";
-        txtTimKiem.Size = new System.Drawing.Size(460, 34);
+        txtTimKiem.Size = new System.Drawing.Size(460, 30);
         txtTimKiem.TabIndex = 5;
         // 
         // btnTimKiem
@@ -177,12 +178,12 @@ public partial class FormLichSuNhapKho
         dgvPhieuNhap.BackgroundColor = System.Drawing.Color.White;
         dgvPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvPhieuNhap.Location = new System.Drawing.Point(0, 195);
+        dgvPhieuNhap.Location = new System.Drawing.Point(0, 210);
         dgvPhieuNhap.Name = "dgvPhieuNhap";
         dgvPhieuNhap.ReadOnly = true;
         dgvPhieuNhap.RowHeadersWidth = 62;
         dgvPhieuNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvPhieuNhap.Size = new System.Drawing.Size(1100, 225);
+        dgvPhieuNhap.Size = new System.Drawing.Size(1100, 190);
         dgvPhieuNhap.TabIndex = 2;
         // 
         // pnlChiTiet
@@ -196,24 +197,26 @@ public partial class FormLichSuNhapKho
         pnlChiTiet.Size = new System.Drawing.Size(1100, 300);
         pnlChiTiet.TabIndex = 3;
         // 
-        // lblChiTiet
+        // dgvChiTiet
         // 
-        lblChiTiet.Dock = System.Windows.Forms.DockStyle.Top;
-        lblChiTiet.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblChiTiet.ForeColor = System.Drawing.Color.Navy;
-        lblChiTiet.Location = new System.Drawing.Point(0, 0);
-        lblChiTiet.Name = "lblChiTiet";
-        lblChiTiet.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-        lblChiTiet.Size = new System.Drawing.Size(1100, 40);
-        lblChiTiet.TabIndex = 0;
-        lblChiTiet.Text = "CHI TIẾT PHIẾU NHẬP";
-        lblChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        dgvChiTiet.AllowUserToAddRows = false;
+        dgvChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+        dgvChiTiet.BackgroundColor = System.Drawing.Color.White;
+        dgvChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvChiTiet.Location = new System.Drawing.Point(0, 100);
+        dgvChiTiet.Name = "dgvChiTiet";
+        dgvChiTiet.ReadOnly = true;
+        dgvChiTiet.RowHeadersWidth = 62;
+        dgvChiTiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+        dgvChiTiet.Size = new System.Drawing.Size(1100, 200);
+        dgvChiTiet.TabIndex = 1;
         // 
         // pnlThongTinNhaCungCap
         // 
         pnlThongTinNhaCungCap.Controls.Add(txtThongTinNhaCungCap);
         pnlThongTinNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
-        pnlThongTinNhaCungCap.Location = new System.Drawing.Point(0, 40);
+        pnlThongTinNhaCungCap.Location = new System.Drawing.Point(0, 0);
         pnlThongTinNhaCungCap.Name = "pnlThongTinNhaCungCap";
         pnlThongTinNhaCungCap.Padding = new System.Windows.Forms.Padding(20, 0, 20, 4);
         pnlThongTinNhaCungCap.Size = new System.Drawing.Size(1100, 100);
@@ -234,24 +237,22 @@ public partial class FormLichSuNhapKho
         txtThongTinNhaCungCap.TabIndex = 0;
         txtThongTinNhaCungCap.TabStop = false;
         // 
-        // dgvChiTiet
+        // lblChiTiet
         // 
-        dgvChiTiet.AllowUserToAddRows = false;
-        dgvChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        dgvChiTiet.BackgroundColor = System.Drawing.Color.White;
-        dgvChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgvChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvChiTiet.Location = new System.Drawing.Point(0, 140);
-        dgvChiTiet.Name = "dgvChiTiet";
-        dgvChiTiet.ReadOnly = true;
-        dgvChiTiet.RowHeadersWidth = 62;
-        dgvChiTiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvChiTiet.Size = new System.Drawing.Size(1100, 160);
-        dgvChiTiet.TabIndex = 1;
+        lblChiTiet.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblChiTiet.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblChiTiet.ForeColor = System.Drawing.Color.Navy;
+        lblChiTiet.Location = new System.Drawing.Point(0, 0);
+        lblChiTiet.Name = "lblChiTiet";
+        lblChiTiet.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+        lblChiTiet.Size = new System.Drawing.Size(1100, 40);
+        lblChiTiet.TabIndex = 0;
+        lblChiTiet.Text = "CHI TIẾT PHIẾU NHẬP";
+        lblChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // FormLichSuNhapKho
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.WhiteSmoke;
         ClientSize = new System.Drawing.Size(1100, 700);
@@ -259,17 +260,17 @@ public partial class FormLichSuNhapKho
         Controls.Add(pnlChiTiet);
         Controls.Add(pnlLoc);
         Controls.Add(pnlTieuDe);
-        Name = "FormLichSuNhapKho";
+        Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
         Text = "MiniMart - Lịch sử nhập kho";
         pnlTieuDe.ResumeLayout(false);
         pnlTieuDe.PerformLayout();
         pnlLoc.ResumeLayout(false);
         pnlLoc.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvPhieuNhap).EndInit();
         pnlChiTiet.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dgvChiTiet).EndInit();
         pnlThongTinNhaCungCap.ResumeLayout(false);
         pnlThongTinNhaCungCap.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvPhieuNhap).EndInit();
-        ((System.ComponentModel.ISupportInitialize)dgvChiTiet).EndInit();
         ResumeLayout(false);
     }
 
