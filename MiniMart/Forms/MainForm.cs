@@ -9,7 +9,6 @@ public partial class MainForm : Form
     private Button? _nutDangChon;
     
     private static readonly Color MauNutMenu = Color.FromArgb(0, 0, 192);
-    private static readonly Color MauNenMenu = Color.Navy;
 
     public bool DangXuat { get; private set; }
 
