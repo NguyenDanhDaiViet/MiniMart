@@ -45,7 +45,6 @@ public partial class FormBanHang : Form
         nudGiamGiaHoaDon.ValueChanged += XuLyThayDoiGiamGiaHoaDon_ValueChanged;
         txtKhachDua.Leave += XuLyDinhDangTienKhachDua_Leave;
         btnTimKiem.Click += (_, _) => TaiDanhSachSanPham(); 
-        txtTimKiem.TextChanged += XuLyTimKiemSanPham_TextChanged;
         txtTimKiem.KeyDown += XuLyTimKiemSanPham_KeyDown;
         
         TaiDanhSachSanPham();
@@ -256,8 +255,6 @@ public partial class FormBanHang : Form
             ("GiaBan", "Giá bán"), ("SoLuongHangTon", "Tồn kho"));
         TienIchGiaoDien.DinhDangSo(dgvSanPham, "GiaBan");
     }
-    private void XuLyTimKiemSanPham_TextChanged(object? sender, EventArgs e)
-        => TaiDanhSachSanPham();
 
     private void XuLyTimKiemSanPham_KeyDown(object? sender, KeyEventArgs e)
     {
