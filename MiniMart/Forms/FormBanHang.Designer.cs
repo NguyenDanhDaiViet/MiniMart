@@ -251,6 +251,7 @@ partial class FormBanHang
         // 
         // dgvSanPham
         // 
+        dgvSanPham.BackgroundColor = System.Drawing.Color.White;
         dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
         dgvSanPham.Location = new System.Drawing.Point(3, 128);
@@ -674,15 +675,17 @@ partial class FormBanHang
         // 
         // lblTongCong
         // 
-        lblTongCong.Dock = System.Windows.Forms.DockStyle.Fill;
-        lblTongCong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lblTongCong.Anchor = System.Windows.Forms.AnchorStyles.None;
+        lblTongCong.AutoSize = true;
+        lblTongCong.BackColor = System.Drawing.SystemColors.ButtonFace;
+        lblTongCong.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTongCong.ForeColor = System.Drawing.Color.Red;
-        lblTongCong.Location = new System.Drawing.Point(424, 40);
+        lblTongCong.Location = new System.Drawing.Point(487, 49);
         lblTongCong.Name = "lblTongCong";
-        lblTongCong.Size = new System.Drawing.Size(294, 50);
+        lblTongCong.Size = new System.Drawing.Size(168, 31);
         lblTongCong.TabIndex = 0;
         lblTongCong.Text = "Tổng cộng: 0đ";
-        lblTongCong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+        lblTongCong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // flpTienNhanh
         // 
@@ -877,6 +880,7 @@ partial class FormBanHang
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaDong).EndInit();
         grpThanhToan.ResumeLayout(false);
         tlpThanhToan.ResumeLayout(false);
+        tlpThanhToan.PerformLayout();
         flpKhuyenMai.ResumeLayout(false);
         flpKhuyenMai.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)nudGiamGiaHoaDon).EndInit();
