@@ -34,7 +34,6 @@ partial class FormTopSanPham
         panel1 = new System.Windows.Forms.Panel();
         tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
         panel2 = new System.Windows.Forms.Panel();
-        btnDong = new System.Windows.Forms.Button();
         lblTieuDe = new System.Windows.Forms.Label();
         panel3 = new System.Windows.Forms.Panel();
         lblTongKet = new System.Windows.Forms.Label();
@@ -84,22 +83,12 @@ partial class FormTopSanPham
         // panel2
         // 
         panel2.BackColor = System.Drawing.Color.White;
-        panel2.Controls.Add(btnDong);
         panel2.Controls.Add(lblTieuDe);
         panel2.Dock = System.Windows.Forms.DockStyle.Fill;
         panel2.Location = new System.Drawing.Point(3, 3);
         panel2.Name = "panel2";
         panel2.Size = new System.Drawing.Size(1016, 90);
         panel2.TabIndex = 0;
-        // 
-        // btnDong
-        // 
-        btnDong.Location = new System.Drawing.Point(747, 31);
-        btnDong.Name = "btnDong";
-        btnDong.Size = new System.Drawing.Size(115, 35);
-        btnDong.TabIndex = 1;
-        btnDong.Text = "Đóng";
-        btnDong.UseVisualStyleBackColor = true;
         // 
         // lblTieuDe
         // 
@@ -271,8 +260,6 @@ partial class FormTopSanPham
     private System.Windows.Forms.DateTimePicker dtpTuNgay;
 
     private System.Windows.Forms.Label lblTuNgay;
-
-    private System.Windows.Forms.Button btnDong;
 
     private System.Windows.Forms.Label lblTieuDe;
     private System.Windows.Forms.Panel panel3;
