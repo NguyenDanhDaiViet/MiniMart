@@ -21,14 +21,13 @@ public partial class FormQuanLyTaiKhoan : Form
         cboVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
         cboVaiTro.Items.AddRange(new object[] {VaiTroQuanLy, VaiTroNhanVien});
         txtMatKhau.UseSystemPasswordChar = true;
-
-        // Tìm kiếm: bấm nút hoặc gõ phím (gõ tới đâu lọc tới đó).
+        
         btnTimKiem.Click += (_, _) => TaiDanhSachTaiKhoan();
-        txtTimKiem.TextChanged += XuLyTimKiem_TextChanged;
         btnLamMoi.Click += XuLyTaoMoi_Click;
         btnLuu.Click += XuLyLuu_Click;
         btnKhoaMoKhoa.Click += XuLyKhoaTaiKhoan_Click;
         dgvTaiKhoan.CellClick += XuLyChonTaiKhoan_CellClick;
+        chkHienMatKhau.CheckedChanged += XuLyHienMatKhau_CheckedChanged;
 
         XoaDuLieuNhap();
         TaiDanhSachTaiKhoan();
@@ -50,10 +49,13 @@ public partial class FormQuanLyTaiKhoan : Form
         txtTenDangNhap.Clear();
         txtHoTen.Clear();
         txtMatKhau.Clear();
+        chkHienMatKhau.Checked = false;
         cboVaiTro.SelectedIndex = 1;
         dgvTaiKhoan.ClearSelection();
     }
-    private void XuLyTimKiem_TextChanged(object? sender, EventArgs e)=> TaiDanhSachTaiKhoan();
+
+    private void XuLyHienMatKhau_CheckedChanged(object? sender, EventArgs e)
+        => txtMatKhau.UseSystemPasswordChar = !chkHienMatKhau.Checked;
     private void XuLyTaoMoi_Click(object? sender, EventArgs e)=> XoaDuLieuNhap();
 
     private void XuLyLuu_Click(object? sender, EventArgs e)

@@ -25,7 +25,6 @@ public partial class FormBaoCaoThongKe : Form
         var homNay = DateTime.Today;
         dtpTuNgay.Value = new DateTime(homNay.Year, homNay.Month, 1); 
         dtpDenNgay.Value = homNay;
-        TaiBaoCao();
     }
 
     private bool KhoangNgayHopLe()

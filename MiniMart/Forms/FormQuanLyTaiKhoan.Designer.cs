@@ -51,6 +51,7 @@ partial class FormQuanLyTaiKhoan
         lblTenDangNhap = new System.Windows.Forms.Label();
         txtTenDangNhap = new System.Windows.Forms.TextBox();
         cboVaiTro = new System.Windows.Forms.ComboBox();
+        chkHienMatKhau = new System.Windows.Forms.CheckBox();
         panel3 = new System.Windows.Forms.Panel();
         dgvTaiKhoan = new System.Windows.Forms.DataGridView();
         panel1.SuspendLayout();
@@ -69,7 +70,7 @@ partial class FormQuanLyTaiKhoan
         panel1.Dock = System.Windows.Forms.DockStyle.Top;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(1119, 308);
+        panel1.Size = new System.Drawing.Size(1119, 350);
         panel1.TabIndex = 0;
         // 
         // tableLayoutPanel1
@@ -85,7 +86,7 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel1.RowCount = 2;
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel1.Size = new System.Drawing.Size(1119, 308);
+        tableLayoutPanel1.Size = new System.Drawing.Size(1119, 350);
         tableLayoutPanel1.TabIndex = 1;
         // 
         // tableLayoutPanel2
@@ -102,7 +103,7 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel2.RowCount = 2;
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
         tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel2.Size = new System.Drawing.Size(1113, 148);
+        tableLayoutPanel2.Size = new System.Drawing.Size(1113, 169);
         tableLayoutPanel2.TabIndex = 0;
         // 
         // lblTieuDe
@@ -110,7 +111,8 @@ partial class FormQuanLyTaiKhoan
         lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblTieuDe.AutoSize = true;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblTieuDe.Location = new System.Drawing.Point(308, 18);
+        lblTieuDe.ForeColor = System.Drawing.Color.Navy;
+        lblTieuDe.Location = new System.Drawing.Point(308, 23);
         lblTieuDe.Name = "lblTieuDe";
         lblTieuDe.Size = new System.Drawing.Size(299, 38);
         lblTieuDe.TabIndex = 0;
@@ -124,7 +126,7 @@ partial class FormQuanLyTaiKhoan
         btnTimKiem.BackColor = System.Drawing.Color.Navy;
         btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTimKiem.ForeColor = System.Drawing.Color.White;
-        btnTimKiem.Location = new System.Drawing.Point(926, 90);
+        btnTimKiem.Location = new System.Drawing.Point(926, 105);
         btnTimKiem.Name = "btnTimKiem";
         btnTimKiem.Size = new System.Drawing.Size(176, 42);
         btnTimKiem.TabIndex = 2;
@@ -135,7 +137,7 @@ partial class FormQuanLyTaiKhoan
         // 
         txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtTimKiem.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTimKiem.Location = new System.Drawing.Point(3, 97);
+        txtTimKiem.Location = new System.Drawing.Point(3, 113);
         txtTimKiem.Name = "txtTimKiem";
         txtTimKiem.Size = new System.Drawing.Size(909, 27);
         txtTimKiem.TabIndex = 3;
@@ -150,12 +152,12 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 1);
         tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 0);
         tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel3.Location = new System.Drawing.Point(3, 157);
+        tableLayoutPanel3.Location = new System.Drawing.Point(3, 178);
         tableLayoutPanel3.Name = "tableLayoutPanel3";
         tableLayoutPanel3.RowCount = 2;
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.21622F));
         tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.783783F));
-        tableLayoutPanel3.Size = new System.Drawing.Size(1113, 148);
+        tableLayoutPanel3.Size = new System.Drawing.Size(1113, 169);
         tableLayoutPanel3.TabIndex = 1;
         // 
         // tableLayoutPanel4
@@ -168,18 +170,18 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel4.Controls.Add(btnLuu, 1, 0);
         tableLayoutPanel4.Controls.Add(btnLamMoi, 0, 0);
         tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel4.Location = new System.Drawing.Point(3, 101);
+        tableLayoutPanel4.Location = new System.Drawing.Point(3, 114);
         tableLayoutPanel4.Name = "tableLayoutPanel4";
         tableLayoutPanel4.RowCount = 1;
         tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tableLayoutPanel4.Size = new System.Drawing.Size(1107, 44);
+        tableLayoutPanel4.Size = new System.Drawing.Size(1107, 52);
         tableLayoutPanel4.TabIndex = 0;
         // 
         // btnKhoaMoKhoa
         // 
         btnKhoaMoKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnKhoaMoKhoa.AutoSize = true;
-        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 7);
+        btnKhoaMoKhoa.Location = new System.Drawing.Point(843, 11);
         btnKhoaMoKhoa.Name = "btnKhoaMoKhoa";
         btnKhoaMoKhoa.Size = new System.Drawing.Size(162, 30);
         btnKhoaMoKhoa.TabIndex = 2;
@@ -190,7 +192,7 @@ partial class FormQuanLyTaiKhoan
         // 
         btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLuu.AutoSize = true;
-        btnLuu.Location = new System.Drawing.Point(453, 5);
+        btnLuu.Location = new System.Drawing.Point(453, 9);
         btnLuu.Name = "btnLuu";
         btnLuu.Size = new System.Drawing.Size(200, 34);
         btnLuu.TabIndex = 1;
@@ -201,7 +203,7 @@ partial class FormQuanLyTaiKhoan
         // 
         btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
         btnLamMoi.AutoSize = true;
-        btnLamMoi.Location = new System.Drawing.Point(82, 5);
+        btnLamMoi.Location = new System.Drawing.Point(82, 9);
         btnLamMoi.Name = "btnLamMoi";
         btnLamMoi.Size = new System.Drawing.Size(200, 34);
         btnLamMoi.TabIndex = 0;
@@ -223,19 +225,21 @@ partial class FormQuanLyTaiKhoan
         tableLayoutPanel5.Controls.Add(lblTenDangNhap, 0, 0);
         tableLayoutPanel5.Controls.Add(txtTenDangNhap, 0, 1);
         tableLayoutPanel5.Controls.Add(cboVaiTro, 3, 1);
+        tableLayoutPanel5.Controls.Add(chkHienMatKhau, 2, 2);
         tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
         tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
         tableLayoutPanel5.Name = "tableLayoutPanel5";
-        tableLayoutPanel5.RowCount = 2;
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-        tableLayoutPanel5.Size = new System.Drawing.Size(1107, 92);
+        tableLayoutPanel5.RowCount = 3;
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+        tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+        tableLayoutPanel5.Size = new System.Drawing.Size(1107, 105);
         tableLayoutPanel5.TabIndex = 1;
         // 
         // txtMatKhau
         // 
         txtMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-        txtMatKhau.Location = new System.Drawing.Point(573, 55);
+        txtMatKhau.Location = new System.Drawing.Point(573, 39);
         txtMatKhau.Name = "txtMatKhau";
         txtMatKhau.Size = new System.Drawing.Size(234, 27);
         txtMatKhau.TabIndex = 6;
@@ -243,7 +247,7 @@ partial class FormQuanLyTaiKhoan
         // txtHoTen
         // 
         txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
-        txtHoTen.Location = new System.Drawing.Point(301, 55);
+        txtHoTen.Location = new System.Drawing.Point(301, 39);
         txtHoTen.Name = "txtHoTen";
         txtHoTen.Size = new System.Drawing.Size(224, 27);
         txtHoTen.TabIndex = 5;
@@ -251,7 +255,7 @@ partial class FormQuanLyTaiKhoan
         // lblVaiTro
         // 
         lblVaiTro.Anchor = System.Windows.Forms.AnchorStyles.None;
-        lblVaiTro.Location = new System.Drawing.Point(918, 11);
+        lblVaiTro.Location = new System.Drawing.Point(918, 6);
         lblVaiTro.Name = "lblVaiTro";
         lblVaiTro.Size = new System.Drawing.Size(100, 23);
         lblVaiTro.TabIndex = 3;
@@ -261,7 +265,7 @@ partial class FormQuanLyTaiKhoan
         // lblMatKhau
         // 
         lblMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-        lblMatKhau.Location = new System.Drawing.Point(574, 11);
+        lblMatKhau.Location = new System.Drawing.Point(574, 6);
         lblMatKhau.Name = "lblMatKhau";
         lblMatKhau.Size = new System.Drawing.Size(232, 23);
         lblMatKhau.TabIndex = 2;
@@ -270,7 +274,7 @@ partial class FormQuanLyTaiKhoan
         // lblHoTen
         // 
         lblHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
-        lblHoTen.Location = new System.Drawing.Point(301, 11);
+        lblHoTen.Location = new System.Drawing.Point(301, 6);
         lblHoTen.Name = "lblHoTen";
         lblHoTen.Size = new System.Drawing.Size(223, 23);
         lblHoTen.TabIndex = 1;
@@ -279,7 +283,7 @@ partial class FormQuanLyTaiKhoan
         // lblTenDangNhap
         // 
         lblTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-        lblTenDangNhap.Location = new System.Drawing.Point(23, 11);
+        lblTenDangNhap.Location = new System.Drawing.Point(23, 6);
         lblTenDangNhap.Name = "lblTenDangNhap";
         lblTenDangNhap.Size = new System.Drawing.Size(228, 23);
         lblTenDangNhap.TabIndex = 0;
@@ -288,7 +292,7 @@ partial class FormQuanLyTaiKhoan
         // txtTenDangNhap
         // 
         txtTenDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-        txtTenDangNhap.Location = new System.Drawing.Point(22, 55);
+        txtTenDangNhap.Location = new System.Drawing.Point(22, 39);
         txtTenDangNhap.Name = "txtTenDangNhap";
         txtTenDangNhap.Size = new System.Drawing.Size(229, 27);
         txtTenDangNhap.TabIndex = 4;
@@ -297,18 +301,29 @@ partial class FormQuanLyTaiKhoan
         // 
         cboVaiTro.Anchor = System.Windows.Forms.AnchorStyles.None;
         cboVaiTro.FormattingEnabled = true;
-        cboVaiTro.Location = new System.Drawing.Point(862, 55);
+        cboVaiTro.Location = new System.Drawing.Point(862, 38);
         cboVaiTro.Name = "cboVaiTro";
         cboVaiTro.Size = new System.Drawing.Size(212, 28);
         cboVaiTro.TabIndex = 7;
+        // 
+        // chkHienMatKhau
+        // 
+        chkHienMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+        chkHienMatKhau.AutoSize = true;
+        chkHienMatKhau.Location = new System.Drawing.Point(627, 75);
+        chkHienMatKhau.Name = "chkHienMatKhau";
+        chkHienMatKhau.Size = new System.Drawing.Size(127, 24);
+        chkHienMatKhau.TabIndex = 8;
+        chkHienMatKhau.Text = "Hiện mật khẩu";
+        chkHienMatKhau.UseVisualStyleBackColor = true;
         // 
         // panel3
         // 
         panel3.Controls.Add(dgvTaiKhoan);
         panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-        panel3.Location = new System.Drawing.Point(0, 308);
+        panel3.Location = new System.Drawing.Point(0, 350);
         panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(1119, 420);
+        panel3.Size = new System.Drawing.Size(1119, 378);
         panel3.TabIndex = 2;
         // 
         // dgvTaiKhoan
@@ -318,7 +333,7 @@ partial class FormQuanLyTaiKhoan
         dgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
         dgvTaiKhoan.Name = "dgvTaiKhoan";
         dgvTaiKhoan.RowHeadersWidth = 51;
-        dgvTaiKhoan.Size = new System.Drawing.Size(1119, 420);
+        dgvTaiKhoan.Size = new System.Drawing.Size(1119, 378);
         dgvTaiKhoan.TabIndex = 0;
         dgvTaiKhoan.Text = "dataGridView1";
         // 
@@ -347,6 +362,7 @@ partial class FormQuanLyTaiKhoan
     private System.Windows.Forms.TextBox txtHoTen;
     private System.Windows.Forms.TextBox txtMatKhau;
     private System.Windows.Forms.ComboBox cboVaiTro;
+    private System.Windows.Forms.CheckBox chkHienMatKhau;
 
     private System.Windows.Forms.TextBox txtTenDangNhap;
 

@@ -7,8 +7,18 @@ public class DichVuKhachHang
 {
     public List<KhachHang> LayDanhSach(string tuKhoa = "")
     {
-        using var db = new CoSoDuLieu(); string k = (tuKhoa ?? "").Trim();
-        return db.KhachHangs.AsNoTracking().Where(x => k == "" || x.HoTen.Contains(k) || x.SoDienThoai.Contains(k)).OrderBy(x => x.HoTen).ToList();
+        using var db = new CoSoDuLieu();
+        
+        var ds = db.KhachHangs.AsNoTracking()
+            .OrderBy(x => x.HoTen)
+            .ToList();
+        
+        string k = DichVuLichSuHoatDong.BoDau(tuKhoa);
+        if (k == "") return ds;
+
+        return ds.Where(x => DichVuLichSuHoatDong.BoDau(x.HoTen).Contains(k)
+                             || DichVuLichSuHoatDong.BoDau(x.SoDienThoai).Contains(k))
+            .ToList();
     }
     public void Luu(KhachHang kh)
     {

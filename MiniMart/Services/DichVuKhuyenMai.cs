@@ -7,10 +7,17 @@ public class DichVuKhuyenMai
     public List<KhuyenMai> LayDanhSach(string key = "")
     {
         using var db = new CoSoDuLieu();
-        string k=(key??"").Trim(); 
-        return db.KhuyenMais.AsNoTracking().
-            Where(x=>k==""||x.MaCode.Contains(k)||x.TenKhuyenMai.Contains(k)).OrderByDescending(x=>x.TuNgay).
-            ToList();
+        string k = (key ?? "").Trim();
+
+        var ds = db.KhuyenMais.AsNoTracking()
+            .OrderByDescending(x => x.TuNgay)
+            .ToList();
+
+        if (k == "") return ds;
+
+        return ds.Where(x => x.MaCode.Contains(k, StringComparison.OrdinalIgnoreCase)
+                             || x.TenKhuyenMai.Contains(k, StringComparison.OrdinalIgnoreCase))
+            .ToList();
     }
     public void Luu(KhuyenMai km)
     {

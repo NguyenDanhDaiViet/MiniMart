@@ -14,7 +14,6 @@ public partial class FormCanhBao : Form
         
         TienIchGiaoDien.CauHinhLuoi(dgvCanhBao);
         btnLamMoi.Click += XuLyLamMoi_Click;
-        TaiDanhSachCanhBao();
     }
     private void TaiDanhSachCanhBao()
     {
