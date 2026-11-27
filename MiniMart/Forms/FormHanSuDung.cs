@@ -21,7 +21,6 @@ public partial class FormHanSuDung : Form
 
         btnTaoLo.Click += XuLyTaoLo_Click;
         btnLoc.Click += (_, _) => TaiDanhSach();
-        txtTimKiem.TextChanged += (_, _) => TaiDanhSach();
         btnXoaLo.Click += XuLyXoaLo_Click;
         txtTimKiem.KeyDown += (_, e) =>
         {

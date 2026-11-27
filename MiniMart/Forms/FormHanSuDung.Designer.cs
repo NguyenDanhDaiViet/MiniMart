@@ -83,15 +83,15 @@ partial class FormHanSuDung
         tableLayoutPanel1.Controls.Add(tlpTimKiem, 0, 2);
         tableLayoutPanel1.Controls.Add(dgvLoHang, 0, 3);
         tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-        tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+        tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
-        tableLayoutPanel1.Size = new System.Drawing.Size(968, 100);
-        tableLayoutPanel1.TabIndex = 0;
         tableLayoutPanel1.RowCount = 4;
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
         tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+        tableLayoutPanel1.Size = new System.Drawing.Size(1000, 660);
+        tableLayoutPanel1.TabIndex = 0;
         // 
         // lblTieuDe
         // 
@@ -101,7 +101,7 @@ partial class FormHanSuDung
         lblTieuDe.ForeColor = System.Drawing.Color.Navy;
         lblTieuDe.Location = new System.Drawing.Point(3, 0);
         lblTieuDe.Name = "lblTieuDe";
-        lblTieuDe.Size = new System.Drawing.Size(974, 60);
+        lblTieuDe.Size = new System.Drawing.Size(994, 66);
         lblTieuDe.TabIndex = 0;
         lblTieuDe.Text = "QUẢN LÝ HẠN SỬ DỤNG";
         lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,9 +112,9 @@ partial class FormHanSuDung
         grpLoHang.Dock = System.Windows.Forms.DockStyle.Fill;
         grpLoHang.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         grpLoHang.ForeColor = System.Drawing.Color.Navy;
-        grpLoHang.Location = new System.Drawing.Point(3, 3);
+        grpLoHang.Location = new System.Drawing.Point(3, 69);
         grpLoHang.Name = "grpLoHang";
-        grpLoHang.Size = new System.Drawing.Size(968, 150);
+        grpLoHang.Size = new System.Drawing.Size(994, 164);
         grpLoHang.TabIndex = 1;
         grpLoHang.TabStop = false;
         grpLoHang.Text = "Tạo lô hàng mới";
@@ -139,15 +139,14 @@ partial class FormHanSuDung
         tlpLoHang.Controls.Add(dtpHanSuDung, 4, 1);
         tlpLoHang.Controls.Add(flpNutLo, 0, 2);
         tlpLoHang.Dock = System.Windows.Forms.DockStyle.Fill;
-        tlpLoHang.Location = new System.Drawing.Point(3, 3);
+        tlpLoHang.Location = new System.Drawing.Point(3, 26);
         tlpLoHang.Name = "tlpLoHang";
-        tlpLoHang.Size = new System.Drawing.Size(968, 100);
-        tlpLoHang.TabIndex = 0;
         tlpLoHang.RowCount = 3;
         tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
         tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
         tlpLoHang.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-        tlpLoHang.SetColumnSpan(flpNutLo, 5);
+        tlpLoHang.Size = new System.Drawing.Size(988, 135);
+        tlpLoHang.TabIndex = 0;
         // 
         // lblSanPham
         // 
@@ -155,7 +154,7 @@ partial class FormHanSuDung
         lblSanPham.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblSanPham.Location = new System.Drawing.Point(3, 0);
         lblSanPham.Name = "lblSanPham";
-        lblSanPham.Size = new System.Drawing.Size(180, 26);
+        lblSanPham.Size = new System.Drawing.Size(270, 28);
         lblSanPham.TabIndex = 0;
         lblSanPham.Text = "Sản phẩm";
         lblSanPham.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -164,9 +163,9 @@ partial class FormHanSuDung
         // 
         lblMaLo.Dock = System.Windows.Forms.DockStyle.Fill;
         lblMaLo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblMaLo.Location = new System.Drawing.Point(3, 0);
+        lblMaLo.Location = new System.Drawing.Point(279, 0);
         lblMaLo.Name = "lblMaLo";
-        lblMaLo.Size = new System.Drawing.Size(180, 26);
+        lblMaLo.Size = new System.Drawing.Size(171, 28);
         lblMaLo.TabIndex = 1;
         lblMaLo.Text = "Mã lô";
         lblMaLo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -175,9 +174,9 @@ partial class FormHanSuDung
         // 
         lblSoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
         lblSoLuong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblSoLuong.Location = new System.Drawing.Point(3, 0);
+        lblSoLuong.Location = new System.Drawing.Point(456, 0);
         lblSoLuong.Name = "lblSoLuong";
-        lblSoLuong.Size = new System.Drawing.Size(180, 26);
+        lblSoLuong.Size = new System.Drawing.Size(132, 28);
         lblSoLuong.TabIndex = 2;
         lblSoLuong.Text = "Số lượng lô";
         lblSoLuong.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -186,9 +185,9 @@ partial class FormHanSuDung
         // 
         lblNgaySanXuat.Dock = System.Windows.Forms.DockStyle.Fill;
         lblNgaySanXuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblNgaySanXuat.Location = new System.Drawing.Point(3, 0);
+        lblNgaySanXuat.Location = new System.Drawing.Point(594, 0);
         lblNgaySanXuat.Name = "lblNgaySanXuat";
-        lblNgaySanXuat.Size = new System.Drawing.Size(180, 26);
+        lblNgaySanXuat.Size = new System.Drawing.Size(191, 28);
         lblNgaySanXuat.TabIndex = 3;
         lblNgaySanXuat.Text = "Ngày sản xuất (tùy chọn)";
         lblNgaySanXuat.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -197,9 +196,9 @@ partial class FormHanSuDung
         // 
         lblHanSuDung.Dock = System.Windows.Forms.DockStyle.Fill;
         lblHanSuDung.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        lblHanSuDung.Location = new System.Drawing.Point(3, 0);
+        lblHanSuDung.Location = new System.Drawing.Point(791, 0);
         lblHanSuDung.Name = "lblHanSuDung";
-        lblHanSuDung.Size = new System.Drawing.Size(180, 26);
+        lblHanSuDung.Size = new System.Drawing.Size(194, 28);
         lblHanSuDung.TabIndex = 4;
         lblHanSuDung.Text = "Hạn sử dụng";
         lblHanSuDung.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -210,31 +209,31 @@ partial class FormHanSuDung
         cboSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         cboSanPham.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         cboSanPham.FormattingEnabled = true;
-        cboSanPham.Location = new System.Drawing.Point(3, 3);
+        cboSanPham.Location = new System.Drawing.Point(3, 32);
         cboSanPham.Name = "cboSanPham";
-        cboSanPham.Size = new System.Drawing.Size(180, 31);
+        cboSanPham.Size = new System.Drawing.Size(270, 31);
         cboSanPham.TabIndex = 5;
         // 
         // txtMaLo
         // 
         txtMaLo.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtMaLo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtMaLo.Location = new System.Drawing.Point(3, 3);
+        txtMaLo.Location = new System.Drawing.Point(279, 33);
         txtMaLo.MaxLength = 40;
         txtMaLo.Name = "txtMaLo";
         txtMaLo.PlaceholderText = "Để trống để tự tạo";
-        txtMaLo.Size = new System.Drawing.Size(180, 30);
+        txtMaLo.Size = new System.Drawing.Size(171, 30);
         txtMaLo.TabIndex = 6;
         // 
         // nudSoLuong
         // 
         nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         nudSoLuong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        nudSoLuong.Location = new System.Drawing.Point(3, 3);
+        nudSoLuong.Location = new System.Drawing.Point(456, 33);
         nudSoLuong.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
         nudSoLuong.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         nudSoLuong.Name = "nudSoLuong";
-        nudSoLuong.Size = new System.Drawing.Size(180, 30);
+        nudSoLuong.Size = new System.Drawing.Size(132, 30);
         nudSoLuong.TabIndex = 7;
         nudSoLuong.ThousandsSeparator = true;
         nudSoLuong.Value = new decimal(new int[] { 1, 0, 0, 0 });
@@ -245,10 +244,10 @@ partial class FormHanSuDung
         dtpNgaySanXuat.Checked = false;
         dtpNgaySanXuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpNgaySanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpNgaySanXuat.Location = new System.Drawing.Point(3, 3);
+        dtpNgaySanXuat.Location = new System.Drawing.Point(594, 33);
         dtpNgaySanXuat.Name = "dtpNgaySanXuat";
         dtpNgaySanXuat.ShowCheckBox = true;
-        dtpNgaySanXuat.Size = new System.Drawing.Size(180, 30);
+        dtpNgaySanXuat.Size = new System.Drawing.Size(191, 30);
         dtpNgaySanXuat.TabIndex = 8;
         // 
         // dtpHanSuDung
@@ -256,19 +255,20 @@ partial class FormHanSuDung
         dtpHanSuDung.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         dtpHanSuDung.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpHanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        dtpHanSuDung.Location = new System.Drawing.Point(3, 3);
+        dtpHanSuDung.Location = new System.Drawing.Point(791, 33);
         dtpHanSuDung.Name = "dtpHanSuDung";
-        dtpHanSuDung.Size = new System.Drawing.Size(180, 30);
+        dtpHanSuDung.Size = new System.Drawing.Size(194, 30);
         dtpHanSuDung.TabIndex = 9;
         // 
         // flpNutLo
         // 
+        tlpLoHang.SetColumnSpan(flpNutLo, 5);
         flpNutLo.Controls.Add(btnTaoLo);
         flpNutLo.Dock = System.Windows.Forms.DockStyle.Fill;
-        flpNutLo.Location = new System.Drawing.Point(3, 3);
+        flpNutLo.Location = new System.Drawing.Point(3, 71);
         flpNutLo.Name = "flpNutLo";
         flpNutLo.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-        flpNutLo.Size = new System.Drawing.Size(960, 44);
+        flpNutLo.Size = new System.Drawing.Size(982, 61);
         flpNutLo.TabIndex = 10;
         flpNutLo.WrapContents = false;
         // 
@@ -279,7 +279,7 @@ partial class FormHanSuDung
         btnTaoLo.Cursor = System.Windows.Forms.Cursors.Hand;
         btnTaoLo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTaoLo.ForeColor = System.Drawing.Color.White;
-        btnTaoLo.Location = new System.Drawing.Point(3, 3);
+        btnTaoLo.Location = new System.Drawing.Point(3, 5);
         btnTaoLo.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
         btnTaoLo.Name = "btnTaoLo";
         btnTaoLo.Size = new System.Drawing.Size(150, 38);
@@ -300,12 +300,12 @@ partial class FormHanSuDung
         tlpTimKiem.Controls.Add(btnLoc, 2, 0);
         tlpTimKiem.Controls.Add(btnXoaLo, 3, 0);
         tlpTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-        tlpTimKiem.Location = new System.Drawing.Point(3, 3);
+        tlpTimKiem.Location = new System.Drawing.Point(3, 239);
         tlpTimKiem.Name = "tlpTimKiem";
-        tlpTimKiem.Size = new System.Drawing.Size(968, 100);
-        tlpTimKiem.TabIndex = 2;
         tlpTimKiem.RowCount = 1;
         tlpTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+        tlpTimKiem.Size = new System.Drawing.Size(994, 50);
+        tlpTimKiem.TabIndex = 2;
         // 
         // lblTimKiem
         // 
@@ -313,7 +313,7 @@ partial class FormHanSuDung
         lblTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTimKiem.Location = new System.Drawing.Point(3, 0);
         lblTimKiem.Name = "lblTimKiem";
-        lblTimKiem.Size = new System.Drawing.Size(180, 26);
+        lblTimKiem.Size = new System.Drawing.Size(114, 50);
         lblTimKiem.TabIndex = 0;
         lblTimKiem.Text = "Tìm nhanh:";
         lblTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,11 +322,11 @@ partial class FormHanSuDung
         // 
         txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right));
         txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTimKiem.Location = new System.Drawing.Point(3, 3);
+        txtTimKiem.Location = new System.Drawing.Point(123, 10);
         txtTimKiem.MaxLength = 100;
         txtTimKiem.Name = "txtTimKiem";
         txtTimKiem.PlaceholderText = "Mã lô hoặc tên sản phẩm";
-        txtTimKiem.Size = new System.Drawing.Size(180, 30);
+        txtTimKiem.Size = new System.Drawing.Size(332, 30);
         txtTimKiem.TabIndex = 1;
         // 
         // btnLoc
@@ -336,7 +336,7 @@ partial class FormHanSuDung
         btnLoc.Cursor = System.Windows.Forms.Cursors.Hand;
         btnLoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnLoc.ForeColor = System.Drawing.Color.White;
-        btnLoc.Location = new System.Drawing.Point(3, 3);
+        btnLoc.Location = new System.Drawing.Point(465, 6);
         btnLoc.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
         btnLoc.Name = "btnLoc";
         btnLoc.Size = new System.Drawing.Size(100, 38);
@@ -351,12 +351,12 @@ partial class FormHanSuDung
         btnXoaLo.Cursor = System.Windows.Forms.Cursors.Hand;
         btnXoaLo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnXoaLo.ForeColor = System.Drawing.Color.White;
-        btnXoaLo.Location = new System.Drawing.Point(3, 3);
+        btnXoaLo.Location = new System.Drawing.Point(581, 6);
         btnXoaLo.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
         btnXoaLo.Name = "btnXoaLo";
-        btnXoaLo.Size = new System.Drawing.Size(180, 38);
+        btnXoaLo.Size = new System.Drawing.Size(179, 38);
         btnXoaLo.TabIndex = 3;
-        btnXoaLo.Text = "Xóa lô chưa xuất";
+        btnXoaLo.Text = "Xóa lô";
         btnXoaLo.UseVisualStyleBackColor = false;
         // 
         // dgvLoHang
@@ -367,13 +367,13 @@ partial class FormHanSuDung
         dgvLoHang.BackgroundColor = System.Drawing.Color.White;
         dgvLoHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvLoHang.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvLoHang.Location = new System.Drawing.Point(3, 3);
+        dgvLoHang.Location = new System.Drawing.Point(3, 295);
         dgvLoHang.MultiSelect = false;
         dgvLoHang.Name = "dgvLoHang";
         dgvLoHang.ReadOnly = true;
         dgvLoHang.RowHeadersWidth = 51;
         dgvLoHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        dgvLoHang.Size = new System.Drawing.Size(968, 300);
+        dgvLoHang.Size = new System.Drawing.Size(994, 362);
         dgvLoHang.TabIndex = 3;
         // 
         // FormHanSuDung
@@ -386,13 +386,11 @@ partial class FormHanSuDung
         WindowState = System.Windows.Forms.FormWindowState.Maximized;
         panel1.ResumeLayout(false);
         tableLayoutPanel1.ResumeLayout(false);
-        tableLayoutPanel1.PerformLayout();
         grpLoHang.ResumeLayout(false);
         tlpLoHang.ResumeLayout(false);
         tlpLoHang.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
         flpNutLo.ResumeLayout(false);
-        flpNutLo.PerformLayout();
         tlpTimKiem.ResumeLayout(false);
         tlpTimKiem.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)dgvLoHang).EndInit();
