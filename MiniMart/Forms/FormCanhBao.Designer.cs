@@ -130,11 +130,11 @@ partial class FormCanhBao
         // 
         // lblTieuDe
         // 
-        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+        lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
         lblTieuDe.AutoSize = true;
         lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lblTieuDe.ForeColor = System.Drawing.Color.Red;
-        lblTieuDe.Location = new System.Drawing.Point(3, 16);
+        lblTieuDe.Location = new System.Drawing.Point(271, 16);
         lblTieuDe.Name = "lblTieuDe";
         lblTieuDe.Size = new System.Drawing.Size(322, 41);
         lblTieuDe.TabIndex = 1;

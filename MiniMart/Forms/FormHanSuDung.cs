@@ -22,12 +22,6 @@ public partial class FormHanSuDung : Form
         btnTaoLo.Click += XuLyTaoLo_Click;
         btnLoc.Click += (_, _) => TaiDanhSach();
         btnXoaLo.Click += XuLyXoaLo_Click;
-        txtTimKiem.KeyDown += (_, e) =>
-        {
-            if (e.KeyCode != Keys.Enter) return;
-            e.SuppressKeyPress = true;
-            TaiDanhSach();
-        };
 
         TaiDanhSach();
     }
