@@ -18,9 +18,6 @@ public partial class FormLichSuHoatDong : Form
         
         
         btnLoc.Click += (_, _) => TaiDanhSach();
-        txtTuKhoa.TextChanged += (_, _) => TaiDanhSach(baoLoiNgay: false);
-        dtpTuNgay.ValueChanged += (_, _) => TaiDanhSach();
-        dtpDenNgay.ValueChanged += (_, _) => TaiDanhSach();
         txtTuKhoa.KeyDown += (_, e) =>
         {
             if (e.KeyCode != Keys.Enter) return;

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Globalization;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
 using MiniMart.Data;
 using MiniMart.Forms;
 using MiniMart.Model;
@@ -22,12 +24,29 @@ public class DichVuLichSuHoatDong
     public List<LichSuHoatDong> LayDanhSach(DateTime tu, DateTime den, string tuKhoa = "")
     {
         using var db = new CoSoDuLieu();
-        var q = db.LichSuHoatDongs.AsNoTracking().
-            Where(x => x.ThoiGian >= tu.Date && x.ThoiGian < den.Date.AddDays(1));
         
-        string k = (tuKhoa ?? "").Trim();
-        if (k.Length > 0) q = q.Where(x => x.TenDangNhap.Contains(k) || x.HanhDong.Contains(k) || x.NoiDung.Contains(k));
+        var ds = db.LichSuHoatDongs.AsNoTracking()
+            .Where(x => x.ThoiGian >= tu.Date && x.ThoiGian < den.Date.AddDays(1))
+            .OrderByDescending(x => x.ThoiGian)
+            .ToList();
         
-        return q.OrderByDescending(x => x.ThoiGian).Take(3000).ToList();
+        string k = BoDau(tuKhoa);
+        if (k.Length > 0)
+            ds = ds.Where(x => BoDau(x.TenDangNhap).Contains(k)
+                               || BoDau(x.HanhDong).Contains(k)
+                               || BoDau(x.NoiDung).Contains(k))
+                .ToList();
+
+        return ds.Take(3000).ToList();
+    }
+    public static string BoDau(string? s)
+    {
+        if (string.IsNullOrWhiteSpace(s)) return "";
+        string chuan = s.Trim().ToLowerInvariant().Normalize(NormalizationForm.FormD);
+        var sb = new StringBuilder();
+        foreach (char c in chuan)
+            if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                sb.Append(c);
+        return sb.ToString().Replace('đ', 'd');
     }
 }
