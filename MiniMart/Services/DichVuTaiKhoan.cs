@@ -36,18 +36,24 @@ public class DichVuTaiKhoan
     public static DataTable LayTatCa(string timKiem = "")
     {
         using var db = new CoSoDuLieu();
-        string s = $"%{timKiem}%";
-        var user = db.NguoiDungs.AsNoTracking()
-            .Where(x => EF.Functions.Like(x.TenNguoiDung, s) || EF.Functions.Like(x.TenHienThi, s))
+        
+        var users = db.NguoiDungs.AsNoTracking()
             .OrderBy(x => x.Id)
             .ToList();
+        
+        string k = DichVuLichSuHoatDong.BoDau(timKiem);
+        if (k != "")
+            users = users.Where(x => DichVuLichSuHoatDong.BoDau(x.TenNguoiDung).Contains(k)
+                                     || DichVuLichSuHoatDong.BoDau(x.TenHienThi).Contains(k))
+                .ToList();
+        
         var table = new DataTable();
         table.Columns.Add("Id", typeof(int));
         table.Columns.Add("TenNguoiDung", typeof(string));
         table.Columns.Add("TenHienThi", typeof(string));
         table.Columns.Add("VaiTro", typeof(string));
         table.Columns.Add("TrangThai", typeof(string));
-        foreach (var u in user)
+        foreach (var u in users)
             table.Rows.Add(u.Id, u.TenNguoiDung, u.TenHienThi, u.VaiTro, u.DangHoatDong ? "Hoạt động" : "Đã khóa");
         return table;
     }
